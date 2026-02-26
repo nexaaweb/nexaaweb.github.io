@@ -1,1 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nexaaweb | About</title>
+<link rel="stylesheet" href="assets/css/style.css">
 
+<style>
+
+/* ================= ABOUT HERO ================= */
+
+.about-hero {
+  padding: 120px 10% 80px;
+  background: linear-gradient(135deg, #f4f6f8, #ffffff);
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-size: 42px;
+  color: #c4161c;
+  margin-bottom: 20px;
+}
+
+.about-hero p {
+  max-width: 850px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* ================= JOURNEY ================= */
+
+.journey {
+  padding: 80px 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.journey h2 {
+  color: #c4161c;
+  margin-bottom: 20px;
+}
+
+.journey p {
+  margin-bottom: 15px;
+}
+
+.timeline-box {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* ================= WHY CHOOSE ================= */
+
+.why {
+  background: #c4161c;
+  color: white;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.why h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.why p {
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+/* ================= BUTTON ================= */
+
+.btn-light {
+  display: inline-block;
+  padding: 12px 28px;
+  background: white;
+  color: #c4161c;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.btn-light:hover {
+  background: #ff4d4d;
+  color: white;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 992px) {
+  .journey {
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Nexaaweb</div>
+  <div class="menu-toggle">&#9776;</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+
+    <li class="dropdown">
+      <a href="services.html">Services ▾</a>
+      <div class="dropdown-menu">
+
+        <div class="sub-dropdown">
+          <a href="#">Website Services ▸</a>
+          <div class="sub-menu">
+            <a href="#">Business Website Design & Development</a>
+            <a href="#">Website Redesign & Optimization</a>
+            <a href="#">SEO & Ranking Strategies</a>
+          </div>
+        </div>
+
+        <div class="sub-dropdown">
+          <a href="#">Design & Branding Services ▸</a>
+          <div class="sub-menu">
+            <a href="#">Logo & Brand Identity</a>
+            <a href="#">Poster & Banner Design</a>
+            <a href="#">Brochure, Flyer & Company Profile Design</a>
+          </div>
+        </div>
+
+        <div class="sub-dropdown">
+          <a href="#">Business & Office Designs ▸</a>
+          <div class="sub-menu">
+            <a href="#">Resume / CV & Certificate Design</a>
+            <a href="#">Professional PPT / Presentation Design</a>
+            <a href="#">Name Plate, Office Plate & Menu Card Design</a>
+          </div>
+        </div>
+
+        <div class="sub-dropdown">
+          <a href="#">Event & Recognition Designs ▸</a>
+          <div class="sub-menu">
+            <a href="#">Award & Trophy Design</a>
+            <a href="#">Event Certificate & Recognition Materials</a>
+          </div>
+        </div>
+
+        <div class="sub-dropdown">
+          <a href="#">Marketing & Growth Services ▸</a>
+          <div class="sub-menu">
+            <a href="#">Digital Marketing Ideas</a>
+            <a href="#">Branding Strategies & Consultations</a>
+            <a href="#">Invoice / Bill & Data Management</a>
+          </div>
+        </div>
+
+        <div class="sub-dropdown">
+          <a href="#">AI & Advanced Optimization ▸</a>
+          <div class="sub-menu">
+            <a href="#">AI-Powered Website Optimization</a>
+            <a href="#">Business Improvement Guidance</a>
+          </div>
+        </div>
+
+      </div>
+    </li>
+
+    <li class="dropdown">
+      <a href="portfolio.html">Portfolio ▾</a>
+      <div class="dropdown-menu">
+        <a href="#">Website Design Samples</a>
+        <a href="#">Branding & Posters</a>
+        <a href="#">Office Designs</a>
+      </div>
+    </li>
+
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="about-hero">
+  <h1>About Nexaaweb</h1>
+  <p>
+    Nexaaweb is a web & digital branding agency founded by Saher offering innovative digital solutions.
+    We specialize in website design, branding, marketing strategies, and AI-powered optimization to help businesses grow in today’s competitive digital landscape.
+  </p>
+</section>
+
+<!-- JOURNEY -->
+<section class="journey">
+  <div>
+    <h2>Our Journey</h2>
+    <p>
+      Nexaaweb started with a simple vision — to help businesses turn ideas into impactful digital experiences.
+    </p>
+    <p>
+      From designing modern business websites to building complete branding systems, our journey is focused on quality, innovation, and measurable growth.
+    </p>
+    <a href="#skills" class="btn-light">See Our Skills</a>
+  </div>
+
+  <div class="timeline-box">
+    <h2>Our Skills</h2>
+    <p>✔ Web Design & Development</p>
+    <p>✔ UI/UX Strategy</p>
+    <p>✔ Branding & Identity Design</p>
+    <p>✔ AI Optimization Tools</p>
+    <p>✔ Marketing Growth Planning</p>
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="why">
+  <h2>Why Choose Nexaaweb?</h2>
+  <p>
+    We provide AI optimization for faster tasks, personalized marketing ideas, and business growth guidance to help your company thrive.
+  </p>
+  <p>
+    Our approach combines creativity with data-driven strategies to deliver results that matter.
+  </p>
+  <a href="contact.html" class="btn-light">Hire Us</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Nexaaweb: Web & Digital Branding Agency. All Rights Reserved.</p>
+  <p>Email: <a href="mailto:nexaawebofficial@gmail.com">nexaawebofficial@gmail.com</a></p>
+  <p>Phone/WhatsApp: <a href="tel:+917411984925">+91 7411984925</a></p>
+</footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
