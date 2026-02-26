@@ -3,35 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Nexaaweb</title>
+    <title>Home - Nexaaweb</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.css">
 </head>
 <body>
-    <!-- Nav same as index -->
-
-    <section class="top split-screen">
-        <h1>About Nexaaweb</h1>
-        <p>Nexaaweb is a web & digital branding agency founded by Saher (@Saher__7), offering innovative digital solutions from home-based operations.</p>
-    </section>
-
-    <section class="mid wireframe-trigger">
-        <h2>Our Journey</h2>
+    <nav>
         <ul>
-            <li>Experience: Designed 2 business websites (logismart.in, warehousingstock.com), 30+ promotional posters, Shopify sites, resumes, and more.</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a>
+                <ul class="dropdown">
+                    <li><a href="services.html#website-services">Website Services</a>
+                        <ul>
+                            <li>Business Website Design & Development</li>
+                            <li>Website Redesign & Optimization</li>
+                            <li>SEO & Ranking Strategies</li>
+                        </ul>
+                    </li>
+                    <li><a href="services.html#design-branding">Design & Branding Services</a>
+                        <ul>
+                            <li>Logo & Brand Identity Design</li>
+                            <li>Poster & Banner Design</li>
+                            <li>Brochure & Flyer Design</li>
+                        </ul>
+                    </li>
+                    <li><a href="services.html#business-office">Business & Office Designs</a>
+                        <ul>
+                            <li>Resume / CV Design</li>
+                            <li>Professional PPT / Presentation Design</li>
+                            <li>Certificate Design</li>
+                            <li>Name Plate & Office Plate Design</li>
+                            <li>Company Profile Design</li>
+                            <li>Brochure & Flyer Design</li>
+                        </ul>
+                    </li>
+                    <li><a href="services.html#event-recognition">Event & Recognition Designs</a>
+                        <ul>
+                            <li>Award & Trophy Design</li>
+                            <li>Event & Recognition Certificate Design</li>
+                        </ul>
+                    </li>
+                    <li><a href="services.html#marketing-growth">Marketing & Growth Services</a>
+                        <ul>
+                            <li>Digital Marketing Ideas</li>
+                            <li>Branding Strategies & Consultations</li>
+                            <li>Invoice / Bill & Data Management Design</li>
+                        </ul>
+                    </li>
+                    <li><a href="services.html#ai-optimization">AI & Advanced Optimization</a>
+                        <ul>
+                            <li>AI-Powered Website Optimization</li>
+                            <li>Business Improvement Guidance</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
-        <button>See Our Skills</button>
+    </nav>
+
+    <section class="hero fluid-pour">
+        <h1>Welcome to Nexaaweb – Where Ideas Flow into Designs</h1>
+        <p>Nexaaweb is a web & digital branding agency specializing in website design, branding, and AI-powered growth strategies for businesses.</p>
+        <svg class="liquid-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 0,0 Q 50,50 100,0" class="pour-path"></path> <!-- Liquid pour path -->
+        </svg>
+        <div class="swiper carousel auto-cycle">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="assets/images/website-mockup.jpg" alt="Website Design">
+                    <h3>Website Design</h3>
+                    <p>Custom business sites with UI/UX focus.</p>
+                    <span>Price: Starting ₹10,000</span>
+                    <button>Get Started</button>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/branding-poster.jpg" alt="Branding">
+                    <h3>Branding</h3>
+                    <p>Logos and posters to elevate your identity.</p>
+                    <span>Price: Starting ₹5,000</span>
+                    <button>Get Started</button>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/seo-tips.jpg" alt="SEO Tips">
+                    <h3>SEO Tips</h3>
+                    <p>Strategies for top ranks and visibility.</p>
+                    <span>Price: Starting ₹3,000</span>
+                    <button>Get Started</button>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/ai-optimization.jpg" alt="AI Optimization">
+                    <h3>AI Optimization</h3>
+                    <p>Fast tasks with new AI tools.</p>
+                    <span>Price: Starting ₹4,000</span>
+                    <button>Get Started</button>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/marketing-guidance.jpg" alt="Marketing Guidance">
+                    <h3>Marketing Guidance</h3>
+                    <p>Ad spend and growth ideas.</p>
+                    <span>Price: Starting ₹6,000</span>
+                    <button>Get Started</button>
+                </div>
+            </div>
+        </div>
+        <button onclick="location.href='services.html'">Explore Services</button>
     </section>
 
-    <section class="bottom floating-icons">
-        <h2>Why Choose Nexaaweb?</h2>
-        <p>We provide AI optimization for faster tasks, personalized marketing ideas, and business growth guidance to help your company thrive.</p>
-        <p>Para 2</p>
-        <p>Para 3</p>
-        <button onclick="location.href='contact.html'">Hire Us</button>
+    <section class="mid parallax jarallax" data-jarallax data-speed="0.2">
+        <h2>Our Featured Services</h2>
+        <div class="wireframe-trigger">
+            <div class="wireframe"> <!-- GSAP transforms to full UI -->
+                <img src="assets/images/wireframe.jpg" alt="Wireframe">
+            </div>
+            <div class="full-ui hidden">
+                <img src="assets/images/full-ui.jpg" alt="Full UI">
+            </div>
+            <p>My Process: From wireframe to stunning design.</p>
+        </div>
+        <div class="overlapping-3d">
+            <canvas id="three-canvas"></canvas> <!-- Three.js for 3D mockups -->
+        </div>
+        <button onclick="location.href='portfolio.html'">View Portfolio</button>
     </section>
 
-    <!-- Footer same -->
+    <section class="tech-stack">
+        <h2>Tech Stack</h2>
+        <div class="floating-icons">
+            <img src="assets/images/react-icon.png" alt="React" data-popup="Used for dynamic UIs">
+            <img src="assets/images/python-icon.png" alt="Python" data-popup="Backend and AI scripts">
+            <img src="assets/images/ai-icon.png" alt="AI Tools" data-popup="Optimization services">
+            <!-- Add more -->
+            <div class="popup"></div>
+        </div>
+    </section>
 
+    <section class="bottom split-screen">
+        <h2>Ready to Transform Your Business?</h2>
+        <p>Boost your leads and growth with our expert marketing and AI optimization tips.</p>
+        <div class="bridge">
+            <div class="left">Backend (Data Icons)</div>
+            <canvas id="particle-canvas"></canvas> <!-- Particle bridge -->
+            <div class="right">Frontend (UI)</div>
+        </div>
+        <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Message"></textarea>
+            <button type="submit">Get a Free Quote</button>
+        </form>
+        <button onclick="location.href='contact.html'">Contact Us</button>
+        <div class="interactive-quiz">
+            <button onclick="showQuiz()">What Service Do You Need?</button>
+            <div id="quiz-form" style="display:none;">
+                <select><option>Website</option><option>Branding</option></select>
+                <button>Get AI Tip</button>
+            </div>
+        </div>
+        <div class="testimonial-carousel swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Client Quote 1 "Great design!"</div>
+                <!-- Add more -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Nexaaweb: Web & Digital Branding Agency. All Rights Reserved.</p>
+        <p>Email: nexaawebofficial@gmail.com | Phone/WhatsApp: +91 7411984925</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.162.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
