@@ -1,1 +1,143 @@
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
+body {
+  background: white;
+  color: #111;
+  overflow-x: hidden;
+}
+
+/* HERO SECTION (Black Background) */
+.hero {
+  height: 100vh;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  color: #b30000;
+  text-shadow: 0 0 15px rgba(179, 0, 0, 0.6);
+}
+
+.hero p {
+  margin: 20px 0;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.cta-btn {
+  padding: 12px 30px;
+  border: none;
+  background: #b30000;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: black;
+  border: 2px solid #b30000;
+  color: #b30000;
+  box-shadow: 0 0 15px rgba(179, 0, 0, 0.6);
+}
+
+/* ABOUT SECTION (White Background) */
+.about {
+  padding: 100px 10%;
+  text-align: center;
+  background: white;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  color: #b30000;
+  margin-bottom: 20px;
+}
+
+/* SERVICES SECTION */
+.services {
+  padding: 100px 10%;
+  background: white;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  color: #b30000;
+  margin-bottom: 50px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  padding: 40px;
+  border: 1px solid #eee;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  background: black;
+  color: white;
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(179, 0, 0, 0.6);
+}
+
+/* PORTFOLIO SECTION (Black Background) */
+.portfolio {
+  padding: 100px 10%;
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+.portfolio h2 {
+  font-size: 2.5rem;
+  color: #b30000;
+  margin-bottom: 50px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.portfolio-item {
+  background: #111;
+  padding: 60px;
+  transition: 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(179, 0, 0, 0.7);
+}
+
+/* CONTACT SECTION */
+.contact {
+  padding: 100px 10%;
+  text-align: center;
+  background: white;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  color: #b30000;
+  margin-bottom: 30px;
+}
