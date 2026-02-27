@@ -1,1 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Your Brand</title>
 
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background:#0f0f14;
+    color:white;
+}
+
+/* Glass Navbar */
+.navbar{
+    position:fixed;
+    width:100%;
+    top:0;
+    padding:15px 50px;
+    backdrop-filter: blur(15px);
+    background:rgba(255,255,255,0.05);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:#ff4c4c;
+}
+
+/* Hero Section */
+.portfolio-hero{
+    padding-top:120px;
+    text-align:center;
+}
+
+.portfolio-hero h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.portfolio-hero p{
+    color:#ccc;
+}
+
+/* Dropdown Filter Buttons */
+.filter-buttons{
+    text-align:center;
+    margin:40px 0;
+}
+
+.filter-buttons button{
+    padding:10px 20px;
+    margin:10px;
+    background:rgba(255,255,255,0.08);
+    border:none;
+    color:white;
+    cursor:pointer;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.filter-buttons button:hover{
+    background:#ff4c4c;
+}
+
+/* Portfolio Grid */
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+    gap:30px;
+    padding:40px 80px;
+}
+
+.portfolio-item{
+    overflow:hidden;
+    border-radius:15px;
+    position:relative;
+    transform:translateY(50px);
+    opacity:0;
+    transition:0.6s ease;
+}
+
+.portfolio-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.portfolio-item:hover img{
+    transform:scale(1.1);
+}
+
+/* Reveal Animation */
+.show{
+    transform:translateY(0);
+    opacity:1;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <div><b>YourLogo</b></div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html">Blog</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</div>
+
+<section class="portfolio-hero">
+    <h1>Our Creative Portfolio</h1>
+    <p>Explore our real work & creative projects</p>
+</section>
+
+<div class="filter-buttons">
+    <button onclick="filterSelection('all')">All</button>
+    <button onclick="filterSelection('web')">Websites Design Samples</button>
+    <button onclick="filterSelection('branding')">Branding & Posters</button>
+    <button onclick="filterSelection('office')">Office Designs</button>
+</div>
+
+<div class="portfolio-grid">
+
+    <!-- Website Samples -->
+    <div class="portfolio-item web">
+        <img src="assets/images/web1.jpg" alt="">
+    </div>
+    <div class="portfolio-item web">
+        <img src="assets/images/web2.jpg" alt="">
+    </div>
+
+    <!-- Branding -->
+    <div class="portfolio-item branding">
+        <img src="assets/images/branding1.jpg" alt="">
+    </div>
+    <div class="portfolio-item branding">
+        <img src="assets/images/poster1.jpg" alt="">
+    </div>
+
+    <!-- Office -->
+    <div class="portfolio-item office">
+        <img src="assets/images/office1.jpg" alt="">
+    </div>
+    <div class="portfolio-item office">
+        <img src="assets/images/office2.jpg" alt="">
+    </div>
+
+</div>
+
+<script>
+function filterSelection(category){
+    let items = document.getElementsByClassName("portfolio-item");
+
+    if(category == "all") category = "";
+
+    for(let i=0;i<items.length;i++){
+        items[i].style.display = "none";
+        if(items[i].className.indexOf(category) > -1){
+            items[i].style.display = "block";
+        }
+    }
+}
+
+window.addEventListener("scroll", function(){
+    let items = document.querySelectorAll(".portfolio-item");
+    let windowHeight = window.innerHeight;
+
+    items.forEach(item=>{
+        let position = item.getBoundingClientRect().top;
+
+        if(position < windowHeight - 100){
+            item.classList.add("show");
+        }
+    });
+});
+</script>
+
+</body>
+</html>
