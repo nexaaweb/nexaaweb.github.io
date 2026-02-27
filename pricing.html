@@ -1,1 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing | Your Brand</title>
 
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI', sans-serif;
+    background:#0f0f14;
+    color:white;
+}
+
+/* Navbar */
+.navbar{
+    position:fixed;
+    width:100%;
+    top:0;
+    padding:15px 50px;
+    backdrop-filter: blur(15px);
+    background:rgba(255,255,255,0.05);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:#ff4c4c;
+}
+
+/* Hero */
+.pricing-hero{
+    padding-top:120px;
+    text-align:center;
+}
+
+.pricing-hero h1{
+    font-size:42px;
+}
+
+/* Pricing Grid */
+.pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+    gap:30px;
+    padding:60px 80px;
+}
+
+.price-card{
+    background:rgba(255,255,255,0.05);
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    backdrop-filter:blur(10px);
+    transition:0.4s;
+}
+
+.price-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(255,76,76,0.2);
+}
+
+.price-card h2{
+    margin-bottom:10px;
+}
+
+.price{
+    font-size:28px;
+    color:#ff4c4c;
+    margin:20px 0;
+}
+
+.price-card ul{
+    list-style:none;
+    padding:0;
+    color:#ccc;
+}
+
+.price-card ul li{
+    margin:10px 0;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 25px;
+    background:#ff4c4c;
+    border-radius:25px;
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+    color:#ff4c4c;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <div><b>YourLogo</b></div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html">Blog</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</div>
+
+<section class="pricing-hero">
+    <h1>Choose Your Plan</h1>
+</section>
+
+<div class="pricing-grid">
+
+    <div class="price-card">
+        <h2>Starter</h2>
+        <div class="price">$199</div>
+        <ul>
+            <li>Basic Website</li>
+            <li>Responsive Design</li>
+            <li>Basic SEO</li>
+        </ul>
+        <a href="#" class="btn">Get Started</a>
+    </div>
+
+    <div class="price-card">
+        <h2>Professional</h2>
+        <div class="price">$499</div>
+        <ul>
+            <li>Advanced Website</li>
+            <li>Branding Kit</li>
+            <li>SEO Optimization</li>
+        </ul>
+        <a href="#" class="btn">Get Started</a>
+    </div>
+
+    <div class="price-card">
+        <h2>Premium</h2>
+        <div class="price">$999</div>
+        <ul>
+            <li>Full Brand Package</li>
+            <li>Marketing Strategy</li>
+            <li>AI Optimization</li>
+        </ul>
+        <a href="#" class="btn">Get Started</a>
+    </div>
+
+</div>
+
+</body>
+</html>
