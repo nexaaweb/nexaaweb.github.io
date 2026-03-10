@@ -6,193 +6,70 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nexaaweb Services</title>
+<title>Nexaaweb | Services</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+/* HERO */
 
-body{
-font-family:Poppins,sans-serif;
-line-height:1.7;
-background:#fff;
-}
-
-/* ================= NAVBAR ================= */
-
-header{
-background:#fff;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
-position:sticky;
-top:0;
-z-index:1000;
-}
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 8%;
-}
-
-.logo{
-font-size:22px;
-font-weight:700;
-color:#E31E24;
-}
-
-.nav-links{
-list-style:none;
-display:flex;
-gap:30px;
-}
-
-.nav-links li{
-position:relative;
-}
-
-.nav-links a{
-text-decoration:none;
-color:#222;
-font-weight:500;
-}
-
-/* ================= MEGA MENU ================= */
-
-.mega-menu{
-
-position:absolute;
-top:100%;
-left:0;
-
-width:900px;
-
-background:#fff;
-
-display:none;
-
-padding:30px;
-
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-
-grid-template-columns:repeat(3,1fr);
-
-gap:30px;
-
-}
-
-.nav-links li:hover .mega-menu{
-display:grid;
-}
-
-.mega-menu h4{
-margin-bottom:10px;
-color:#E31E24;
-}
-
-.mega-menu a{
-display:block;
-padding:4px 0;
-font-size:14px;
-}
-
-/* ================= HERO ================= */
-
-.hero{
-
-background:
-
-linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
-url("https://via.placeholder.com/1600x800");
-
+.hero-services{
 height:70vh;
-
+background:
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+url("https://images.unsplash.com/photo-1557804506-669a67965ba0");
+background-size:cover;
+background-position:center;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-
-color:#fff;
-
+color:white;
+padding:20px;
 }
 
-.hero h1{
+.hero-services h1{
 font-size:48px;
 margin-bottom:10px;
 }
 
-.hero h3{
-color:#ff4b4b;
+.hero-services h3{
+color:#ff4d4d;
 margin-bottom:15px;
 }
 
-.hero p{
-max-width:650px;
+.hero-services p{
+max-width:700px;
 margin:auto;
 margin-bottom:25px;
 }
 
-.btn{
-
-padding:14px 30px;
-
-background:#E31E24;
-
-color:#fff;
-
-text-decoration:none;
-
-border-radius:6px;
-
-}
-
-/* ================= SECTIONS ================= */
-
-section{
-padding:80px 10%;
-}
+/* GRID */
 
 .container{
+padding:80px 10%;
 max-width:1200px;
 margin:auto;
 }
 
-/* ================= MAIN SERVICES ================= */
-
 .grid3{
-
 display:grid;
-
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
 gap:30px;
-
 margin-top:40px;
-
 }
 
 .card{
-
-background:#fff;
-
+background:white;
 padding:25px;
-
 border-radius:10px;
-
 box-shadow:0 10px 20px rgba(0,0,0,0.05);
-
 transition:.3s;
-
 }
 
 .card:hover{
-transform:translateY(-6px);
+transform:translateY(-8px);
 }
 
 .card img{
@@ -201,145 +78,62 @@ border-radius:8px;
 margin-bottom:15px;
 }
 
-/* ================= ALL SERVICES ================= */
-
-.services-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-gap:30px;
-
-margin-top:40px;
-
-}
-
-.service-card{
-
-background:#fff;
-
-padding:25px;
-
-border-radius:10px;
-
-box-shadow:0 10px 20px rgba(0,0,0,0.05);
-
-}
-
-.service-card img{
-width:100%;
-border-radius:8px;
-margin-bottom:10px;
-}
-
-.service-card ul{
-padding-left:18px;
-margin-top:10px;
-}
-
-/* ================= PROCESS ================= */
+/* PROCESS */
 
 .steps{
-
 display:grid;
-
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
 gap:25px;
-
 margin-top:40px;
-
 }
 
 .step{
-
 text-align:center;
-
 padding:25px;
-
-background:#fff;
-
+background:white;
 box-shadow:0 8px 20px rgba(0,0,0,0.05);
-
 border-radius:8px;
-
-}
-
-.step img{
-width:100%;
-border-radius:8px;
-margin-bottom:10px;
 }
 
 .step span{
-font-size:22px;
-color:#E31E24;
+font-size:26px;
+color:#c4161c;
 font-weight:bold;
+display:block;
+margin-bottom:10px;
 }
 
-/* ================= WHY ================= */
+/* WHY */
 
 .points{
 margin-top:20px;
+padding-left:20px;
 }
 
 .points li{
-margin-bottom:8px;
+margin-bottom:10px;
 }
 
-/* ================= CTA ================= */
+/* CTA */
 
 .cta{
-
-background:#E31E24;
-
-color:#fff;
-
+background:#c4161c;
+color:white;
 text-align:center;
-
-}
-
-.cta img{
-width:100%;
-max-width:500px;
-margin-bottom:20px;
-border-radius:8px;
+padding:80px 10%;
 }
 
 .cta-buttons{
-
-margin-top:20px;
-
+margin-top:25px;
 display:flex;
-
 justify-content:center;
-
 gap:20px;
-
 flex-wrap:wrap;
-
 }
 
 .btn-white{
-
-background:#fff;
-
-color:#E31E24;
-
-}
-
-/* ================= MOBILE ================= */
-
-@media(max-width:900px){
-
-.mega-menu{
-position:static;
-width:100%;
-display:block;
-box-shadow:none;
-}
-
+background:white;
+color:#c4161c;
 }
 
 </style>
@@ -348,110 +142,21 @@ box-shadow:none;
 
 <body>
 
-<!-- HEADER -->
-
-<header>
-
-<nav>
-
-<div class="logo">Nexaaweb</div>
-
-<ul class="nav-links">
-
-<li><a href="#">Home</a></li>
-
-<li>
-
-<a href="services.html">Services ▼</a>
-
-<div class="mega-menu">
-
-<div>
-
-<h4>Web Design & Development</h4>
-
-<a href="#">Business Website Design</a>
-<a href="#">Responsive & Mobile-Friendly Websites</a>
-<a href="#">Landing Page Design</a>
-<a href="#">Website Redesign & Modern UI/UX</a>
-<a href="#">E-commerce Website Development</a>
-<a href="#">Website Maintenance & Support</a>
-<a href="#">SEO & Ranking Strategies</a>
-<a href="#">AI-Powered Website Optimization</a>
-
-</div>
-
-<div>
-
-<h4>Branding & Creative Design</h4>
-
-<a href="#">Logo Design</a>
-<a href="#">Brand Identity Design</a>
-<a href="#">Business Card Design</a>
-<a href="#">Poster & Banner Design</a>
-<a href="#">Brochure / Flyer / Company Profile</a>
-<a href="#">Social Media Post Design</a>
-<a href="#">QR Code Design</a>
-
-<h4 style="margin-top:15px;">Digital Marketing</h4>
-
-<a href="#">Social Media Content Creation</a>
-<a href="#">SEO Setup & Optimization</a>
-<a href="#">Lead Generation Strategy</a>
-<a href="#">Digital Marketing Ideas</a>
-
-</div>
-
-<div>
-
-<h4>Consulting & Strategy</h4>
-
-<a href="#">Business Consulting</a>
-<a href="#">Web & Digital Consulting</a>
-<a href="#">Strategy Consulting</a>
-<a href="#">Management Consulting</a>
-<a href="#">Branding Strategy Consultation</a>
-<a href="#">Business Growth Strategy</a>
-<a href="#">Business Improvement Guidance</a>
-<a href="#">Invoice / Bill & Data Management</a>
-
-<h4 style="margin-top:15px;">AI & Automation</h4>
-
-<a href="#">AI Tools Integration for Businesses</a>
-<a href="#">AI Content Creation Assistance</a>
-<a href="#">Marketing Automation Setup</a>
-
-</div>
-
-</div>
-
-</li>
-
-<li><a href="#">Portfolio</a></li>
-<li><a href="#">Blog</a></li>
-<li><a href="#">Pricing</a></li>
-<li><a href="#">Contact</a></li>
-
-</ul>
-
-</nav>
-
-</header>
-
 <!-- HERO -->
 
-<section class="hero">
+<section class="hero-services">
 
 <div>
 
 <h1>Our Services</h1>
 
-<h3>Web Design, Branding & Digital Growth Solutions</h3>
+<h3>Web Design, Branding & Digital Growth</h3>
 
 <p>
 
-Nexaaweb provides creative and strategic digital solutions designed to help businesses grow online.
-From modern website development and powerful branding to smart business strategies and automation, our services are focused on building strong digital identities and long-term business success.
+Nexaaweb provides modern digital solutions designed to help businesses grow online.
+From professional website development to branding and strategic consulting,
+our goal is to build strong digital identities for businesses.
 
 </p>
 
@@ -463,23 +168,21 @@ From modern website development and powerful branding to smart business strategi
 
 <!-- MAIN SERVICES -->
 
-<section>
+<section class="container">
 
-<div class="container">
-
-<h2>Main Services Highlight</h2>
+<h2>Main Services</h2>
 
 <div class="grid3">
 
 <div class="card">
 
-<img src="https://via.placeholder.com/600x400">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
 
 <h3>Web Design & Development</h3>
 
 <p>
 
-Modern, responsive, and high-performance websites designed to represent your business professionally and convert visitors into customers.
+Responsive business websites with modern UI/UX designed to attract customers and build credibility.
 
 </p>
 
@@ -487,13 +190,13 @@ Modern, responsive, and high-performance websites designed to represent your bus
 
 <div class="card">
 
-<img src="https://via.placeholder.com/600x400">
+<img src="https://images.unsplash.com/photo-1558655146-d09347e92766">
 
 <h3>Branding & Creative Design</h3>
 
 <p>
 
-Unique logos, brand identities, and creative designs that help businesses stand out and build strong recognition.
+Logos, brand identities, posters, and social media designs that help businesses stand out.
 
 </p>
 
@@ -501,17 +204,15 @@ Unique logos, brand identities, and creative designs that help businesses stand 
 
 <div class="card">
 
-<img src="https://via.placeholder.com/600x400">
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f">
 
 <h3>Consulting & Strategy</h3>
 
 <p>
 
-Strategic guidance and practical solutions to help businesses grow, improve operations, and build effective digital presence.
+Professional consulting and growth strategies to help businesses improve operations and digital presence.
 
 </p>
-
-</div>
 
 </div>
 
@@ -521,9 +222,7 @@ Strategic guidance and practical solutions to help businesses grow, improve oper
 
 <!-- PROCESS -->
 
-<section>
-
-<div class="container">
+<section class="container">
 
 <h2>Our Process</h2>
 
@@ -531,63 +230,51 @@ Strategic guidance and practical solutions to help businesses grow, improve oper
 
 <div class="step">
 
-<img src="https://via.placeholder.com/500x300">
-
 <span>1</span>
 
 <h4>Understanding Your Business</h4>
 
-<p>We learn about your business goals, audience, and requirements.</p>
+<p>We analyze your goals, audience, and business needs.</p>
 
 </div>
 
 <div class="step">
-
-<img src="https://via.placeholder.com/500x300">
 
 <span>2</span>
 
 <h4>Planning & Strategy</h4>
 
-<p>We create a structured plan to design the best digital solution.</p>
+<p>We create a structured digital plan.</p>
 
 </div>
 
 <div class="step">
-
-<img src="https://via.placeholder.com/500x300">
 
 <span>3</span>
 
 <h4>Design & Development</h4>
 
-<p>Creative design and technical development to build impactful results.</p>
+<p>Modern design and strong technical implementation.</p>
 
 </div>
 
 <div class="step">
-
-<img src="https://via.placeholder.com/500x300">
 
 <span>4</span>
 
-<h4>Optimization & Improvement</h4>
+<h4>Optimization</h4>
 
-<p>Improving performance, usability, and visibility.</p>
+<p>Improving performance, SEO and usability.</p>
 
 </div>
 
 <div class="step">
 
-<img src="https://via.placeholder.com/500x300">
-
 <span>5</span>
 
-<h4>Launch & Growth Support</h4>
+<h4>Launch & Growth</h4>
 
-<p>Helping businesses grow with ongoing support and improvements.</p>
-
-</div>
+<p>Continuous support for long-term growth.</p>
 
 </div>
 
@@ -597,11 +284,7 @@ Strategic guidance and practical solutions to help businesses grow, improve oper
 
 <!-- WHY CHOOSE -->
 
-<section>
-
-<div class="container">
-
-<img src="https://via.placeholder.com/900x400">
+<section class="container">
 
 <h2>Why Choose Nexaaweb</h2>
 
@@ -610,7 +293,7 @@ Strategic guidance and practical solutions to help businesses grow, improve oper
 <li>Modern and professional design approach</li>
 <li>Creative branding solutions</li>
 <li>Business-focused strategies</li>
-<li>Affordable solutions for startups and businesses</li>
+<li>Affordable solutions for startups</li>
 <li>Personalized attention for every project</li>
 <li>Future-ready digital ideas</li>
 
@@ -618,11 +301,9 @@ Strategic guidance and practical solutions to help businesses grow, improve oper
 
 <p style="margin-top:15px">
 
-At Nexaaweb, we focus on creating solutions that are not only visually impressive but also built for real business growth.
+At Nexaaweb, we create solutions that are not only visually impressive but also designed for real business growth.
 
 </p>
-
-</div>
 
 </section>
 
@@ -630,13 +311,12 @@ At Nexaaweb, we focus on creating solutions that are not only visually impressiv
 
 <section class="cta">
 
-<img src="https://via.placeholder.com/800x400">
-
 <h2>Ready to Build Something Great?</h2>
 
 <p>
 
-Whether you need a modern website, powerful branding, or smart business strategies, Nexaaweb is here to help you grow and stand out in the digital world.
+Whether you need a modern website, powerful branding, or smart digital strategies,
+Nexaaweb is here to help you grow.
 
 </p>
 
@@ -644,7 +324,7 @@ Whether you need a modern website, powerful branding, or smart business strategi
 
 <a href="mailto:nexaawebofficial@gmail.com" class="btn btn-white">Start Your Project</a>
 
-<a href="https://wa.me/917411984925?text=Hello%20Nexaaweb%2C%20we%20want%20to%20build%20a%20website.%20Please%20share%20the%20details." class="btn">Contact Us</a>
+<a href="https://wa.me/917411984925" class="btn">Contact Us</a>
 
 </div>
 
