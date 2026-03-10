@@ -3,241 +3,459 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nexaaweb | About</title>
-<link rel="stylesheet" href="assets/css/style.css">
+<title>About Nexaaweb</title>
 
 <style>
 
-/* ================= ABOUT HERO ================= */
+/* GLOBAL */
 
-.about-hero {
-  padding: 120px 10% 80px;
-  background: linear-gradient(135deg, #f4f6f8, #ffffff);
-  text-align: center;
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin:0;
+line-height:1.6;
+color:#1A1A1A;
+background:#FFFFFF;
 }
 
-.about-hero h1 {
-  font-size: 42px;
-  color: #c4161c;
-  margin-bottom: 20px;
+section{
+padding:80px 10%;
 }
 
-.about-hero p {
-  max-width: 850px;
-  margin: auto;
-  font-size: 18px;
-  line-height: 1.8;
+h1,h2,h3{
+margin-bottom:15px;
 }
 
-/* ================= JOURNEY ================= */
-
-.journey {
-  padding: 80px 10%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: center;
+p{
+color:#444;
 }
 
-.journey h2 {
-  color: #c4161c;
-  margin-bottom: 20px;
+.container{
+max-width:1200px;
+margin:auto;
 }
 
-.journey p {
-  margin-bottom: 15px;
+/* HERO */
+
+.about-hero{
+background:
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+url("https://images.unsplash.com/photo-1492724441997-5dc865305da7");
+background-size:cover;
+background-position:center;
+color:white;
+text-align:center;
+padding:120px 20px;
 }
 
-.timeline-box {
-  background: white;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+.about-hero h1{
+font-size:50px;
+margin-bottom:10px;
 }
 
-/* ================= WHY CHOOSE ================= */
-
-.why {
-  background: #c4161c;
-  color: white;
-  padding: 80px 10%;
-  text-align: center;
+.about-hero h3{
+color:#E31E24;
+margin-bottom:20px;
+font-weight:500;
 }
 
-.why h2 {
-  font-size: 32px;
-  margin-bottom: 30px;
+.about-hero p{
+max-width:700px;
+margin:auto;
+color:#eee;
 }
 
-.why p {
-  max-width: 700px;
-  margin: auto;
-  margin-bottom: 20px;
+/* TWO COLUMN */
+
+.two-col{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
 }
 
-/* ================= BUTTON ================= */
-
-.btn-light {
-  display: inline-block;
-  padding: 12px 28px;
-  background: white;
-  color: #c4161c;
-  border-radius: 6px;
-  font-weight: bold;
-  margin-top: 20px;
-  transition: 0.3s;
+.two-col img{
+width:100%;
+border-radius:8px;
 }
 
-.btn-light:hover {
-  background: #ff4d4d;
-  color: white;
+/* SECTION GREY */
+
+.grey{
+background:#F8F9FA;
 }
 
-/* ================= RESPONSIVE ================= */
+/* CARDS */
 
-@media(max-width: 992px) {
-  .journey {
-    grid-template-columns: 1fr;
-  }
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+transition:0.3s;
+border-bottom:3px solid transparent;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-bottom:3px solid #E31E24;
+}
+
+.card img{
+width:100%;
+border-radius:6px;
+margin-bottom:15px;
+}
+
+/* LIST */
+
+.points{
+margin-top:30px;
+}
+
+.points li{
+margin-bottom:10px;
+}
+
+/* APPROACH STEPS */
+
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-top:40px;
+}
+
+.step{
+background:white;
+padding:25px;
+border-radius:6px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+text-align:center;
+}
+
+.step span{
+display:block;
+font-size:22px;
+font-weight:bold;
+color:#E31E24;
+margin-bottom:10px;
+}
+
+/* CTA */
+
+.cta{
+text-align:center;
+background:#E31E24;
+color:white;
+}
+
+.cta p{
+color:#fff;
+max-width:600px;
+margin:auto;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 32px;
+background:#BF0A0A;
+color:white;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#8e0000;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.two-col{
+grid-template-columns:1fr;
+}
+
+.about-hero h1{
+font-size:36px;
+}
+
 }
 
 </style>
+
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="logo">Nexaaweb</div>
-  <div class="menu-toggle">&#9776;</div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-
-    <li class="dropdown">
-      <a href="services.html">Services ▾</a>
-      <div class="dropdown-menu">
-
-        <div class="sub-dropdown">
-          <a href="#">Website Services ▸</a>
-          <div class="sub-menu">
-            <a href="#">Business Website Design & Development</a>
-            <a href="#">Website Redesign & Optimization</a>
-            <a href="#">SEO & Ranking Strategies</a>
-          </div>
-        </div>
-
-        <div class="sub-dropdown">
-          <a href="#">Design & Branding Services ▸</a>
-          <div class="sub-menu">
-            <a href="#">Logo & Brand Identity</a>
-            <a href="#">Poster & Banner Design</a>
-            <a href="#">Brochure, Flyer & Company Profile Design</a>
-          </div>
-        </div>
-
-        <div class="sub-dropdown">
-          <a href="#">Business & Office Designs ▸</a>
-          <div class="sub-menu">
-            <a href="#">Resume / CV & Certificate Design</a>
-            <a href="#">Professional PPT / Presentation Design</a>
-            <a href="#">Name Plate, Office Plate & Menu Card Design</a>
-          </div>
-        </div>
-
-        <div class="sub-dropdown">
-          <a href="#">Event & Recognition Designs ▸</a>
-          <div class="sub-menu">
-            <a href="#">Award & Trophy Design</a>
-            <a href="#">Event Certificate & Recognition Materials</a>
-          </div>
-        </div>
-
-        <div class="sub-dropdown">
-          <a href="#">Marketing & Growth Services ▸</a>
-          <div class="sub-menu">
-            <a href="#">Digital Marketing Ideas</a>
-            <a href="#">Branding Strategies & Consultations</a>
-            <a href="#">Invoice / Bill & Data Management</a>
-          </div>
-        </div>
-
-        <div class="sub-dropdown">
-          <a href="#">AI & Advanced Optimization ▸</a>
-          <div class="sub-menu">
-            <a href="#">AI-Powered Website Optimization</a>
-            <a href="#">Business Improvement Guidance</a>
-          </div>
-        </div>
-
-      </div>
-    </li>
-
-    <li class="dropdown">
-      <a href="portfolio.html">Portfolio ▾</a>
-      <div class="dropdown-menu">
-        <a href="#">Website Design Samples</a>
-        <a href="#">Branding & Posters</a>
-        <a href="#">Office Designs</a>
-      </div>
-    </li>
-
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="pricing.html">Pricing</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
 
 <!-- HERO -->
+
 <section class="about-hero">
-  <h1>About Nexaaweb</h1>
-  <p>
-    Nexaaweb is a web & digital branding agency founded by Saher offering innovative digital solutions.
-    We specialize in website design, branding, marketing strategies, and AI-powered optimization to help businesses grow in today’s competitive digital landscape.
-  </p>
+
+<h1>About Nexaaweb</h1>
+
+<h3>Web Design, Branding & Digital Growth Agency</h3>
+
+<p>
+Nexaaweb is a creative web design and digital branding agency focused on helping businesses grow through powerful design, modern websites, and smart digital strategies.
+</p>
+
 </section>
 
-<!-- JOURNEY -->
-<section class="journey">
-  <div>
-    <h2>Our Journey</h2>
-    <p>
-      Nexaaweb started with a simple vision — to help businesses turn ideas into impactful digital experiences.
-    </p>
-    <p>
-      From designing modern business websites to building complete branding systems, our journey is focused on quality, innovation, and measurable growth.
-    </p>
-    <a href="#skills" class="btn-light">See Our Skills</a>
-  </div>
 
-  <div class="timeline-box">
-    <h2>Our Skills</h2>
-    <p>✔ Web Design & Development</p>
-    <p>✔ UI/UX Strategy</p>
-    <p>✔ Branding & Identity Design</p>
-    <p>✔ AI Optimization Tools</p>
-    <p>✔ Marketing Growth Planning</p>
-  </div>
+<!-- MISSION -->
+
+<section>
+
+<div class="container two-col">
+
+<div>
+
+<h2>Our Mission</h2>
+
+<p>
+Our mission is to help businesses build a powerful digital presence through modern websites, creative branding, and strategic digital solutions.
+</p>
+
+<p>
+We believe every business deserves a strong online identity that reflects its true value and attracts the right audience.
+</p>
+
+</div>
+
+<img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
+
+</div>
+
 </section>
+
+
+<!-- WHAT WE DO -->
+
+<section class="grey">
+
+<div class="container">
+
+<h2>What We Do</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1467232004584-a241de8b3b52">
+
+<h3>Web Design & Development</h3>
+
+<p>
+We design modern, responsive, and user-friendly websites that help businesses establish a professional online presence and convert visitors into customers.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf">
+
+<h3>Branding & Creative Design</h3>
+
+<p>
+From logos to brand identity and marketing materials, we create visually powerful designs that help businesses stand out and build strong brand recognition.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
+
+<h3>Business Consulting & Strategy</h3>
+
+<p>
+We help businesses grow with smart strategies, digital insights, and practical guidance that improve visibility, customer engagement, and long-term growth.
+</p>
+
+</div>
+
+</div>
+
+<p style="margin-top:40px;text-align:center;">
+We combine creativity, technology, and marketing ideas to build websites and digital identities that attract customers and grow businesses.
+</p>
+
+</div>
+
+</section>
+
 
 <!-- WHY CHOOSE -->
-<section class="why">
-  <h2>Why Choose Nexaaweb?</h2>
-  <p>
-    We provide AI optimization for faster tasks, personalized marketing ideas, and business growth guidance to help your company thrive.
-  </p>
-  <p>
-    Our approach combines creativity with data-driven strategies to deliver results that matter.
-  </p>
-  <a href="contact.html" class="btn-light">Hire Us</a>
+
+<section>
+
+<div class="container">
+
+<h2>Why Choose Nexaaweb</h2>
+
+<p>
+At Nexaaweb, we focus on creating solutions that are not only beautiful but also practical and business-driven.
+</p>
+
+<ul class="points">
+
+<li>Modern & professional website design</li>
+
+<li>Creative branding solutions</li>
+
+<li>Business-focused design approach</li>
+
+<li>Affordable solutions for startups & businesses</li>
+
+<li>Personalized attention for every client</li>
+
+<li>Future-ready digital strategies</li>
+
+</ul>
+
+</div>
+
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 Nexaaweb: Web & Digital Branding Agency. All Rights Reserved.</p>
-  <p>Email: <a href="mailto:nexaawebofficial@gmail.com">nexaawebofficial@gmail.com</a></p>
-  <p>Phone/WhatsApp: <a href="tel:+917411984925">+91 7411984925</a></p>
-</footer>
 
-<script src="assets/js/script.js"></script>
+<!-- APPROACH -->
+
+<section class="grey">
+
+<div class="container">
+
+<h2>Our Approach</h2>
+
+<p>
+Every project at Nexaaweb follows a clear process to ensure quality, creativity, and results.
+</p>
+
+<div class="steps">
+
+<div class="step">
+
+<span>1</span>
+Understand the business
+
+</div>
+
+<div class="step">
+
+<span>2</span>
+Plan the design strategy
+
+</div>
+
+<div class="step">
+
+<span>3</span>
+Create modern & impactful designs
+
+</div>
+
+<div class="step">
+
+<span>4</span>
+Optimize for performance & growth
+
+</div>
+
+<div class="step">
+
+<span>5</span>
+Deliver results that help businesses grow
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- VISION -->
+
+<section>
+
+<div class="container two-col">
+
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+
+<div>
+
+<h2>Our Vision</h2>
+
+<p>
+Our vision is to build Nexaaweb into a creative digital agency that helps businesses worldwide grow through design, technology, and innovation.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOUNDER -->
+
+<section class="grey">
+
+<div class="container">
+
+<h2>Founder</h2>
+
+<p>
+Nexaaweb started with a simple idea — turning creative ideas into powerful digital experiences.
+</p>
+
+<p>
+Founded by Saher, Nexaaweb was created with a passion for design, innovation, and helping businesses grow in the digital world.
+</p>
+
+<p>
+What began as a creative vision is now growing into a platform where modern design, branding, and strategic thinking come together to help businesses build a strong online presence.
+</p>
+
+<p>
+Nexaaweb focuses on combining creativity with smart digital strategies to create websites and branding that are not only visually impressive but also built for real business growth.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<h2>Let's Build Something Amazing Together</h2>
+
+<p>
+If you're looking for a modern website, strong branding, or smart business strategies, Nexaaweb is here to help.
+</p>
+
+<a href="mailto:nexaawebofficial@gmail.com" class="btn">
+Start Your Project
+</a>
+
+</section>
+
+
 </body>
 </html>
