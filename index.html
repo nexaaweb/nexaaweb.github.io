@@ -3,344 +3,434 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nexaaweb | Home</title>
+
+<title>Nexaaweb | Web Design, Branding & Digital Growth</title>
+
 <link rel="stylesheet" href="assets/css/style.css">
+
 <style>
 
-/* ================= HERO ================= */
+/* ---------- HEADER ---------- */
 
-.hero {
-  height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-              url('https://images.unsplash.com/photo-1557804506-669a67965ba0');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  padding: 20px;
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:#fff;
+border-bottom:1px solid #eee;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-  color: #fff;
-  text-shadow: 0 0 15px rgba(196,22,28,0.8);
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#c4161c;
 }
 
-.hero p {
-  max-width: 700px;
-  margin: auto;
-  font-size: 18px;
-  margin-bottom: 30px;
+.nav-links{
+list-style:none;
+display:flex;
+gap:30px;
 }
 
-.btn {
-  display: inline-block;
-  padding: 12px 28px;
-  background: #c4161c;
-  color: white;
-  border-radius: 6px;
-  transition: 0.3s;
+.nav-links a{
+text-decoration:none;
+color:#000;
+font-weight:500;
 }
 
-.btn:hover {
-  background: #ff4d4d;
+.nav-links a:hover{
+color:#c4161c;
+border-bottom:2px solid #c4161c;
 }
 
-/* ================= FEATURED ================= */
+/* ---------- HERO ---------- */
 
-.featured {
-  padding: 80px 10%;
-  text-align: center;
-  background: #f4f6f8;
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url("https://images.unsplash.com/photo-1557804506-669a67965ba0");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:#fff;
+padding:20px;
 }
 
-.featured h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap: 25px;
+.hero p{
+font-size:18px;
+max-width:700px;
+margin:auto;
+margin-bottom:30px;
 }
 
-.card {
-  background: white;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  transition: 0.3s;
+.btn{
+background:#c4161c;
+padding:14px 32px;
+color:white;
+border-radius:6px;
+text-decoration:none;
 }
 
-.card:hover {
-  transform: translateY(-8px);
+.btn:hover{
+background:#ff4d4d;
 }
 
-.card h3 {
-  margin-bottom: 15px;
-  color: #c4161c;
+/* ---------- MAIN SERVICES ---------- */
+
+.main-services{
+padding:80px 10%;
+text-align:center;
+background:#fff;
 }
 
-/* ================= CTA ================= */
-
-.cta {
-  background: #c4161c;
-  color: white;
-  text-align: center;
-  padding: 80px 10%;
+.main-services h2{
+font-size:32px;
+margin-bottom:10px;
 }
 
-.cta h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+.services-grid{
+margin-top:50px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
 }
 
-.cta p {
-  max-width: 600px;
-  margin: auto;
-  margin-bottom: 30px;
+.service-card{
+background:#fff;
+border-radius:10px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+padding:40px;
+transition:0.3s;
 }
 
-.form-box {
-  max-width: 500px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.service-card:hover{
+transform:translateY(-10px);
+}
+
+.service-card h3{
+color:#c4161c;
+margin-bottom:15px;
+}
+
+/* ---------- PORTFOLIO ---------- */
+
+.portfolio{
+background:#f5f5f5;
+padding:80px 10%;
+text-align:center;
+}
+
+.projects{
+margin-top:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.project img{
+width:100%;
+border-radius:8px;
+}
+
+/* ---------- PROCESS ---------- */
+
+.process{
+padding:80px 10%;
+text-align:center;
+}
+
+.steps{
+margin-top:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.step{
+background:#fff;
+padding:30px;
+border-radius:8px;
+box-shadow:0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* ---------- CTA ---------- */
+
+.cta{
+background:#c4161c;
+color:white;
+text-align:center;
+padding:80px 10%;
+}
+
+.form-box{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+margin-top:20px;
 }
 
 .form-box input,
-.form-box textarea {
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
+.form-box textarea{
+padding:12px;
+border:none;
+border-radius:6px;
 }
 
-.form-box button {
-  padding: 12px;
-  background: white;
-  color: #c4161c;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
+/* ---------- FOOTER ---------- */
+
+footer{
+background:
+linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),
+url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f");
+background-size:cover;
+background-position:center;
+color:white;
+padding:60px 10%;
 }
 
-.form-box button:hover {
-  background: #ff4d4d;
-  color: white;
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+}
+
+footer h3{
+margin-bottom:15px;
+}
+
+footer a{
+color:white;
+text-decoration:none;
+}
+
+footer a:hover{
+color:#ff4d4d;
+}
+
+.copyright{
+text-align:center;
+margin-top:40px;
+font-size:14px;
 }
 
 </style>
 </head>
+
 <body>
 
-<!-- NAVBAR -->
+<!-- HEADER -->
+
 <nav class="navbar">
-  <div class="logo">Nexaaweb</div>
-  <div class="menu-toggle">&#9776;</div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
 
-    <li class="dropdown">
-<a href="services.html">Services ▾</a>
+<div class="logo">NEXAAWEB</div>
 
-<div class="dropdown-menu">
+<ul class="nav-links">
 
-<!-- Web Development -->
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="portfolio.html">Portfolio</a></li>
+<li><a href="blog.html">Blog</a></li>
+<li><a href="pricing.html">Pricing</a></li>
+<li><a href="contact.html">Contact</a></li>
 
-<div class="sub-dropdown">
-<a href="services/web.html">Web Design & Development ▸</a>
+</ul>
 
-<div class="sub-menu">
-<a href="services/business-website.html">Business Website Design</a>
-<a href="services/responsive-website.html">Responsive & Mobile-Friendly Websites</a>
-<a href="services/landing-page.html">Landing Page Design</a>
-<a href="services/website-redesign.html">Website Redesign & Modern UI/UX</a>
-<a href="services/ecommerce.html">E-commerce Website Development</a>
-<a href="services/maintenance.html">Website Maintenance & Support</a>
-<a href="services/seo.html">SEO & Ranking Strategies</a>
-<a href="services/ai-optimization.html">AI-Powered Website Optimization</a>
-</div>
-
-</div>
-
-
-<!-- Branding -->
-
-<div class="sub-dropdown">
-<a href="services/branding.html">Branding & Creative Design ▸</a>
-
-<div class="sub-menu">
-<a href="services/logo-design.html">Logo Design</a>
-<a href="services/brand-identity.html">Brand Identity Design</a>
-<a href="services/business-card.html">Business Card Design</a>
-<a href="services/poster-design.html">Poster & Banner Design</a>
-<a href="services/brochure.html">Brochure / Flyer / Company Profile</a>
-<a href="services/social-media.html">Social Media Post Design</a>
-<a href="services/qr-design.html">QR Code Design</a>
-</div>
-
-</div>
-
-
-<!-- Office Designs -->
-
-<div class="sub-dropdown">
-<a href="services/office-designs.html">Business & Office Designs ▸</a>
-
-<div class="sub-menu">
-<a href="services/resume.html">Resume / CV Design</a>
-<a href="services/certificate.html">Certificate Design</a>
-<a href="services/ppt.html">Professional PPT Design</a>
-<a href="services/nameplate.html">Name Plate Design</a>
-<a href="services/office-plate.html">Office Plate Design</a>
-<a href="services/menu-card.html">Menu Card Design</a>
-</div>
-
-</div>
-
-
-<!-- Event Designs -->
-
-<div class="sub-dropdown">
-<a href="services/event-designs.html">Event & Recognition Designs ▸</a>
-
-<div class="sub-menu">
-<a href="services/award.html">Award & Trophy Design</a>
-<a href="services/event-certificate.html">Event Certificate Design</a>
-<a href="services/recognition.html">Recognition Materials Design</a>
-</div>
-
-</div>
-
-
-<!-- Marketing -->
-
-<div class="sub-dropdown">
-<a href="services/marketing.html">Digital Marketing ▸</a>
-
-<div class="sub-menu">
-<a href="services/content-creation.html">Social Media Content Creation</a>
-<a href="services/seo-setup.html">SEO Setup & Optimization</a>
-<a href="services/lead-generation.html">Lead Generation Strategy</a>
-<a href="services/marketing-ideas.html">Digital Marketing Ideas</a>
-</div>
-
-</div>
-
-
-<!-- AI -->
-
-<div class="sub-dropdown">
-<a href="services/ai.html">AI & Automation ▸</a>
-
-<div class="sub-menu">
-<a href="services/ai-tools.html">AI Tools Integration for Businesses</a>
-<a href="services/ai-content.html">AI Content Creation Assistance</a>
-<a href="services/automation.html">Marketing Automation Setup</a>
-</div>
-
-</div>
-
-
-<!-- Consulting -->
-
-<div class="sub-dropdown">
-<a href="services/consulting.html">Consulting & Strategy ▸</a>
-
-<div class="sub-menu">
-<a href="services/business-consulting.html">Business Consulting</a>
-<a href="services/web-consulting.html">Web & Digital Consulting</a>
-<a href="services/strategy-consulting.html">Strategy Consulting</a>
-<a href="services/management-consulting.html">Management Consulting</a>
-<a href="services/branding-strategy.html">Branding Strategy Consultation</a>
-<a href="services/business-growth.html">Business Growth Strategy</a>
-<a href="services/improvement.html">Business Improvement Guidance</a>
-<a href="services/data-management.html">Invoice / Bill & Data Management</a>
-</div>
-
-</div>
-
-</div>
-</li>
-
-    <li class="dropdown">
-      <a href="portfolio.html">Portfolio ▾</a>
-      <div class="dropdown-menu">
-        <a href="#">Website Design Samples</a>
-        <a href="#">Branding & Posters</a>
-        <a href="#">Office Designs</a>
-      </div>
-    </li>
-
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="pricing.html">Pricing</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
 </nav>
 
 <!-- HERO -->
+
 <section class="hero">
-  <div>
-    <h1>Welcome to Nexaaweb – Where Ideas Flow into Designs</h1>
-    <p>Nexaaweb is a web & digital branding agency specializing in website design, branding, and AI-powered growth strategies for businesses.</p>
-    <a href="services.html" class="btn">Explore Services</a>
-  </div>
+
+<div>
+
+<h1>Web Design, Branding & Digital Growth Agency</h1>
+
+<p>
+We create modern websites, powerful branding, and smart business strategies to help your business grow online.
+</p>
+
+<a href="services.html" class="btn">Explore Services</a>
+
+</div>
+
 </section>
 
-<!-- FEATURED SERVICES -->
-<section class="featured">
-  <h2>Our Featured Services</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Website Design</h3>
-      <p>Custom business websites with modern UI/UX and responsive layouts.</p>
-    </div>
-    <div class="card">
-      <h3>Branding</h3>
-      <p>Logos, posters, and identity systems to elevate your brand presence.</p>
-    </div>
-    <div class="card">
-      <h3>Marketing Growth</h3>
-      <p>Strategic marketing ideas to boost engagement and leads.</p>
-    </div>
-    <div class="card">
-      <h3>AI Optimization</h3>
-      <p>Smart automation and optimization to improve performance.</p>
-    </div>
-  </div>
-  <br><br>
-  <a href="portfolio.html" class="btn">View Portfolio</a>
+<!-- MAIN SERVICES -->
+
+<section class="main-services">
+
+<h2>Our Main Services</h2>
+<p>Helping businesses grow with creativity and strategy</p>
+
+<div class="services-grid">
+
+<div class="service-card">
+<h3>Web Design & Development</h3>
+<p>Modern, responsive, and high-performance websites designed to convert visitors into customers.</p>
+</div>
+
+<div class="service-card">
+<h3>Branding & Creative Design</h3>
+<p>Unique logos, brand identities, and marketing designs to make your brand stand out.</p>
+</div>
+
+<div class="service-card">
+<h3>Consulting & Strategy</h3>
+<p>Professional guidance and actionable strategies to grow your business and online presence.</p>
+</div>
+
+</div>
+
+<br>
+
+<a href="services.html" class="btn">View All Services</a>
+
+</section>
+
+<!-- PORTFOLIO -->
+
+<section class="portfolio">
+
+<h2>Featured Projects</h2>
+<p>A glimpse of our creative and impactful work</p>
+
+<div class="projects">
+
+<div class="project">
+<img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+<p>Business Website Design</p>
+</div>
+
+<div class="project">
+<img src="https://images.unsplash.com/photo-1547658719-da2b51169166">
+<p>Branding & Posters</p>
+</div>
+
+<div class="project">
+<img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8">
+<p>AI Optimization Solutions</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROCESS -->
+
+<section class="process">
+
+<h2>Our Process</h2>
+
+<div class="steps">
+
+<div class="step">
+<h4>Understanding Your Business</h4>
+<p>We analyze your goals and audience.</p>
+</div>
+
+<div class="step">
+<h4>Planning & Strategy</h4>
+<p>Creating the right digital strategy.</p>
+</div>
+
+<div class="step">
+<h4>Design & Development</h4>
+<p>Creative and technical implementation.</p>
+</div>
+
+<div class="step">
+<h4>Optimization & Support</h4>
+<p>Continuous improvement and support.</p>
+</div>
+
+</div>
+
 </section>
 
 <!-- CTA -->
-<section class="cta">
-  <h2>Ready to Transform Your Business?</h2>
-  <p>Boost your leads and growth with our expert marketing and AI optimization tips.</p>
 
-  <div class="form-box">
-    <input type="text" placeholder="Your Name">
-    <input type="email" placeholder="Your Email">
-    <textarea rows="4" placeholder="Your Message"></textarea>
-    <button>Contact Us</button>
-  </div>
+<section class="cta">
+
+<h2>Ready to Transform Your Business?</h2>
+
+<p>Whether you need a modern website, branding, or consulting — Nexaaweb is here to help.</p>
+
+<div class="form-box">
+
+<input type="text" placeholder="Name">
+
+<input type="email" placeholder="Email">
+
+<textarea rows="4" placeholder="Message"></textarea>
+
+<button class="btn">Contact Us</button>
+
+</div>
+
 </section>
 
 <!-- FOOTER -->
+
 <footer>
-  <p>© 2026 Nexaaweb: Web & Digital Branding Agency. All Rights Reserved.</p>
-  <p>Email: <a href="mailto:nexaawebofficial@gmail.com">nexaawebofficial@gmail.com</a></p>
-  <p>Phone/WhatsApp: <a href="tel:+917411984925">+91 7411984925</a></p>
+
+<div class="footer-grid">
+
+<div>
+<h2>Nexaaweb</h2>
+<p>Web Design, Branding & Digital Growth Agency helping businesses build strong digital presence.</p>
+</div>
+
+<div>
+<h3>Quick Links</h3>
+<p><a href="about.html">About</a></p>
+<p><a href="portfolio.html">Portfolio</a></p>
+<p><a href="blog.html">Blog</a></p>
+<p><a href="pricing.html">Pricing</a></p>
+<p><a href="contact.html">Contact</a></p>
+</div>
+
+<div>
+<h3>Main Services</h3>
+<p><a href="services/web-design/index.html">Web Design & Development</a></p>
+<p><a href="services/branding/index.html">Branding & Creative Design</a></p>
+<p><a href="services/consulting/index.html">Consulting & Strategy</a></p>
+</div>
+
+<div>
+<h3>Contact</h3>
+<p>Email: nexaawebofficial@gmail.com</p>
+<p>Phone: +91 7411984925</p>
+<p>
+<a href="https://www.instagram.com/nexaaweb">Instagram</a><br>
+<a href="https://www.linkedin.com/in/saher-fatehmohammed-a61079337/">LinkedIn</a>
+</p>
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 Nexaaweb: Web Design, Branding & Digital Growth Agency. All Rights Reserved.
+
+</div>
+
 </footer>
 
-<script src="assets/js/script.js"></script>
 </body>
 </html>
