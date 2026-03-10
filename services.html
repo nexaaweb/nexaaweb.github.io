@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,15 +20,142 @@ box-sizing:border-box;
 
 body{
 font-family:Poppins,sans-serif;
-color:#1A1A1A;
-background:#FFFFFF;
 line-height:1.7;
+background:#fff;
 }
 
-/* SECTIONS */
+/* ================= NAVBAR ================= */
+
+header{
+background:#fff;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+}
+
+.logo{
+font-size:22px;
+font-weight:700;
+color:#E31E24;
+}
+
+.nav-links{
+list-style:none;
+display:flex;
+gap:30px;
+}
+
+.nav-links li{
+position:relative;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#222;
+font-weight:500;
+}
+
+/* ================= MEGA MENU ================= */
+
+.mega-menu{
+
+position:absolute;
+top:100%;
+left:0;
+
+width:900px;
+
+background:#fff;
+
+display:none;
+
+padding:30px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+}
+
+.nav-links li:hover .mega-menu{
+display:grid;
+}
+
+.mega-menu h4{
+margin-bottom:10px;
+color:#E31E24;
+}
+
+.mega-menu a{
+display:block;
+padding:4px 0;
+font-size:14px;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+
+background:
+
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+url("https://via.placeholder.com/1600x800");
+
+height:70vh;
+
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+
+color:#fff;
+
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+.hero h3{
+color:#ff4b4b;
+margin-bottom:15px;
+}
+
+.hero p{
+max-width:650px;
+margin:auto;
+margin-bottom:25px;
+}
+
+.btn{
+
+padding:14px 30px;
+
+background:#E31E24;
+
+color:#fff;
+
+text-decoration:none;
+
+border-radius:6px;
+
+}
+
+/* ================= SECTIONS ================= */
 
 section{
-padding:90px 10%;
+padding:80px 10%;
 }
 
 .container{
@@ -34,147 +163,122 @@ max-width:1200px;
 margin:auto;
 }
 
-/* HERO */
-
-.hero{
-height:70vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
-
-background:
-linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
-url("https://images.unsplash.com/photo-1557804506-669a67965ba0");
-
-background-size:cover;
-background-position:center;
-}
-
-.hero h1{
-font-size:50px;
-margin-bottom:10px;
-}
-
-.hero h3{
-color:#E31E24;
-font-weight:500;
-margin-bottom:20px;
-}
-
-.hero p{
-max-width:700px;
-margin:auto;
-margin-bottom:30px;
-}
-
-.btn{
-display:inline-block;
-padding:14px 32px;
-background:#BF0A0A;
-color:white;
-text-decoration:none;
-border-radius:6px;
-font-weight:600;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#8e0000;
-}
-
-/* HIGHLIGHT SERVICES */
+/* ================= MAIN SERVICES ================= */
 
 .grid3{
+
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
 gap:30px;
+
 margin-top:40px;
+
 }
 
-.highlight{
-background:white;
-padding:30px;
+.card{
+
+background:#fff;
+
+padding:25px;
+
 border-radius:10px;
-box-shadow:0 10px 25px rgba(0,0,0,0.05);
-transition:0.4s;
-border-bottom:3px solid transparent;
+
+box-shadow:0 10px 20px rgba(0,0,0,0.05);
+
+transition:.3s;
+
 }
 
-.highlight:hover{
-transform:translateY(-10px);
-border-bottom:3px solid #E31E24;
+.card:hover{
+transform:translateY(-6px);
 }
 
-.highlight img{
+.card img{
 width:100%;
 border-radius:8px;
 margin-bottom:15px;
 }
 
-/* SERVICES */
+/* ================= ALL SERVICES ================= */
 
 .services-grid{
+
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
 gap:30px;
+
 margin-top:40px;
+
 }
 
 .service-card{
-background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 10px 25px rgba(0,0,0,0.05);
-transition:0.3s;
-}
 
-.service-card:hover{
-transform:translateY(-8px);
-}
+background:#fff;
 
-.service-card ul{
-margin-top:15px;
-padding-left:18px;
-}
-
-.service-card li{
-margin-bottom:6px;
-}
-
-/* GREY */
-
-.grey{
-background:#F8F9FA;
-}
-
-/* PROCESS */
-
-.steps{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:25px;
-margin-top:40px;
-}
-
-.step{
-background:white;
 padding:25px;
-border-radius:8px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
-text-align:center;
+
+border-radius:10px;
+
+box-shadow:0 10px 20px rgba(0,0,0,0.05);
+
 }
 
-.step span{
-display:block;
-font-size:24px;
-font-weight:bold;
-color:#E31E24;
+.service-card img{
+width:100%;
+border-radius:8px;
 margin-bottom:10px;
 }
 
-/* WHY */
+.service-card ul{
+padding-left:18px;
+margin-top:10px;
+}
+
+/* ================= PROCESS ================= */
+
+.steps{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+margin-top:40px;
+
+}
+
+.step{
+
+text-align:center;
+
+padding:25px;
+
+background:#fff;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.05);
+
+border-radius:8px;
+
+}
+
+.step img{
+width:100%;
+border-radius:8px;
+margin-bottom:10px;
+}
+
+.step span{
+font-size:22px;
+color:#E31E24;
+font-weight:bold;
+}
+
+/* ================= WHY ================= */
 
 .points{
 margin-top:20px;
@@ -184,38 +288,56 @@ margin-top:20px;
 margin-bottom:8px;
 }
 
-/* CTA */
+/* ================= CTA ================= */
 
 .cta{
+
 background:#E31E24;
-color:white;
+
+color:#fff;
+
 text-align:center;
+
 }
 
-.cta p{
-max-width:600px;
-margin:auto;
-margin-bottom:30px;
+.cta img{
+width:100%;
+max-width:500px;
+margin-bottom:20px;
+border-radius:8px;
 }
 
 .cta-buttons{
+
+margin-top:20px;
+
 display:flex;
+
 justify-content:center;
+
 gap:20px;
+
 flex-wrap:wrap;
+
 }
 
 .btn-white{
-background:white;
+
+background:#fff;
+
 color:#E31E24;
+
 }
 
-/* RESPONSIVE */
+/* ================= MOBILE ================= */
 
 @media(max-width:900px){
 
-.hero h1{
-font-size:36px;
+.mega-menu{
+position:static;
+width:100%;
+display:block;
+box-shadow:none;
 }
 
 }
@@ -225,6 +347,96 @@ font-size:36px;
 </head>
 
 <body>
+
+<!-- HEADER -->
+
+<header>
+
+<nav>
+
+<div class="logo">Nexaaweb</div>
+
+<ul class="nav-links">
+
+<li><a href="#">Home</a></li>
+
+<li>
+
+<a href="services.html">Services ▼</a>
+
+<div class="mega-menu">
+
+<div>
+
+<h4>Web Design & Development</h4>
+
+<a href="#">Business Website Design</a>
+<a href="#">Responsive & Mobile-Friendly Websites</a>
+<a href="#">Landing Page Design</a>
+<a href="#">Website Redesign & Modern UI/UX</a>
+<a href="#">E-commerce Website Development</a>
+<a href="#">Website Maintenance & Support</a>
+<a href="#">SEO & Ranking Strategies</a>
+<a href="#">AI-Powered Website Optimization</a>
+
+</div>
+
+<div>
+
+<h4>Branding & Creative Design</h4>
+
+<a href="#">Logo Design</a>
+<a href="#">Brand Identity Design</a>
+<a href="#">Business Card Design</a>
+<a href="#">Poster & Banner Design</a>
+<a href="#">Brochure / Flyer / Company Profile</a>
+<a href="#">Social Media Post Design</a>
+<a href="#">QR Code Design</a>
+
+<h4 style="margin-top:15px;">Digital Marketing</h4>
+
+<a href="#">Social Media Content Creation</a>
+<a href="#">SEO Setup & Optimization</a>
+<a href="#">Lead Generation Strategy</a>
+<a href="#">Digital Marketing Ideas</a>
+
+</div>
+
+<div>
+
+<h4>Consulting & Strategy</h4>
+
+<a href="#">Business Consulting</a>
+<a href="#">Web & Digital Consulting</a>
+<a href="#">Strategy Consulting</a>
+<a href="#">Management Consulting</a>
+<a href="#">Branding Strategy Consultation</a>
+<a href="#">Business Growth Strategy</a>
+<a href="#">Business Improvement Guidance</a>
+<a href="#">Invoice / Bill & Data Management</a>
+
+<h4 style="margin-top:15px;">AI & Automation</h4>
+
+<a href="#">AI Tools Integration for Businesses</a>
+<a href="#">AI Content Creation Assistance</a>
+<a href="#">Marketing Automation Setup</a>
+
+</div>
+
+</div>
+
+</li>
+
+<li><a href="#">Portfolio</a></li>
+<li><a href="#">Blog</a></li>
+<li><a href="#">Pricing</a></li>
+<li><a href="#">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
 
 <!-- HERO -->
 
@@ -249,20 +461,19 @@ From modern website development and powerful branding to smart business strategi
 
 </section>
 
-
 <!-- MAIN SERVICES -->
 
 <section>
 
 <div class="container">
 
-<h2>Main Services</h2>
+<h2>Main Services Highlight</h2>
 
 <div class="grid3">
 
-<div class="highlight">
+<div class="card">
 
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+<img src="https://via.placeholder.com/600x400">
 
 <h3>Web Design & Development</h3>
 
@@ -274,9 +485,9 @@ Modern, responsive, and high-performance websites designed to represent your bus
 
 </div>
 
-<div class="highlight">
+<div class="card">
 
-<img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a">
+<img src="https://via.placeholder.com/600x400">
 
 <h3>Branding & Creative Design</h3>
 
@@ -288,9 +499,9 @@ Unique logos, brand identities, and creative designs that help businesses stand 
 
 </div>
 
-<div class="highlight">
+<div class="card">
 
-<img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
+<img src="https://via.placeholder.com/600x400">
 
 <h3>Consulting & Strategy</h3>
 
@@ -308,160 +519,6 @@ Strategic guidance and practical solutions to help businesses grow, improve oper
 
 </section>
 
-
-<!-- ALL SERVICES -->
-
-<section class="grey">
-
-<div class="container">
-
-<h2>All Services</h2>
-
-<div class="services-grid">
-
-<div class="service-card">
-
-<h3>Web Design & Development</h3>
-
-<p>Modern websites built with performance, usability, and design in mind.</p>
-
-<ul>
-
-<li>Business Website Design</li>
-<li>Responsive & Mobile-Friendly Websites</li>
-<li>Landing Page Design</li>
-<li>Website Redesign & Modern UI/UX</li>
-<li>E-commerce Website Development</li>
-<li>Website Maintenance & Support</li>
-<li>SEO & Ranking Strategies</li>
-<li>AI-Powered Website Optimization</li>
-
-</ul>
-
-</div>
-
-
-<div class="service-card">
-
-<h3>Branding & Creative Design</h3>
-
-<p>Creative branding solutions to build strong brand identity.</p>
-
-<ul>
-
-<li>Logo Design</li>
-<li>Brand Identity Design</li>
-<li>Business Card Design</li>
-<li>Poster & Banner Design</li>
-<li>Brochure / Flyer / Company Profile</li>
-<li>Social Media Post Design</li>
-<li>QR Code Design</li>
-
-</ul>
-
-</div>
-
-
-<div class="service-card">
-
-<h3>Consulting & Strategy</h3>
-
-<p>Professional guidance for better digital growth and business improvement.</p>
-
-<ul>
-
-<li>Business Consulting</li>
-<li>Web & Digital Consulting</li>
-<li>Strategy Consulting</li>
-<li>Management Consulting</li>
-<li>Branding Strategy Consultation</li>
-<li>Business Growth Strategy</li>
-<li>Business Improvement Guidance</li>
-<li>Invoice / Bill & Data Management</li>
-
-</ul>
-
-</div>
-
-
-<div class="service-card">
-
-<h3>Business & Office Designs</h3>
-
-<p>Professional design materials for office and workplace needs.</p>
-
-<ul>
-
-<li>Resume / CV Design</li>
-<li>Certificate Design</li>
-<li>Professional PPT Design</li>
-<li>Name Plate Design</li>
-<li>Office Plate Design</li>
-<li>Menu Card Design</li>
-
-</ul>
-
-</div>
-
-
-<div class="service-card">
-
-<h3>Event & Recognition Designs</h3>
-
-<p>Design solutions for awards, recognition, and special events.</p>
-
-<ul>
-
-<li>Award & Trophy Design</li>
-<li>Event Certificate Design</li>
-<li>Recognition Materials Design</li>
-
-</ul>
-
-</div>
-
-
-<div class="service-card">
-
-<h3>Digital Marketing</h3>
-
-<p>Marketing strategies to improve visibility and generate leads.</p>
-
-<ul>
-
-<li>Social Media Content Creation</li>
-<li>SEO Setup & Optimization</li>
-<li>Lead Generation Strategy</li>
-<li>Digital Marketing Ideas</li>
-
-</ul>
-
-</div>
-
-
-<div class="service-card">
-
-<h3>AI & Automation</h3>
-
-<p>Modern AI solutions that improve productivity and marketing efficiency.</p>
-
-<ul>
-
-<li>AI Tools Integration for Businesses</li>
-<li>AI Content Creation Assistance</li>
-<li>Marketing Automation Setup</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
 <!-- PROCESS -->
 
 <section>
@@ -474,6 +531,8 @@ Strategic guidance and practical solutions to help businesses grow, improve oper
 
 <div class="step">
 
+<img src="https://via.placeholder.com/500x300">
+
 <span>1</span>
 
 <h4>Understanding Your Business</h4>
@@ -483,6 +542,8 @@ Strategic guidance and practical solutions to help businesses grow, improve oper
 </div>
 
 <div class="step">
+
+<img src="https://via.placeholder.com/500x300">
 
 <span>2</span>
 
@@ -494,6 +555,8 @@ Strategic guidance and practical solutions to help businesses grow, improve oper
 
 <div class="step">
 
+<img src="https://via.placeholder.com/500x300">
+
 <span>3</span>
 
 <h4>Design & Development</h4>
@@ -504,6 +567,8 @@ Strategic guidance and practical solutions to help businesses grow, improve oper
 
 <div class="step">
 
+<img src="https://via.placeholder.com/500x300">
+
 <span>4</span>
 
 <h4>Optimization & Improvement</h4>
@@ -513,6 +578,8 @@ Strategic guidance and practical solutions to help businesses grow, improve oper
 </div>
 
 <div class="step">
+
+<img src="https://via.placeholder.com/500x300">
 
 <span>5</span>
 
@@ -528,12 +595,13 @@ Strategic guidance and practical solutions to help businesses grow, improve oper
 
 </section>
 
-
 <!-- WHY CHOOSE -->
 
-<section class="grey">
+<section>
 
 <div class="container">
+
+<img src="https://via.placeholder.com/900x400">
 
 <h2>Why Choose Nexaaweb</h2>
 
@@ -548,7 +616,7 @@ Strategic guidance and practical solutions to help businesses grow, improve oper
 
 </ul>
 
-<p style="margin-top:20px">
+<p style="margin-top:15px">
 
 At Nexaaweb, we focus on creating solutions that are not only visually impressive but also built for real business growth.
 
@@ -558,10 +626,11 @@ At Nexaaweb, we focus on creating solutions that are not only visually impressiv
 
 </section>
 
-
 <!-- CTA -->
 
 <section class="cta">
+
+<img src="https://via.placeholder.com/800x400">
 
 <h2>Ready to Build Something Great?</h2>
 
