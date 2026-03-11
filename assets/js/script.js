@@ -1,41 +1,76 @@
-// Mobile Menu Toggle
-const toggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
-
-toggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
-
+// ==========================
 // MOBILE MENU TOGGLE
+// ==========================
 
 const toggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 
-toggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
+if (toggle && navLinks) {
+  toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+}
 
 
 
-// TESTIMONIALS AUTO SLIDER
+// ==========================
+// TESTIMONIALS SLIDER
+// ==========================
 
-let testimonials = document.querySelectorAll(".testimonial-card");
+const track = document.querySelector(".testimonials-track");
+const cards = document.querySelectorAll(".testimonial-card");
+const nextBtn = document.querySelector(".testimonial-arrow.right");
+const prevBtn = document.querySelector(".testimonial-arrow.left");
+
 let index = 0;
 
-function showTestimonial() {
+function updateSlider() {
 
-  testimonials.forEach(card => {
-    card.classList.remove("active");
-  });
+  if (!track || cards.length === 0) return;
 
-  index++;
+  const cardWidth = cards[0].offsetWidth + 30;
 
-  if (index >= testimonials.length) {
-    index = 0;
-  }
-
-  testimonials[index].classList.add("active");
+  track.style.transform = `translateX(-${index * cardWidth}px)`;
 
 }
 
-setInterval(showTestimonial, 4000);
+// NEXT BUTTON
+if (nextBtn) {
+  nextBtn.addEventListener("click", () => {
+
+    if (index < cards.length - 3) {
+      index++;
+      updateSlider();
+    }
+
+  });
+}
+
+// PREVIOUS BUTTON
+if (prevBtn) {
+  prevBtn.addEventListener("click", () => {
+
+    if (index > 0) {
+      index--;
+      updateSlider();
+    }
+
+  });
+}
+
+
+// AUTO SLIDE
+
+setInterval(() => {
+
+  if (!track || cards.length === 0) return;
+
+  if (index < cards.length - 3) {
+    index++;
+  } else {
+    index = 0;
+  }
+
+  updateSlider();
+
+}, 4000);
