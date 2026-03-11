@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -85,14 +86,15 @@ text-decoration:none;
 font-weight:600;
 }
 
-/* ---------- SERVICES HIGHLIGHT ---------- */
+/* ---------- CINEMATIC SERVICES ---------- */
 
-.services-highlight{
+.services-cinematic{
 display:flex;
-align-items:center;
 justify-content:space-between;
-padding:80px 10%;
+align-items:center;
+padding:100px 10%;
 background:#fff;
+overflow:hidden;
 }
 
 .services-left{
@@ -100,7 +102,7 @@ max-width:400px;
 }
 
 .services-left h2{
-font-size:32px;
+font-size:34px;
 color:black;
 }
 
@@ -109,7 +111,9 @@ color:#c4161c;
 margin-top:10px;
 }
 
-.services-right{
+.services-stage{
+width:500px;
+height:300px;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -119,21 +123,65 @@ align-items:center;
 width:420px;
 height:260px;
 background:#111;
-border-radius:10px;
+border-radius:12px;
 padding:15px;
-box-shadow:0 20px 50px rgba(0,0,0,0.2);
+box-shadow:0 30px 70px rgba(0,0,0,0.25);
+animation:laptopFly 1.2s ease;
 }
 
 .screen{
 background:white;
 height:100%;
-padding:25px;
 border-radius:6px;
+padding:25px;
+text-align:center;
 }
 
 .screen h4{
 color:#c4161c;
 margin-bottom:10px;
+}
+
+@keyframes laptopFly{
+
+0%{
+transform:translateX(400px) rotate(10deg);
+opacity:0;
+}
+
+100%{
+transform:translateX(0) rotate(0);
+opacity:1;
+}
+
+}
+
+/* helicopter board */
+
+.helicopter-board{
+margin:60px auto;
+width:260px;
+background:#c4161c;
+color:white;
+padding:18px;
+text-align:center;
+font-weight:600;
+border-radius:8px;
+animation:dropBoard 1.5s ease;
+}
+
+@keyframes dropBoard{
+
+0%{
+transform:translateY(-200px);
+opacity:0;
+}
+
+100%{
+transform:translateY(0);
+opacity:1;
+}
+
 }
 
 /* ---------- PORTFOLIO ---------- */
@@ -283,9 +331,9 @@ to help your business grow online.
 
 </section>
 
-<!-- SERVICES HIGHLIGHT -->
+<!-- CINEMATIC SERVICES -->
 
-<section class="services-highlight">
+<section class="services-cinematic">
 
 <div class="services-left">
 
@@ -294,9 +342,9 @@ to help your business grow online.
 
 </div>
 
-<div class="services-right">
+<div class="services-stage">
 
-<div class="laptop">
+<div class="laptop" id="laptop">
 
 <div class="screen">
 
@@ -313,6 +361,10 @@ Modern, responsive, and high-performance websites designed to convert visitors i
 </div>
 
 </section>
+
+<div class="helicopter-board">
+View All Services
+</div>
 
 <!-- PORTFOLIO -->
 
@@ -441,8 +493,6 @@ Modern, responsive, and high-performance websites designed to convert visitors i
 
 </footer>
 
-<!-- SERVICE CHANGE SCRIPT -->
-
 <script>
 
 const services = [
@@ -473,9 +523,18 @@ i = (i + 1) % services.length;
 document.getElementById("service-title").innerText = services[i].title;
 document.getElementById("service-text").innerText = services[i].text;
 
-},4000);
+const laptop=document.getElementById("laptop");
+
+laptop.style.animation="none";
+
+setTimeout(()=>{
+laptop.style.animation="laptopFly 1.2s ease";
+},50);
+
+},5000);
 
 </script>
 
 </body>
 </html>
+```
