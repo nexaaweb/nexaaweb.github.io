@@ -223,9 +223,17 @@ padding-top:20px;
 
 padding:110px 8%;
 
-background:#f7f7f7;
-
 text-align:center;
+
+background:
+linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+url("https://i.pinimg.com/1200x/30/3c/3d/303c3dd05c4c501fe38df6cd32ec820f.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+background-repeat:no-repeat;
 }
 
 .all-services h2{
