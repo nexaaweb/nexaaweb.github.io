@@ -47,58 +47,93 @@ color:#c4161c;
 border-bottom:2px solid #c4161c;
 }
 
-<section class="hero">
+/* ---------- HERO ---------- */
 
-<div class="hero-content">
+.hero{
+height:90vh;
+display:flex;
+align-items:center;
+padding:0 10%;
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url("https://i.pinimg.com/736x/11/d3/e6/11d3e646686d55ba13b55a6539dccfc0.jpg");
+background-size:cover;
+background-position:right;
+color:white;
+}
 
-<h1>Web Design, Branding & Digital Growth Agency</h1>
+.hero-content{
+max-width:600px;
+}
 
-<p>
-We create modern websites, powerful branding, and smart business strategies
-to help your business grow online.
-</p>
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
 
-<a href="services.html" class="hero-btn">Explore Services</a>
+.hero p{
+font-size:18px;
+margin-bottom:25px;
+}
 
-</div>
+.hero-btn{
+background:#c4161c;
+color:white;
+padding:14px 28px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+}
 
-</section>
+/* ---------- SERVICES HIGHLIGHT ---------- */
 
-/* ---------- MAIN SERVICES ---------- */
-
-.main-services{
+.services-highlight{
+display:flex;
+align-items:center;
+justify-content:space-between;
 padding:80px 10%;
-text-align:center;
 background:#fff;
 }
 
-.main-services h2{
+.services-left{
+max-width:400px;
+}
+
+.services-left h2{
 font-size:32px;
-margin-bottom:10px;
+color:black;
 }
 
-.services-grid{
-margin-top:50px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
-
-.service-card{
-background:#fff;
-border-radius:10px;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
-padding:40px;
-transition:0.3s;
-}
-
-.service-card:hover{
-transform:translateY(-10px);
-}
-
-.service-card h3{
+.services-left h3{
 color:#c4161c;
-margin-bottom:15px;
+margin-top:10px;
+}
+
+.services-right{
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.laptop{
+width:420px;
+height:260px;
+background:#111;
+border-radius:10px;
+padding:15px;
+box-shadow:0 20px 50px rgba(0,0,0,0.2);
+}
+
+.screen{
+background:white;
+height:100%;
+padding:25px;
+border-radius:6px;
+}
+
+.screen h4{
+color:#c4161c;
+margin-bottom:10px;
 }
 
 /* ---------- PORTFOLIO ---------- */
@@ -248,16 +283,16 @@ to help your business grow online.
 
 </section>
 
+<!-- SERVICES HIGHLIGHT -->
+
 <section class="services-highlight">
 
 <div class="services-left">
 
 <h2>Our Main Services</h2>
-
 <h3>Helping businesses grow with creativity and strategy</h3>
 
 </div>
-
 
 <div class="services-right">
 
@@ -278,6 +313,7 @@ Modern, responsive, and high-performance websites designed to convert visitors i
 </div>
 
 </section>
+
 <!-- PORTFOLIO -->
 
 <section class="portfolio">
@@ -349,9 +385,7 @@ Modern, responsive, and high-performance websites designed to convert visitors i
 <div class="form-box">
 
 <input type="text" placeholder="Name">
-
 <input type="email" placeholder="Email">
-
 <textarea rows="4" placeholder="Message"></textarea>
 
 <button class="btn">Contact Us</button>
@@ -382,9 +416,9 @@ Modern, responsive, and high-performance websites designed to convert visitors i
 
 <div>
 <h3>Main Services</h3>
-<p><a href="services/web-design/index.html">Web Design & Development</a></p>
-<p><a href="services/branding/index.html">Branding & Creative Design</a></p>
-<p><a href="services/consulting/index.html">Consulting & Strategy</a></p>
+<p>Web Design & Development</p>
+<p>Branding & Creative Design</p>
+<p>Consulting & Strategy</p>
 </div>
 
 <div>
@@ -406,6 +440,42 @@ Modern, responsive, and high-performance websites designed to convert visitors i
 </div>
 
 </footer>
+
+<!-- SERVICE CHANGE SCRIPT -->
+
+<script>
+
+const services = [
+
+{
+title:"Web Design & Development",
+text:"Modern, responsive, and high-performance websites designed to convert visitors into customers."
+},
+
+{
+title:"Branding & Creative Design",
+text:"Unique logos, brand identities, and marketing designs to make your brand stand out."
+},
+
+{
+title:"Consulting & Strategy",
+text:"Professional guidance and actionable strategies to grow your business and online presence."
+}
+
+];
+
+let i = 0;
+
+setInterval(()=>{
+
+i = (i + 1) % services.length;
+
+document.getElementById("service-title").innerText = services[i].title;
+document.getElementById("service-text").innerText = services[i].text;
+
+},4000);
+
+</script>
 
 </body>
 </html>
