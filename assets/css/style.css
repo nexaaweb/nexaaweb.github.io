@@ -724,3 +724,67 @@ background:white;
 color:black;
 
 }
+/* TRUST BADGES */
+
+.trust-section{
+
+background:#ffffff;
+
+padding:70px 8%;
+
+text-align:center;
+
+border-top:1px solid #eee;
+
+}
+
+.trust-container{
+max-width:1000px;
+margin:auto;
+}
+
+.trust-section h3{
+font-size:24px;
+margin-bottom:40px;
+color:#333;
+}
+
+.trust-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+gap:30px;
+
+}
+
+.trust-card{
+
+background:#f8f8f8;
+
+padding:25px;
+
+border-radius:10px;
+
+transition:0.3s;
+
+}
+
+.trust-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 12px 30px rgba(0,0,0,0.1);
+
+}
+
+.trust-card img{
+width:40px;
+margin-bottom:10px;
+}
+
+.trust-card p{
+font-weight:600;
+color:#444;
+}
