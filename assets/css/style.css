@@ -376,3 +376,68 @@ margin-top:40px;
 border-top:1px solid rgba(255,255,255,0.2);
 padding-top:20px;
 }
+
+/* ABOUT SECTION */
+
+.about-home{
+
+background:
+
+linear-gradient(
+to right,
+rgba(255,255,255,0) 40%,
+rgba(255,255,255,0.95) 65%,
+white 100%
+),
+
+url("https://i.pinimg.com/1200x/05/1b/cb/051bcb3cd6b75ddaa07cd3db81e8b9ff.jpg");
+
+background-size:cover;
+background-position:left center;
+
+padding:140px 8%;
+
+display:flex;
+align-items:center;
+justify-content:flex-end;
+
+}
+
+.about-overlay{
+max-width:550px;
+}
+
+.about-content h2{
+font-size:36px;
+margin-bottom:10px;
+}
+
+.about-sub{
+color:#c4161c;
+font-weight:600;
+margin-bottom:15px;
+}
+
+.about-content p{
+color:#555;
+margin-bottom:20px;
+line-height:1.7;
+}
+
+.about-btn{
+
+background:#c4161c;
+color:white;
+
+padding:14px 34px;
+
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+
+transition:.3s;
+}
+
+.about-btn:hover{
+background:black;
+}
