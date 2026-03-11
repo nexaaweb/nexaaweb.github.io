@@ -1,7 +1,8 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,285 +10,9 @@
 
 <link rel="stylesheet" href="assets/css/style.css">
 
-<style>
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-/* ---------- HEADER ---------- */
-
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-background:#fff;
-border-bottom:1px solid #eee;
-position:sticky;
-top:0;
-z-index:1000;
-}
-
-.logo{
-font-size:28px;
-font-weight:bold;
-color:#c4161c;
-}
-
-.nav-links{
-list-style:none;
-display:flex;
-gap:30px;
-}
-
-.nav-links a{
-text-decoration:none;
-color:#000;
-font-weight:500;
-}
-
-.nav-links a:hover{
-color:#c4161c;
-border-bottom:2px solid #c4161c;
-}
-
-/* ---------- HERO ---------- */
-
-.hero{
-height:90vh;
-display:flex;
-align-items:center;
-padding:0 10%;
-background:
-linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-url("https://i.pinimg.com/736x/11/d3/e6/11d3e646686d55ba13b55a6539dccfc0.jpg");
-background-size:cover;
-background-position:right;
-color:white;
-}
-
-.hero-content{
-max-width:600px;
-}
-
-.hero h1{
-font-size:48px;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:18px;
-margin-bottom:25px;
-}
-
-.hero-btn{
-background:#c4161c;
-color:white;
-padding:14px 28px;
-border-radius:6px;
-text-decoration:none;
-font-weight:600;
-}
-
-/* ---------- CINEMATIC SERVICES ---------- */
-
-.services-cinematic{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:100px 10%;
-background:#fff;
-overflow:hidden;
-}
-
-.services-left{
-max-width:400px;
-}
-
-.services-left h2{
-font-size:34px;
-color:black;
-}
-
-.services-left h3{
-color:#c4161c;
-margin-top:10px;
-}
-
-.services-stage{
-width:500px;
-height:300px;
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
-.laptop{
-width:420px;
-height:260px;
-background:#111;
-border-radius:12px;
-padding:15px;
-box-shadow:0 30px 70px rgba(0,0,0,0.25);
-animation:laptopFly 1.2s ease;
-}
-
-.screen{
-background:white;
-height:100%;
-border-radius:6px;
-padding:25px;
-text-align:center;
-}
-
-.screen h4{
-color:#c4161c;
-margin-bottom:10px;
-}
-
-@keyframes laptopFly{
-
-0%{
-transform:translateX(400px) rotate(10deg);
-opacity:0;
-}
-
-100%{
-transform:translateX(0) rotate(0);
-opacity:1;
-}
-
-}
-
-/* helicopter board */
-
-.helicopter-board{
-margin:60px auto;
-width:260px;
-background:#c4161c;
-color:white;
-padding:18px;
-text-align:center;
-font-weight:600;
-border-radius:8px;
-animation:dropBoard 1.5s ease;
-}
-
-@keyframes dropBoard{
-
-0%{
-transform:translateY(-200px);
-opacity:0;
-}
-
-100%{
-transform:translateY(0);
-opacity:1;
-}
-
-}
-
-/* ---------- PORTFOLIO ---------- */
-
-.portfolio{
-background:#f5f5f5;
-padding:80px 10%;
-text-align:center;
-}
-
-.projects{
-margin-top:40px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-}
-
-.project img{
-width:100%;
-border-radius:8px;
-}
-
-/* ---------- PROCESS ---------- */
-
-.process{
-padding:80px 10%;
-text-align:center;
-}
-
-.steps{
-margin-top:40px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-}
-
-.step{
-background:#fff;
-padding:30px;
-border-radius:8px;
-box-shadow:0 10px 20px rgba(0,0,0,0.05);
-}
-
-/* ---------- CTA ---------- */
-
-.cta{
-background:#c4161c;
-color:white;
-text-align:center;
-padding:80px 10%;
-}
-
-.form-box{
-max-width:500px;
-margin:auto;
-display:flex;
-flex-direction:column;
-gap:15px;
-margin-top:20px;
-}
-
-.form-box input,
-.form-box textarea{
-padding:12px;
-border:none;
-border-radius:6px;
-}
-
-/* ---------- FOOTER ---------- */
-
-footer{
-background:
-linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),
-url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f");
-background-size:cover;
-background-position:center;
-color:white;
-padding:60px 10%;
-}
-
-.footer-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:30px;
-}
-
-footer h3{
-margin-bottom:15px;
-}
-
-footer a{
-color:white;
-text-decoration:none;
-}
-
-footer a:hover{
-color:#ff4d4d;
-}
-
-.copyright{
-text-align:center;
-margin-top:40px;
-font-size:14px;
-}
-
-</style>
 </head>
 
 <body>
@@ -300,13 +25,13 @@ font-size:14px;
 
 <ul class="nav-links">
 
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="portfolio.html">Portfolio</a></li>
-<li><a href="blog.html">Blog</a></li>
-<li><a href="pricing.html">Pricing</a></li>
-<li><a href="contact.html">Contact</a></li>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Portfolio</a></li>
+<li><a href="#">Blog</a></li>
+<li><a href="#">Pricing</a></li>
+<li><a href="#">Contact</a></li>
 
 </ul>
 
@@ -321,23 +46,24 @@ font-size:14px;
 <h1>Web Design, Branding & Digital Growth Agency</h1>
 
 <p>
-We create modern websites, powerful branding, and smart business strategies 
-to help your business grow online.
+We create modern websites, powerful branding, and smart strategies
+to help businesses grow online.
 </p>
 
-<a href="services.html" class="hero-btn">Explore Services</a>
+<a href="#" class="hero-btn">Explore Services</a>
 
 </div>
 
 </section>
 
-<!-- CINEMATIC SERVICES -->
+<!-- SERVICES -->
 
 <section class="services-cinematic">
 
 <div class="services-left">
 
 <h2>Our Main Services</h2>
+
 <h3>Helping businesses grow with creativity and strategy</h3>
 
 </div>
@@ -351,7 +77,7 @@ to help your business grow online.
 <h4 id="service-title">Web Design & Development</h4>
 
 <p id="service-text">
-Modern, responsive, and high-performance websites designed to convert visitors into customers.
+Modern, responsive websites designed to convert visitors into customers.
 </p>
 
 </div>
@@ -363,7 +89,9 @@ Modern, responsive, and high-performance websites designed to convert visitors i
 </section>
 
 <div class="helicopter-board">
+
 View All Services
+
 </div>
 
 <!-- PORTFOLIO -->
@@ -371,23 +99,33 @@ View All Services
 <section class="portfolio">
 
 <h2>Featured Projects</h2>
-<p>A glimpse of our creative and impactful work</p>
+
+<p>A glimpse of our creative work</p>
 
 <div class="projects">
 
 <div class="project">
+
 <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+
 <p>Business Website Design</p>
+
 </div>
 
 <div class="project">
+
 <img src="https://images.unsplash.com/photo-1547658719-da2b51169166">
+
 <p>Branding & Posters</p>
+
 </div>
 
 <div class="project">
+
 <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8">
-<p>AI Optimization Solutions</p>
+
+<p>AI Optimization</p>
+
 </div>
 
 </div>
@@ -408,18 +146,18 @@ View All Services
 </div>
 
 <div class="step">
-<h4>Planning & Strategy</h4>
-<p>Creating the right digital strategy.</p>
+<h4>Planning Strategy</h4>
+<p>Creating the right digital plan.</p>
 </div>
 
 <div class="step">
 <h4>Design & Development</h4>
-<p>Creative and technical implementation.</p>
+<p>Creative and technical execution.</p>
 </div>
 
 <div class="step">
-<h4>Optimization & Support</h4>
-<p>Continuous improvement and support.</p>
+<h4>Optimization</h4>
+<p>Continuous improvement & support.</p>
 </div>
 
 </div>
@@ -432,12 +170,14 @@ View All Services
 
 <h2>Ready to Transform Your Business?</h2>
 
-<p>Whether you need a modern website, branding, or consulting — Nexaaweb is here to help.</p>
+<p>Let's build something powerful together.</p>
 
 <div class="form-box">
 
 <input type="text" placeholder="Name">
+
 <input type="email" placeholder="Email">
+
 <textarea rows="4" placeholder="Message"></textarea>
 
 <button class="btn">Contact Us</button>
@@ -453,45 +193,65 @@ View All Services
 <div class="footer-grid">
 
 <div>
+
 <h2>Nexaaweb</h2>
-<p>Web Design, Branding & Digital Growth Agency helping businesses build strong digital presence.</p>
+
+<p>
+Web Design, Branding & Digital Growth Agency
+helping businesses build strong digital presence.
+</p>
+
 </div>
 
 <div>
+
 <h3>Quick Links</h3>
-<p><a href="about.html">About</a></p>
-<p><a href="portfolio.html">Portfolio</a></p>
-<p><a href="blog.html">Blog</a></p>
-<p><a href="pricing.html">Pricing</a></p>
-<p><a href="contact.html">Contact</a></p>
+
+<p><a href="#">About</a></p>
+<p><a href="#">Portfolio</a></p>
+<p><a href="#">Blog</a></p>
+<p><a href="#">Pricing</a></p>
+<p><a href="#">Contact</a></p>
+
 </div>
 
 <div>
+
 <h3>Main Services</h3>
+
 <p>Web Design & Development</p>
 <p>Branding & Creative Design</p>
 <p>Consulting & Strategy</p>
+
 </div>
 
 <div>
+
 <h3>Contact</h3>
+
 <p>Email: nexaawebofficial@gmail.com</p>
 <p>Phone: +91 7411984925</p>
+
 <p>
+
 <a href="https://www.instagram.com/nexaaweb">Instagram</a><br>
-<a href="https://www.linkedin.com/in/saher-fatehmohammed-a61079337/">LinkedIn</a>
+<a href="https://www.linkedin.com">LinkedIn</a>
+
 </p>
+
 </div>
 
 </div>
 
 <div class="copyright">
 
-© 2026 Nexaaweb: Web Design, Branding & Digital Growth Agency. All Rights Reserved.
+© 2026 Nexaaweb. All Rights Reserved.
 
 </div>
 
 </footer>
+
+<!-- JAVASCRIPT -->
 
 <script>
 
@@ -499,17 +259,17 @@ const services = [
 
 {
 title:"Web Design & Development",
-text:"Modern, responsive, and high-performance websites designed to convert visitors into customers."
+text:"Modern, responsive, and high-performance websites."
 },
 
 {
 title:"Branding & Creative Design",
-text:"Unique logos, brand identities, and marketing designs to make your brand stand out."
+text:"Unique logos and strong brand identity."
 },
 
 {
 title:"Consulting & Strategy",
-text:"Professional guidance and actionable strategies to grow your business and online presence."
+text:"Professional guidance to grow your business."
 }
 
 ];
@@ -521,6 +281,7 @@ setInterval(()=>{
 i = (i + 1) % services.length;
 
 document.getElementById("service-title").innerText = services[i].title;
+
 document.getElementById("service-text").innerText = services[i].text;
 
 const laptop=document.getElementById("laptop");
@@ -528,7 +289,9 @@ const laptop=document.getElementById("laptop");
 laptop.style.animation="none";
 
 setTimeout(()=>{
+
 laptop.style.animation="laptopFly 1.2s ease";
+
 },50);
 
 },5000);
@@ -537,4 +300,3 @@ laptop.style.animation="laptopFly 1.2s ease";
 
 </body>
 </html>
-```
