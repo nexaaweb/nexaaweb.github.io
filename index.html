@@ -275,6 +275,26 @@ Smart automation and AI-powered solutions for businesses
 
 </section>
 
+<script>
+
+let cards = document.querySelectorAll(".portfolio-card");
+
+let index = 1;
+
+setInterval(()=>{
+
+cards.forEach(card=>card.classList.remove("active"));
+
+index++;
+
+if(index >= cards.length) index = 0;
+
+cards[index].classList.add("active");
+
+},3000);
+
+</script>
+  
 <!-- FOOTER -->
 
 <footer>
