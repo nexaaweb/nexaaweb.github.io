@@ -628,3 +628,99 @@ transition:0.3s;
 .process-btn:hover{
 background:black;
 }
+/* CTA SECTION */
+
+.cta-section{
+
+background:
+linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+url("https://i.pinimg.com/736x/3e/55/90/3e55905f32d0d11f355b8d2a743fcba9.jpg");
+
+background-size:cover;
+background-position:center;
+
+padding:130px 8%;
+
+text-align:center;
+
+color:white;
+
+}
+
+.cta-container{
+max-width:800px;
+margin:auto;
+}
+
+.cta-section h2{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.cta-desc{
+color:#ddd;
+font-size:16px;
+line-height:1.7;
+margin-bottom:40px;
+}
+
+/* BUTTON AREA */
+
+.cta-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+/* PRIMARY BUTTON */
+
+.cta-primary{
+
+background:#c4161c;
+
+color:white;
+
+padding:15px 36px;
+
+border-radius:6px;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:0.3s;
+
+}
+
+.cta-primary:hover{
+background:black;
+}
+
+/* SECONDARY BUTTON */
+
+.cta-secondary{
+
+border:2px solid white;
+
+color:white;
+
+padding:13px 34px;
+
+border-radius:6px;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:0.3s;
+
+}
+
+.cta-secondary:hover{
+
+background:white;
+
+color:black;
+
+}
