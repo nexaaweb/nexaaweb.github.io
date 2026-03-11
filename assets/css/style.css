@@ -461,3 +461,106 @@ display:block;
 }
 
 }
+/* ---------- CINEMATIC SERVICES ---------- */
+
+.services-cinematic{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:100px 10%;
+background:#fff;
+overflow:hidden;
+}
+
+.services-left{
+max-width:400px;
+}
+
+.services-left h2{
+font-size:34px;
+color:black;
+}
+
+.services-left h3{
+color:#c4161c;
+margin-top:10px;
+}
+
+.services-stage{
+width:500px;
+height:300px;
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+}
+
+/* LAPTOP */
+
+.laptop{
+width:420px;
+height:260px;
+background:#111;
+border-radius:12px;
+padding:15px;
+box-shadow:0 30px 70px rgba(0,0,0,0.25);
+
+animation: laptopFly 1.2s ease;
+}
+
+.screen{
+background:white;
+height:100%;
+border-radius:6px;
+padding:25px;
+text-align:center;
+}
+
+.screen h4{
+color:#c4161c;
+margin-bottom:10px;
+}
+
+/* FLY ANIMATION */
+
+@keyframes laptopFly{
+
+0%{
+transform:translateX(400px) rotate(10deg);
+opacity:0;
+}
+
+100%{
+transform:translateX(0) rotate(0);
+opacity:1;
+}
+
+}
+
+/* HELICOPTER BOARD */
+
+.helicopter-board{
+margin:60px auto;
+width:260px;
+background:#c4161c;
+color:white;
+padding:18px;
+text-align:center;
+font-weight:600;
+border-radius:8px;
+animation: dropBoard 1.5s ease;
+}
+
+@keyframes dropBoard{
+
+0%{
+transform:translateY(-200px);
+opacity:0;
+}
+
+100%{
+transform:translateY(0);
+opacity:1;
+}
+
+}
