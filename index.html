@@ -10,7 +10,6 @@
 
 <link rel="stylesheet" href="assets/css/style.css">
 
-<!-- GOOGLE FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
@@ -58,41 +57,55 @@ to help businesses grow online.
 
 <!-- SERVICES -->
 
-<section class="services-cinematic">
-
-<div class="services-left">
+<section class="services">
 
 <h2>Our Main Services</h2>
 
-<h3>Helping businesses grow with creativity and strategy</h3>
+<p class="services-sub">
+Helping businesses grow with creativity and strategy
+</p>
+
+<div class="services-grid">
+
+<div class="service-card">
+
+<img src="https://i.pinimg.com/736x/f5/e8/72/f5e87230f73c9811d9f9a69feb392b5a.jpg">
+
+<h3>Web Design & Development</h3>
+
+<p>
+Modern, responsive websites designed to convert visitors into customers.
+</p>
 
 </div>
 
-<div class="services-stage">
+<div class="service-card">
 
-<div class="laptop" id="laptop">
+<img src="https://i.pinimg.com/1200x/5f/8d/6c/5f8d6c992c2249fd9a519a700940b06c.jpg">
 
-<div class="screen">
+<h3>Branding & Creative Design</h3>
 
-<h4 id="service-title">Web Design & Development</h4>
+<p>
+Unique logos and strong brand identities that make your business stand out.
+</p>
 
-<p id="service-text">
-Modern, responsive websites designed to convert visitors into customers.
+</div>
+
+<div class="service-card">
+
+<img src="https://i.pinimg.com/736x/63/eb/0b/63eb0be236fc46b8d04386530d46aa5b.jpg">
+
+<h3>Consulting & Strategy</h3>
+
+<p>
+Professional guidance and strategies to help your business grow faster.
 </p>
 
 </div>
 
 </div>
 
-</div>
-
 </section>
-
-<div class="helicopter-board">
-
-View All Services
-
-</div>
 
 <!-- PORTFOLIO -->
 
@@ -105,59 +118,18 @@ View All Services
 <div class="projects">
 
 <div class="project">
-
 <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
-
 <p>Business Website Design</p>
-
 </div>
 
 <div class="project">
-
 <img src="https://images.unsplash.com/photo-1547658719-da2b51169166">
-
 <p>Branding & Posters</p>
-
 </div>
 
 <div class="project">
-
 <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8">
-
 <p>AI Optimization</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- PROCESS -->
-
-<section class="process">
-
-<h2>Our Process</h2>
-
-<div class="steps">
-
-<div class="step">
-<h4>Understanding Your Business</h4>
-<p>We analyze your goals and audience.</p>
-</div>
-
-<div class="step">
-<h4>Planning Strategy</h4>
-<p>Creating the right digital plan.</p>
-</div>
-
-<div class="step">
-<h4>Design & Development</h4>
-<p>Creative and technical execution.</p>
-</div>
-
-<div class="step">
-<h4>Optimization</h4>
-<p>Continuous improvement & support.</p>
 </div>
 
 </div>
@@ -175,9 +147,7 @@ View All Services
 <div class="form-box">
 
 <input type="text" placeholder="Name">
-
 <input type="email" placeholder="Email">
-
 <textarea rows="4" placeholder="Message"></textarea>
 
 <button class="btn">Contact Us</button>
@@ -197,8 +167,7 @@ View All Services
 <h2>Nexaaweb</h2>
 
 <p>
-Web Design, Branding & Digital Growth Agency
-helping businesses build strong digital presence.
+Web Design, Branding & Digital Growth Agency helping businesses grow online.
 </p>
 
 </div>
@@ -232,13 +201,6 @@ helping businesses build strong digital presence.
 <p>Email: nexaawebofficial@gmail.com</p>
 <p>Phone: +91 7411984925</p>
 
-<p>
-
-<a href="https://www.instagram.com/nexaaweb">Instagram</a><br>
-<a href="https://www.linkedin.com">LinkedIn</a>
-
-</p>
-
 </div>
 
 </div>
@@ -250,53 +212,6 @@ helping businesses build strong digital presence.
 </div>
 
 </footer>
-
-<!-- JAVASCRIPT -->
-
-<script>
-
-const services = [
-
-{
-title:"Web Design & Development",
-text:"Modern, responsive, and high-performance websites."
-},
-
-{
-title:"Branding & Creative Design",
-text:"Unique logos and strong brand identity."
-},
-
-{
-title:"Consulting & Strategy",
-text:"Professional guidance to grow your business."
-}
-
-];
-
-let i = 0;
-
-setInterval(()=>{
-
-i = (i + 1) % services.length;
-
-document.getElementById("service-title").innerText = services[i].title;
-
-document.getElementById("service-text").innerText = services[i].text;
-
-const laptop=document.getElementById("laptop");
-
-laptop.style.animation="none";
-
-setTimeout(()=>{
-
-laptop.style.animation="laptopFly 1.2s ease";
-
-},50);
-
-},5000);
-
-</script>
 
 </body>
 </html>
