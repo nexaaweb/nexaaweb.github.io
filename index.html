@@ -198,7 +198,7 @@ Explore everything Nexaaweb offers
 </div>
 
 </section>
-  
+
 <!-- PORTFOLIO SECTION -->
 
 <section class="portfolio-section">
@@ -209,52 +209,40 @@ Explore everything Nexaaweb offers
 A glimpse of our creative and impactful work
 </p>
 
-<div class="portfolio-carousel">
+<div class="portfolio-wrapper">
+
+<button class="arrow left">&#10094;</button>
+
+<div class="portfolio-track">
 
 <div class="portfolio-card">
-
-<img src="https://picsum.photos/500/350?random=1">
-
+<img src="https://picsum.photos/600/400?random=1">
 <h3>Business Website Design</h3>
-
-<p>
-Modern and responsive websites for startups and companies
-</p>
-
+<p>Modern and responsive websites for startups and companies</p>
 </div>
-
 
 <div class="portfolio-card active">
-
-<img src="https://picsum.photos/500/350?random=2">
-
+<img src="https://picsum.photos/600/400?random=2">
 <h3>Branding & Posters</h3>
-
-<p>
-Logos, brochures, and promotional materials
-</p>
-
+<p>Logos, brochures, and promotional materials</p>
 </div>
-
 
 <div class="portfolio-card">
-
-<img src="https://picsum.photos/500/350?random=3">
-
+<img src="https://picsum.photos/600/400?random=3">
 <h3>AI Optimization</h3>
-
-<p>
-Smart automation and AI-powered solutions for businesses
-</p>
+<p>Smart automation and AI-powered solutions for businesses</p>
+</div>
 
 </div>
+
+<button class="arrow right">&#10095;</button>
 
 </div>
 
 <a href="#" class="portfolio-btn">View Portfolio</a>
 
 </section>
-
+  
 <!-- CTA -->
 
 <section class="cta">
@@ -351,6 +339,92 @@ Web Design, Branding & Digital Growth Agency helping businesses grow online.
 </div>
 
 </footer>
+<script>
 
+const cards = document.querySelectorAll(".portfolio-card");
+const track = document.querySelector(".portfolio-track");
+
+let index = 1;
+
+function updateCarousel(){
+
+cards.forEach(card=>card.classList.remove("active"));
+
+cards[index].classList.add("active");
+
+let offset = (cards[0].offsetWidth + 30) * index;
+
+track.style.transform = "translateX(" + (-offset + 350) + "px)";
+}
+
+function nextSlide(){
+
+index++;
+
+if(index >= cards.length){
+index = 0;
+}
+
+updateCarousel();
+}
+
+function prevSlide(){
+
+index--;
+
+if(index < 0){
+index = cards.length - 1;
+}
+
+updateCarousel();
+}
+
+document.querySelector(".right").onclick = nextSlide;
+document.querySelector(".left").onclick = prevSlide;
+
+/* AUTO SCROLL */
+
+setInterval(nextSlide,2000);
+
+/* DRAG SCROLL */
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+track.addEventListener("mousedown",(e)=>{
+
+isDown = true;
+startX = e.pageX;
+
+});
+
+track.addEventListener("mouseleave",()=>{
+
+isDown = false;
+
+});
+
+track.addEventListener("mouseup",()=>{
+
+isDown = false;
+
+});
+
+track.addEventListener("mousemove",(e)=>{
+
+if(!isDown) return;
+
+let move = e.pageX - startX;
+
+if(move > 100) prevSlide();
+if(move < -100) nextSlide();
+
+});
+
+updateCarousel();
+
+</script>
+  
 </body>
 </html>
