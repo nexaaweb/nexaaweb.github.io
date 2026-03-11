@@ -572,3 +572,26 @@ transition:0.3s;
 .why-btn:hover{
 background:black;
 }
+.robot-divider{
+
+background:#f4f6f8;
+
+text-align:center;
+
+padding:40px 0;
+
+}
+
+.robot-divider img{
+
+width:120px;
+
+transition:0.4s;
+
+}
+
+.robot-divider img:hover{
+
+transform:scale(1.1) rotate(5deg);
+
+}
