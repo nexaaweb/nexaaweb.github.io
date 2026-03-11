@@ -442,6 +442,19 @@ transition:.3s;
 background:black;
 }
 
+.section-divider{
+
+height:120px;
+
+background:linear-gradient(
+to bottom,
+white 0%,
+#f4f6f8 40%,
+#1a1a1a 100%
+);
+
+}
+
 /* WHY CHOOSE SECTION */
 
 .why-section{
