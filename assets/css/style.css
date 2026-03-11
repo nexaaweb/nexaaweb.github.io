@@ -595,3 +595,67 @@ transition:0.4s;
 transform:scale(1.1) rotate(5deg);
 
 }
+
+/* ROBOT DIVIDER */
+
+.robot-divider{
+
+background:#f4f6f8;
+
+text-align:center;
+
+padding:60px 0;
+
+position:relative;
+
+}
+
+/* ROBOT IMAGE */
+
+.robot-divider img{
+
+width:120px;
+
+animation:robotFloat 3s ease-in-out infinite;
+
+filter:drop-shadow(0 0 12px rgba(196,22,28,0.4));
+
+transition:0.4s;
+
+}
+
+/* FLOAT ANIMATION */
+
+@keyframes robotFloat{
+
+0%{transform:translateY(0)}
+
+50%{transform:translateY(-12px)}
+
+100%{transform:translateY(0)}
+
+}
+
+/* HOVER EFFECT */
+
+.robot-divider img:hover{
+
+transform:translateY(-18px) scale(1.08);
+
+filter:drop-shadow(0 0 18px rgba(196,22,28,0.8));
+
+}
+
+/* TEXT */
+
+.robot-text{
+
+margin-top:12px;
+
+font-weight:600;
+
+color:#333;
+
+letter-spacing:1px;
+
+}
