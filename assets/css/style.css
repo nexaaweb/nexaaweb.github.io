@@ -30,6 +30,18 @@ font-weight:700;
 color:#c4161c;
 }
 
+/* HEADER DATE */
+
+.header-date{
+
+font-size:14px;
+
+color:#666;
+
+font-weight:500;
+
+}
+
 .nav-links{
 list-style:none;
 display:flex;
