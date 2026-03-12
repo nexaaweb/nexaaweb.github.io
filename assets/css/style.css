@@ -1378,3 +1378,56 @@ color:#666;
 font-weight:500;
 
 }
+/* HERO SERVICES TICKER */
+
+.services-ticker{
+
+width:100%;
+
+overflow:hidden;
+
+margin-bottom:20px;
+
+}
+
+.ticker-track{
+
+display:flex;
+
+gap:40px;
+
+animation:scrollServices 20s linear infinite;
+
+white-space:nowrap;
+
+}
+
+.ticker-track span{
+
+background:#c4161c;
+
+color:white;
+
+padding:6px 16px;
+
+border-radius:20px;
+
+font-size:14px;
+
+font-weight:500;
+
+}
+
+/* ANIMATION */
+
+@keyframes scrollServices{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
+}
