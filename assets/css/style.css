@@ -999,3 +999,90 @@ transform:translateX(-50%);
 }
 
 }
+/* FINAL CTA */
+
+.final-cta{
+
+padding:120px 8%;
+
+text-align:center;
+
+color:white;
+
+background:
+linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),
+url("https://i.pinimg.com/736x/3e/55/90/3e55905f32d0d11f355b8d2a743fcba9.jpg");
+
+background-size:cover;
+background-position:center;
+
+}
+
+.cta-container{
+max-width:800px;
+margin:auto;
+}
+
+.final-cta h2{
+font-size:40px;
+margin-bottom:15px;
+}
+
+.final-cta p{
+color:#ddd;
+margin-bottom:35px;
+line-height:1.7;
+}
+
+/* BUTTONS */
+
+.cta-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.cta-main-btn{
+
+background:#c4161c;
+
+color:white;
+
+padding:15px 35px;
+
+border-radius:6px;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.cta-main-btn:hover{
+background:black;
+}
+
+.cta-whatsapp-btn{
+
+background:#25D366;
+
+color:white;
+
+padding:15px 35px;
+
+border-radius:6px;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.cta-whatsapp-btn:hover{
+background:#1ebc57;
+}
