@@ -145,3 +145,20 @@ counter.innerText = target;
 updateCounter();
 
 });
+
+// HEADER DATE
+
+const dateElement = document.getElementById("headerDate");
+
+const today = new Date();
+
+const options = {
+weekday: "long",
+day: "numeric",
+month: "short",
+year: "numeric"
+};
+
+const formattedDate = today.toLocaleDateString("en-US", options);
+
+dateElement.innerText = formattedDate;
