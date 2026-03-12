@@ -912,3 +912,90 @@ border-radius:6px;
 margin:0 10px;
 
 }
+/* CLIENT LOGOS */
+
+.client-logos{
+
+padding:70px 8%;
+
+background:white;
+
+text-align:center;
+
+overflow:hidden;
+
+}
+
+.logos-sub{
+
+font-weight:600;
+
+color:#666;
+
+margin-bottom:40px;
+
+letter-spacing:1px;
+
+}
+
+/* SLIDER */
+
+.logos-slider{
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+/* TRACK */
+
+.logos-track{
+
+display:flex;
+
+gap:60px;
+
+animation:logoScroll 25s linear infinite;
+
+align-items:center;
+
+}
+
+/* LOGO */
+
+.logos-track img{
+
+width:90px;
+
+opacity:0.5;
+
+filter:grayscale(100%);
+
+transition:0.4s;
+
+}
+
+.logos-track img:hover{
+
+opacity:1;
+
+filter:grayscale(0);
+
+transform:scale(1.1);
+
+}
+
+/* ANIMATION */
+
+@keyframes logoScroll{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
+}
