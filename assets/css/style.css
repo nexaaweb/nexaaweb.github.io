@@ -89,6 +89,21 @@ text-decoration:none;
 font-weight:bold;
 }
 
+.hero-top{
+position:absolute;
+top:30px;
+right:40px;
+font-size:16px;
+color:white;
+}
+
+.hero-content{
+position:relative;
+color:white;
+max-width:600px;
+margin-left:8%;
+}
+
 /* SERVICES */
 
 .services{
