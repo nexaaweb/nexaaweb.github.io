@@ -1,16 +1,15 @@
-function updateDate(){
+/* HEADER LOAD */
 
-const options = { 
-weekday: 'long', 
-year: 'numeric', 
-month: 'long', 
-day: 'numeric'
-};
+fetch("components/header.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("header").innerHTML = data;
+});
 
-const today = new Date().toLocaleDateString('en-US', options);
+/* FOOTER LOAD */
 
-document.getElementById("date").innerHTML = today;
-
-}
-
-updateDate();
+fetch("components/footer.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("footer").innerHTML = data;
+});
