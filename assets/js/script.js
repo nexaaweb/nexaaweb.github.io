@@ -1,6 +1,18 @@
-console.log("NexaaWeb website loaded");
+fetch("components/header.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("header").innerHTML = data;
+});
+
+fetch("components/footer.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("footer").innerHTML = data;
+});
+
 
 function updateDate(){
+
 const options={
 weekday:"long",
 year:"numeric",
@@ -10,7 +22,8 @@ day:"numeric"
 
 const today=new Date().toLocaleDateString("en-US",options);
 
-document.getElementById("date").textContent=today;
+document.getElementById("date").innerText=today;
+
 }
 
 updateDate();
