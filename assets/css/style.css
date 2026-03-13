@@ -130,6 +130,10 @@ margin-top:60px;
 
 @media(max-width:768px){
 
+.nav-menu{
+flex-direction:column;
+}
+
 .hero h1{
 font-size:32px;
 }
