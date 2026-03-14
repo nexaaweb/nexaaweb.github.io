@@ -269,6 +269,101 @@ height:30px;
 
 }
 
+/* ============================ */
+/* SECTION 3 – KEY STATS */
+/* ============================ */
+
+.stats{
+
+padding:100px 10%;
+background:#F5F5F5;
+text-align:center;
+
+}
+
+.stats-heading{
+
+font-size:34px;
+margin-bottom:15px;
+
+}
+
+.stats-subtext{
+
+max-width:700px;
+margin:auto;
+margin-bottom:70px;
+color:#666;
+
+}
+
+.stats-grid{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+
+}
+
+.stat-card{
+
+background:#FFFFFF;
+padding:40px 30px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+border-bottom:4px solid #B92425;
+transition:0.3s;
+
+}
+
+.stat-number{
+
+font-size:42px;
+font-weight:bold;
+color:#B92425;
+margin-bottom:10px;
+
+}
+
+.stat-card p{
+
+font-size:16px;
+color:#666;
+
+}
+
+/* hover */
+
+.stat-card:hover{
+
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+
+}
+
+/* tablet */
+
+@media(max-width:1000px){
+
+.stats-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* mobile */
+
+@media(max-width:600px){
+
+.stats-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
 /* SERVICES */
 
 .services{
