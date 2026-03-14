@@ -160,7 +160,116 @@ font-family:'Poppins',sans-serif;
 background:#C51A24;
 }
 
+/* ============================ */
+/* SECTION 2 – TRUSTED BY / CLIENT LOGOS */
+/* ============================ */
 
+.clients{
+
+padding:70px 10%;
+background:#ffffff;
+text-align:center;
+overflow:hidden;
+
+}
+
+.clients .section-title{
+
+font-size:28px;
+margin-bottom:40px;
+color:#222222;
+
+}
+
+/* slider */
+
+.clients-slider{
+
+display:flex;
+flex-direction:column;
+gap:35px;
+
+}
+
+.clients-track{
+
+display:flex;
+gap:60px;
+align-items:center;
+width:max-content;
+
+}
+
+.clients-track img{
+
+height:40px;
+opacity:0.7;
+transition:0.3s;
+
+}
+
+.clients-track img:hover{
+
+opacity:1;
+transform:scale(1.1);
+
+}
+
+/* animations */
+
+.slide-left{
+
+animation:slideLeft 35s linear infinite;
+
+}
+
+.slide-right{
+
+animation:slideRight 35s linear infinite;
+
+}
+
+@keyframes slideLeft{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
+}
+
+@keyframes slideRight{
+
+0%{
+transform:translateX(-50%);
+}
+
+100%{
+transform:translateX(0);
+}
+
+}
+
+/* mobile */
+
+@media(max-width:768px){
+
+.clients-track{
+
+gap:40px;
+
+}
+
+.clients-track img{
+
+height:30px;
+
+}
+
+}
 
 /* SERVICES */
 
