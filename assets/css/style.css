@@ -336,3 +336,117 @@ font-size:34px;
 }
 
 }
+/* ============================ */
+/* SECTION 4 – ABOUT NEXAAWEB */
+/* ============================ */
+
+.home-about{
+
+background-image:url("https://i.pinimg.com/736x/51/49/c0/5149c033abb7b018b6ef7f3270f9daaf.jpg");
+background-size:cover;
+background-position:center;
+height:520px;
+display:flex;
+align-items:center;
+
+}
+
+/* LEFT WHITE OVERLAY */
+
+.about-overlay{
+
+width:55%;
+height:100%;
+background:linear-gradient(
+to right,
+rgba(255,255,255,0.95),
+rgba(255,255,255,0.85),
+rgba(255,255,255,0)
+);
+
+display:flex;
+align-items:center;
+
+}
+
+.about-content{
+
+max-width:520px;
+margin-left:8%;
+
+}
+
+.about-content h2{
+
+color:#B92425;
+font-size:18px;
+letter-spacing:2px;
+margin-bottom:10px;
+
+}
+
+.about-content h3{
+
+font-size:38px;
+margin-bottom:20px;
+
+}
+
+.about-content p{
+
+font-size:16px;
+line-height:1.7;
+margin-bottom:25px;
+
+}
+
+.about-btn{
+
+background:#B92425;
+color:#fff;
+padding:12px 28px;
+border-radius:6px;
+text-decoration:none;
+display:inline-block;
+transition:.3s;
+
+}
+
+.about-btn:hover{
+
+background:#a61f20;
+
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:900px){
+
+.home-about{
+
+height:auto;
+padding:80px 20px;
+
+}
+
+.about-overlay{
+
+width:100%;
+background:rgba(255,255,255,0.95);
+
+}
+
+.about-content{
+
+margin:0;
+
+}
+
+.about-content h3{
+
+font-size:30px;
+
+}
+
+}
