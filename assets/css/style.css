@@ -225,3 +225,99 @@ font-size:34px;
 }
 
 }
+/* WHY CHOOSE SECTION */
+
+.why-section{
+
+padding:90px 10%;
+background:#ffffff;
+text-align:center;
+
+}
+
+.why-subheading{
+
+max-width:800px;
+margin:auto;
+margin-bottom:60px;
+font-size:18px;
+color:#666666;
+
+}
+
+.why-grid{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:35px;
+
+}
+
+.why-card{
+
+background:#ffffff;
+border-bottom:4px solid red;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:all .35s ease;
+overflow:hidden;
+
+}
+
+.why-card img{
+
+width:100%;
+height:220px;
+object-fit:cover;
+
+}
+
+.why-card h3{
+
+color:red;
+font-family:'Poppins',sans-serif;
+font-weight:600;
+font-size:20px;
+margin:20px;
+
+}
+
+.why-card p{
+
+padding:0 20px 25px;
+color:#666666;
+
+}
+
+/* HOVER EFFECT */
+
+.why-card:hover{
+
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+
+}
+
+.why-card img{
+
+transition:transform .4s ease;
+
+}
+
+.why-card:hover img{
+
+transform:scale(1.1);
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.why-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
