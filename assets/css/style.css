@@ -225,23 +225,39 @@ font-size:34px;
 }
 
 }
-/* WHY CHOOSE SECTION */
+/* =============================== */
+/* SECTION 3 – WHY CHOOSE NEXAAWEB */
+/* =============================== */
 
-.why-section{
+.why-nexaaweb{
 
-padding:90px 10%;
+padding:100px 10%;
 background:#ffffff;
-text-align:center;
 
 }
 
-.why-subheading{
+.container{
 
-max-width:800px;
+max-width:1200px;
 margin:auto;
-margin-bottom:60px;
+
+}
+
+.section-title{
+
+font-size:42px;
+text-align:center;
+margin-bottom:15px;
+
+}
+
+.section-subtitle{
+
+text-align:center;
+max-width:750px;
+margin:auto;
+margin-bottom:70px;
 font-size:18px;
-color:#666666;
 
 }
 
@@ -256,8 +272,8 @@ gap:35px;
 .why-card{
 
 background:#ffffff;
-border-bottom:4px solid red;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
+border-bottom:4px solid #B92425;
+box-shadow:0 12px 30px rgba(0,0,0,0.08);
 transition:all .35s ease;
 overflow:hidden;
 
@@ -266,17 +282,16 @@ overflow:hidden;
 .why-card img{
 
 width:100%;
-height:220px;
+height:230px;
 object-fit:cover;
+transition:transform .4s ease;
 
 }
 
 .why-card h3{
 
-color:red;
-font-family:'Poppins',sans-serif;
-font-weight:600;
-font-size:20px;
+color:#B92425;
+font-size:21px;
 margin:20px;
 
 }
@@ -284,28 +299,22 @@ margin:20px;
 .why-card p{
 
 padding:0 20px 25px;
-color:#666666;
+font-size:15px;
 
 }
 
-/* HOVER EFFECT */
+/* hover animation */
 
 .why-card:hover{
 
-transform:translateY(-10px) scale(1.02);
-box-shadow:0 20px 40px rgba(0,0,0,0.15);
-
-}
-
-.why-card img{
-
-transition:transform .4s ease;
+transform:translateY(-12px);
+box-shadow:0 20px 45px rgba(0,0,0,0.15);
 
 }
 
 .why-card:hover img{
 
-transform:scale(1.1);
+transform:scale(1.08);
 
 }
 
@@ -317,6 +326,12 @@ transform:scale(1.1);
 .why-grid{
 
 grid-template-columns:1fr;
+
+}
+
+.section-title{
+
+font-size:34px;
 
 }
 
