@@ -1405,3 +1405,191 @@ transform:rotate(45deg);
 
 }
 
+/* ============================ */
+/* SECTION – FINAL CTA */
+/* ============================ */
+
+.cta-section{
+
+position:relative;
+padding:140px 8%;
+text-align:center;
+color:#fff;
+overflow:hidden;
+background:linear-gradient(135deg,#0f0f0f,#1a1a1a);
+
+}
+
+/* animated gradient */
+
+.cta-section::before{
+
+content:"";
+position:absolute;
+width:600px;
+height:600px;
+background:#B92425;
+filter:blur(180px);
+top:-150px;
+left:-150px;
+opacity:0.5;
+animation:ctaMove 12s infinite alternate;
+
+}
+
+.cta-section::after{
+
+content:"";
+position:absolute;
+width:500px;
+height:500px;
+background:#B92425;
+filter:blur(180px);
+bottom:-150px;
+right:-150px;
+opacity:0.4;
+animation:ctaMove2 14s infinite alternate;
+
+}
+
+.cta-overlay{
+
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(
+180deg,
+rgba(0,0,0,0.2),
+rgba(0,0,0,0.8)
+);
+
+}
+
+.cta-content{
+
+position:relative;
+max-width:750px;
+margin:auto;
+z-index:2;
+
+}
+
+.cta-content h2{
+
+font-size:42px;
+margin-bottom:20px;
+font-family:Playfair Display;
+
+}
+
+.cta-content p{
+
+font-size:18px;
+color:#ddd;
+margin-bottom:40px;
+font-family:Open Sans;
+
+}
+
+/* buttons */
+
+.cta-buttons{
+
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+
+}
+
+.cta-btn{
+
+padding:16px 34px;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+font-family:Poppins;
+transition:0.4s;
+
+}
+
+/* primary */
+
+.primary-btn{
+
+background:#B92425;
+color:#fff;
+box-shadow:0 0 20px rgba(185,36,37,0.6);
+
+}
+
+.primary-btn:hover{
+
+transform:translateY(-4px);
+box-shadow:0 0 35px rgba(185,36,37,0.9);
+
+}
+
+/* secondary */
+
+.secondary-btn{
+
+border:2px solid #fff;
+color:#fff;
+
+}
+
+.secondary-btn:hover{
+
+background:#fff;
+color:#000;
+
+}
+
+/* animations */
+
+@keyframes ctaMove{
+
+0%{
+
+transform:translateY(0) translateX(0);
+
+}
+
+100%{
+
+transform:translateY(80px) translateX(100px);
+
+}
+
+}
+
+@keyframes ctaMove2{
+
+0%{
+
+transform:translateY(0) translateX(0);
+
+}
+
+100%{
+
+transform:translateY(-80px) translateX(-120px);
+
+}
+
+}
+
+/* mobile */
+
+@media(max-width:768px){
+
+.cta-content h2{
+
+font-size:30px;
+
+}
+
+}
