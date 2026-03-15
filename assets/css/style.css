@@ -1833,289 +1833,272 @@ font-size:14px;
 
 }
 
+/* ================= GLOBAL RESET ================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Open Sans',sans-serif;
+color:#333;
+line-height:1.6;
+background:#ffffff;
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
 /* ================= HEADER ================= */
-.header-white {
-    background-color: #ffffff;
-    padding: 20px 50px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+
+.header-white{
+background:#ffffff;
+padding:20px 50px;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.header-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-.header-white .logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    font-weight: 700;
-    color: #B92425;
+.logo{
+font-family:'Playfair Display',serif;
+font-size:28px;
+font-weight:700;
+color:#B92425;
 }
 
-.header-white .logo span {
-    color: #B92425;
+.logo span{
+color:#B92425;
 }
 
-.header-white nav ul {
-    display: flex;
-    list-style: none;
-    gap: 30px;
+.nav-links{
+display:flex;
+list-style:none;
+gap:30px;
 }
 
-.header-white nav ul li {
-    position: relative;
+.nav-links li{
+position:relative;
 }
 
-.header-white nav ul li a {
-    text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    color: #222;
-    padding: 5px 0;
-    transition: all 0.3s;
+.nav-links a{
+text-decoration:none;
+font-weight:600;
+color:#222;
+padding:5px 0;
+transition:0.3s;
 }
 
-.header-white nav ul li a.active,
-.header-white nav ul li a:hover {
-    color: #B92425;
-    border-bottom: 2px solid #B92425;
+.nav-links a:hover,
+.nav-links a.active{
+color:#B92425;
+border-bottom:2px solid #B92425;
 }
 
 /* ================= DROPDOWN ================= */
-.header-white .dropdown-menu {
-    position: absolute;
-    top: 35px;
-    left: 0;
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    list-style: none;
-    padding: 10px 0;
-    min-width: 220px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    z-index: 10;
+
+.dropdown-menu{
+position:absolute;
+top:35px;
+left:0;
+background:#fff;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+opacity:0;
+visibility:hidden;
+transform:translateY(10px);
+list-style:none;
+padding:10px 0;
+min-width:230px;
+border-radius:6px;
+transition:all .35s ease;
 }
 
-.header-white .dropdown:hover .dropdown-menu,
-.header-white .dropdown-menu:hover {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover{
+opacity:1;
+visibility:visible;
+transform:translateY(0);
 }
 
-.header-white .dropdown-menu li a {
-    padding: 10px 20px;
-    display: block;
-    color: #222;
-    font-weight: 500;
+.dropdown-menu li a{
+padding:10px 20px;
+display:block;
+color:#222;
 }
 
-.header-white .dropdown-menu li a:hover {
-    color: #B92425;
+.dropdown-menu li a:hover{
+color:#B92425;
+background:#f5f5f5;
 }
 
-/* ================= HERO / INTRO ================= */
-.about-hero {
-    position: relative;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 20px;
-    background-image: url('https://i.pinimg.com/736x/d5/1f/7b/d51f7b0979c67a4b76e8582245f50cfd.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+/* ================= HERO ================= */
+
+.about-hero{
+position:relative;
+height:80vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:0 20px;
+background-image:url('https://i.pinimg.com/736x/d5/1f/7b/d51f7b0979c67a4b76e8582245f50cfd.jpg');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
 }
 
-.about-hero-overlay {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.5);
-    z-index: 1;
+.about-hero-overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.55);
 }
 
-.about-hero-text {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    color: #fff;
+.about-hero-text{
+position:relative;
+max-width:800px;
+color:white;
+z-index:2;
 }
 
-/* ================= WHO WE ARE ================= */
-.who-we-are {
-    padding: 80px 20px;
-    background-color: #f5f5f5;
-    text-align: center;
+.about-hero-text h1{
+font-family:'Playfair Display',serif;
+font-size:46px;
+margin-bottom:10px;
 }
 
-.who-we-are h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #222222;
+.about-hero-text h2{
+font-family:'Poppins',sans-serif;
+font-size:24px;
+margin-bottom:20px;
 }
 
-.who-we-are p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.6;
-    color: #666666;
-}
-
-/* ================= SCROLL ANIMATIONS ================= */
-.fade-up {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.fade-up.appear {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 992px) {
-    .who-we-are h2 {
-        font-size: 28px;
-    }
-    .who-we-are p {
-        font-size: 16px;
-    }
+.about-hero-text p{
+font-size:18px;
+margin-bottom:25px;
 }
 
 /* ================= BUTTON ================= */
-.btn-red {
-    display: inline-block;
-    padding: 12px 30px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    background-color: #B92425;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: all 0.3s;
+
+.btn-red{
+display:inline-block;
+padding:12px 30px;
+font-weight:600;
+background:#B92425;
+color:white;
+text-decoration:none;
+border-radius:6px;
+transition:all .3s ease;
 }
 
-.btn-red:hover {
-    background-color: #C51A24;
+.btn-red:hover{
+background:#C51A24;
+transform:translateY(-2px);
+box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* ================= WHO WE ARE ================= */
+
+.who-we-are{
+padding:90px 20px;
+background:#F5F5F5;
+text-align:center;
+}
+
+.who-we-are h2{
+font-family:'Playfair Display',serif;
+font-size:36px;
+margin-bottom:20px;
+color:#222;
+}
+
+.who-we-are p{
+font-size:18px;
+max-width:800px;
+margin:auto;
+color:#666;
 }
 
 /* ================= WHAT WE DO ================= */
-.what-we-do {
-    padding: 100px 20px;
-    background-color: #ffffff;
-    text-align: center;
+
+.what-we-do{
+padding:100px 20px;
+background:white;
+text-align:center;
 }
 
-.what-we-do h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    margin-bottom: 10px;
-    color: #222222;
+.what-we-do h2{
+font-family:'Playfair Display',serif;
+font-size:36px;
+margin-bottom:10px;
 }
 
-.what-we-do .section-subtitle {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    margin-bottom: 50px;
-    color: #666666;
+.section-subtitle{
+font-size:18px;
+color:#666;
+margin-bottom:50px;
 }
 
-/* SERVICES GRID */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
 }
 
-/* SERVICE CARD */
-.service-card {
-    background: #f5f5f5;
-    padding: 30px 20px;
-    border-radius: 15px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
+.service-card{
+background:#F5F5F5;
+padding:30px 20px;
+border-radius:16px;
+transition:.4s;
+cursor:pointer;
 }
 
-.service-card h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 22px;
-    margin-bottom: 15px;
-    color: #B92425;
+.service-card h3{
+font-family:'Poppins',sans-serif;
+font-size:22px;
+margin-bottom:15px;
+color:#B92425;
 }
 
-.service-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    color: #333333;
+.service-card ul{
+list-style:none;
 }
 
-.service-card ul li {
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 15px;
+.service-card li{
+margin-bottom:10px;
+padding-left:15px;
+position:relative;
 }
 
-.service-card ul li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: #B92425;
-    font-weight: bold;
+.service-card li::before{
+content:"•";
+position:absolute;
+left:0;
+color:#B92425;
 }
 
-/* HOVER EFFECT */
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+.service-card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+background:white;
 }
 
-/* ================= SCROLL ANIMATION ================= */
-.fade-up {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.fade-up.appear {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-    .services-grid {
-        gap: 20px;
-    }
-    .service-card {
-        padding: 25px 15px;
-    }
-    .service-card h3 {
-        font-size: 20px;
-    }
-    .service-card ul li {
-        font-size: 15px;
-    }
-}
-/* ================= SECTION 4 : OUR APPROACH ================= */
+/* ================= OUR APPROACH ================= */
 
 .our-approach{
 padding:100px 20px;
@@ -2132,39 +2115,27 @@ margin-bottom:70px;
 .approach-header h2{
 font-family:'Playfair Display',serif;
 font-size:36px;
-color:#222;
 margin-bottom:15px;
 }
 
 .approach-header p{
-font-family:'Open Sans',sans-serif;
 font-size:18px;
 color:#666;
-line-height:1.6;
 }
-
-/* TIMELINE GRID */
 
 .approach-timeline{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:35px;
-position:relative;
 }
-
-/* STEP CARD */
 
 .approach-step{
 background:#F5F5F5;
 padding:35px 25px;
 border-radius:16px;
 text-align:center;
-transition:all .35s ease;
-position:relative;
-overflow:hidden;
+transition:.35s;
 }
-
-/* ICON */
 
 .approach-icon{
 font-size:34px;
@@ -2177,30 +2148,19 @@ display:flex;
 align-items:center;
 justify-content:center;
 border-radius:50%;
-margin-left:auto;
-margin-right:auto;
-transition:.35s;
+margin:auto;
 }
-
-/* TITLE */
 
 .approach-step h3{
 font-family:'Poppins',sans-serif;
 font-size:20px;
 margin-bottom:10px;
-color:#222;
 }
-
-/* TEXT */
 
 .approach-step p{
-font-family:'Open Sans',sans-serif;
 font-size:15px;
 color:#666;
-line-height:1.6;
 }
-
-/* HOVER EFFECT */
 
 .approach-step:hover{
 transform:translateY(-10px);
@@ -2209,11 +2169,11 @@ background:white;
 }
 
 .approach-step:hover .approach-icon{
-transform:scale(1.1);
 background:#C51A24;
+transform:scale(1.1);
 }
 
-/* SCROLL ANIMATION */
+/* ================= SCROLL ANIMATION ================= */
 
 .fade-up{
 opacity:0;
@@ -2226,44 +2186,41 @@ opacity:1;
 transform:translateY(0);
 }
 
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-.approach-header h2{
-font-size:28px;
-}
-
-.approach-header p{
-font-size:16px;
-}
-
-.approach-step{
-padding:28px 20px;
-}
-
-}
-
 /* ================= FOOTER ================= */
-footer {
-    padding: 20px 50px;
-    background-color: #222222;
-    color: #fff;
-    text-align: center;
+
+footer{
+padding:25px;
+background:#222;
+color:white;
+text-align:center;
 }
 
 /* ================= RESPONSIVE ================= */
-@media (max-width: 992px) {
-    .about-hero-text h1 {
-        font-size: 36px;
-    }
-    .about-hero-text h2 {
-        font-size: 20px;
-    }
-    .who-we-are h2 {
-        font-size: 28px;
-    }
-    .who-we-are p {
-        font-size: 16px;
-    }
+
+@media(max-width:992px){
+
+.about-hero-text h1{
+font-size:36px;
+}
+
+.about-hero-text h2{
+font-size:20px;
+}
+
+.who-we-are h2{
+font-size:28px;
+}
+
+}
+
+@media(max-width:768px){
+
+.services-grid{
+gap:20px;
+}
+
+.service-card{
+padding:25px 15px;
+}
+
 }
