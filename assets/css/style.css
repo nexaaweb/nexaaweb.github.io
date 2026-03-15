@@ -1714,3 +1714,102 @@ font-size:30px;
 }
 
 }
+
+/* ============================ */
+/* FOOTER */
+/* ============================ */
+
+.site-footer{
+
+background:#111;
+color:#ccc;
+padding:80px 8% 30px;
+
+}
+
+.footer-container{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:40px;
+
+}
+
+.footer-col h3{
+
+color:#fff;
+margin-bottom:15px;
+
+}
+
+.footer-col h4{
+
+color:#B92425;
+margin-bottom:15px;
+
+}
+
+.footer-col p{
+
+font-size:14px;
+line-height:1.6;
+
+}
+
+.footer-col ul{
+
+list-style:none;
+padding:0;
+
+}
+
+.footer-col ul li{
+
+margin-bottom:8px;
+
+}
+
+.footer-col ul li a{
+
+text-decoration:none;
+color:#ccc;
+font-size:14px;
+
+}
+
+.footer-col ul li a:hover{
+
+color:#B92425;
+
+}
+
+/* social */
+
+.footer-social{
+
+margin-top:10px;
+
+}
+
+.footer-social a{
+
+display:inline-block;
+margin-right:10px;
+text-decoration:none;
+background:#B92425;
+color:#fff;
+padding:6px 10px;
+border-radius:4px;
+font-size:12px;
+
+}
+
+.footer-bottom{
+
+margin-top:50px;
+border-top:1px solid #333;
+padding-top:20px;
+text-align:center;
+font-size:14px;
+
+}
