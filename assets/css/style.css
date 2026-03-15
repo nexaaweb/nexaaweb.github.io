@@ -2327,6 +2327,90 @@ grid-template-columns:1fr;
 
 }
 
+/* ================= SECTION 8 : KEY STATS ================= */
+
+.stats-section{
+background:#B92425;
+padding:90px 20px;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:40px;
+text-align:center;
+}
+
+.stat-card{
+color:white;
+transition:.35s;
+}
+
+.stat-card h2{
+font-size:48px;
+font-family:'Playfair Display',serif;
+margin-bottom:10px;
+}
+
+.stat-card p{
+font-size:18px;
+font-family:'Open Sans',sans-serif;
+}
+
+.stat-card:hover{
+transform:translateY(-6px);
+}
+
+
+
+/* ================= SECTION 9 : CTA ================= */
+
+.cta-section{
+padding:100px 20px;
+background:#F5F5F5;
+text-align:center;
+}
+
+.cta-content h2{
+font-family:'Playfair Display',serif;
+font-size:38px;
+color:#222;
+margin-bottom:25px;
+}
+
+.cta-btn{
+display:inline-block;
+background:#B92425;
+color:white;
+padding:14px 35px;
+font-size:16px;
+font-weight:600;
+border-radius:6px;
+text-decoration:none;
+transition:.3s;
+}
+
+.cta-btn:hover{
+background:#C51A24;
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+.stat-card h2{
+font-size:36px;
+}
+
+.cta-content h2{
+font-size:28px;
+}
+
+}
 /* ================= FOOTER ================= */
 
 footer{
