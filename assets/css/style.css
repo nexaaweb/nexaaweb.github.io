@@ -2013,15 +2013,82 @@ font-size:14px;
     background-color: #C51A24;
 }
 
-/* ================= FOOTER ================= */
-footer {
-    padding: 20px 50px;
-    background-color: #222222;
-    color: #fff;
+/* ================= WHAT WE DO ================= */
+.what-we-do {
+    padding: 100px 20px;
+    background-color: #ffffff;
     text-align: center;
 }
 
-/* ================= SCROLL ANIMATIONS ================= */
+.what-we-do h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #222222;
+}
+
+.what-we-do .section-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    margin-bottom: 50px;
+    color: #666666;
+}
+
+/* SERVICES GRID */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* SERVICE CARD */
+.service-card {
+    background: #f5f5f5;
+    padding: 30px 20px;
+    border-radius: 15px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #B92425;
+}
+
+.service-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #333333;
+}
+
+.service-card ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.service-card ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #B92425;
+    font-weight: bold;
+}
+
+/* HOVER EFFECT */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* ================= SCROLL ANIMATION ================= */
 .fade-up {
     opacity: 0;
     transform: translateY(30px);
@@ -2034,21 +2101,17 @@ footer {
 }
 
 /* ================= RESPONSIVE ================= */
-@media (max-width: 992px) {
-    .header-container {
-        flex-direction: column;
-        gap: 15px;
+@media (max-width: 768px) {
+    .services-grid {
+        gap: 20px;
     }
-    .about-hero-text h1 {
-        font-size: 36px;
+    .service-card {
+        padding: 25px 15px;
     }
-    .about-hero-text h2 {
-        font-size: 22px;
+    .service-card h3 {
+        font-size: 20px;
     }
-    .who-we-are h2 {
-        font-size: 28px;
-    }
-    .who-we-are p {
-        font-size: 16px;
+    .service-card ul li {
+        font-size: 15px;
     }
 }
