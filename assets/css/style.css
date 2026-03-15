@@ -2496,7 +2496,194 @@ grid-template-columns:1fr;
 }
 
 }
-    
+
+/* CONTACT HERO */
+
+.contact-hero{
+
+position:relative;
+height:80vh;
+
+background-image:url('https://i.pinimg.com/1200x/93/15/ef/9315ef78bcef5f215005c00dd22d1c80.jpg');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+
+padding:20px;
+
+}
+
+.contact-overlay{
+
+position:absolute;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.55);
+
+}
+
+.contact-hero-content{
+
+position:relative;
+z-index:2;
+max-width:700px;
+color:white;
+
+}
+
+.contact-hero-content h1{
+
+font-size:48px;
+font-family:'Playfair Display',serif;
+margin-bottom:10px;
+
+}
+
+.contact-hero-content h2{
+
+font-size:24px;
+margin-bottom:20px;
+
+}
+
+.contact-hero-content p{
+
+font-size:17px;
+line-height:1.6;
+
+}
+
+.contact-info-section{
+
+padding:100px 20px;
+background:#F5F5F5;
+
+}
+
+.contact-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+
+}
+
+.contact-card{
+
+background:white;
+padding:35px;
+
+border-radius:12px;
+
+text-align:center;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+transition:.4s;
+
+}
+
+.contact-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.contact-card h3{
+
+font-family:'Poppins',sans-serif;
+color:#B92425;
+
+margin-bottom:10px;
+
+}
+
+.contact-card p{
+
+color:#666;
+font-family:'Open Sans';
+
+}
+.contact-form-section{
+
+padding:100px 20px;
+background:white;
+
+}
+
+.contact-form-container{
+
+max-width:800px;
+margin:auto;
+text-align:center;
+
+}
+
+.contact-form-container h2{
+
+font-family:'Playfair Display';
+font-size:36px;
+margin-bottom:40px;
+
+}
+
+.form-grid{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+
+}
+
+.contact-form-container input,
+.contact-form-container textarea{
+
+width:100%;
+padding:14px;
+
+border-radius:6px;
+border:1px solid #ddd;
+
+font-size:15px;
+
+}
+
+.contact-form-container button{
+
+background:#B92425;
+color:white;
+
+padding:14px 30px;
+
+border:none;
+border-radius:6px;
+
+margin-top:20px;
+
+cursor:pointer;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.contact-form-container button:hover{
+
+background:#C51A24;
+
+}
+
 }
 /* ================= FOOTER ================= */
 
