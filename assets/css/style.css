@@ -1833,35 +1833,113 @@ font-size:14px;
 
 }
 
-/* ================= HEADER FOR ABOUT ================= */
-.header-about {
+/* ================= HEADER / HERO BACKGROUND ================= */
+.header-about,
+.about-hero {
     background-image: url('https://i.pinimg.com/736x/d5/1f/7b/d51f7b0979c67a4b76e8582245f50cfd.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header-about {
     position: relative;
+    z-index: 2;
 }
 
 .header-about::after {
     content: '';
     position: absolute;
     top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.4); /* dark overlay behind header links */
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4); /* overlay behind header links */
     z-index: 0;
 }
 
 .header-about .header-container {
     position: relative;
     z-index: 2;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-about .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #B92425;
+}
+
+.header-about .logo span {
+    color: #B92425;
+}
+
+.header-about nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.header-about nav ul li {
+    position: relative;
+}
+
+.header-about nav ul li a {
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    padding: 5px 0;
+    transition: all 0.3s;
+}
+
+.header-about nav ul li a.active,
+.header-about nav ul li a:hover {
+    color: #B92425;
+    border-bottom: 2px solid #B92425;
+}
+
+/* ================= DROPDOWN ================= */
+.header-about .dropdown-menu {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    list-style: none;
+    padding: 10px 0;
+    min-width: 220px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.header-about .dropdown:hover .dropdown-menu,
+.header-about .dropdown-menu:hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.header-about .dropdown-menu li a {
+    padding: 10px 20px;
+    display: block;
+    color: #222;
+    font-weight: 500;
+}
+
+.header-about .dropdown-menu li a:hover {
+    color: #B92425;
 }
 
 /* ================= HERO / INTRO ================= */
 .about-hero {
     position: relative;
-    background-image: url('https://i.pinimg.com/736x/d5/1f/7b/d51f7b0979c67a4b76e8582245f50cfd.jpg');
-    background-size: cover;
-    background-position: center;
     height: 80vh;
     display: flex;
     align-items: center;
@@ -1874,7 +1952,7 @@ font-size:14px;
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: rgba(0,0,0,0.5); /* overlay for text readability */
+    background: rgba(0,0,0,0.5);
     z-index: 1;
 }
 
@@ -1883,39 +1961,6 @@ font-size:14px;
     z-index: 2;
     max-width: 800px;
     color: #fff;
-}
-
-.about-hero-text h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 48px;
-    margin-bottom: 15px;
-}
-
-.about-hero-text h2 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.about-hero-text p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.about-hero-text .btn-red {
-    padding: 12px 30px;
-    background-color: #B92425;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: all 0.3s;
-}
-
-.about-hero-text .btn-red:hover {
-    background-color: #C51A24;
 }
 
 /* ================= WHO WE ARE ================= */
@@ -1938,6 +1983,23 @@ font-size:14px;
     margin: 0 auto;
 }
 
+/* ================= BUTTON ================= */
+.btn-red {
+    display: inline-block;
+    padding: 12px 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    background-color: #B92425;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.btn-red:hover {
+    background-color: #C51A24;
+}
+
 /* ================= FOOTER ================= */
 footer {
     padding: 20px 50px;
@@ -1946,13 +2008,29 @@ footer {
     text-align: center;
 }
 
+/* ================= SCROLL ANIMATIONS ================= */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-up.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* ================= RESPONSIVE ================= */
 @media (max-width: 992px) {
+    .header-about .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
     .about-hero-text h1 {
         font-size: 36px;
     }
     .about-hero-text h2 {
-        font-size: 20px;
+        font-size: 22px;
     }
     .who-we-are h2 {
         font-size: 28px;
