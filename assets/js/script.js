@@ -79,3 +79,18 @@ updateCounter();
 
   faders.forEach(fader => appearOnScroll.observe(fader));
 </script>
+
+<script>
+
+const faders=document.querySelectorAll('.fade-up');
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(!entry.isIntersecting)return;
+entry.target.classList.add('appear');
+});
+},{threshold:0.2});
+
+faders.forEach(el=>observer.observe(el));
+
+</script>
