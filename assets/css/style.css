@@ -1833,6 +1833,12 @@ font-size:14px;
 
 }
 
+/* ================= SMOOTH SCROLL ================= */
+
+html{
+scroll-behavior:smooth;
+}
+
 /* ================= GLOBAL RESET ================= */
 
 *{
