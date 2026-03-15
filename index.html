@@ -1,48 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>NEXAAWEB</title>
-
-<link rel="stylesheet" href="assets/css/style.css">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXAAWEB</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&family=Poppins:wght@500&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<div id="header"></div>
+    <!-- ================= SECTION 1: HEADER ================= -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                NEXAA<span>WEB</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="web-design.html">Web Design & Development</a></li>
+                            <li><a href="branding.html">Branding & Creative Design</a></li>
+                            <li><a href="consulting.html">Consulting & Strategy</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <!-- ================= SECTION 2: HERO ================= -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-container">
+            <div class="hero-left">
+                <img src="https://i.pinimg.com/1200x/9c/ec/19/9cec199c1c7388c726b145448bb419d6.jpg" alt="Hero Image">
+            </div>
+            <div class="hero-right">
+                <h1>Web Design, Branding & Digital Growth Agency</h1>
+                <p>We create modern websites, powerful branding and smart strategies to help businesses grow online.</p>
+                <a href="services.html" class="btn-red">Explore Services</a>
+            </div>
+        </div>
+    </section>
 
-<section class="hero">
-
-<div class="hero-inner">
-
-<div class="hero-date" id="date"></div>
-
-<div class="hero-content">
-
-<h1>Web Design, Branding & Digital Growth Agency</h1>
-
-<p>
-We create modern websites, powerful branding and smart strategies
-to help businesses grow online.
-</p>
-
-<a href="services.html" class="btn-primary">Explore Services</a>
-
-</div>
-
-</div>
-
-</section>
+</body>
+</html>
 
 <!-- ========================= -->
 <!-- SECTION 2 – TRUSTED BY / CLIENT LOGOS -->
