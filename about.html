@@ -56,34 +56,49 @@
     </div>
 </section>
 
-  <!-- ================= SECTION 4: FOOTER ================= -->
-  <footer>
-      <div class="container">
-          <p>&copy; 2026 NexaaWeb. All rights reserved.</p>
-      </div>
-  </footer>
+<!-- ================= SECTION 3: WHAT WE DO ================= -->
+<section class="what-we-do fade-up">
+    <div class="container">
+        <h2>What We Do</h2>
+        <p class="section-subtitle">At NexaaWeb, we provide complete digital and creative solutions to help businesses grow and stand out online.</p>
 
-  <!-- ================= SCRIPTS ================= -->
-  <script>
-    // Scroll Animation
-    const faders = document.querySelectorAll('.fade-up');
-    const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            entry.target.classList.add('appear');
-            observer.unobserve(entry.target);
-        });
-    }, appearOptions);
-    faders.forEach(fader => { appearOnScroll.observe(fader); });
+        <div class="services-grid">
 
-    // Parallax Effect for Hero
-    const hero = document.getElementById('hero');
-    window.addEventListener('scroll', () => {
-        const scrollPos = window.scrollY;
-        hero.style.backgroundPositionY = `${scrollPos * 0.5}px`;
-    });
-  </script>
+            <!-- Web Design & Development -->
+            <div class="service-card">
+                <h3>Web Design & Development</h3>
+                <ul>
+                    <li>Modern business websites</li>
+                    <li>E-commerce stores & Shopify development</li>
+                    <li>Landing pages & portfolio websites</li>
+                    <li>AI-powered chatbots & website solutions</li>
+                    <li>Website redesign & optimization</li>
+                </ul>
+            </div>
 
-</body>
-</html>
+            <!-- Branding & Creative Design -->
+            <div class="service-card">
+                <h3>Branding & Creative Design</h3>
+                <ul>
+                    <li>Logos & complete brand identities</li>
+                    <li>Posters, banners & social media graphics</li>
+                    <li>Business cards, brochures & flyers</li>
+                    <li>Resume / CV design & professional PPTs</li>
+                    <li>Menu cards & office signage</li>
+                </ul>
+            </div>
+
+            <!-- Consulting & Strategy -->
+            <div class="service-card">
+                <h3>Consulting & Strategy</h3>
+                <ul>
+                    <li>Business consulting & startup strategy</li>
+                    <li>Website planning & digital growth strategy</li>
+                    <li>AI consulting & automation solutions</li>
+                    <li>Online business growth & performance optimization</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
