@@ -10,14 +10,13 @@
 
 <link rel="stylesheet" href="assets/css/style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 </head>
 
 <body>
 
-
-<!-- ================= SECTION 1 : HEADER ================= -->
+<!-- HEADER -->
 
 <header class="header-white">
 
@@ -26,68 +25,63 @@
 <div class="logo">NEXAA<span>WEB</span></div>
 
 <nav>
-
 <ul class="nav-links">
 
 <li><a href="index.html">Home</a></li>
-
 <li><a href="about.html">About</a></li>
 
 <li class="dropdown">
-
-<a href="services.html">Services ▾</a>
+<a href="services.html">Services ⌄</a>
 
 <ul class="dropdown-menu">
-
-<li><a href="web-design.html">Web Design & Development</a></li>
-
-<li><a href="branding.html">Branding & Creative Design</a></li>
-
-<li><a href="consulting.html">Consulting & Strategy</a></li>
-
+<li><a href="#">Web Design & Development</a></li>
+<li><a href="#">Branding & Creative</a></li>
+<li><a href="#">Consulting</a></li>
 </ul>
 
 </li>
 
 <li><a href="portfolio.html">Portfolio</a></li>
-
 <li><a href="blog.html">Blog</a></li>
-
 <li><a href="pricing.html">Pricing</a></li>
-
 <li><a href="contact.html" class="active">Contact</a></li>
 
 </ul>
-
 </nav>
 
 </div>
-
 </header>
 
-
-
-<!-- ================= SECTION 2 : CONTACT HERO ================= -->
+<!-- HERO SECTION -->
 
 <section class="contact-hero">
 
 <div class="contact-overlay"></div>
 
-<div class="container contact-hero-content fade-up">
+<div class="contact-hero-content fade-up">
 
 <h1>Contact Us</h1>
 
 <h2>Let’s Start Your Next Digital Project</h2>
 
 <p>
-Have a project in mind or need help with your website, branding, or digital growth? 
-Get in touch with NexaaWeb and let’s discuss how we can create something amazing for your business.
+
+Have a project in mind or need help with your website, branding, or digital growth?
+Get in touch with NexaaWeb and let’s create something amazing.
+
 </p>
 
+</div>
 
-<div class="contact-info">
+</section>
 
-<div class="info-box">
+<!-- CONTACT INFORMATION -->
+
+<section class="contact-info-section">
+
+<div class="container contact-grid">
+
+<div class="contact-card fade-up">
 
 <h3>Email</h3>
 
@@ -95,8 +89,7 @@ Get in touch with NexaaWeb and let’s discuss how we can create something amazi
 
 </div>
 
-
-<div class="info-box">
+<div class="contact-card fade-up">
 
 <h3>Phone / WhatsApp</h3>
 
@@ -104,8 +97,7 @@ Get in touch with NexaaWeb and let’s discuss how we can create something amazi
 
 </div>
 
-
-<div class="info-box">
+<div class="contact-card fade-up">
 
 <h3>Location</h3>
 
@@ -113,21 +105,11 @@ Get in touch with NexaaWeb and let’s discuss how we can create something amazi
 
 </div>
 
-</div>
-
-
-<div class="availability">
+<div class="contact-card fade-up">
 
 <h3>Availability</h3>
 
-<p>
-Available 7 Days a Week
-</p>
-
-<p class="availability-text">
-NexaaWeb works with clients throughout the week to deliver websites, branding, and digital solutions. 
-Projects are handled with flexibility to ensure smooth progress and timely delivery.
-</p>
+<p>Available 7 Days a Week</p>
 
 </div>
 
@@ -135,7 +117,7 @@ Projects are handled with flexibility to ensure smooth progress and timely deliv
 
 </section>
 
-<!-- ================= SECTION 3 : CONTACT FORM ================= -->
+<!-- CONTACT FORM -->
 
 <section class="contact-form-section">
 
@@ -143,25 +125,21 @@ Projects are handled with flexibility to ensure smooth progress and timely deliv
 
 <h2>SEND US A MESSAGE</h2>
 
-<form action="https://formsubmit.co/nexaawebofficial@gmail.com" method="POST">
-
-<input type="hidden" name="_subject" value="New NexaaWeb Contact Message">
-
-<input type="hidden" name="_captcha" value="false">
+<form id="contactForm">
 
 <div class="form-grid">
 
-<input type="text" name="Full Name" placeholder="Full Name" required>
+<input type="text" id="name" placeholder="Full Name" required>
 
-<input type="email" name="Email Address" placeholder="Email Address" required>
+<input type="email" id="email" placeholder="Email Address" required>
 
-<input type="text" name="Phone / WhatsApp" placeholder="Phone / WhatsApp">
+<input type="text" id="phone" placeholder="Phone / WhatsApp">
 
-<input type="text" name="Service Interested In" placeholder="Service Interested In">
+<input type="text" id="service" placeholder="Service Interested In">
 
 </div>
 
-<textarea name="Message" placeholder="Message" rows="6" required></textarea>
+<textarea id="message" placeholder="Message" rows="6" required></textarea>
 
 <button type="submit">Send Message</button>
 
@@ -171,7 +149,7 @@ Projects are handled with flexibility to ensure smooth progress and timely deliv
 
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -183,6 +161,7 @@ Projects are handled with flexibility to ensure smooth progress and timely deliv
 
 </footer>
 
+<script src="assets/js/contact.js"></script>
 
 </body>
 </html>
