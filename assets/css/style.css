@@ -2115,3 +2115,131 @@ font-size:14px;
         font-size: 15px;
     }
 }
+/* ================= SECTION 4 : OUR APPROACH ================= */
+
+.our-approach{
+padding:100px 20px;
+background:#ffffff;
+}
+
+.approach-header{
+text-align:center;
+max-width:750px;
+margin:auto;
+margin-bottom:70px;
+}
+
+.approach-header h2{
+font-family:'Playfair Display',serif;
+font-size:36px;
+color:#222;
+margin-bottom:15px;
+}
+
+.approach-header p{
+font-family:'Open Sans',sans-serif;
+font-size:18px;
+color:#666;
+line-height:1.6;
+}
+
+/* TIMELINE GRID */
+
+.approach-timeline{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:35px;
+position:relative;
+}
+
+/* STEP CARD */
+
+.approach-step{
+background:#F5F5F5;
+padding:35px 25px;
+border-radius:16px;
+text-align:center;
+transition:all .35s ease;
+position:relative;
+overflow:hidden;
+}
+
+/* ICON */
+
+.approach-icon{
+font-size:34px;
+margin-bottom:18px;
+background:#B92425;
+color:white;
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+margin-left:auto;
+margin-right:auto;
+transition:.35s;
+}
+
+/* TITLE */
+
+.approach-step h3{
+font-family:'Poppins',sans-serif;
+font-size:20px;
+margin-bottom:10px;
+color:#222;
+}
+
+/* TEXT */
+
+.approach-step p{
+font-family:'Open Sans',sans-serif;
+font-size:15px;
+color:#666;
+line-height:1.6;
+}
+
+/* HOVER EFFECT */
+
+.approach-step:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,0.12);
+background:white;
+}
+
+.approach-step:hover .approach-icon{
+transform:scale(1.1);
+background:#C51A24;
+}
+
+/* SCROLL ANIMATION */
+
+.fade-up{
+opacity:0;
+transform:translateY(40px);
+transition:all .8s ease;
+}
+
+.fade-up.appear{
+opacity:1;
+transform:translateY(0);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.approach-header h2{
+font-size:28px;
+}
+
+.approach-header p{
+font-size:16px;
+}
+
+.approach-step{
+padding:28px 20px;
+}
+
+}
