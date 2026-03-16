@@ -113,3 +113,163 @@ font-size:16px;
 }
 
 }
+/* ===============================
+SECTION TITLES
+=============================== */
+
+.section-title{
+
+font-size:34px;
+text-align:center;
+color:#000000;
+margin-bottom:20px;
+
+}
+
+.section-text{
+
+max-width:800px;
+margin:auto;
+text-align:center;
+color:#666666;
+line-height:1.8;
+margin-bottom:60px;
+
+}
+
+
+
+/* ===============================
+SERVICES OVERVIEW
+=============================== */
+
+.services-overview{
+
+padding:100px 20px;
+background:#F4F4F4;
+
+}
+
+
+
+/* ===============================
+WHAT WE OFFER
+=============================== */
+
+.services-offer{
+
+padding:100px 20px;
+background:#FFFFFF;
+
+}
+
+.services-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+
+}
+
+
+
+/* SERVICE CARD */
+
+.service-card{
+
+background:#FFFFFF;
+padding:40px;
+border-radius:8px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+transition:0.4s;
+
+}
+
+.service-card:hover{
+
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
+
+}
+
+
+
+/* ICON */
+
+.service-icon{
+
+width:60px;
+height:60px;
+background:#B92425;
+color:#FFFFFF;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:26px;
+margin:auto;
+margin-bottom:20px;
+
+}
+
+
+
+/* CARD TITLE */
+
+.service-card h3{
+
+font-size:22px;
+margin-bottom:15px;
+color:#000000;
+
+}
+
+
+
+/* CARD TEXT */
+
+.service-card p{
+
+font-size:15px;
+color:#666666;
+line-height:1.7;
+margin-bottom:25px;
+
+}
+
+
+
+/* BUTTON */
+
+.service-btn{
+
+display:inline-block;
+background:#B92425;
+color:#FFFFFF;
+padding:10px 26px;
+border-radius:4px;
+text-decoration:none;
+transition:0.3s;
+
+}
+
+.service-btn:hover{
+
+background:#D21F2B;
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.section-title{
+
+font-size:28px;
+
+}
+
+}
