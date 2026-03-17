@@ -695,4 +695,132 @@ padding:80px 20px;
 }
 
 }
+/* ===============================
+SECTION 11 — FINAL CTA
+=============================== */
 
+.cta-section{
+
+position:relative;
+padding:120px 20px;
+text-align:center;
+color:#FFFFFF;
+background:url("https://i.pinimg.com/736x/5e/05/b3/5e05b339c75aac6cf337e1c2db8b5526.jpg") center/cover no-repeat;
+
+}
+
+
+/* DARK OVERLAY */
+
+.cta-overlay{
+
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.75);
+
+}
+
+
+/* CONTENT */
+
+.cta-section .container{
+
+position:relative;
+z-index:2;
+max-width:800px;
+margin:auto;
+
+}
+
+
+/* HEADINGS */
+
+.cta-section h2{
+
+font-size:32px;
+margin-bottom:10px;
+
+}
+
+.cta-section h3{
+
+font-size:24px;
+margin-bottom:20px;
+color:#B92425;
+
+}
+
+
+/* TEXT */
+
+.cta-section p{
+
+font-size:16px;
+line-height:1.7;
+margin-bottom:30px;
+
+}
+
+
+/* BUTTON */
+
+.cta-btn{
+
+display:inline-block;
+background:#B92425;
+color:#FFFFFF;
+padding:14px 35px;
+border-radius:5px;
+text-decoration:none;
+font-weight:500;
+transition:0.4s;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+
+}
+
+.cta-btn:hover{
+
+background:#D21F2B;
+transform:translateY(-3px);
+box-shadow:0 15px 35px rgba(0,0,0,0.4);
+
+}
+
+
+/* SMALL TEXT */
+
+.cta-small-text{
+
+margin-top:20px;
+font-size:14px;
+opacity:0.9;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.cta-section{
+
+padding:80px 20px;
+
+}
+
+.cta-section h2{
+
+font-size:26px;
+
+}
+
+.cta-section h3{
+
+font-size:20px;
+
+}
+
+}
