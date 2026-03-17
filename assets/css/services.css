@@ -298,6 +298,109 @@ font-size:28px;
 
 }
 
+/* ===============================
+SECTION 7 — HOW WE WORK
+=============================== */
+
+.process-section{
+
+padding:100px 20px;
+background:#F4F4F4;
+
+}
+
+.section-subtitle{
+
+text-align:center;
+color:#B92425;
+margin-bottom:15px;
+letter-spacing:1px;
+
+}
+
+
+/* GRID */
+
+.process-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+margin-top:50px;
+
+}
+
+
+/* CARD */
+
+.process-card{
+
+background:#FFFFFF;
+padding:35px;
+border-radius:8px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+transition:0.4s;
+
+}
+
+.process-card:hover{
+
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
+
+}
+
+
+/* ICON */
+
+.process-icon{
+
+width:60px;
+height:60px;
+background:#B92425;
+color:#FFFFFF;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+margin:auto;
+margin-bottom:20px;
+
+}
+
+
+/* TEXT */
+
+.process-card h3{
+
+font-size:20px;
+margin-bottom:10px;
+color:#000000;
+
+}
+
+.process-card p{
+
+font-size:14px;
+color:#666666;
+line-height:1.6;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.process-section{
+
+padding:80px 20px;
+
+}
+
+}
 
 
 
