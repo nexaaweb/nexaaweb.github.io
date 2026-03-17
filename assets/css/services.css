@@ -137,6 +137,30 @@ margin-bottom:60px;
 
 }
 
+/* ===============================
+SECTION TITLES
+=============================== */
+
+.section-title{
+
+font-size:34px;
+text-align:center;
+color:#000000;
+margin-bottom:20px;
+
+}
+
+.section-text{
+
+max-width:800px;
+margin:auto;
+text-align:center;
+color:#666666;
+line-height:1.8;
+margin-bottom:60px;
+
+}
+
 
 
 /* ===============================
@@ -273,3 +297,8 @@ font-size:28px;
 }
 
 }
+
+
+
+
+
