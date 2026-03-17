@@ -586,5 +586,113 @@ padding:80px 20px;
 }
 
 }
+/* ===============================
+SECTION 8 — WHO THIS IS FOR
+=============================== */
 
+.audience-section{
+
+position:relative;
+padding:120px 20px;
+background:url("https://i.pinimg.com/736x/91/14/95/9114957d638576fa6cf3eef7bfbdd038.jpg") center/cover no-repeat;
+color:#FFFFFF;
+
+}
+
+
+/* DARK OVERLAY */
+
+.audience-section .overlay{
+
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.75);
+
+}
+
+
+/* CONTENT ABOVE OVERLAY */
+
+.audience-section .container{
+
+position:relative;
+z-index:2;
+
+}
+
+
+/* LIGHT TEXT */
+
+.light{
+
+color:#FFFFFF;
+
+}
+
+
+/* GRID */
+
+.audience-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+margin-top:60px;
+
+}
+
+
+/* CARD */
+
+.audience-card{
+
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+padding:30px;
+border-radius:8px;
+transition:0.4s;
+border:1px solid rgba(255,255,255,0.15);
+
+}
+
+.audience-card:hover{
+
+transform:translateY(-10px);
+background:rgba(255,255,255,0.15);
+
+}
+
+
+/* TEXT */
+
+.audience-card h3{
+
+color:#FFFFFF;
+margin-bottom:10px;
+
+}
+
+.audience-card p{
+
+color:#FFFFFF;
+font-size:14px;
+line-height:1.6;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.audience-section{
+
+padding:80px 20px;
+
+}
+
+}
 
