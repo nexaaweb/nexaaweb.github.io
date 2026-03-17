@@ -401,7 +401,89 @@ padding:80px 20px;
 }
 
 }
+/* ===============================
+SECTION 9 — TOOLS & TECHNOLOGIES
+=============================== */
 
+.tools-section{
+
+padding:100px 0;
+background:#FFFFFF;
+text-align:center;
+
+}
+
+
+/* TECH SLIDER */
+
+.tech-slider{
+
+overflow:hidden;
+white-space:nowrap;
+margin-top:60px;
+
+}
+
+.tech-track{
+
+display:inline-block;
+animation:scrollTech 25s linear infinite;
+
+}
+
+
+/* TECH ITEMS */
+
+.tech-track span{
+
+display:inline-block;
+margin:0 40px;
+font-size:18px;
+color:#000000;
+font-weight:500;
+position:relative;
+
+}
+
+
+/* DOT STYLE */
+
+.tech-track span::after{
+
+content:"•";
+margin-left:40px;
+color:#B92425;
+
+}
+
+
+/* ANIMATION */
+
+@keyframes scrollTech{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.tech-track span{
+
+font-size:16px;
+margin:0 25px;
+
+}
+
+}
 
 
 
