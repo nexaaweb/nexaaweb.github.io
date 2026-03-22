@@ -15,10 +15,6 @@ justify-content:space-between;
 gap:50px;
 }
 
-.hero-text{
-max-width:500px;
-}
-
 .hero-text h5{
 color:#B92425;
 }
@@ -32,7 +28,7 @@ color:#B92425;
 }
 
 .hero-image img{
-width:350px;
+width:320px;
 border-radius:20px;
 }
 
@@ -59,7 +55,7 @@ padding:80px 20px;
 text-align:center;
 }
 
-/* SERVICES */
+/* SERVICES GRID */
 
 .title{
 text-align:center;
@@ -67,33 +63,26 @@ color:#B92425;
 margin-bottom:40px;
 }
 
-.slider{
-overflow:hidden;
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
 }
-
-.slide-track{
-display:flex;
-gap:20px;
-animation:scroll 25s linear infinite;
-}
-
-@keyframes scroll{
-0%{transform:translateX(0);}
-100%{transform:translateX(-50%);}
-}
-
-/* CARD DESIGN */
 
 .service-card{
-min-width:350px;
-background:#fff;
-border-radius:15px;
 display:flex;
 justify-content:space-between;
 align-items:center;
+background:#fff;
 padding:20px;
+border-radius:15px;
 box-shadow:0 10px 30px rgba(0,0,0,0.08);
 border-bottom:3px solid #B92425;
+transition:0.3s;
+}
+
+.service-card:hover{
+transform:translateY(-8px);
 }
 
 .service-card img{
@@ -104,7 +93,7 @@ border-radius:10px;
 }
 
 .text{
-max-width:200px;
+max-width:60%;
 }
 
 /* WHY */
@@ -112,11 +101,6 @@ max-width:200px;
 .branding-why{
 padding:80px 20px;
 text-align:center;
-}
-
-.branding-why ul{
-list-style:none;
-line-height:2;
 }
 
 /* PROCESS */
@@ -147,13 +131,27 @@ text-align:center;
 /* RESPONSIVE */
 
 @media(max-width:768px){
+
 .hero-container{
 flex-direction:column;
 text-align:center;
 }
 
-.slide-track{
-animation:none;
-overflow-x:auto;
+.grid{
+grid-template-columns:1fr;
 }
+
+.service-card{
+flex-direction:column;
+text-align:center;
+}
+
+.service-card img{
+margin-top:10px;
+}
+
+.text{
+max-width:100%;
+}
+
 }
