@@ -1,163 +1,191 @@
 body{
-    font-family: 'Poppins', sans-serif;
-    margin:0;
+font-family:'Open Sans',sans-serif;
 }
 
 /* HERO */
-.hero{
-    height:100vh;
-    background:url('https://i.pinimg.com/736x/dc/0e/6d/dc0e6dd3e5f68e58d8f6a87630b36c93.jpg') center/cover no-repeat;
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:flex-end;
+
+.wd-hero{
+position:relative;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:#fff;
+overflow:hidden;
+}
+
+.hero-video{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
 }
 
 .hero-overlay{
-    position:absolute;
-    right:0;
-    top:0;
-    width:50%;
-    height:100%;
-    background:rgba(0,0,0,0.6);
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
 }
 
 .hero-content{
-    position:relative;
-    width:50%;
-    color:white;
-    padding:40px;
-    animation:slideRight 1s ease;
+position:relative;
+max-width:800px;
 }
 
-.hero h1{
-    font-family:'Playfair Display';
-    font-size:42px;
+.wd-hero h5{
+color:#B92425;
+letter-spacing:2px;
 }
 
-.hero h2{
-    margin:15px 0;
+.wd-hero h1{
+font-size:48px;
+margin:20px 0;
 }
+
+.wd-hero p{
+color:#ddd;
+margin-bottom:20px;
+}
+
+/* BUTTON */
 
 .btn{
-    background:#B92425;
-    color:#fff;
-    padding:12px 25px;
-    border-radius:6px;
-    display:inline-block;
-    transition:.3s;
+background:#B92425;
+color:#fff;
+padding:12px 30px;
+border-radius:4px;
+text-decoration:none;
+transition:0.3s;
 }
 
 .btn:hover{
-    transform:scale(1.05);
+background:#D21F2B;
 }
 
-/* SECTIONS */
-.section{
-    padding:70px 20px;
+/* OVERVIEW */
+
+.wd-overview{
+padding:80px 20px;
+text-align:center;
 }
 
-.center{
-    text-align:center;
-}
-
-.max-text{
-    max-width:700px;
-    margin:auto;
+.wd-overview p{
+max-width:700px;
+margin:auto;
+color:#666;
 }
 
 /* SERVICES */
+
+.wd-services{
+padding:80px 20px;
+}
+
 .services-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
 }
 
-.card{
-    background:#fff;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition:.3s;
+.service-card{
+background:#fff;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+transition:0.4s;
 }
 
-.card:hover{
-    transform:translateY(-10px) scale(1.02);
+.service-card:hover{
+transform:translateY(-10px);
 }
 
-.card img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
+.service-card img{
+width:100%;
+height:200px;
+object-fit:cover;
 }
 
-.card h3, .card p{
-    padding:10px;
+.service-card h3{
+padding:15px;
+}
+
+.service-card p{
+padding:0 15px 20px;
+color:#666;
 }
 
 /* WHY */
-.why-list{
-    list-style:none;
-    max-width:400px;
-    margin:auto;
-    text-align:right;
+
+.wd-why{
+padding:80px 20px;
+background:#f9f9f9;
+}
+
+.wd-why ul{
+max-width:600px;
+margin:auto;
+color:#666;
+line-height:2;
 }
 
 /* PROCESS */
-.process{
-    display:flex;
-    gap:20px;
-    overflow-x:auto;
+
+.wd-process{
+padding:80px 20px;
+text-align:center;
 }
 
-.step{
-    min-width:200px;
-    background:#f4f4f4;
-    padding:25px;
-    text-align:center;
-    border-radius:10px;
-    transition:.3s;
+.process-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
 }
 
-.step:hover{
-    background:#B92425;
-    color:white;
+.process-card{
+background:#fff;
+padding:30px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+transition:0.3s;
+}
+
+.process-card:hover{
+transform:translateY(-8px);
 }
 
 /* CTA */
-.cta{
-    background:#271314;
-    color:white;
-    text-align:center;
-    padding:80px 20px;
+
+.wd-cta{
+padding:100px 20px;
+background:#271314;
+color:#fff;
+text-align:center;
 }
 
-/* ANIMATIONS */
-@keyframes slideRight{
-    from{opacity:0; transform:translateX(100px);}
-    to{opacity:1; transform:translateX(0);}
+.wd-cta p{
+color:#ddd;
+margin-bottom:20px;
 }
 
-/* MOBILE */
+/* RESPONSIVE */
+
 @media(max-width:992px){
-    .services-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
+.services-grid{
+grid-template-columns:repeat(2,1fr);
+}
+.process-grid{
+grid-template-columns:repeat(2,1fr);
+}
 }
 
 @media(max-width:600px){
-    .services-grid{
-        grid-template-columns:1fr;
-    }
+.services-grid,
+.process-grid{
+grid-template-columns:1fr;
+}
 
-    .hero{
-        justify-content:center;
-    }
-
-    .hero-content{
-        width:100%;
-        text-align:center;
-    }
-
-    .hero-overlay{
-        width:100%;
-    }
+.wd-hero h1{
+font-size:32px;
+}
 }
