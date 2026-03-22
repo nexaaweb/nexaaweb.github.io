@@ -1,10 +1,28 @@
 /* RESET */
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
 body{
   font-family: Arial, sans-serif;
   background:#fff;
   color:#000;
+}
+
+/* GLOBAL ANIMATION */
+section{
+  opacity:0;
+  transform:translateY(40px);
+  animation:fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 
 /* HERO */
@@ -29,7 +47,7 @@ body{
 .hero h2{margin:10px 0;}
 .hero p{max-width:600px;margin-bottom:20px;}
 
-/* BUTTON */
+/* BUTTON FIX */
 .btn{
   background:#e3262e;
   color:#fff;
@@ -37,6 +55,13 @@ body{
   text-decoration:none;
   border-radius:5px;
   display:inline-block;
+  width:auto; /* FIXED */
+  transition:all 0.3s ease;
+}
+
+.btn:hover{
+  background:#000;
+  transform:translateY(-3px);
 }
 
 /* OVERVIEW */
@@ -47,12 +72,14 @@ body{
   padding:60px 20px;
 }
 
-.overview-text{flex:1;}
-.overview-img{flex:1;}
-
 .overview-img img{
   width:100%;
   border-radius:10px;
+  transition:0.5s;
+}
+
+.overview-img img:hover{
+  transform:scale(1.05);
 }
 
 /* SERVICES */
@@ -63,7 +90,7 @@ body{
 
 .service-grid{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
+  grid-template-columns:repeat(4,1fr); /* 4 COLUMN */
   gap:25px;
   margin-top:30px;
 }
@@ -71,12 +98,24 @@ body{
 .card{
   background:#fff;
   box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transition:0.4s;
+  overflow:hidden;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 15px 30px rgba(0,0,0,0.2);
 }
 
 .card img{
   width:100%;
   height:200px;
   object-fit:cover;
+  transition:0.5s;
+}
+
+.card:hover img{
+  transform:scale(1.1);
 }
 
 .card h3{
@@ -97,6 +136,11 @@ body{
 
 .why li{
   margin:10px 0;
+  transition:0.3s;
+}
+
+.why li:hover{
+  color:#e3262e;
 }
 
 /* AUTO SCROLL */
@@ -118,6 +162,12 @@ body{
   padding:20px 40px;
   margin:0 10px;
   white-space:nowrap;
+  transition:0.3s;
+}
+
+.step:hover{
+  background:#fff;
+  color:#e3262e;
 }
 
 @keyframes scroll{
@@ -133,7 +183,13 @@ body{
   padding:60px 20px;
 }
 
-/* MOBILE */
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .service-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
 @media(max-width:768px){
 
   .overview-container{
