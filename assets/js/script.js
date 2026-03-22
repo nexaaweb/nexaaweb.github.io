@@ -100,3 +100,61 @@ entry.target.classList.add("appear")
 }, {threshold:0.2})
 
 faders.forEach(el => observer.observe(el))
+
+// ============================
+// CURSOR GLOW EFFECT
+// ============================
+
+const cursor = document.createElement("div");
+cursor.classList.add("cursor-glow");
+document.body.appendChild(cursor);
+
+document.addEventListener("mousemove", (e) => {
+cursor.style.left = e.clientX + "px";
+cursor.style.top = e.clientY + "px";
+});
+
+
+// ============================
+// MAGNETIC BUTTON EFFECT
+// ============================
+
+const buttons = document.querySelectorAll(".btn");
+
+buttons.forEach(btn => {
+btn.addEventListener("mousemove", e => {
+const rect = btn.getBoundingClientRect();
+const x = e.clientX - rect.left - rect.width / 2;
+const y = e.clientY - rect.top - rect.height / 2;
+
+btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+});
+
+btn.addEventListener("mouseleave", () => {
+btn.style.transform = "translate(0,0)";
+});
+});
+
+
+// ============================
+// 3D CARD TILT EFFECT
+// ============================
+
+const cards = document.querySelectorAll(".service-card");
+
+cards.forEach(card => {
+card.addEventListener("mousemove", e => {
+const rect = card.getBoundingClientRect();
+const x = e.clientX - rect.left;
+const y = e.clientY - rect.top;
+
+const rotateX = -(y / rect.height - 0.5) * 10;
+const rotateY = (x / rect.width - 0.5) * 10;
+
+card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+});
+
+card.addEventListener("mouseleave", () => {
+card.style.transform = "rotateX(0) rotateY(0) scale(1)";
+});
+});
