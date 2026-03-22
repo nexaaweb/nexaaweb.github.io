@@ -158,3 +158,16 @@ card.addEventListener("mouseleave", () => {
 card.style.transform = "rotateX(0) rotateY(0) scale(1)";
 });
 });
+
+// LOADER
+window.addEventListener("load",()=>{
+document.getElementById("loader").style.display="none";
+});
+
+// SCROLL BAR
+window.onscroll=()=>{
+let winScroll=document.body.scrollTop||document.documentElement.scrollTop;
+let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+let scrolled=(winScroll/height)*100;
+document.getElementById("progress-bar").style.width=scrolled+"%";
+};
