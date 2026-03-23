@@ -12,23 +12,32 @@
 
 <div id="header"></div>
 
-<!-- HERO SECTION -->
+<!-- =============================================
+   SIRF YE HERO SECTION REPLACE KARO
+   branding.html mein <section class="branding-hero"> 
+   wala pura block is se replace kar do
+   ============================================= -->
+
 <section class="branding-hero">
-    <div class="container hero-container">
-        <div class="hero-text">
-            <!-- FIX: h5 → p tag with class (h5 to h1 jump semantically galat tha) -->
+    <div class="hero-bg-wrapper">
+        <!-- Background Image with dark overlay -->
+        <div class="hero-overlay"></div>
+
+        <!-- Hero Content -->
+        <div class="container hero-content">
             <p class="hero-label">BRANDING & CREATIVE DESIGN</p>
-            <h1>Creative Designs <span class="red">That Make Your Brand Stand Out</span></h1>
-            <p>At NexaaWeb, we create powerful and visually appealing designs that help your brand stand out. From logos to marketing materials, every design reflects your identity.</p>
-            <div class="hero-cta-area">
-                <a href="contact.html" class="btn">Start Your Project</a>
-                <!-- FIX: mini-thumb ka alag image URL use kiya, duplicate hata diya -->
-                <img src="https://i.pinimg.com/736x/b7/b3/27/b7b3274175bd59c691eb4de8d118d642.jpg" class="mini-thumb" alt="NexaaWeb Design Sample">
-            </div>
-        </div>
-        <div class="hero-image">
-            <!-- FIX: Hero main image alag rakha -->
-            <img src="https://i.pinimg.com/736x/53/ed/6d/53ed6dd2be73a11c022f15d6c138a840.jpg" alt="NexaaWeb Main Branding Illustration">
+
+            <h1 class="hero-heading">
+                Creative <span class="red-word">Designs</span> That Make<br>
+                Your Brand Stand Out
+            </h1>
+
+            <p class="hero-desc">
+                At NexaaWeb, we create powerful and visually appealing designs that help your brand stand out.
+                From logos to marketing materials, every design reflects your identity.
+            </p>
+
+            <a href="contact.html" class="hero-btn">Start Your Project</a>
         </div>
     </div>
 </section>
