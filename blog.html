@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -8,237 +7,135 @@
 
 <title>Blog | NexaaWeb</title>
 
-<!-- MAIN CSS -->
 <link rel="stylesheet" href="assets/css/style.css">
-
-<!-- BLOG CSS -->
 <link rel="stylesheet" href="assets/css/blog.css">
 
-<!-- FONTS -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
 
 </head>
 
-
 <body>
 
-<!-- HEADER -->
 <div id="header"></div>
 
+<!-- SECTION 1 -->
+<section class="blog-hero fade-up">
+<h5>BLOG & INSIGHTS</h5>
+<h1><span class="black">Learn, Grow</span> <span class="red">& Stay Ahead</span></h1>
+<p>Explore expert insights, tips, and strategies on web design, branding, and digital growth.</p>
 
-<!-- ========================= -->
-<!-- SECTION 1: BLOG HERO -->
-<!-- ========================= -->
-
-<section class="blog-hero">
-
-<div class="container">
-
-<h5 class="fade-up">BLOG & INSIGHTS</h5>
-
-<h1 class="fade-up">
-<span class="black">Learn, Grow</span> 
-<span class="red">& Stay Ahead</span>
-</h1>
-
-<p class="fade-up">
-Explore expert insights, tips, and strategies on web design, branding, and digital growth. 
-At NexaaWeb, we share practical knowledge to help businesses build a strong online presence and grow smarter.
-</p>
-
-<div class="search-box fade-up">
-
-<input type="text" placeholder="Search Articles...">
-
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="Search Articles...">
 <button>🔍</button>
-
 </div>
-
-</div>
-
-</section>
-
-<!-- ========================= -->
-<!-- SECTION 2: CATEGORIES -->
-<!-- ========================= -->
-
-<section class="blog-categories">
-
-<div class="container">
-
-<h3>Categories</h3>
-
-<div class="categories-row">
-
-<span>Web Design</span>
-<span>Branding</span>
-<span>SEO</span>
-<span>Business Growth</span>
-<span>AI & Technology</span>
-
-</div>
-
-</div>
-
 </section>
 
 
+<!-- SECTION 2 -->
+<section class="categories fade-up">
+<span data-filter="all">All</span>
+<span data-filter="web">Web Design</span>
+<span data-filter="branding">Branding</span>
+<span data-filter="seo">SEO</span>
+<span data-filter="business">Business</span>
+<span data-filter="ai">AI</span>
+</section>
 
-<!-- ========================= -->
-<!-- SECTION 3: FEATURED -->
-<!-- ========================= -->
 
-<section class="blog-featured">
-
-<div class="container featured-grid">
+<!-- SECTION 3 FEATURED -->
+<section class="featured fade-up">
 
 <div class="featured-text">
-
 <h2>How Much Time Does It Take to Build a Website?</h2>
-
-<p>
-Building a website depends on the complexity, number of pages, and features required. Simple websites with basic structure can be completed within a few days, while business websites with multiple pages, forms, and integrations may take more time.
-</p>
-
-<p>
-Advanced websites with custom design, unique UI/UX, and complex functionality require detailed planning, development, and testing. Choosing the right approach helps ensure better performance, user experience, and long-term growth.
-</p>
-
+<p>Building a website depends on complexity and features...</p>
 </div>
-
-<div class="featured-img">
 
 <img src="https://i.pinimg.com/736x/a0/be/97/a0be97578c8ffcdf9fce8702a3f7a708.jpg">
 
-</div>
-
-</div>
-
 </section>
 
 
-
-<!-- ========================= -->
-<!-- SECTION 4: BLOG CONTENT -->
-<!-- ========================= -->
-
+<!-- SECTION 4 BLOG CONTENT -->
 <section class="blog-content">
 
-<div class="container">
-
-<!-- ARTICLE -->
-<div class="article">
-
+<div class="article" data-category="business">
 <h2>Why Every Business Needs a Website in 2026</h2>
-
-<p>
-In today’s digital world, having a website is essential for every business. It helps build trust, improve visibility, and attract more customers online. A professional website acts as your digital presence and allows people to learn about your services anytime.
-</p>
-
-<p>
-Without a website, businesses miss out on opportunities to grow and compete in the market. A well-designed website can increase credibility and support long-term business success.
-</p>
-
+<p>A website builds trust and visibility...</p>
 </div>
 
-<hr>
-
-<!-- ARTICLE -->
-<div class="article">
-
-<h2>Shopify vs WordPress: Which One is Better?</h2>
-
-<p>
-Both Shopify and WordPress are popular platforms for building websites. Shopify is ideal for e-commerce stores with built-in features, while WordPress offers flexibility and customization for different types of websites.
-</p>
-
-<p>
-Choosing the right platform depends on your business needs, budget, and long-term goals. Understanding the differences helps in making the right decision.
-</p>
-
+<div class="article" data-category="web">
+<h2>Shopify vs WordPress</h2>
+<p>Comparison of platforms...</p>
 </div>
 
-<hr>
-
-<!-- ARTICLE -->
-<div class="article">
-
-<h2>Top 5 Logo Design Tips for Strong Branding</h2>
-
-<p>
-A logo is a key part of your brand identity. A good logo should be simple, memorable, and relevant to your business. Choosing the right colors, fonts, and style helps create a strong visual identity.
-</p>
-
-<p>
-Consistency in branding ensures that your business looks professional and recognizable across different platforms.
-</p>
-
+<div class="article" data-category="branding">
+<h2>Logo Design Tips</h2>
+<p>Simple and strong branding tips...</p>
 </div>
 
-<hr>
-
-<!-- ARTICLE -->
-<div class="article">
-
-<h2>How AI is Changing Modern Websites</h2>
-
-<p>
-AI is transforming how websites work by improving user experience and automating processes. Features like chatbots, personalized content, and smart recommendations help businesses engage better with users.
-</p>
-
-<p>
-Using AI in websites can improve efficiency, reduce manual work, and create smarter digital solutions.
-</p>
-
+<div class="article" data-category="ai">
+<h2>How AI is Changing Websites</h2>
+<p>AI improves automation...</p>
 </div>
 
-<hr>
-
-<!-- ARTICLE -->
-<div class="article">
-
-<h2>Best Website Design Trends You Should Know</h2>
-
-<p>
-Modern website design focuses on clean layouts, fast performance, and mobile-friendly experience. Minimal design, bold typography, and smooth animations are becoming popular.
-</p>
-
-<p>
-Staying updated with design trends helps businesses create modern and engaging websites that attract users.
-</p>
-
-</div>
-
+<div class="article" data-category="web">
+<h2>Website Design Trends</h2>
+<p>Modern design trends...</p>
 </div>
 
 </section>
 
 
+<!-- SECTION 6 -->
+<section class="info-block fade-up">
+<h2>Smart Solutions We Offer</h2>
+<p>Free Hosting Websites (GitHub), Low Budget Websites, AI Websites, Fast Delivery Projects.</p>
+</section>
 
-<!-- ========================= -->
-<!-- SECTION 5: CTA -->
-<!-- ========================= -->
 
-<section class="blog-cta">
+<!-- SECTION 7 -->
+<section class="info-block fade-up">
+<h2>Budget-Friendly Website Solutions</h2>
+<p>Start with simple free hosting websites and scale later.</p>
+</section>
 
-<div class="container">
 
-<h2>Need Help With Your Website or Brand?</h2>
+<!-- SECTION 8 -->
+<section class="info-block fade-up">
+<h2>Real Project Insights</h2>
+<p>We built websites in 5 days and helped businesses start online with zero cost.</p>
+</section>
 
-<p>Let’s build something powerful for your business.</p>
 
+<!-- SECTION 9 -->
+<section class="info-block fade-up">
+<h2>Quick Tips</h2>
+<ul>
+<li>Keep design simple</li>
+<li>Use clear navigation</li>
+<li>Mobile friendly</li>
+<li>Fast loading</li>
+</ul>
+</section>
+
+
+<!-- SECTION 10 -->
+<section class="info-block fade-up">
+<h2>Business & Website Insights</h2>
+<p>Why websites matter and how AI helps business growth.</p>
+</section>
+
+
+<!-- CTA -->
+<section class="blog-cta fade-up">
+<h2>Need Help With Your Website?</h2>
 <a href="contact.html" class="btn">Start Your Project</a>
-
-</div>
-
 </section>
 
-<!-- FOOTER -->
 <div id="footer"></div>
 
-
-<!-- MAIN JS -->
 <script src="assets/js/script.js"></script>
+<script src="assets/js/blog.js"></script>
 
 </body>
 </html>
