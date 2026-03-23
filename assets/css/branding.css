@@ -14,89 +14,80 @@ body { font-family: 'Poppins', sans-serif; background: #fff; overflow-x: hidden;
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 .red { color: #B92425; }
 
-/* NEW HERO DESIGN STYLES */
-.branding-hero-new {
-    background: url('https://i.pinimg.com/736x/11/d3/e6/11d3e646686d55ba13b55a6539dccfc0.jpg') no-repeat center center/cover;
-    height: 100vh; /* Full Screen Height */
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
+/* ============================= */
+/* BRANDING HERO SECTION START */
+/* ============================= */
+
+.branding-hero {
+  position: relative;
+  height: 100vh;
+  background: url('https://i.pinimg.com/736x/11/d3/e6/11d3e646686d55ba13b55a6539dccfc0.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
 }
 
-/* Transperant Dark Overlay */
-.hero-overlay-dark {
-    background: rgba(0, 0, 0, 0.6); /* Halka transparent black layer */
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
+/* overlay */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(39, 19, 20, 0.6);
+  z-index: 1;
 }
 
-.hero-content-center {
-    max-width: 900px;
-    text-align: left; /* Image design ke mutabik left ya center kar sakte hain */
+/* content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
 }
 
-/* Text Styling */
-.hero-content-center h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 65px; /* Big & Bold */
-    font-weight: 800;
-    color: #ffffff; /* Pura White */
-    line-height: 1.1;
-    margin-bottom: 25px;
-    text-transform: uppercase;
+/* heading */
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 55px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
 }
 
-.text-red {
-    color: #B92425; /* Sirf 'Designs' word Red */
+/* red word */
+.hero-content h1 span {
+  color: #B92425;
 }
 
-.hero-content-center p {
-    font-size: 1.2rem;
-    color: #ffffff; /* White color for paragraph */
-    max-width: 700px;
-    line-height: 1.8;
-    margin-bottom: 35px;
-    font-weight: 400;
+/* paragraph */
+.hero-content p {
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
+  font-size: 18px;
+  margin: 20px 0 30px;
+  line-height: 1.6;
 }
 
-/* Square Red Button */
-.btn-square {
-    background: #B92425;
-    color: #ffffff;
-    padding: 18px 45px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.1rem;
-    display: inline-block;
-    border: none;
-    border-radius: 0; /* No Round Corners - Pura Square */
-    transition: 0.4s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+/* button */
+.hero-btn {
+  display: inline-block;
+  background: #B92425;
+  color: #ffffff;
+  padding: 14px 30px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  border-radius: 0;
+  transition: 0.3s ease;
 }
 
-.btn-square:hover {
-    background: #ffffff;
-    color: #B92425;
-    transform: translateY(-5px);
+.hero-btn:hover {
+  background: #C51A24;
 }
 
-/* Responsive for Mobile */
-@media (max-width: 768px) {
-    .hero-content-center h1 {
-        font-size: 38px;
-    }
-    .hero-content-center p {
-        font-size: 1rem;
-    }
-    .branding-hero-new {
-        height: 80vh;
-    }
-}
-
+/* ============================= */
+/* BRANDING HERO SECTION END */
+/* ============================= */
 /* ─── OVERVIEW ──────────────────────────────── */
 .branding-overview {
     padding: 100px 0;
