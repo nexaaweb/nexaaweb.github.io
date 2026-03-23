@@ -1,51 +1,85 @@
 /* ===============================
-SERVICES HERO
+SERVICES HERO (UPDATED)
 =============================== */
 
 .services-hero{
 
-padding:130px 20px;
-background:#FFFFFF;
-text-align:center;
+position:relative;
+padding:160px 20px;
+background:url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f") center/cover no-repeat;
+color:#FFFFFF;
 
 }
 
+/* DARK OVERLAY */
+
+.services-hero .overlay{
+
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.65);
+
+}
+
+/* CONTENT */
+
+.hero-content{
+
+position:relative;
+z-index:2;
+max-width:700px;
+
+}
+
+/* SMALL HEADING */
+
 .services-hero h5{
 
-color:#B92425;
+color:#FFFFFF;
 letter-spacing:2px;
 font-size:14px;
 margin-bottom:15px;
 
 }
 
+/* MAIN HEADING */
+
 .services-hero h1{
 
-font-size:44px;
-color:#000000;
-margin-bottom:25px;
+font-size:48px;
+line-height:1.2;
+margin-bottom:20px;
+color:#FFFFFF;
 
 }
+
+/* RED HIGHLIGHT */
+
+.services-hero h1 span{
+
+color:#B92425;
+
+}
+
+/* PARAGRAPH */
 
 .services-hero p{
 
-max-width:760px;
-margin:auto;
-color:#666666;
+color:#E0E0E0;
 line-height:1.8;
-font-size:17px;
-margin-bottom:45px;
+font-size:16px;
+margin-bottom:40px;
 
 }
 
-
-
-/* HERO BUTTONS */
+/* BUTTONS */
 
 .hero-buttons{
 
 display:flex;
-justify-content:center;
 gap:20px;
 flex-wrap:wrap;
 
@@ -55,7 +89,7 @@ flex-wrap:wrap;
 
 background:#B92425;
 color:#FFFFFF;
-padding:12px 30px;
+padding:12px 28px;
 border-radius:4px;
 text-decoration:none;
 transition:0.3s;
@@ -70,9 +104,9 @@ background:#D21F2B;
 
 .secondary-btn{
 
-border:2px solid #B92425;
-color:#B92425;
-padding:12px 30px;
+border:2px solid #FFFFFF;
+color:#FFFFFF;
+padding:12px 28px;
 border-radius:4px;
 text-decoration:none;
 transition:0.3s;
@@ -81,22 +115,18 @@ transition:0.3s;
 
 .secondary-btn:hover{
 
-background:#B92425;
-color:#FFFFFF;
+background:#FFFFFF;
+color:#000000;
 
 }
 
-
-
-/* ===============================
-MOBILE
-=============================== */
+/* MOBILE */
 
 @media(max-width:768px){
 
 .services-hero{
 
-padding:100px 20px;
+padding:120px 20px;
 
 }
 
@@ -106,61 +136,7 @@ font-size:32px;
 
 }
 
-.services-hero p{
-
-font-size:16px;
-
 }
-
-}
-/* ===============================
-SECTION TITLES
-=============================== */
-
-.section-title{
-
-font-size:34px;
-text-align:center;
-color:#000000;
-margin-bottom:20px;
-
-}
-
-.section-text{
-
-max-width:800px;
-margin:auto;
-text-align:center;
-color:#666666;
-line-height:1.8;
-margin-bottom:60px;
-
-}
-
-/* ===============================
-SECTION TITLES
-=============================== */
-
-.section-title{
-
-font-size:34px;
-text-align:center;
-color:#000000;
-margin-bottom:20px;
-
-}
-
-.section-text{
-
-max-width:800px;
-margin:auto;
-text-align:center;
-color:#666666;
-line-height:1.8;
-margin-bottom:60px;
-
-}
-
 
 
 /* ===============================
