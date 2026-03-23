@@ -1,229 +1,379 @@
-body{
-font-family:'Open Sans',sans-serif;
+/* ============================================
+   WEB-DESIGN.CSS — NexaaWeb
+   Fixes Applied:
+   - h5 → .hero-label (semantic fix)
+   - Video background hero (image replace)
+   - .btn conflict → .wd-btn (scoped)
+   - card-body wrapper for clean padding
+   - why-list bullet style improved
+   - process-num added
+   - overview-title margin fix
+   - All sections responsive
+   ============================================ */
+
+/* ─── BASE ───────────────────────────────────── */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #fff;
+    color: #333;
+    overflow-x: hidden;
 }
 
-/* HERO */
-
-.wd-hero{
-position:relative;
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:#fff;
-overflow:hidden;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.hero-img{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
+/* ─── HERO — Video Background ────────────────── */
+.wd-hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
 }
 
-.hero-img img{
-width:100%;
-height:100%;
-object-fit:cover;
+/* FIX: Video background wrapper */
+.hero-video-wrap {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
 }
 
-.hero-overlay{
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.7);
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-.hero-text{
-position:relative;
-z-index:2;
-max-width:800px;
-margin:auto;
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.68);
 }
 
-.hero-btn{
-margin-top:30px;
+/* Hero Text */
+.hero-text {
+    position: relative;
+    z-index: 2;
+    max-width: 820px;
+    margin: auto;
+    padding: 0 20px;
 }
 
-.wd-hero h5{
-color:#B92425;
-letter-spacing:2px;
+/* FIX: h5 removed → .hero-label */
+.hero-label {
+    color: #B92425;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    display: block;
 }
 
-.wd-hero h1{
-font-size:48px;
-margin:20px 0;
+.wd-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    line-height: 1.2;
+    margin-bottom: 22px;
 }
 
-.wd-hero p{
-color:#ddd;
-margin-bottom:20px;
+.wd-hero h1 .white { color: #ffffff; }
+.wd-hero h1 .red   { color: #B92425; }
+
+.hero-desc {
+    color: #ddd;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 32px;
 }
 
-/* BUTTON */
-
-.btn{
-background:#B92425;
-color:#fff;
-padding:12px 30px;
-border-radius:4px;
-text-decoration:none;
-transition:0.3s;
+.hero-btn {
+    margin-top: 10px;
 }
 
-.btn:hover{
-background:#D21F2B;
+/* ─── BUTTON (scoped — no conflict with style.css) ─── */
+/* FIX: .btn → .wd-btn to avoid conflict */
+.wd-btn {
+    background: #B92425;
+    color: #fff;
+    padding: 14px 36px;
+    border-radius: 4px;        /* sharp corners */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-block;
+    transition: background 0.3s ease;
+    letter-spacing: 0.3px;
 }
 
-/* OVERVIEW */
-
-.wd-overview{
-padding:80px 20px;
-text-align:center;
+.wd-btn:hover {
+    background: #8f1a1b;
+    color: #fff;
 }
 
-.overview-title{
-margin-top:40px;
+/* ─── OVERVIEW ───────────────────────────────── */
+.wd-overview {
+    padding: 90px 20px;
+    text-align: center;
+    background: #fff;
 }
 
-.wd-overview p{
-max-width:700px;
-margin:auto;
-color:#666;
+.overview-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #111;
+    /* FIX: extra margin-top removed, proper spacing */
+    margin-bottom: 20px;
 }
 
-/* SERVICES */
-
-.wd-services{
-padding:80px 20px;
+.wd-overview p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.8;
 }
 
-.services-title{
-margin-top:40px;
-color:#B92425;
-text-align:center;
+/* ─── SERVICES — 4 Column Grid ───────────────── */
+.wd-services {
+    padding: 80px 20px;
+    background: #f9f9f9;
 }
 
-.services-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
+.services-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #B92425;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-.service-card{
-background:#fff;
-border-radius:10px;
-overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
-transition:0.4s;
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
 }
 
-.service-card:hover{
-transform:translateY(-10px);
+.service-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    border: 1px solid #eee;
+    transition: 0.35s ease;
 }
 
-.service-card img{
-width:100%;
-height:200px;
-object-fit:cover;
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: #B92425;
+    box-shadow: 0 16px 35px rgba(185, 36, 37, 0.1);
 }
 
-.service-card h3{
-padding:15px;
+.service-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
 }
 
-.service-card p{
-padding:0 15px 20px;
-color:#666;
+/* FIX: card-body wrapper for clean padding */
+.card-body {
+    padding: 18px 20px 22px;
 }
 
-/* WHY */
-
-.wd-why{
-padding:80px 20px;
-background:#f9f9f9;
+.card-body h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 8px;
+    line-height: 1.4;
 }
 
-.why-title{
-text-align:center;
+.card-body p {
+    color: #666;
+    font-size: 0.88rem;
+    line-height: 1.6;
 }
 
-.why-list{
-text-align:center;
-list-style:none;
-padding:0;
+/* ─── WHY CHOOSE US ──────────────────────────── */
+.wd-why {
+    padding: 90px 20px;
+    background: #fff;
 }
 
-.wd-why ul{
-max-width:600px;
-margin:auto;
-color:#666;
-line-height:2;
+.why-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #111;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-/* PROCESS */
-
-.wd-process{
-padding:80px 20px;
-text-align:center;
+/* FIX: Custom bullet style instead of plain list-style:none */
+.why-list {
+    max-width: 620px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
 }
 
-.process-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
+.why-list li {
+    color: #444;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    padding: 14px 20px 14px 50px;
+    position: relative;
+    border-bottom: 1px solid #f0f0f0;
 }
 
-.process-card{
-background:#fff;
-padding:30px;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
-transition:0.3s;
+.why-list li:last-child {
+    border-bottom: none;
 }
 
-.process-card:hover{
-transform:translateY(-8px);
+/* Red bullet dot */
+.why-list li::before {
+    content: '';
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background: #B92425;
+    border-radius: 50%;
 }
 
-/* CTA */
-
-.wd-cta{
-padding:100px 20px;
-background:#271314;
-color:#fff;
-text-align:center;
+/* ─── HOW WE WORK — 4 Steps ──────────────────── */
+.wd-process {
+    padding: 90px 20px;
+    background: #111;
+    text-align: center;
 }
 
-.wd-cta p{
-color:#ddd;
-margin-bottom:20px;
+/* FIX: inline style removed, now in CSS */
+.process-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 50px;
 }
 
-.cta-btn{
-margin-top:30px;
-display:inline-block;
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
-/* RESPONSIVE */
-
-@media(max-width:992px){
-.services-grid{
-grid-template-columns:repeat(2,1fr);
-}
-.process-grid{
-grid-template-columns:repeat(2,1fr);
-}
+.process-card {
+    background: #B92425;
+    color: #fff;
+    padding: 38px 28px;
+    border-radius: 12px;
+    transition: 0.3s ease;
+    text-align: left;
 }
 
-@media(max-width:600px){
-.services-grid,
-.process-grid{
-grid-template-columns:1fr;
+.process-card:hover {
+    background: #000;
+    border: 1px solid #B92425;
+    transform: translateY(-6px);
 }
 
-.wd-hero h1{
-font-size:32px;
+/* FIX: process number added (was missing in original) */
+.process-num {
+    font-size: 3rem;
+    font-weight: 800;
+    opacity: 0.25;
+    line-height: 1;
+    margin-bottom: 14px;
 }
+
+.process-card h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 12px;
+}
+
+.process-card p {
+    font-size: 0.9rem;
+    opacity: 0.88;
+    line-height: 1.65;
+}
+
+/* ─── CTA — Dark Background ──────────────────── */
+.wd-cta {
+    padding: 110px 20px;
+    background: #1a0708;
+    color: #fff;
+    text-align: center;
+}
+
+.wd-cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    color: #fff;
+}
+
+.wd-cta p {
+    color: #ccc;
+    font-size: 1.05rem;
+    margin-bottom: 36px;
+    line-height: 1.7;
+}
+
+.cta-btn {
+    /* inherits .wd-btn, no extra needed */
+}
+
+/* ─── RESPONSIVE ─────────────────────────────── */
+@media (max-width: 1100px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .wd-hero h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .services-grid,
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+    .wd-hero h1 {
+        font-size: 30px;
+    }
+    .wd-cta h2 {
+        font-size: 1.8rem;
+    }
+    .services-title,
+    .why-title,
+    .overview-title,
+    .process-title {
+        font-size: 1.7rem;
+    }
 }
