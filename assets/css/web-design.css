@@ -1,32 +1,6 @@
-/* ============================================
-   WEB-DESIGN.CSS — NexaaWeb
-   Fixes Applied:
-   - h5 → .hero-label (semantic fix)
-   - Video background hero (image replace)
-   - .btn conflict → .wd-btn (scoped)
-   - card-body wrapper for clean padding
-   - why-list bullet style improved
-   - process-num added
-   - overview-title margin fix
-   - All sections responsive
-   ============================================ */
-
-/* ─── BASE ───────────────────────────────────── */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-    font-family: 'Open Sans', sans-serif;
-    background: #fff;
-    color: #333;
-    overflow-x: hidden;
+body{
+font-family:'Open Sans',sans-serif;
 }
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
 /* HERO */
 .wd-hero{
 position:relative;
@@ -77,259 +51,404 @@ margin:20px 0;
 color:#ddd;
 margin-bottom:20px;
 }
-
-/* ─── OVERVIEW ───────────────────────────────── */
-.wd-overview {
-    padding: 90px 20px;
-    text-align: center;
-    background: #fff;
+/* BUTTON */
+.btn{
+background:#B92425;
+color:#fff;
+padding:12px 30px;
+border-radius:4px;
+text-decoration:none;
+transition:0.3s;
 }
-
-.overview-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
-    color: #111;
-    /* FIX: extra margin-top removed, proper spacing */
-    margin-bottom: 20px;
+.btn:hover{
+background:#D21F2B;
 }
-
-.wd-overview p {
-    max-width: 720px;
-    margin: 0 auto;
-    color: #555;
-    font-size: 1.05rem;
-    line-height: 1.8;
+/* OVERVIEW */
+.wd-overview{
+padding:80px 20px;
+text-align:center;
 }
-
-/* ─── SERVICES — 4 Column Grid ───────────────── */
-.wd-services {
-    padding: 80px 20px;
-    background: #f9f9f9;
+.overview-title{
+margin-top:40px;
 }
-
-.services-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
-    color: #B92425;
-    text-align: center;
-    margin-bottom: 50px;
+.wd-overview p{
+max-width:700px;
+margin:auto;
+color:#666;
 }
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+/* SERVICES */
+.wd-services{
+padding:80px 20px;
 }
-
-.service-card {
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
-    border: 1px solid #eee;
-    transition: 0.35s ease;
+.services-title{
+margin-top:40px;
+color:#B92425;
+text-align:center;
 }
-
-.service-card:hover {
-    transform: translateY(-8px);
-    border-color: #B92425;
-    box-shadow: 0 16px 35px rgba(185, 36, 37, 0.1);
+.services-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
 }
-
-.service-card img {
-    width: 100%;
-    height: 190px;
-    object-fit: cover;
-    display: block;
+.service-card{
+background:#fff;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+transition:0.4s;
 }
-
-/* FIX: card-body wrapper for clean padding */
-.card-body {
-    padding: 18px 20px 22px;
+.service-card:hover{
+transform:translateY(-10px);
 }
-
-.card-body h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #111;
-    margin-bottom: 8px;
-    line-height: 1.4;
+.service-card img{
+width:100%;
+height:200px;
+object-fit:cover;
 }
-
-.card-body p {
-    color: #666;
-    font-size: 0.88rem;
-    line-height: 1.6;
+.service-card h3{
+padding:15px;
+}
+.service-card p{
+padding:0 15px 20px;
+color:#666;
 }
 
 /* ─── WHY CHOOSE US ──────────────────────────── */
+
 .wd-why {
+
     padding: 90px 20px;
+
     background: #fff;
+
 }
+
+
 
 .why-title {
+
     font-family: 'Playfair Display', serif;
+
     font-size: 2.2rem;
+
     color: #111;
+
     text-align: center;
+
     margin-bottom: 40px;
+
 }
+
+
 
 /* FIX: Custom bullet style instead of plain list-style:none */
+
 .why-list {
+
     max-width: 620px;
+
     margin: 0 auto;
+
     list-style: none;
+
     padding: 0;
+
 }
+
+
 
 .why-list li {
+
     color: #444;
+
     font-size: 1.05rem;
+
     line-height: 1.7;
+
     padding: 14px 20px 14px 50px;
+
     position: relative;
+
     border-bottom: 1px solid #f0f0f0;
+
 }
+
+
 
 .why-list li:last-child {
+
     border-bottom: none;
+
 }
+
+
 
 /* Red bullet dot */
+
 .why-list li::before {
+
     content: '';
+
     position: absolute;
+
     left: 18px;
+
     top: 50%;
+
     transform: translateY(-50%);
+
     width: 10px;
+
     height: 10px;
+
     background: #B92425;
+
     border-radius: 50%;
+
 }
+
+
 
 /* ─── HOW WE WORK — 4 Steps ──────────────────── */
+
 .wd-process {
+
     padding: 90px 20px;
+
     background: #111;
+
     text-align: center;
+
 }
+
+
 
 /* FIX: inline style removed, now in CSS */
+
 .process-title {
+
     font-family: 'Playfair Display', serif;
+
     font-size: 2.2rem;
+
     color: #fff;
+
     margin-bottom: 50px;
+
 }
+
+
 
 .process-grid {
+
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
+
     gap: 20px;
+
 }
+
+
 
 .process-card {
+
     background: #B92425;
+
     color: #fff;
+
     padding: 38px 28px;
+
     border-radius: 12px;
+
     transition: 0.3s ease;
+
     text-align: left;
+
 }
+
+
 
 .process-card:hover {
+
     background: #000;
+
     border: 1px solid #B92425;
+
     transform: translateY(-6px);
+
 }
+
+
 
 /* FIX: process number added (was missing in original) */
+
 .process-num {
+
     font-size: 3rem;
+
     font-weight: 800;
+
     opacity: 0.25;
+
     line-height: 1;
+
     margin-bottom: 14px;
+
 }
+
+
 
 .process-card h3 {
+
     font-size: 1.05rem;
+
     font-weight: 600;
+
     text-transform: uppercase;
+
     letter-spacing: 0.8px;
+
     margin-bottom: 12px;
+
 }
+
+
 
 .process-card p {
+
     font-size: 0.9rem;
+
     opacity: 0.88;
+
     line-height: 1.65;
+
 }
+
+
 
 /* ─── CTA — Dark Background ──────────────────── */
+
 .wd-cta {
+
     padding: 110px 20px;
+
     background: #1a0708;
+
     color: #fff;
+
     text-align: center;
+
 }
+
+
 
 .wd-cta h2 {
+
     font-family: 'Playfair Display', serif;
+
     font-size: 2.5rem;
+
     margin-bottom: 16px;
+
     color: #fff;
+
 }
+
+
 
 .wd-cta p {
+
     color: #ccc;
+
     font-size: 1.05rem;
+
     margin-bottom: 36px;
+
     line-height: 1.7;
+
 }
+
+
 
 .cta-btn {
+
     /* inherits .wd-btn, no extra needed */
+
 }
+
+
 
 /* ─── RESPONSIVE ─────────────────────────────── */
+
 @media (max-width: 1100px) {
+
     .services-grid {
+
         grid-template-columns: repeat(3, 1fr);
+
     }
+
 }
+
+
 
 @media (max-width: 992px) {
+
     .services-grid {
+
         grid-template-columns: repeat(2, 1fr);
+
     }
+
     .process-grid {
+
         grid-template-columns: repeat(2, 1fr);
+
     }
+
     .wd-hero h1 {
+
         font-size: 40px;
+
     }
+
 }
 
+
+
 @media (max-width: 600px) {
+
     .services-grid,
+
     .process-grid {
+
         grid-template-columns: 1fr;
+
     }
+
     .wd-hero h1 {
+
         font-size: 30px;
+
     }
+
     .wd-cta h2 {
+
         font-size: 1.8rem;
+
     }
+
     .services-title,
+
     .why-title,
+
     .overview-title,
+
     .process-title {
+
         font-size: 1.7rem;
+
     }
+
 }
