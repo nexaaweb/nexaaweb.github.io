@@ -1,226 +1,35 @@
-/* SECTION 1: BLOG HERO */
+body{font-family:'Open Sans',sans-serif;background:#fff}
 
-.blog-hero{
-background:#F4F4F4;
-padding:100px 20px;
-text-align:center;
-}
+/* HERO */
+.blog-hero{text-align:center;padding:100px 20px}
+.blog-hero h5{color:#B92425}
+.blog-hero h1{font-size:42px}
+.red{color:#B92425}
 
-.blog-hero h5{
-color:#B92425;
-letter-spacing:2px;
-margin-bottom:10px;
-}
+/* SEARCH */
+.search-box{margin-top:30px}
+.search-box input{padding:12px 20px;border-radius:30px;border:none;box-shadow:0 5px 15px rgba(0,0,0,0.1)}
+.search-box button{background:#B92425;color:#fff;border:none;padding:12px;border-radius:50%}
 
-.blog-hero h1{
-font-size:42px;
-margin-bottom:20px;
-}
+/* CATEGORIES */
+.categories{text-align:center;padding:40px}
+.categories span{margin:5px;padding:8px 15px;background:#fff;border-radius:20px;cursor:pointer;box-shadow:0 5px 10px rgba(0,0,0,0.08)}
+.categories span:hover{background:#B92425;color:#fff}
 
-.blog-hero p{
-max-width:700px;
-margin:auto;
-color:#666666;
-margin-bottom:40px;
-}
+/* FEATURED */
+.featured{display:flex;gap:30px;padding:80px}
+.featured img{width:400px;border-radius:20px}
 
-/* TEXT COLORS */
+/* BLOG */
+.blog-content{max-width:800px;margin:auto;padding:50px}
+.article{margin-bottom:40px;border-bottom:1px solid #eee;padding-bottom:20px}
 
-.red{
-color:#B92425;
-}
+/* INFO BLOCK */
+.info-block{padding:80px;text-align:center}
 
-.black{
-color:#000;
-}
+/* CTA */
+.blog-cta{padding:100px;background:#271314;color:#fff;text-align:center}
 
-/* SEARCH BOX */
-
-.search-box{
-display:flex;
-justify-content:center;
-align-items:center;
-gap:10px;
-}
-
-.search-box input{
-width:300px;
-padding:12px 20px;
-border:none;
-border-radius:30px;
-outline:none;
-font-size:14px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-}
-
-.search-box button{
-background:#B92425;
-color:#fff;
-border:none;
-padding:12px 18px;
-border-radius:50%;
-cursor:pointer;
-transition:0.3s;
-}
-
-.search-box button:hover{
-background:#D21F2B;
-transform:scale(1.1);
-}
-
-/* RESPONSIVE */
-
-@media(max-width:600px){
-
-.blog-hero h1{
-font-size:28px;
-}
-
-.search-box{
-flex-direction:column;
-}
-
-.search-box input{
-width:100%;
-}
-
-}
-
-/* ========================= */
-/* SECTION 2: CATEGORIES */
-/* ========================= */
-
-.blog-categories{
-padding:50px 20px;
-text-align:center;
-}
-
-.categories-row{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-margin-top:20px;
-}
-
-.categories-row span{
-padding:8px 18px;
-border-radius:20px;
-background:#fff;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
-cursor:pointer;
-transition:0.3s;
-}
-
-.categories-row span:hover{
-background:#B92425;
-color:#fff;
-}
-
-
-/* ========================= */
-/* SECTION 3: FEATURED */
-/* ========================= */
-
-.blog-featured{
-padding:80px 20px;
-background:#F4F4F4;
-}
-
-.featured-grid{
-display:flex;
-align-items:center;
-gap:40px;
-}
-
-.featured-text{
-flex:1;
-}
-
-.featured-img img{
-width:100%;
-border-radius:15px;
-}
-
-.featured-text h2{
-margin-bottom:20px;
-}
-
-.featured-text p{
-color:#666;
-margin-bottom:15px;
-}
-
-
-/* ========================= */
-/* SECTION 4: BLOG CONTENT */
-/* ========================= */
-
-.blog-content{
-padding:80px 20px;
-max-width:800px;
-margin:auto;
-}
-
-.article{
-margin-bottom:40px;
-}
-
-.article h2{
-margin-bottom:15px;
-}
-
-.article p{
-color:#666;
-line-height:1.8;
-margin-bottom:10px;
-}
-
-hr{
-border:none;
-border-top:1px solid #eee;
-margin:40px 0;
-}
-
-
-/* ========================= */
-/* SECTION 5: CTA */
-/* ========================= */
-
-.blog-cta{
-padding:100px 20px;
-background:#271314;
-color:#fff;
-text-align:center;
-}
-
-.blog-cta p{
-margin-bottom:20px;
-color:#ddd;
-}
-
-.blog-cta .btn{
-background:#B92425;
-padding:12px 30px;
-border-radius:30px;
-text-decoration:none;
-color:#fff;
-}
-
-.blog-cta .btn:hover{
-background:#D21F2B;
-}
-
-
-/* ========================= */
-/* RESPONSIVE */
-/* ========================= */
-
-@media(max-width:768px){
-
-.featured-grid{
-flex-direction:column;
-text-align:center;
-}
-
-}
+/* ANIMATION */
+.fade-up{opacity:0;transform:translateY(40px);transition:0.8s}
+.fade-up.appear{opacity:1;transform:translateY(0)}
