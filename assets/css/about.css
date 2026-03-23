@@ -14,7 +14,7 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--white); overflow-x: hidden; }
+body { font-family: 'Open Sans', sans-serif; color: var(--text); background: var(--white); overflow-x: hidden; }
 
 .red   { color: var(--red); }
 .white { color: var(--white) !important; }
@@ -129,7 +129,7 @@ section h2 {
   display: inline-flex; align-items: center; gap: 10px;
   padding: 14px 36px;
   background: var(--red); color: var(--white);
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px; font-weight: 700;
   text-decoration: none; border-radius: 2px;
   animation: fadeUp 0.7s ease 0.3s both;
@@ -487,7 +487,7 @@ section h2 {
   display: inline-block;
   padding: 15px 44px;
   background: var(--white); color: var(--red);
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px; font-weight: 700;
   text-decoration: none; border-radius: 2px;
   border: 2px solid var(--white);
