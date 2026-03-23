@@ -1,35 +1,166 @@
-body{font-family:'Open Sans',sans-serif;background:#fff}
+body{
+font-family:'Open Sans',sans-serif;
+background:#fff;
+color:#000;
+}
 
 /* HERO */
-.blog-hero{text-align:center;padding:100px 20px}
-.blog-hero h5{color:#B92425}
-.blog-hero h1{font-size:42px}
-.red{color:#B92425}
+.blog-hero{
+text-align:center;
+padding:120px 20px;
+}
 
-/* SEARCH */
-.search-box{margin-top:30px}
-.search-box input{padding:12px 20px;border-radius:30px;border:none;box-shadow:0 5px 15px rgba(0,0,0,0.1)}
-.search-box button{background:#B92425;color:#fff;border:none;padding:12px;border-radius:50%}
+.blog-hero h5{
+color:#B92425;
+}
+
+.blog-hero h1{
+font-size:48px;
+}
+
+.blog-hero .red{color:#B92425;font-weight:bold;}
+
+#searchInput{
+margin-top:30px;
+padding:15px;
+width:300px;
+border:2px solid #B92425;
+border-radius:30px;
+}
 
 /* CATEGORIES */
-.categories{text-align:center;padding:40px}
-.categories span{margin:5px;padding:8px 15px;background:#fff;border-radius:20px;cursor:pointer;box-shadow:0 5px 10px rgba(0,0,0,0.08)}
-.categories span:hover{background:#B92425;color:#fff}
+.blog-categories{
+text-align:center;
+margin-bottom:40px;
+}
+
+.categories span{
+margin:0 15px;
+cursor:pointer;
+}
+
+.categories span:hover{
+color:#B92425;
+}
 
 /* FEATURED */
-.featured{display:flex;gap:30px;padding:80px}
-.featured img{width:400px;border-radius:20px}
+.featured{
+background:#271314;
+color:#fff;
+padding:80px 20px;
+}
 
-/* BLOG */
-.blog-content{max-width:800px;margin:auto;padding:50px}
-.article{margin-bottom:40px;border-bottom:1px solid #eee;padding-bottom:20px}
+.featured-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
 
-/* INFO BLOCK */
-.info-block{padding:80px;text-align:center}
+.featured-img img{
+width:100%;
+border-radius:10px;
+}
+
+/* BLOG CONTENT */
+.blog-content{
+padding:80px 20px;
+max-width:800px;
+margin:auto;
+}
+
+.blog h3{
+font-size:22px;
+margin-bottom:10px;
+}
+
+hr{
+border:1px solid #B92425;
+margin:30px 0;
+}
 
 /* CTA */
-.blog-cta{padding:100px;background:#271314;color:#fff;text-align:center}
+.mid-cta{
+background:#B92425;
+color:#fff;
+text-align:center;
+padding:60px;
+}
 
-/* ANIMATION */
-.fade-up{opacity:0;transform:translateY(40px);transition:0.8s}
-.fade-up.appear{opacity:1;transform:translateY(0)}
+.btn-white{
+background:#fff;
+color:#B92425;
+padding:12px 30px;
+border-radius:4px;
+text-decoration:none;
+}
+
+/* SMART */
+.smart{
+padding:80px 20px;
+}
+
+.smart-box{
+margin-bottom:30px;
+}
+
+/* BUDGET */
+.budget{
+padding:80px 20px;
+max-width:800px;
+margin:auto;
+text-align:center;
+}
+
+/* INSIGHTS */
+.insights{
+padding:80px 20px;
+text-align:center;
+}
+
+.insight span{
+color:#B92425;
+}
+
+/* TIPS */
+.tips{
+padding:80px 20px;
+}
+
+.tips ul{
+columns:2;
+}
+
+.tips li{
+margin-bottom:10px;
+}
+
+/* FINAL CTA */
+.final-cta{
+background:#271314;
+color:#fff;
+text-align:center;
+padding:80px;
+}
+
+.btn{
+background:#B92425;
+color:#fff;
+padding:12px 30px;
+text-decoration:none;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.featured-grid{
+grid-template-columns:1fr;
+}
+
+.tips ul{
+columns:1;
+}
+
+#searchInput{
+width:90%;
+}
+}
