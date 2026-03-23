@@ -14,116 +14,86 @@ body { font-family: 'Poppins', sans-serif; background: #fff; overflow-x: hidden;
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 .red { color: #B92425; }
 
-/* =============================================
-   HERO SECTION CSS — branding.css mein
-   purana .branding-hero wala block replace karo
-   ============================================= */
-
-/* HERO — Full Background Image with Overlay */
-.branding-hero {
-    padding: 0;
-    margin: 0;
-}
-
-.hero-bg-wrapper {
-    position: relative;
+/* NEW HERO DESIGN STYLES */
+.branding-hero-new {
+    background: url('https://i.pinimg.com/736x/11/d3/e6/11d3e646686d55ba13b55a6539dccfc0.jpg') no-repeat center center/cover;
+    height: 100vh; /* Full Screen Height */
     width: 100%;
-    min-height: 92vh;
-    background-image: url('https://i.pinimg.com/736x/11/d3/e6/11d3e646686d55ba13b55a6539dccfc0.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    position: relative;
     display: flex;
     align-items: center;
 }
 
-/* Transparent dark overlay image ke upar */
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.52);
-    z-index: 1;
+/* Transperant Dark Overlay */
+.hero-overlay-dark {
+    background: rgba(0, 0, 0, 0.6); /* Halka transparent black layer */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
-/* Hero text content overlay ke upar */
-.hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    padding: 80px 20px;
+.hero-content-center {
+    max-width: 900px;
+    text-align: left; /* Image design ke mutabik left ya center kar sakte hain */
 }
 
-/* Small top label */
-.hero-label {
-    color: #fff;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    opacity: 0.85;
-}
-
-/* Main heading — bold, big, white */
-.hero-heading {
-    font-family: 'Playfair Display', serif;
-    font-size: 58px;
-    font-weight: 700;
-    line-height: 1.15;
-    color: #ffffff;
+/* Text Styling */
+.hero-content-center h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 65px; /* Big & Bold */
+    font-weight: 800;
+    color: #ffffff; /* Pura White */
+    line-height: 1.1;
     margin-bottom: 25px;
+    text-transform: uppercase;
 }
 
-/* Sirf "Designs" word red */
-.hero-heading .red-word {
-    color: #B92425;
+.text-red {
+    color: #B92425; /* Sirf 'Designs' word Red */
 }
 
-/* Description text — white */
-.hero-desc {
-    color: #ffffff;
-    font-size: 1.1rem;
+.hero-content-center p {
+    font-size: 1.2rem;
+    color: #ffffff; /* White color for paragraph */
+    max-width: 700px;
     line-height: 1.8;
-    max-width: 620px;
-    margin-bottom: 40px;
-    opacity: 0.92;
+    margin-bottom: 35px;
+    font-weight: 400;
 }
 
-/* Button — red background, white text, sharp corners (not round) */
-.hero-btn {
-    display: inline-block;
+/* Square Red Button */
+.btn-square {
     background: #B92425;
     color: #ffffff;
+    padding: 18px 45px;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    padding: 16px 40px;
-    border-radius: 6px;       /* sharp corners, bilkul round nahi */
-    letter-spacing: 0.5px;
-    transition: background 0.3s ease;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: inline-block;
+    border: none;
+    border-radius: 0; /* No Round Corners - Pura Square */
+    transition: 0.4s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.hero-btn:hover {
-    background: #8f1a1b;
+.btn-square:hover {
+    background: #ffffff;
+    color: #B92425;
+    transform: translateY(-5px);
 }
 
-/* ─── RESPONSIVE ─────────────────────────────── */
+/* Responsive for Mobile */
 @media (max-width: 768px) {
-    .hero-bg-wrapper {
-        min-height: 100vh;
-        align-items: flex-end;
+    .hero-content-center h1 {
+        font-size: 38px;
     }
-
-    .hero-content {
-        padding: 60px 20px;
+    .hero-content-center p {
+        font-size: 1rem;
     }
-
-    .hero-heading {
-        font-size: 36px;
-    }
-
-    .hero-desc {
-        font-size: 0.95rem;
+    .branding-hero-new {
+        height: 80vh;
     }
 }
 
