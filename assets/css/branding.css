@@ -14,68 +14,117 @@ body { font-family: 'Poppins', sans-serif; background: #fff; overflow-x: hidden;
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 .red { color: #B92425; }
 
-/* ─── HERO ─────────────────────────────────── */
+/* =============================================
+   HERO SECTION CSS — branding.css mein
+   purana .branding-hero wala block replace karo
+   ============================================= */
+
+/* HERO — Full Background Image with Overlay */
 .branding-hero {
-    padding: 80px 0;
-    background: #fcfcfc;
+    padding: 0;
+    margin: 0;
 }
 
-.hero-container {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.hero-text { flex: 1.2; }
-
-/* FIX: h5 hata ke .hero-label banaya */
-.hero-text .hero-label {
-    color: #B92425;
-    font-weight: 600;
-    font-size: 0.85rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-.hero-text h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 45px;
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
-
-.hero-text p {
-    color: #555;
-    margin-bottom: 30px;
-    font-size: 1.05rem;
-    line-height: 1.7;
-}
-
-.hero-cta-area {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.mini-thumb {
-    width: 70px;
-    height: 70px;
-    border-radius: 15px;
-    border: 2px solid #B92425;
-    object-fit: cover;
-}
-
-/* FIX: flex-shrink:0 add kiya taake image squeeze na ho */
-.hero-image {
-    flex: 1;
-    flex-shrink: 0;
-}
-
-.hero-image img {
+.hero-bg-wrapper {
+    position: relative;
     width: 100%;
-    border-radius: 40px 0 40px 0;
-    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.1);
+    min-height: 92vh;
+    background-image: url('https://i.pinimg.com/736x/11/d3/e6/11d3e646686d55ba13b55a6539dccfc0.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+/* Transparent dark overlay image ke upar */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.52);
+    z-index: 1;
+}
+
+/* Hero text content overlay ke upar */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 80px 20px;
+}
+
+/* Small top label */
+.hero-label {
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    opacity: 0.85;
+}
+
+/* Main heading — bold, big, white */
+.hero-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 1.15;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+/* Sirf "Designs" word red */
+.hero-heading .red-word {
+    color: #B92425;
+}
+
+/* Description text — white */
+.hero-desc {
+    color: #ffffff;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 620px;
+    margin-bottom: 40px;
+    opacity: 0.92;
+}
+
+/* Button — red background, white text, sharp corners (not round) */
+.hero-btn {
+    display: inline-block;
+    background: #B92425;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 16px 40px;
+    border-radius: 6px;       /* sharp corners, bilkul round nahi */
+    letter-spacing: 0.5px;
+    transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: #8f1a1b;
+}
+
+/* ─── RESPONSIVE ─────────────────────────────── */
+@media (max-width: 768px) {
+    .hero-bg-wrapper {
+        min-height: 100vh;
+        align-items: flex-end;
+    }
+
+    .hero-content {
+        padding: 60px 20px;
+    }
+
+    .hero-heading {
+        font-size: 36px;
+    }
+
+    .hero-desc {
+        font-size: 0.95rem;
+    }
 }
 
 /* ─── OVERVIEW ──────────────────────────────── */
