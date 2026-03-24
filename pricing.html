@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pricing — NexaaWeb</title>
+  <title>Pricing &#8212; NexaaWeb</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="assets/css/header.css"/>
   <link rel="stylesheet" href="assets/css/footer.css"/>
@@ -15,9 +15,7 @@
 
   <main>
 
-    <!-- ══════════════════════════════
-         1. HERO
-    ══════════════════════════════ -->
+    <!-- HERO -->
     <section class="pr-hero">
       <div class="pr-hero-bg"></div>
       <div class="container center">
@@ -26,194 +24,183 @@
           <h1>Pricing Plans for<br/><span class="red">Every Business</span></h1>
           <p class="hero-sub">Simple, transparent, and affordable pricing designed for startups, businesses, and growing brands.</p>
           <p class="hero-p">At NexaaWeb, we offer flexible pricing based on your business needs. Whether you need a simple website, a premium business solution, or advanced digital systems, we provide high-quality services at competitive rates.</p>
-          <!-- TOGGLE -->
-          <div class="toggle-wrap">
-            <span class="toggle-lbl" id="lbl-standard">Standard Hosting</span>
-            <button class="toggle-btn" id="priceToggle" aria-pressed="false">
-              <span class="toggle-knob"></span>
-            </button>
-            <span class="toggle-lbl" id="lbl-github">GitHub (Free Hosting)</span>
+          <div class="toggles-row">
+            <div class="toggle-wrap">
+              <span class="toggle-lbl active-lbl" id="lbl-standard">Standard Hosting</span>
+              <button class="toggle-btn" id="priceToggle"><span class="toggle-knob"></span></button>
+              <span class="toggle-lbl" id="lbl-github">GitHub (Free Hosting)</span>
+            </div>
+            <div class="toggle-divider"></div>
+            <div class="currency-toggle-wrap">
+              <button class="currency-btn active-currency" id="btnINR">&#127470;&#127475; INR (&#8377;)</button>
+              <button class="currency-btn" id="btnUSD">&#127757; USD ($)</button>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ══════════════════════════════
-         2. MAIN WEBSITE PRICING
-    ══════════════════════════════ -->
+    <!-- PLANS -->
     <section class="pr-plans">
       <div class="container">
         <div class="section-top center reveal">
-          <span class="tag" id="plans-tag">Website Pricing Plans</span>
-          <h2 id="plans-heading">Choose Your <span class="red">Website Plan</span></h2>
+          <span class="tag">Website Pricing Plans</span>
+          <h2>Choose Your <span class="red">Website Plan</span></h2>
         </div>
-
         <div class="plans-grid">
 
-          <!-- BASIC -->
           <div class="plan-card reveal">
             <div class="plan-badge">Basic</div>
             <div class="plan-price">
-              <span class="currency">₹</span>
+              <span class="currency">&#8377;</span>
               <span class="amount std-price">3,999</span>
               <span class="amount gh-price hidden">5,499</span>
             </div>
             <div class="plan-period">one-time payment</div>
             <ul class="plan-features">
-              <li><span class="tick">✔</span>1–5 Pages Website</li>
-              <li><span class="tick">✔</span>Mobile Responsive Design</li>
-              <li><span class="tick">✔</span>Modern Business Layout</li>
-              <li><span class="tick">✔</span>Contact Form Setup</li>
-              <li><span class="tick">✔</span>Basic SEO Setup</li>
-              <li><span class="tick">✔</span>Delivery in 5 Days</li>
-              <li><span class="tick">✔</span>2 Revisions Included</li>
-              <li class="gh-feature hidden"><span class="tick">✔</span>Free GitHub Hosting</li>
-              <li class="gh-feature hidden"><span class="tick">✔</span>GitHub Domain Provided</li>
-              <li class="gh-feature hidden"><span class="tick">✔</span>Upgrade Option Available</li>
+              <li><span class="tick">&#10004;</span>1&#8211;5 Pages Website</li>
+              <li><span class="tick">&#10004;</span>Mobile Responsive Design</li>
+              <li><span class="tick">&#10004;</span>Modern Business Layout</li>
+              <li><span class="tick">&#10004;</span>Contact Form Setup</li>
+              <li><span class="tick">&#10004;</span>Basic SEO Setup</li>
+              <li><span class="tick">&#10004;</span>Delivery in 5 Days</li>
+              <li><span class="tick">&#10004;</span>2 Revisions Included</li>
+              <li class="gh-feature hidden"><span class="tick">&#10004;</span>Free GitHub Hosting</li>
+              <li class="gh-feature hidden"><span class="tick">&#10004;</span>GitHub Domain Provided</li>
+              <li class="gh-feature hidden"><span class="tick">&#10004;</span>Upgrade Option Available</li>
             </ul>
             <a href="/contact.html" class="plan-btn">Get Started</a>
           </div>
 
-          <!-- PREMIUM (highlighted) -->
           <div class="plan-card plan-featured reveal" style="transition-delay:.1s">
             <div class="plan-popular">Most Popular</div>
             <div class="plan-badge">Premium</div>
             <div class="plan-price">
-              <span class="currency">₹</span>
+              <span class="currency">&#8377;</span>
               <span class="amount std-price">7,999</span>
               <span class="amount gh-price hidden">9,499</span>
             </div>
             <div class="plan-period">one-time payment</div>
             <ul class="plan-features">
-              <li><span class="tick">✔</span>5–8 Pages Website</li>
-              <li><span class="tick">✔</span>Custom Business Design</li>
-              <li><span class="tick">✔</span>Fully Responsive</li>
-              <li><span class="tick">✔</span>Inquiry + Contact Forms</li>
-              <li><span class="tick">✔</span>Performance Optimization</li>
-              <li><span class="tick">✔</span>Basic SEO Setup</li>
-              <li><span class="tick">✔</span>3 Revisions Included</li>
-              <li><span class="tick">✔</span>Delivery: 5–7 Days</li>
-              <li class="gh-feature hidden"><span class="tick">✔</span>Free GitHub Hosting</li>
-              <li class="gh-feature hidden"><span class="tick">✔</span>Best for Startups</li>
-              <li class="gh-feature hidden"><span class="tick">✔</span>No Hosting Cost</li>
+              <li><span class="tick">&#10004;</span>5&#8211;8 Pages Website</li>
+              <li><span class="tick">&#10004;</span>Custom Business Design</li>
+              <li><span class="tick">&#10004;</span>Fully Responsive</li>
+              <li><span class="tick">&#10004;</span>Inquiry + Contact Forms</li>
+              <li><span class="tick">&#10004;</span>Performance Optimization</li>
+              <li><span class="tick">&#10004;</span>Basic SEO Setup</li>
+              <li><span class="tick">&#10004;</span>3 Revisions Included</li>
+              <li><span class="tick">&#10004;</span>Delivery: 5&#8211;7 Days</li>
+              <li class="gh-feature hidden"><span class="tick">&#10004;</span>Free GitHub Hosting</li>
+              <li class="gh-feature hidden"><span class="tick">&#10004;</span>Best for Startups</li>
+              <li class="gh-feature hidden"><span class="tick">&#10004;</span>No Hosting Cost</li>
             </ul>
             <a href="/contact.html" class="plan-btn">Get Started</a>
             <p class="plan-note">Most popular choice for growing businesses</p>
           </div>
 
-          <!-- PRO -->
           <div class="plan-card reveal" style="transition-delay:.2s">
             <div class="plan-badge">Pro</div>
             <div class="plan-price">
-              <span class="currency">₹</span>
+              <span class="currency">&#8377;</span>
               <span class="amount std-price">14,999</span>
               <span class="amount gh-price hidden">17,999</span>
               <span class="plus">+</span>
             </div>
             <div class="plan-period">one-time payment</div>
             <ul class="plan-features">
-              <li><span class="tick">✔</span>Large Business Website</li>
-              <li><span class="tick">✔</span>Unlimited Pages</li>
-              <li><span class="tick">✔</span>Nested Menus</li>
-              <li><span class="tick">✔</span>Advanced Forms</li>
-              <li><span class="tick">✔</span>Dynamic Pages</li>
-              <li><span class="tick">✔</span>Custom UI/UX</li>
-              <li><span class="tick">✔</span>Advanced Typography &amp; Layout</li>
-              <li><span class="tick">✔</span>4 Revisions Included</li>
-              <li class="gh-feature hidden"><span class="tick">✔</span>Free GitHub Hosting</li>
-              <li class="gh-feature hidden"><span class="tick">✔</span>Scalable Architecture</li>
+              <li><span class="tick">&#10004;</span>Large Business Website</li>
+              <li><span class="tick">&#10004;</span>Unlimited Pages</li>
+              <li><span class="tick">&#10004;</span>Nested Menus</li>
+              <li><span class="tick">&#10004;</span>Advanced Forms</li>
+              <li><span class="tick">&#10004;</span>Dynamic Pages</li>
+              <li><span class="tick">&#10004;</span>Custom UI/UX</li>
+              <li><span class="tick">&#10004;</span>Advanced Typography &amp; Layout</li>
+              <li><span class="tick">&#10004;</span>4 Revisions Included</li>
+              <li class="gh-feature hidden"><span class="tick">&#10004;</span>Free GitHub Hosting</li>
+              <li class="gh-feature hidden"><span class="tick">&#10004;</span>Scalable Architecture</li>
             </ul>
             <a href="/contact.html" class="plan-btn">Get Started</a>
           </div>
 
-          <!-- ULTRA PRO -->
           <div class="plan-card reveal" style="transition-delay:.3s">
             <div class="plan-badge">Ultra Pro</div>
             <div class="plan-price">
-              <span class="currency">₹</span>
+              <span class="currency">&#8377;</span>
               <span class="amount std-price">25,000</span>
               <span class="amount gh-price hidden">29,999</span>
               <span class="plus">+</span>
             </div>
             <div class="plan-period">one-time payment</div>
             <ul class="plan-features">
-              <li><span class="tick">✔</span>Trend-Based Premium Design</li>
-              <li><span class="tick">✔</span>Advanced UI/UX System</li>
-              <li><span class="tick">✔</span>Extra Pages &amp; Dropdowns</li>
-              <li><span class="tick">✔</span>Full Responsive Optimization</li>
-              <li><span class="tick">✔</span>High Performance</li>
-              <li><span class="tick">✔</span>Advanced Design + Animations</li>
-              <li><span class="tick">✔</span>Priority Support</li>
-              <li class="gh-feature hidden"><span class="tick">✔</span>Free GitHub Hosting</li>
-              <li class="gh-feature hidden"><span class="tick">✔</span>Full Advanced System</li>
+              <li><span class="tick">&#10004;</span>Trend-Based Premium Design</li>
+              <li><span class="tick">&#10004;</span>Advanced UI/UX System</li>
+              <li><span class="tick">&#10004;</span>Extra Pages &amp; Dropdowns</li>
+              <li><span class="tick">&#10004;</span>Full Responsive Optimization</li>
+              <li><span class="tick">&#10004;</span>High Performance</li>
+              <li><span class="tick">&#10004;</span>Advanced Design + Animations</li>
+              <li><span class="tick">&#10004;</span>Priority Support</li>
+              <li class="gh-feature hidden"><span class="tick">&#10004;</span>Free GitHub Hosting</li>
+              <li class="gh-feature hidden"><span class="tick">&#10004;</span>Full Advanced System</li>
             </ul>
             <a href="/contact.html" class="plan-btn">Get Started</a>
           </div>
 
         </div>
-
-        <!-- DISCLAIMER -->
         <div class="disclaimer reveal">
-          <span class="disclaimer-icon">📌</span>
+          <span class="disclaimer-icon">&#128204;</span>
           <p><strong>Note:</strong> Domain and hosting charges are not included in the above pricing. Clients are required to purchase their own domain and hosting. We will assist you in setup and integration.</p>
         </div>
       </div>
     </section>
 
-    <!-- ══════════════════════════════
-         3. GITHUB FREE OPTION BANNER
-    ══════════════════════════════ -->
+    <!-- GITHUB BANNER -->
     <section class="pr-github">
       <div class="container">
         <div class="github-inner reveal">
           <div class="github-text">
             <span class="tag">Zero Investment Hosting</span>
             <h2>Don't Want to Spend on<br/><span class="red">Domain &amp; Hosting?</span></h2>
-            <p>Get Your Website Built on GitHub — hosting is completely free. You will get a live website without paying for hosting. You can upgrade to a custom domain anytime in the future.</p>
-            <button class="github-toggle-btn" id="githubSwitchBtn">
-              Switch to GitHub Pricing ↑
-            </button>
+            <p>Get Your Website Built on GitHub &#8212; hosting is completely free. You will get a live website without paying for hosting. You can upgrade to a custom domain anytime in the future.</p>
+            <button class="github-toggle-btn" id="githubSwitchBtn">Switch to GitHub Pricing &#8593;</button>
           </div>
           <div class="github-badges">
-            <div class="gb-item"><span class="gb-icon">🆓</span><span>Free Hosting</span></div>
-            <div class="gb-item"><span class="gb-icon">🌐</span><span>Live Website</span></div>
-            <div class="gb-item"><span class="gb-icon">⬆️</span><span>Upgradeable</span></div>
-            <div class="gb-item"><span class="gb-icon">⚡</span><span>Fast Delivery</span></div>
+            <div class="gb-item"><span class="gb-icon">&#x1F193;</span><span>Free Hosting</span></div>
+            <div class="gb-item"><span class="gb-icon">&#127760;</span><span>Live Website</span></div>
+            <div class="gb-item"><span class="gb-icon">&#11014;</span><span>Upgradeable</span></div>
+            <div class="gb-item"><span class="gb-icon">&#9889;</span><span>Fast Delivery</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ══════════════════════════════
-         4. E-COMMERCE / SHOPIFY
-    ══════════════════════════════ -->
+    <!-- E-COMMERCE -->
     <section class="pr-ecom">
       <div class="container">
         <div class="section-top reveal">
           <span class="tag">Online Stores</span>
           <h2>E-Commerce &amp; <span class="red">Shopify Websites</span></h2>
-          <p class="section-note">⚠️ E-commerce websites are not available on GitHub hosting — dedicated hosting required.</p>
         </div>
+        <p class="section-note">&#9888; E-commerce websites are not available on GitHub hosting &#8212; dedicated hosting required.</p>
         <div class="ecom-grid">
           <div class="ecom-card reveal">
             <h3>Shopify Store Setup</h3>
-            <div class="ecom-price">₹9,999 – ₹25,000</div>
+            <div class="ecom-price">&#8377;9,999 &#8211; &#8377;25,000</div>
             <ul class="ecom-list">
-              <li><span class="tick">✔</span>Product Setup</li>
-              <li><span class="tick">✔</span>Payment Integration</li>
-              <li><span class="tick">✔</span>Order System</li>
-              <li><span class="tick">✔</span>Mobile Responsive</li>
+              <li><span class="tick">&#10004;</span>Product Setup</li>
+              <li><span class="tick">&#10004;</span>Payment Integration</li>
+              <li><span class="tick">&#10004;</span>Order System</li>
+              <li><span class="tick">&#10004;</span>Mobile Responsive</li>
             </ul>
             <a href="/contact.html" class="plan-btn">Get Quote</a>
           </div>
           <div class="ecom-card reveal" style="transition-delay:.15s">
             <h3>Custom E-commerce Website</h3>
-            <div class="ecom-price">₹15,000 – ₹40,000+</div>
+            <div class="ecom-price">&#8377;15,000 &#8211; &#8377;40,000+</div>
             <ul class="ecom-list">
-              <li><span class="tick">✔</span>Product Setup</li>
-              <li><span class="tick">✔</span>Payment Integration</li>
-              <li><span class="tick">✔</span>Order System</li>
-              <li><span class="tick">✔</span>Mobile Responsive</li>
+              <li><span class="tick">&#10004;</span>Product Setup</li>
+              <li><span class="tick">&#10004;</span>Payment Integration</li>
+              <li><span class="tick">&#10004;</span>Order System</li>
+              <li><span class="tick">&#10004;</span>Mobile Responsive</li>
             </ul>
             <a href="/contact.html" class="plan-btn">Get Quote</a>
           </div>
@@ -221,9 +208,7 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════════
-         5. BRANDING PRICING
-    ══════════════════════════════ -->
+    <!-- BRANDING -->
     <section class="pr-branding">
       <div class="container">
         <div class="section-top reveal">
@@ -231,30 +216,23 @@
           <h2>Branding &amp; Creative <span class="red">Design Pricing</span></h2>
         </div>
         <div class="price-table reveal">
-          <div class="pt-row pt-head">
-            <span>Service</span><span>Price</span>
-          </div>
-          <div class="pt-row"><span>Logo Design</span><span class="pt-price">₹999 – ₹2,499</span></div>
-          <div class="pt-row"><span>Brand Identity Design</span><span class="pt-price">₹2,500</span></div>
-          <div class="pt-row"><span>Poster / Banner</span><span class="pt-price">₹500+</span></div>
-          <div class="pt-row"><span>Social Media Design</span><span class="pt-price">₹500+</span></div>
-          <div class="pt-row"><span>Business Card</span><span class="pt-price">₹399</span></div>
-          <div class="pt-row"><span>PPT Design</span><span class="pt-price">₹999</span></div>
-          <div class="pt-row"><span>Advanced PPT</span><span class="pt-price">₹3,999</span></div>
-          <div class="pt-row"><span>Menu Card</span><span class="pt-price">₹299</span></div>
-          <div class="pt-row"><span>Name Plate</span><span class="pt-price">₹299</span></div>
-          <div class="pt-row"><span>Resume / CV</span><span class="pt-price">₹499</span></div>
-          <div class="pt-row pt-package">
-            <span>🔥 Full Brand Package</span>
-            <span class="pt-price red">₹6,999 – ₹12,999</span>
-          </div>
+          <div class="pt-row pt-head"><span>Service</span><span>Price</span></div>
+          <div class="pt-row"><span>Logo Design</span><span class="pt-price">&#8377;999 &#8211; &#8377;2,499</span></div>
+          <div class="pt-row"><span>Brand Identity Design</span><span class="pt-price">&#8377;2,500</span></div>
+          <div class="pt-row"><span>Poster / Banner</span><span class="pt-price">&#8377;500+</span></div>
+          <div class="pt-row"><span>Social Media Design</span><span class="pt-price">&#8377;500+</span></div>
+          <div class="pt-row"><span>Business Card</span><span class="pt-price">&#8377;399</span></div>
+          <div class="pt-row"><span>PPT Design</span><span class="pt-price">&#8377;999</span></div>
+          <div class="pt-row"><span>Advanced PPT</span><span class="pt-price">&#8377;3,999</span></div>
+          <div class="pt-row"><span>Menu Card</span><span class="pt-price">&#8377;299</span></div>
+          <div class="pt-row"><span>Name Plate</span><span class="pt-price">&#8377;299</span></div>
+          <div class="pt-row"><span>Resume / CV</span><span class="pt-price">&#8377;499</span></div>
+          <div class="pt-row pt-package"><span>&#128293; Full Brand Package</span><span class="pt-price red">&#8377;6,999 &#8211; &#8377;12,999</span></div>
         </div>
       </div>
     </section>
 
-    <!-- ══════════════════════════════
-         6. CONSULTING PRICING
-    ══════════════════════════════ -->
+    <!-- CONSULTING -->
     <section class="pr-consulting">
       <div class="container">
         <div class="section-top reveal">
@@ -263,21 +241,19 @@
         </div>
         <div class="price-table reveal">
           <div class="pt-row pt-head"><span>Service</span><span>Price</span></div>
-          <div class="pt-row"><span>Business Consulting</span><span class="pt-price">₹999</span></div>
-          <div class="pt-row"><span>Management Consulting</span><span class="pt-price">₹1,499</span></div>
-          <div class="pt-row"><span>Startup Strategy</span><span class="pt-price">₹1,999</span></div>
-          <div class="pt-row"><span>Website Consulting</span><span class="pt-price">₹999</span></div>
-          <div class="pt-row"><span>Digital Growth Strategy</span><span class="pt-price">₹1,999</span></div>
-          <div class="pt-row"><span>AI Consulting</span><span class="pt-price">₹2,499</span></div>
-          <div class="pt-row"><span>AI Automation Strategy</span><span class="pt-price">₹3,999</span></div>
-          <div class="pt-row"><span>Online Business Growth</span><span class="pt-price">₹2,999</span></div>
+          <div class="pt-row"><span>Business Consulting</span><span class="pt-price">&#8377;999</span></div>
+          <div class="pt-row"><span>Management Consulting</span><span class="pt-price">&#8377;1,499</span></div>
+          <div class="pt-row"><span>Startup Strategy</span><span class="pt-price">&#8377;1,999</span></div>
+          <div class="pt-row"><span>Website Consulting</span><span class="pt-price">&#8377;999</span></div>
+          <div class="pt-row"><span>Digital Growth Strategy</span><span class="pt-price">&#8377;1,999</span></div>
+          <div class="pt-row"><span>AI Consulting</span><span class="pt-price">&#8377;2,499</span></div>
+          <div class="pt-row"><span>AI Automation Strategy</span><span class="pt-price">&#8377;3,999</span></div>
+          <div class="pt-row"><span>Online Business Growth</span><span class="pt-price">&#8377;2,999</span></div>
         </div>
       </div>
     </section>
 
-    <!-- ══════════════════════════════
-         7. SEO ADD-ON
-    ══════════════════════════════ -->
+    <!-- SEO -->
     <section class="pr-seo">
       <div class="container">
         <div class="seo-inner reveal">
@@ -292,7 +268,7 @@
               </div>
               <div class="seo-price-item featured">
                 <span class="seo-label">Advanced SEO Setup</span>
-                <span class="seo-val">₹3,999 – ₹9,999</span>
+                <span class="seo-val">&#8377;3,999 &#8211; &#8377;9,999</span>
               </div>
             </div>
           </div>
@@ -306,9 +282,7 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════════
-         CTA
-    ══════════════════════════════ -->
+    <!-- CTA -->
     <section class="pr-cta">
       <div class="pr-cta-glow"></div>
       <div class="container center reveal">
@@ -331,44 +305,107 @@
     }, { threshold: 0.08 });
     revEls.forEach(el => ro.observe(el));
 
-    /* PRICE TOGGLE */
-    const toggle       = document.getElementById('priceToggle');
-    const switchBtn    = document.getElementById('githubSwitchBtn');
-    const stdPrices    = document.querySelectorAll('.std-price');
-    const ghPrices     = document.querySelectorAll('.gh-price');
-    const ghFeatures   = document.querySelectorAll('.gh-feature');
-    const lblStd       = document.getElementById('lbl-standard');
-    const lblGh        = document.getElementById('lbl-github');
+    /* PRICE DATA */
+    const priceData = {
+      basic:   ['3,999',  '5,499',  '48',  '66'],
+      premium: ['7,999',  '9,499',  '96',  '114'],
+      pro:     ['14,999', '17,999', '180', '216'],
+      ultra:   ['25,000', '29,999', '299', '359']
+    };
+    const keys = ['basic','premium','pro','ultra'];
+
+    const ecomData = {
+      shopify: { inr:'\u20b99,999 \u2013 \u20b925,000', usd:'$120 \u2013 $300' },
+      custom:  { inr:'\u20b915,000 \u2013 \u20b940,000+', usd:'$180 \u2013 $480+' }
+    };
+
+    const brandingINR = ['\u20b9999 \u2013 \u20b92,499','\u20b92,500','\u20b9500+','\u20b9500+','\u20b9399','\u20b9999','\u20b93,999','\u20b9299','\u20b9299','\u20b9499','\u20b96,999 \u2013 \u20b912,999'];
+    const brandingUSD = ['$12 \u2013 $30','$30','$6+','$6+','$5','$12','$48','$4','$4','$6','$84 \u2013 $156'];
+    const consultINR  = ['\u20b9999','\u20b91,499','\u20b91,999','\u20b9999','\u20b91,999','\u20b92,499','\u20b93,999','\u20b92,999'];
+    const consultUSD  = ['$12','$18','$24','$12','$24','$30','$48','$36'];
+
     let isGithub = false;
+    let isUSD    = false;
 
-    function switchPricing(toGithub) {
-      isGithub = toGithub;
-      toggle.setAttribute('aria-pressed', toGithub);
-      toggle.classList.toggle('active', toGithub);
-      lblStd.classList.toggle('active-lbl', !toGithub);
-      lblGh.classList.toggle('active-lbl', toGithub);
+    const toggle    = document.getElementById('priceToggle');
+    const switchBtn = document.getElementById('githubSwitchBtn');
+    const lblStd    = document.getElementById('lbl-standard');
+    const lblGh     = document.getElementById('lbl-github');
+    const btnINR    = document.getElementById('btnINR');
+    const btnUSD    = document.getElementById('btnUSD');
 
-      /* morph prices */
-      stdPrices.forEach(el => {
-        el.classList.toggle('hidden', toGithub);
-        el.classList.toggle('morph-out', toGithub);
-      });
-      ghPrices.forEach(el => {
-        el.classList.toggle('hidden', !toGithub);
-        el.classList.toggle('morph-in', toGithub);
-      });
-      ghFeatures.forEach(el => el.classList.toggle('hidden', !toGithub));
-
-      switchBtn.textContent = toGithub
-        ? 'Switch to Standard Pricing ↓'
-        : 'Switch to GitHub Pricing ↑';
+    function morphEl(el, val) {
+      el.textContent = val;
+      el.classList.add('morph-in');
+      setTimeout(() => el.classList.remove('morph-in'), 400);
     }
 
-    toggle.addEventListener('click', () => switchPricing(!isGithub));
+    function applyPrices() {
+      const sym = isUSD ? '$' : '\u20b9';
+      document.querySelectorAll('.currency').forEach(el => el.textContent = sym);
+
+      document.querySelectorAll('.plan-card').forEach((card, i) => {
+        if (i >= keys.length) return;
+        const key = keys[i];
+        const val = isGithub
+          ? (isUSD ? priceData[key][3] : priceData[key][1])
+          : (isUSD ? priceData[key][2] : priceData[key][0]);
+        const stdEl = card.querySelector('.std-price');
+        const ghEl  = card.querySelector('.gh-price');
+        if (isGithub) {
+          if (stdEl) stdEl.classList.add('hidden');
+          if (ghEl)  { ghEl.classList.remove('hidden'); morphEl(ghEl, val); }
+        } else {
+          if (ghEl)  ghEl.classList.add('hidden');
+          if (stdEl) { stdEl.classList.remove('hidden'); morphEl(stdEl, val); }
+        }
+      });
+
+      document.querySelectorAll('.gh-feature').forEach(el => el.classList.toggle('hidden', !isGithub));
+
+      const ep = document.querySelectorAll('.ecom-price');
+      if (ep[0]) morphEl(ep[0], isUSD ? ecomData.shopify.usd : ecomData.shopify.inr);
+      if (ep[1]) morphEl(ep[1], isUSD ? ecomData.custom.usd  : ecomData.custom.inr);
+
+      document.querySelectorAll('.pr-branding .pt-price').forEach((el,i) => {
+        const v = isUSD ? brandingUSD[i] : brandingINR[i];
+        if (v) morphEl(el, v);
+      });
+      document.querySelectorAll('.pr-consulting .pt-price').forEach((el,i) => {
+        const v = isUSD ? consultUSD[i] : consultINR[i];
+        if (v) morphEl(el, v);
+      });
+
+      const sv = document.querySelectorAll('.seo-val');
+      if (sv[1]) morphEl(sv[1], isUSD ? '$48 \u2013 $120' : '\u20b93,999 \u2013 \u20b99,999');
+
+      toggle.classList.toggle('active', isGithub);
+      lblStd.classList.toggle('active-lbl', !isGithub);
+      lblGh.classList.toggle('active-lbl', isGithub);
+      switchBtn.textContent = isGithub
+        ? 'Switch to Standard Pricing \u2193'
+        : 'Switch to GitHub Pricing \u2191';
+    }
+
+    toggle.addEventListener('click', () => { isGithub = !isGithub; applyPrices(); });
     switchBtn.addEventListener('click', () => {
-      switchPricing(!isGithub);
+      isGithub = !isGithub; applyPrices();
       document.querySelector('.pr-plans').scrollIntoView({ behavior: 'smooth' });
     });
+    btnINR.addEventListener('click', () => {
+      isUSD = false;
+      btnINR.classList.add('active-currency');
+      btnUSD.classList.remove('active-currency');
+      applyPrices();
+    });
+    btnUSD.addEventListener('click', () => {
+      isUSD = true;
+      btnUSD.classList.add('active-currency');
+      btnINR.classList.remove('active-currency');
+      applyPrices();
+    });
+
+    applyPrices();
   </script>
 </body>
 </html>
