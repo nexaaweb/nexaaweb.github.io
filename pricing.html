@@ -1,170 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pricing | Your Brand</title>
-
-<link rel="stylesheet" href="style.css">
-
-<style>
-body{
-    margin:0;
-    font-family:'Segoe UI', sans-serif;
-    background:#0f0f14;
-    color:white;
-}
-
-/* Navbar */
-.navbar{
-    position:fixed;
-    width:100%;
-    top:0;
-    padding:15px 50px;
-    backdrop-filter: blur(15px);
-    background:rgba(255,255,255,0.05);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    z-index:1000;
-}
-
-.navbar a{
-    color:white;
-    text-decoration:none;
-    margin:0 15px;
-    transition:0.3s;
-}
-
-.navbar a:hover{
-    color:#ff4c4c;
-}
-
-/* Hero */
-.pricing-hero{
-    padding-top:120px;
-    text-align:center;
-}
-
-.pricing-hero h1{
-    font-size:42px;
-}
-
-/* Pricing Grid */
-.pricing-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
-    gap:30px;
-    padding:60px 80px;
-}
-
-.price-card{
-    background:rgba(255,255,255,0.05);
-    border-radius:20px;
-    padding:30px;
-    text-align:center;
-    backdrop-filter:blur(10px);
-    transition:0.4s;
-}
-
-.price-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 20px 40px rgba(255,76,76,0.2);
-}
-
-.price-card h2{
-    margin-bottom:10px;
-}
-
-.price{
-    font-size:28px;
-    color:#ff4c4c;
-    margin:20px 0;
-}
-
-.price-card ul{
-    list-style:none;
-    padding:0;
-    color:#ccc;
-}
-
-.price-card ul li{
-    margin:10px 0;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:10px 25px;
-    background:#ff4c4c;
-    border-radius:25px;
-    color:white;
-    text-decoration:none;
-    transition:0.3s;
-}
-
-.btn:hover{
-    background:white;
-    color:#ff4c4c;
-}
-</style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pricing — NexaaWeb</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/header.css"/>
+  <link rel="stylesheet" href="assets/css/footer.css"/>
+  <link rel="stylesheet" href="assets/css/pricing.css"/>
 </head>
-
 <body>
 
-<div class="navbar">
-    <div><b>YourLogo</b></div>
-    <div>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="blog.html">Blog</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="contact.html">Contact</a>
-    </div>
-</div>
+  <div id="header-placeholder"></div>
 
-<section class="pricing-hero">
-    <h1>Choose Your Plan</h1>
-</section>
+  <main>
 
-<div class="pricing-grid">
+    <!-- ══════════════════════════════
+         1. HERO
+    ══════════════════════════════ -->
+    <section class="pr-hero">
+      <div class="pr-hero-bg"></div>
+      <div class="container center">
+        <div class="pr-hero-content">
+          <span class="pr-label">Transparent Pricing</span>
+          <h1>Pricing Plans for<br/><span class="red">Every Business</span></h1>
+          <p class="hero-sub">Simple, transparent, and affordable pricing designed for startups, businesses, and growing brands.</p>
+          <p class="hero-p">At NexaaWeb, we offer flexible pricing based on your business needs. Whether you need a simple website, a premium business solution, or advanced digital systems, we provide high-quality services at competitive rates.</p>
+          <!-- TOGGLE -->
+          <div class="toggle-wrap">
+            <span class="toggle-lbl" id="lbl-standard">Standard Hosting</span>
+            <button class="toggle-btn" id="priceToggle" aria-pressed="false">
+              <span class="toggle-knob"></span>
+            </button>
+            <span class="toggle-lbl" id="lbl-github">GitHub (Free Hosting)</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="price-card">
-        <h2>Starter</h2>
-        <div class="price">$199</div>
-        <ul>
-            <li>Basic Website</li>
-            <li>Responsive Design</li>
-            <li>Basic SEO</li>
-        </ul>
-        <a href="#" class="btn">Get Started</a>
-    </div>
+    <!-- ══════════════════════════════
+         2. MAIN WEBSITE PRICING
+    ══════════════════════════════ -->
+    <section class="pr-plans">
+      <div class="container">
+        <div class="section-top center reveal">
+          <span class="tag" id="plans-tag">Website Pricing Plans</span>
+          <h2 id="plans-heading">Choose Your <span class="red">Website Plan</span></h2>
+        </div>
 
-    <div class="price-card">
-        <h2>Professional</h2>
-        <div class="price">$499</div>
-        <ul>
-            <li>Advanced Website</li>
-            <li>Branding Kit</li>
-            <li>SEO Optimization</li>
-        </ul>
-        <a href="#" class="btn">Get Started</a>
-    </div>
+        <div class="plans-grid">
 
-    <div class="price-card">
-        <h2>Premium</h2>
-        <div class="price">$999</div>
-        <ul>
-            <li>Full Brand Package</li>
-            <li>Marketing Strategy</li>
-            <li>AI Optimization</li>
-        </ul>
-        <a href="#" class="btn">Get Started</a>
-    </div>
+          <!-- BASIC -->
+          <div class="plan-card reveal">
+            <div class="plan-badge">Basic</div>
+            <div class="plan-price">
+              <span class="currency">₹</span>
+              <span class="amount std-price">3,999</span>
+              <span class="amount gh-price hidden">5,499</span>
+            </div>
+            <div class="plan-period">one-time payment</div>
+            <ul class="plan-features">
+              <li><span class="tick">✔</span>1–5 Pages Website</li>
+              <li><span class="tick">✔</span>Mobile Responsive Design</li>
+              <li><span class="tick">✔</span>Modern Business Layout</li>
+              <li><span class="tick">✔</span>Contact Form Setup</li>
+              <li><span class="tick">✔</span>Basic SEO Setup</li>
+              <li><span class="tick">✔</span>Delivery in 5 Days</li>
+              <li><span class="tick">✔</span>2 Revisions Included</li>
+              <li class="gh-feature hidden"><span class="tick">✔</span>Free GitHub Hosting</li>
+              <li class="gh-feature hidden"><span class="tick">✔</span>GitHub Domain Provided</li>
+              <li class="gh-feature hidden"><span class="tick">✔</span>Upgrade Option Available</li>
+            </ul>
+            <a href="/contact.html" class="plan-btn">Get Started</a>
+          </div>
 
-</div>
+          <!-- PREMIUM (highlighted) -->
+          <div class="plan-card plan-featured reveal" style="transition-delay:.1s">
+            <div class="plan-popular">Most Popular</div>
+            <div class="plan-badge">Premium</div>
+            <div class="plan-price">
+              <span class="currency">₹</span>
+              <span class="amount std-price">7,999</span>
+              <span class="amount gh-price hidden">9,499</span>
+            </div>
+            <div class="plan-period">one-time payment</div>
+            <ul class="plan-features">
+              <li><span class="tick">✔</span>5–8 Pages Website</li>
+              <li><span class="tick">✔</span>Custom Business Design</li>
+              <li><span class="tick">✔</span>Fully Responsive</li>
+              <li><span class="tick">✔</span>Inquiry + Contact Forms</li>
+              <li><span class="tick">✔</span>Performance Optimization</li>
+              <li><span class="tick">✔</span>Basic SEO Setup</li>
+              <li><span class="tick">✔</span>3 Revisions Included</li>
+              <li><span class="tick">✔</span>Delivery: 5–7 Days</li>
+              <li class="gh-feature hidden"><span class="tick">✔</span>Free GitHub Hosting</li>
+              <li class="gh-feature hidden"><span class="tick">✔</span>Best for Startups</li>
+              <li class="gh-feature hidden"><span class="tick">✔</span>No Hosting Cost</li>
+            </ul>
+            <a href="/contact.html" class="plan-btn">Get Started</a>
+            <p class="plan-note">Most popular choice for growing businesses</p>
+          </div>
 
+          <!-- PRO -->
+          <div class="plan-card reveal" style="transition-delay:.2s">
+            <div class="plan-badge">Pro</div>
+            <div class="plan-price">
+              <span class="currency">₹</span>
+              <span class="amount std-price">14,999</span>
+              <span class="amount gh-price hidden">17,999</span>
+              <span class="plus">+</span>
+            </div>
+            <div class="plan-period">one-time payment</div>
+            <ul class="plan-features">
+              <li><span class="tick">✔</span>Large Business Website</li>
+              <li><span class="tick">✔</span>Unlimited Pages</li>
+              <li><span class="tick">✔</span>Nested Menus</li>
+              <li><span class="tick">✔</span>Advanced Forms</li>
+              <li><span class="tick">✔</span>Dynamic Pages</li>
+              <li><span class="tick">✔</span>Custom UI/UX</li>
+              <li><span class="tick">✔</span>Advanced Typography &amp; Layout</li>
+              <li><span class="tick">✔</span>4 Revisions Included</li>
+              <li class="gh-feature hidden"><span class="tick">✔</span>Free GitHub Hosting</li>
+              <li class="gh-feature hidden"><span class="tick">✔</span>Scalable Architecture</li>
+            </ul>
+            <a href="/contact.html" class="plan-btn">Get Started</a>
+          </div>
+
+          <!-- ULTRA PRO -->
+          <div class="plan-card reveal" style="transition-delay:.3s">
+            <div class="plan-badge">Ultra Pro</div>
+            <div class="plan-price">
+              <span class="currency">₹</span>
+              <span class="amount std-price">25,000</span>
+              <span class="amount gh-price hidden">29,999</span>
+              <span class="plus">+</span>
+            </div>
+            <div class="plan-period">one-time payment</div>
+            <ul class="plan-features">
+              <li><span class="tick">✔</span>Trend-Based Premium Design</li>
+              <li><span class="tick">✔</span>Advanced UI/UX System</li>
+              <li><span class="tick">✔</span>Extra Pages &amp; Dropdowns</li>
+              <li><span class="tick">✔</span>Full Responsive Optimization</li>
+              <li><span class="tick">✔</span>High Performance</li>
+              <li><span class="tick">✔</span>Advanced Design + Animations</li>
+              <li><span class="tick">✔</span>Priority Support</li>
+              <li class="gh-feature hidden"><span class="tick">✔</span>Free GitHub Hosting</li>
+              <li class="gh-feature hidden"><span class="tick">✔</span>Full Advanced System</li>
+            </ul>
+            <a href="/contact.html" class="plan-btn">Get Started</a>
+          </div>
+
+        </div>
+
+        <!-- DISCLAIMER -->
+        <div class="disclaimer reveal">
+          <span class="disclaimer-icon">📌</span>
+          <p><strong>Note:</strong> Domain and hosting charges are not included in the above pricing. Clients are required to purchase their own domain and hosting. We will assist you in setup and integration.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         3. GITHUB FREE OPTION BANNER
+    ══════════════════════════════ -->
+    <section class="pr-github">
+      <div class="container">
+        <div class="github-inner reveal">
+          <div class="github-text">
+            <span class="tag">Zero Investment Hosting</span>
+            <h2>Don't Want to Spend on<br/><span class="red">Domain &amp; Hosting?</span></h2>
+            <p>Get Your Website Built on GitHub — hosting is completely free. You will get a live website without paying for hosting. You can upgrade to a custom domain anytime in the future.</p>
+            <button class="github-toggle-btn" id="githubSwitchBtn">
+              Switch to GitHub Pricing ↑
+            </button>
+          </div>
+          <div class="github-badges">
+            <div class="gb-item"><span class="gb-icon">🆓</span><span>Free Hosting</span></div>
+            <div class="gb-item"><span class="gb-icon">🌐</span><span>Live Website</span></div>
+            <div class="gb-item"><span class="gb-icon">⬆️</span><span>Upgradeable</span></div>
+            <div class="gb-item"><span class="gb-icon">⚡</span><span>Fast Delivery</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         4. E-COMMERCE / SHOPIFY
+    ══════════════════════════════ -->
+    <section class="pr-ecom">
+      <div class="container">
+        <div class="section-top reveal">
+          <span class="tag">Online Stores</span>
+          <h2>E-Commerce &amp; <span class="red">Shopify Websites</span></h2>
+          <p class="section-note">⚠️ E-commerce websites are not available on GitHub hosting — dedicated hosting required.</p>
+        </div>
+        <div class="ecom-grid">
+          <div class="ecom-card reveal">
+            <h3>Shopify Store Setup</h3>
+            <div class="ecom-price">₹9,999 – ₹25,000</div>
+            <ul class="ecom-list">
+              <li><span class="tick">✔</span>Product Setup</li>
+              <li><span class="tick">✔</span>Payment Integration</li>
+              <li><span class="tick">✔</span>Order System</li>
+              <li><span class="tick">✔</span>Mobile Responsive</li>
+            </ul>
+            <a href="/contact.html" class="plan-btn">Get Quote</a>
+          </div>
+          <div class="ecom-card reveal" style="transition-delay:.15s">
+            <h3>Custom E-commerce Website</h3>
+            <div class="ecom-price">₹15,000 – ₹40,000+</div>
+            <ul class="ecom-list">
+              <li><span class="tick">✔</span>Product Setup</li>
+              <li><span class="tick">✔</span>Payment Integration</li>
+              <li><span class="tick">✔</span>Order System</li>
+              <li><span class="tick">✔</span>Mobile Responsive</li>
+            </ul>
+            <a href="/contact.html" class="plan-btn">Get Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         5. BRANDING PRICING
+    ══════════════════════════════ -->
+    <section class="pr-branding">
+      <div class="container">
+        <div class="section-top reveal">
+          <span class="tag">Creative Services</span>
+          <h2>Branding &amp; Creative <span class="red">Design Pricing</span></h2>
+        </div>
+        <div class="price-table reveal">
+          <div class="pt-row pt-head">
+            <span>Service</span><span>Price</span>
+          </div>
+          <div class="pt-row"><span>Logo Design</span><span class="pt-price">₹999 – ₹2,499</span></div>
+          <div class="pt-row"><span>Brand Identity Design</span><span class="pt-price">₹2,500</span></div>
+          <div class="pt-row"><span>Poster / Banner</span><span class="pt-price">₹500+</span></div>
+          <div class="pt-row"><span>Social Media Design</span><span class="pt-price">₹500+</span></div>
+          <div class="pt-row"><span>Business Card</span><span class="pt-price">₹399</span></div>
+          <div class="pt-row"><span>PPT Design</span><span class="pt-price">₹999</span></div>
+          <div class="pt-row"><span>Advanced PPT</span><span class="pt-price">₹3,999</span></div>
+          <div class="pt-row"><span>Menu Card</span><span class="pt-price">₹299</span></div>
+          <div class="pt-row"><span>Name Plate</span><span class="pt-price">₹299</span></div>
+          <div class="pt-row"><span>Resume / CV</span><span class="pt-price">₹499</span></div>
+          <div class="pt-row pt-package">
+            <span>🔥 Full Brand Package</span>
+            <span class="pt-price red">₹6,999 – ₹12,999</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         6. CONSULTING PRICING
+    ══════════════════════════════ -->
+    <section class="pr-consulting">
+      <div class="container">
+        <div class="section-top reveal">
+          <span class="tag">Strategy Services</span>
+          <h2>Consulting &amp; <span class="red">Strategy Pricing</span></h2>
+        </div>
+        <div class="price-table reveal">
+          <div class="pt-row pt-head"><span>Service</span><span>Price</span></div>
+          <div class="pt-row"><span>Business Consulting</span><span class="pt-price">₹999</span></div>
+          <div class="pt-row"><span>Management Consulting</span><span class="pt-price">₹1,499</span></div>
+          <div class="pt-row"><span>Startup Strategy</span><span class="pt-price">₹1,999</span></div>
+          <div class="pt-row"><span>Website Consulting</span><span class="pt-price">₹999</span></div>
+          <div class="pt-row"><span>Digital Growth Strategy</span><span class="pt-price">₹1,999</span></div>
+          <div class="pt-row"><span>AI Consulting</span><span class="pt-price">₹2,499</span></div>
+          <div class="pt-row"><span>AI Automation Strategy</span><span class="pt-price">₹3,999</span></div>
+          <div class="pt-row"><span>Online Business Growth</span><span class="pt-price">₹2,999</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         7. SEO ADD-ON
+    ══════════════════════════════ -->
+    <section class="pr-seo">
+      <div class="container">
+        <div class="seo-inner reveal">
+          <div class="seo-text">
+            <span class="tag light">Optional Add-On</span>
+            <h2 class="white">SEO <span class="red">Services</span></h2>
+            <p>Basic SEO is included in all website packages. For advanced optimization, choose our dedicated SEO service.</p>
+            <div class="seo-price-wrap">
+              <div class="seo-price-item">
+                <span class="seo-label">Basic SEO</span>
+                <span class="seo-val">Included Free</span>
+              </div>
+              <div class="seo-price-item featured">
+                <span class="seo-label">Advanced SEO Setup</span>
+                <span class="seo-val">₹3,999 – ₹9,999</span>
+              </div>
+            </div>
+          </div>
+          <div class="seo-features">
+            <div class="seo-feat reveal"><span class="sf-dot"></span>Keyword Optimization</div>
+            <div class="seo-feat reveal" style="transition-delay:.08s"><span class="sf-dot"></span>Meta Tags Setup</div>
+            <div class="seo-feat reveal" style="transition-delay:.16s"><span class="sf-dot"></span>Speed Optimization</div>
+            <div class="seo-feat reveal" style="transition-delay:.24s"><span class="sf-dot"></span>Google Indexing</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         CTA
+    ══════════════════════════════ -->
+    <section class="pr-cta">
+      <div class="pr-cta-glow"></div>
+      <div class="container center reveal">
+        <span class="tag light">Let's Build</span>
+        <h2 class="white">Ready to Start Your <span class="red">Project?</span></h2>
+        <p>Let's build something amazing together. Contact NexaaWeb today and take your business to the next level.</p>
+        <a href="/contact.html" class="btn-cta">Start Your Project</a>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="assets/js/script.js"></script>
+  <script>
+    /* SCROLL REVEAL */
+    const revEls = document.querySelectorAll('.reveal');
+    const ro = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); } });
+    }, { threshold: 0.08 });
+    revEls.forEach(el => ro.observe(el));
+
+    /* PRICE TOGGLE */
+    const toggle       = document.getElementById('priceToggle');
+    const switchBtn    = document.getElementById('githubSwitchBtn');
+    const stdPrices    = document.querySelectorAll('.std-price');
+    const ghPrices     = document.querySelectorAll('.gh-price');
+    const ghFeatures   = document.querySelectorAll('.gh-feature');
+    const lblStd       = document.getElementById('lbl-standard');
+    const lblGh        = document.getElementById('lbl-github');
+    let isGithub = false;
+
+    function switchPricing(toGithub) {
+      isGithub = toGithub;
+      toggle.setAttribute('aria-pressed', toGithub);
+      toggle.classList.toggle('active', toGithub);
+      lblStd.classList.toggle('active-lbl', !toGithub);
+      lblGh.classList.toggle('active-lbl', toGithub);
+
+      /* morph prices */
+      stdPrices.forEach(el => {
+        el.classList.toggle('hidden', toGithub);
+        el.classList.toggle('morph-out', toGithub);
+      });
+      ghPrices.forEach(el => {
+        el.classList.toggle('hidden', !toGithub);
+        el.classList.toggle('morph-in', toGithub);
+      });
+      ghFeatures.forEach(el => el.classList.toggle('hidden', !toGithub));
+
+      switchBtn.textContent = toGithub
+        ? 'Switch to Standard Pricing ↓'
+        : 'Switch to GitHub Pricing ↑';
+    }
+
+    toggle.addEventListener('click', () => switchPricing(!isGithub));
+    switchBtn.addEventListener('click', () => {
+      switchPricing(!isGithub);
+      document.querySelector('.pr-plans').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
