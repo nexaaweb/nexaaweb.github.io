@@ -14,7 +14,7 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { font-family: 'Open Sans', sans-serif; color: var(--text); background: var(--white); overflow-x: hidden; }
+body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--white); overflow-x: hidden; }
 
 .red   { color: var(--red); }
 .white { color: var(--white) !important; }
@@ -32,7 +32,7 @@ body { font-family: 'Open Sans', sans-serif; color: var(--text); background: var
 .tag.light { color: rgba(255,255,255,0.4); }
 
 section h2 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(30px, 3.5vw, 48px);
   font-weight: 800; color: var(--black);
   letter-spacing: -1.5px; line-height: 1.1;
@@ -90,7 +90,7 @@ section h2 {
   animation: fadeUp 0.7s ease both;
 }
 .srv-hero h1 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(38px, 5.5vw, 72px);
   font-weight: 800; color: var(--white);
   line-height: 1.08; letter-spacing: -2.5px;
@@ -116,7 +116,7 @@ section h2 {
 .btn-ghost {
   padding: 13px 32px; background: transparent; color: var(--white);
   border: 1.5px solid rgba(255,255,255,0.4);
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 14px; font-weight: 600;
   text-decoration: none; border-radius: 2px;
   transition: border-color 0.2s, color 0.2s;
@@ -124,7 +124,7 @@ section h2 {
 .btn-ghost:hover { border-color: var(--red); color: var(--red); }
 .btn-solid {
   padding: 13px 32px; background: var(--red); color: var(--white);
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 14px; font-weight: 700;
   text-decoration: none; border-radius: 2px;
   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
@@ -209,7 +209,7 @@ section h2 {
 }
 .offer-num {
   position: absolute; top: 24px; left: 24px;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 64px; font-weight: 800;
   color: rgba(255,255,255,0.12);
   line-height: 1;
@@ -222,7 +222,7 @@ section h2 {
   justify-content: center;
 }
 .offer-text h3 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(24px, 2.5vw, 34px);
   font-weight: 800; color: var(--black);
   letter-spacing: -1px; line-height: 1.15;
@@ -299,7 +299,7 @@ section h2 {
   transform: scale(1.1);
 }
 .p-num {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 16px; font-weight: 800; color: var(--red);
   transition: color 0.25s;
 }
@@ -315,7 +315,7 @@ section h2 {
 
 .process-body { padding: 0 16px; }
 .process-body h4 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 15px; font-weight: 800;
   color: var(--white); margin-bottom: 8px;
 }
@@ -383,7 +383,7 @@ section h2 {
   padding-top: 4px;
 }
 .tl-num {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 13px; font-weight: 800;
   color: var(--red); letter-spacing: 1px;
   margin-bottom: 8px;
@@ -402,7 +402,7 @@ section h2 {
   color: var(--red); margin-bottom: 8px;
 }
 .tl-right h4 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 20px; font-weight: 800;
   color: var(--black); margin-bottom: 8px;
   letter-spacing: -0.3px;
@@ -448,7 +448,7 @@ section h2 {
 }
 
 .who-card-num {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 36px; font-weight: 800;
   color: rgba(185,36,37,0.3);
   line-height: 1; margin-bottom: 14px;
@@ -456,7 +456,7 @@ section h2 {
 }
 .who-card:hover .who-card-num { color: rgba(185,36,37,0.6); }
 .who-card h4 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 16px; font-weight: 800;
   color: var(--white); margin-bottom: 10px;
 }
@@ -479,7 +479,7 @@ section h2 {
 }
 .srv-cta-inner { position: relative; z-index: 2; }
 .srv-cta h2 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(28px,4vw,54px); font-weight: 800;
   color: var(--white); letter-spacing: -1.5px; margin-bottom: 16px;
 }
@@ -490,7 +490,7 @@ section h2 {
 .btn-cta {
   display: inline-block; padding: 15px 48px;
   background: var(--red); color: var(--white);
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 14px; font-weight: 700;
   text-decoration: none; border-radius: 2px;
   border: 2px solid var(--red);
