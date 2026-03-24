@@ -1,203 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Contact | NexaaWeb</title>
-
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/contact.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — NexaaWeb</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/header.css"/>
+  <link rel="stylesheet" href="assets/css/footer.css"/>
+  <link rel="stylesheet" href="assets/css/contact.css"/>
 </head>
-
-
 <body>
 
-<div id="header"></div>
+  <div id="header-placeholder"></div>
 
+  <main>
 
-<!-- CONTACT HERO -->
+    <!-- ══════════════════════════════
+         1. HERO
+    ══════════════════════════════ -->
+    <section class="ct-hero">
+      <div class="ct-hero-bg"></div>
+      <div class="ct-hero-content">
+        <span class="ct-label">Contact NexaaWeb</span>
+        <h1>Let's Build Something<br/><span class="red">Powerful</span> Together</h1>
+        <p>Whether you're planning a new website, building your brand, or scaling your business digitally — NexaaWeb is here to help you turn your ideas into reality with smart strategies and creative solutions.</p>
+        <div class="hero-btns">
+          <a href="#contact-form" class="btn-primary">Start Your Project</a>
+          <a href="https://wa.me/917411984925" target="_blank" class="btn-outline">Talk to Us</a>
+        </div>
+      </div>
+    </section>
 
-<section class="contact-hero">
+    <!-- ══════════════════════════════
+         2. CONTACT INFO CARDS
+    ══════════════════════════════ -->
+    <section class="ct-info">
+      <div class="container">
+        <div class="info-grid">
 
-<div class="container">
+          <div class="info-card reveal">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <h4>Email Us</h4>
+            <a href="mailto:nexaawebofficial@gmail.com" class="info-value">nexaawebofficial@gmail.com</a>
+            <p class="info-desc">Reach out anytime for project discussions or inquiries.</p>
+          </div>
 
-<h5>CONTACT US</h5>
+          <div class="info-card reveal" style="transition-delay:.1s">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.13 1.19 2 2 0 012.11 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92v2z"/></svg>
+            </div>
+            <h4>Phone / WhatsApp</h4>
+            <a href="https://wa.me/917411984925" class="info-value">+91 74119 84925</a>
+            <p class="info-desc">Quick responses for faster communication and support.</p>
+          </div>
 
-<h1>Let’s Start Your Next Digital Project</h1>
+          <div class="info-card reveal" style="transition-delay:.2s">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h4>Location</h4>
+            <span class="info-value">India</span>
+            <p class="info-desc">Remote Services Worldwide — working with clients globally across multiple industries.</p>
+          </div>
 
-<p>
-Have a project in mind or need help with your website, branding, or digital growth?
-Get in touch with NexaaWeb and let’s discuss how we can create something amazing for your business.
-</p>
+          <div class="info-card reveal" style="transition-delay:.3s">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h4>Availability</h4>
+            <span class="info-value">24/7 Worldwide</span>
+            <p class="info-desc">Flexible communication and smooth collaboration across different time zones with priority delivery.</p>
+          </div>
 
-</div>
+        </div>
+      </div>
+    </section>
 
-</section>
+    <!-- ══════════════════════════════
+         3. CONTACT FORM
+    ══════════════════════════════ -->
+    <section class="ct-form-section" id="contact-form">
+      <div class="container">
+        <div class="form-layout">
 
+          <div class="form-left reveal">
+            <span class="tag">Get In Touch</span>
+            <h2>Start Your <span class="red">Project</span></h2>
+            <p>Tell us about your project and we'll get back to you with the best solution tailored to your needs.</p>
+            <div class="form-promise">
+              <div class="promise-item">
+                <span class="p-dot"></span>
+                <span>Response within 24 hours</span>
+              </div>
+              <div class="promise-item">
+                <span class="p-dot"></span>
+                <span>Free initial consultation</span>
+              </div>
+              <div class="promise-item">
+                <span class="p-dot"></span>
+                <span>No commitment required</span>
+              </div>
+              <div class="promise-item">
+                <span class="p-dot"></span>
+                <span>100% confidential</span>
+              </div>
+            </div>
+          </div>
 
+          <div class="form-right reveal" style="transition-delay:.12s">
+            <div class="form-card">
+              <form id="contactForm" novalidate>
 
-<!-- CONTACT INFORMATION -->
+                <div class="field-row">
+                  <div class="field-group">
+                    <input type="text" id="fname" name="fname" required placeholder=" "/>
+                    <label for="fname">Your Name *</label>
+                    <span class="field-line"></span>
+                  </div>
+                  <div class="field-group">
+                    <input type="email" id="femail" name="femail" required placeholder=" "/>
+                    <label for="femail">Email Address *</label>
+                    <span class="field-line"></span>
+                  </div>
+                </div>
 
-<section class="contact-info">
+                <div class="field-row">
+                  <div class="field-group">
+                    <input type="tel" id="fphone" name="fphone" placeholder=" "/>
+                    <label for="fphone">Phone / WhatsApp</label>
+                    <span class="field-line"></span>
+                  </div>
+                  <div class="field-group">
+                    <select id="fservice" name="fservice" required>
+                      <option value="" disabled selected></option>
+                      <option value="web-design">Web Design &amp; Development</option>
+                      <option value="branding">Branding &amp; Creative Design</option>
+                      <option value="consulting">Consulting &amp; Strategy</option>
+                      <option value="seo">SEO Optimization</option>
+                      <option value="ai">AI Solutions</option>
+                      <option value="other">Other</option>
+                    </select>
+                    <label for="fservice" class="select-label">Service Required *</label>
+                    <span class="field-line"></span>
+                  </div>
+                </div>
 
-<div class="container contact-grid">
+                <div class="field-group full">
+                  <input type="text" id="fbudget" name="fbudget" placeholder=" "/>
+                  <label for="fbudget">Budget Range (Optional)</label>
+                  <span class="field-line"></span>
+                </div>
 
+                <div class="field-group full">
+                  <textarea id="fmessage" name="fmessage" required rows="5" placeholder=" "></textarea>
+                  <label for="fmessage">Tell Us About Your Project *</label>
+                  <span class="field-line"></span>
+                </div>
 
-<div class="contact-card">
+                <button type="submit" class="submit-btn">
+                  <span class="btn-text">Send Message</span>
+                  <span class="btn-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
+                  </span>
+                  <span class="btn-shine"></span>
+                </button>
 
-<div class="contact-icon">✉</div>
+                <!-- SUCCESS MESSAGE -->
+                <div class="form-success" id="formSuccess">
+                  <div class="success-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                  </div>
+                  <h4>Message Sent!</h4>
+                  <p>Thank you for reaching out. We'll get back to you within 24 hours.</p>
+                </div>
 
-<h3>Email</h3>
+              </form>
+            </div>
+          </div>
 
-<p>nexaawebofficial@gmail.com</p>
+        </div>
+      </div>
+    </section>
 
-</div>
+    <!-- ══════════════════════════════
+         4. LOCATION / MAP
+    ══════════════════════════════ -->
+    <section class="ct-map-section">
+      <div class="container">
+        <div class="map-layout reveal">
+          <div class="map-text">
+            <span class="tag">Our Reach</span>
+            <h2>We Work <span class="red">Globally</span></h2>
+            <p>NexaaWeb operates remotely, allowing us to collaborate with businesses from around the world. No matter where you're located, we ensure smooth communication and efficient project delivery.</p>
+            <div class="map-stats">
+              <div class="ms-item">
+                <span class="ms-num">50+</span>
+                <span class="ms-lbl">Projects</span>
+              </div>
+              <div class="ms-item">
+                <span class="ms-num">10+</span>
+                <span class="ms-lbl">Countries</span>
+              </div>
+              <div class="ms-item">
+                <span class="ms-num">24/7</span>
+                <span class="ms-lbl">Available</span>
+              </div>
+            </div>
+          </div>
+          <div class="map-wrap">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30000000!2d78.9629!3d20.5937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              width="100%" height="100%"
+              style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <div class="map-overlay-card">
+              <span>🌍</span>
+              <p>Remote &bull; Worldwide &bull; Always Available</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- ══════════════════════════════
+         5. CTA
+    ══════════════════════════════ -->
+    <section class="ct-cta">
+      <div class="cta-particles" id="ctaParticles"></div>
+      <div class="container center ct-cta-inner reveal">
+        <span class="tag light">Transform Your Business</span>
+        <h2 class="white">Ready to Transform Your<br/><span class="red">Ideas into Reality?</span></h2>
+        <p>Let's create a powerful website, build a strong brand identity, and implement smart digital strategies that drive real results for your business.</p>
+        <a href="#contact-form" class="btn-glow">Start Your Project</a>
+      </div>
+    </section>
 
+  </main>
 
-<div class="contact-card">
+  <div id="footer-placeholder"></div>
+  <script src="assets/js/script.js"></script>
+  <script>
+    /* ── SCROLL REVEAL ── */
+    const revEls = document.querySelectorAll('.reveal');
+    const ro = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); }
+      });
+    }, { threshold: 0.08 });
+    revEls.forEach(el => ro.observe(el));
 
-<div class="contact-icon">☎</div>
+    /* ── FORM SUBMIT ── */
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form    = this;
+      const btn     = form.querySelector('.submit-btn');
+      const success = document.getElementById('formSuccess');
 
-<h3>Phone / WhatsApp</h3>
+      // basic validation
+      const req = form.querySelectorAll('[required]');
+      let valid = true;
+      req.forEach(f => {
+        if (!f.value.trim()) {
+          f.closest('.field-group').classList.add('error');
+          valid = false;
+        } else {
+          f.closest('.field-group').classList.remove('error');
+        }
+      });
+      if (!valid) return;
 
-<p>+91 74119 84925</p>
+      // loading state
+      btn.classList.add('loading');
+      btn.querySelector('.btn-text').textContent = 'Sending...';
 
-</div>
+      setTimeout(() => {
+        form.style.display = 'none';
+        success.classList.add('show');
+      }, 1600);
+    });
 
+    /* remove error on input */
+    document.querySelectorAll('.field-group input, .field-group textarea, .field-group select').forEach(el => {
+      el.addEventListener('input', () => el.closest('.field-group').classList.remove('error'));
+    });
 
-
-<div class="contact-card">
-
-<div class="contact-icon">📍</div>
-
-<h3>Location</h3>
-
-<p>India</p>
-
-</div>
-
-
-
-<div class="contact-card">
-
-<div class="contact-icon">⏱</div>
-
-<h3>Availability</h3>
-
-<p>
-
-Available 24/7 Worldwide<br><br>
-
-NexaaWeb works with clients throughout the week to deliver websites, branding, and digital solutions.
-Projects are handled with flexibility to ensure smooth progress and timely delivery.
-
-</p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-<div id="footer"></div>
-
-
-<!-- MAIN SCRIPT -->
-<script src="assets/js/script.js"></script>
-
+    /* ── PARTICLES ── */
+    (function() {
+      const container = document.getElementById('ctaParticles');
+      if (!container) return;
+      for (let i = 0; i < 28; i++) {
+        const p = document.createElement('span');
+        p.className = 'particle';
+        p.style.cssText = `
+          left: ${Math.random()*100}%;
+          top:  ${Math.random()*100}%;
+          width: ${Math.random()*3+1}px;
+          height: ${Math.random()*3+1}px;
+          animation-delay: ${Math.random()*6}s;
+          animation-duration: ${Math.random()*8+6}s;
+          opacity: ${Math.random()*0.4+0.1};
+        `;
+        container.appendChild(p);
+      }
+    })();
+  </script>
 </body>
 </html>
-
-<!-- CONTACT FORM -->
-
-<section class="contact-form-section">
-
-<div class="container">
-
-<h2 class="form-title">SEND US A MESSAGE</h2>
-
-<form class="contact-form" id="contactForm">
-
-<div class="form-row">
-
-<input type="text" name="name" placeholder="Full Name" required>
-
-<input type="email" name="email" placeholder="Email Address" required>
-
-</div>
-
-<div class="form-row">
-
-<input type="text" name="phone" placeholder="Phone / WhatsApp">
-
-<input type="text" name="service" placeholder="Service Interested In">
-
-</div>
-
-<textarea name="message" placeholder="Message" rows="6" required></textarea>
-
-<button type="submit" class="contact-btn">Send Message</button>
-
-</form>
-
-</div>
-
-</section>
-
-<!-- LOCATION SECTION -->
-
-<section class="location-section">
-
-<div class="container">
-
-<h2 class="location-title">OUR LOCATION</h2>
-
-<p class="location-text">
-You can connect with us online from anywhere. NexaaWeb works with businesses remotely and provides digital services to clients across different industries.
-</p>
-
-<div class="map-container">
-
-<iframe 
-src="https://www.google.com/maps?q=Belgaum,Karnataka,India&output=embed"
-width="100%" 
-height="450" 
-style="border:0;" 
-allowfullscreen="" 
-loading="lazy">
-</iframe>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- CTA SECTION -->
-
-<section class="cta-section">
-
-<div class="container">
-
-<h2>READY TO START YOUR PROJECT?</h2>
-
-<p>
-Let’s work together to build a powerful website, strong brand identity, and smart digital solutions for your business.
-</p>
-
-<a href="mailto:nexaawebofficial@gmail.com" class="cta-button">
-Start Your Project
-</a>
-
-</div>
-
-</section>
