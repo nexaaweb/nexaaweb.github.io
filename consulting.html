@@ -1,153 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulting & Strategy | NexaaWeb</title>
-    <link rel="stylesheet" href="assets/css/consulting.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Consulting &amp; Strategy — NexaaWeb</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/header.css"/>
+  <link rel="stylesheet" href="assets/css/footer.css"/>
+  <link rel="stylesheet" href="assets/css/consulting.css"/>
 </head>
 <body>
 
-<section class="hero">
-    <div class="hero-overlay">
-        <div class="container">
-            <h1>CONSULTING <span>& STRATEGY</span></h1>
-            <h2>Smart Strategies to Grow Your Business</h2>
-            <p>At NexaaWeb, we help businesses make smarter decisions with the right strategies and digital guidance. From business planning to AI-driven solutions, our consulting services are designed to improve performance, efficiency, and long-term growth.</p>
-            <a href="#" class="btn">Start Your Project</a>
+  <div id="header-placeholder"></div>
+
+  <main>
+
+    <!-- ══════════════════════════════
+         1. HERO
+    ══════════════════════════════ -->
+    <section class="cs-hero">
+      <div class="cs-hero-bg"></div>
+      <div class="cs-hero-overlay"></div>
+      <div class="cs-hero-content">
+        <span class="cs-label">Consulting &amp; Strategy</span>
+        <h1>Smart <span class="red">Strategies</span> to<br/>Grow Your Business</h1>
+        <p>At NexaaWeb, we help businesses make smarter decisions with the right strategies and digital guidance. From business planning to AI-driven solutions, our consulting services are designed to improve performance, efficiency, and long-term growth.</p>
+        <a href="/contact.html" class="btn-hero">Start Your Project</a>
+      </div>
+      <div class="hero-scroll"><span></span></div>
+    </section>
+
+    <!-- ══════════════════════════════
+         2. OVERVIEW
+    ══════════════════════════════ -->
+    <section class="cs-overview">
+      <div class="container">
+        <div class="ov-grid reveal">
+          <div class="ov-text">
+            <span class="tag">Overview</span>
+            <h2>Consulting &amp; <span class="red">Strategy</span></h2>
+            <div class="red-line"></div>
+            <p>We provide consulting and strategic guidance for businesses that want to grow, improve their online presence, and make better decisions. Our approach focuses on understanding your business goals and creating <strong class="red">practical strategies that deliver real results</strong>.</p>
+          </div>
+          <div class="ov-img">
+            <img src="https://i.pinimg.com/1200x/fa/62/e6/fa62e6bcee0f7974dc053639104e9843.jpg" alt="Overview"/>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<section class="overview">
-    <div class="container overview-container">
-        <div class="overview-text">
-            <h2>OVERVIEW</h2>
-            <p>We provide consulting and strategic guidance for businesses that want to grow, improve their online presence, and make better decisions. Our approach focuses on understanding your business goals and creating practical strategies that deliver real results.</p>
+    <!-- ══════════════════════════════
+         3. OUR CONSULTING SERVICES
+    ══════════════════════════════ -->
+    <section class="cs-services">
+      <div class="container">
+        <div class="section-top reveal">
+          <span class="tag">What We Offer</span>
+          <h2>Our Consulting <span class="red">Services</span></h2>
+          <p class="section-sub">Click on any service to learn more about what we offer.</p>
         </div>
-        <div class="overview-img">
-            <img src="https://i.pinimg.com/1200x/fa/62/e6/fa62e6bcee0f7974dc053639104e9843.jpg" alt="Overview">
+        <div class="services-grid">
+
+          <div class="srv-card reveal" data-service="business">
+            <div class="srv-img">
+              <img src="https://i.pinimg.com/736x/a0/be/97/a0be97578c8ffcdf9fce8702a3f7a708.jpg" alt="Business Consulting"/>
+              <div class="srv-overlay"></div>
+            </div>
+            <div class="srv-body">
+              <h3>Business Consulting</h3>
+              <p>We help you plan, structure, and improve your business for better performance and growth.</p>
+              <span class="learn-more">Learn More +</span>
+            </div>
+          </div>
+
+          <div class="srv-card reveal" style="transition-delay:.08s" data-service="management">
+            <div class="srv-img">
+              <img src="https://i.pinimg.com/736x/a2/4b/02/a24b02af795412e7953e3d3dcd436ce3.jpg" alt="Management Consulting"/>
+              <div class="srv-overlay"></div>
+            </div>
+            <div class="srv-body">
+              <h3>Management Consulting</h3>
+              <p>Strategic guidance to improve operations, workflows, and overall business efficiency.</p>
+              <span class="learn-more">Learn More +</span>
+            </div>
+          </div>
+
+          <div class="srv-card reveal" style="transition-delay:.16s" data-service="startup">
+            <div class="srv-img">
+              <img src="https://i.pinimg.com/1200x/0c/6d/97/0c6d977e7a21cc443be345285ba371b6.jpg" alt="Startup Strategy"/>
+              <div class="srv-overlay"></div>
+            </div>
+            <div class="srv-body">
+              <h3>Startup Strategy</h3>
+              <p>Complete support for startups including planning, positioning, and growth strategy.</p>
+              <span class="learn-more">Learn More +</span>
+            </div>
+          </div>
+
+          <div class="srv-card reveal" style="transition-delay:.08s" data-service="website">
+            <div class="srv-img">
+              <img src="https://i.pinimg.com/736x/a1/73/fe/a173fe0a39beb3b54b54651ab701fd15.jpg" alt="Website Consulting"/>
+              <div class="srv-overlay"></div>
+            </div>
+            <div class="srv-body">
+              <h3>Website Consulting</h3>
+              <p>Expert advice on website structure, design, and performance to achieve better results.</p>
+              <span class="learn-more">Learn More +</span>
+            </div>
+          </div>
+
+          <div class="srv-card reveal" style="transition-delay:.16s" data-service="digital">
+            <div class="srv-img">
+              <img src="https://i.pinimg.com/736x/5d/26/12/5d26121f04c4ade55daa7b771e99d871.jpg" alt="Digital Growth"/>
+              <div class="srv-overlay"></div>
+            </div>
+            <div class="srv-body">
+              <h3>Digital Growth Strategy</h3>
+              <p>Strategies to increase online visibility, attract customers, and grow your business digitally.</p>
+              <span class="learn-more">Learn More +</span>
+            </div>
+          </div>
+
+          <div class="srv-card reveal" style="transition-delay:.24s" data-service="ai-consulting">
+            <div class="srv-img">
+              <img src="https://i.pinimg.com/736x/e8/98/8d/e8988dc3af22c8cbf77f1708dc7d05a2.jpg" alt="AI Consulting"/>
+              <div class="srv-overlay"></div>
+            </div>
+            <div class="srv-body">
+              <h3>AI Consulting for Businesses</h3>
+              <p>Guidance on how to use AI tools and solutions to improve your business operations.</p>
+              <span class="learn-more">Learn More +</span>
+            </div>
+          </div>
+
+          <div class="srv-card reveal" style="transition-delay:.08s" data-service="ai-automation">
+            <div class="srv-img">
+              <img src="https://i.pinimg.com/736x/0f/21/cc/0f21ccf8f0a16ec07e7c6f2f5bcac07f.jpg" alt="AI Automation"/>
+              <div class="srv-overlay"></div>
+            </div>
+            <div class="srv-body">
+              <h3>AI Automation Strategy</h3>
+              <p>We help automate repetitive tasks and workflows using smart AI solutions.</p>
+              <span class="learn-more">Learn More +</span>
+            </div>
+          </div>
+
+          <div class="srv-card reveal" style="transition-delay:.16s" data-service="online-growth">
+            <div class="srv-img">
+              <img src="https://i.pinimg.com/1200x/dc/38/07/dc3807e84cad06846cc5892e914034a6.jpg" alt="Online Growth"/>
+              <div class="srv-overlay"></div>
+            </div>
+            <div class="srv-body">
+              <h3>Online Business Growth Consulting</h3>
+              <p>End-to-end strategies to scale your online business effectively.</p>
+              <span class="learn-more">Learn More +</span>
+            </div>
+          </div>
+
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<section class="services">
-    <div class="container">
-        <h2 class="section-title">OUR CONSULTING SERVICES</h2>
-        <div class="service-grid">
-            
-            <div class="card">
-                <img src="https://i.pinimg.com/736x/a0/be/97/a0be97578c8ffcdf9fce8702a3f7a708.jpg" alt="Business Consulting">
-                <div class="card-content">
-                    <h3>Business Consulting</h3>
-                    <p>We help you plan, structure, and improve your business for better performance and growth.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="https://i.pinimg.com/736x/a2/4b/02/a24b02af795412e7953e3d3dcd436ce3.jpg" alt="Management Consulting">
-                <div class="card-content">
-                    <h3>Management Consulting</h3>
-                    <p>Strategic guidance to improve operations, workflows, and overall business efficiency.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="https://i.pinimg.com/1200x/0c/6d/97/0c6d977e7a21cc443be345285ba371b6.jpg" alt="Startup Strategy">
-                <div class="card-content">
-                    <h3>Startup Strategy</h3>
-                    <p>Complete support for startups including planning, positioning, and growth strategy.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="https://i.pinimg.com/736x/a1/73/fe/a173fe0a39beb3b54b54651ab701fd15.jpg" alt="Website Consulting">
-                <div class="card-content">
-                    <h3>Website Consulting</h3>
-                    <p>Expert advice on website structure, design, and performance to achieve better results.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="https://i.pinimg.com/736x/5d/26/12/5d26121f04c4ade55daa7b771e99d871.jpg" alt="Digital Growth Strategy">
-                <div class="card-content">
-                    <h3>Digital Growth Strategy</h3>
-                    <p>Strategies to increase online visibility, attract customers, and grow your business digitally.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="https://i.pinimg.com/736x/e8/98/8d/e8988dc3af22c8cbf77f1708dc7d05a2.jpg" alt="AI Consulting">
-                <div class="card-content">
-                    <h3>AI Consulting for Businesses</h3>
-                    <p>Guidance on how to use AI tools and solutions to improve your business operations.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="https://i.pinimg.com/736x/0f/21/cc/0f21ccf8f0a16ec07e7c6f2f5bcac07f.jpg" alt="AI Automation">
-                <div class="card-content">
-                    <h3>AI Automation Strategy</h3>
-                    <p>We help automate repetitive tasks and workflows using smart AI solutions.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="https://i.pinimg.com/1200x/dc/38/07/dc3807e84cad06846cc5892e914034a6.jpg" alt="Online Growth">
-                <div class="card-content">
-                    <h3>Online Business Growth Consulting</h3>
-                    <p>End-to-end strategies to scale your online business effectively.</p>
-                </div>
-            </div>
-
+    <!-- ══════════════════════════════
+         4. WHY CHOOSE US
+    ══════════════════════════════ -->
+    <section class="cs-why">
+      <div class="container center">
+        <div class="section-top reveal">
+          <span class="tag">Our Promise</span>
+          <h2>Why Choose Our <span class="red">Consulting</span></h2>
         </div>
-    </div>
-</section>
+        <div class="why-list">
+          <div class="why-item reveal">
+            <span class="why-check">✔</span>
+            <span>Practical and result-focused strategies</span>
+          </div>
+          <div class="why-item reveal" style="transition-delay:.08s">
+            <span class="why-check">✔</span>
+            <span>Customized solutions based on your business</span>
+          </div>
+          <div class="why-item reveal" style="transition-delay:.16s">
+            <span class="why-check">✔</span>
+            <span>Focus on growth and scalability</span>
+          </div>
+          <div class="why-item reveal" style="transition-delay:.24s">
+            <span class="why-check">✔</span>
+            <span>Modern tools and AI-driven approach</span>
+          </div>
+          <div class="why-item reveal" style="transition-delay:.32s">
+            <span class="why-check">✔</span>
+            <span>Clear guidance and structured planning</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section class="why">
-    <div class="container">
-        <h2>WHY CHOOSE OUR CONSULTING</h2>
-        <ul>
-            <li>Practical and result-focused strategies</li>
-            <li>Customized solutions based on your business</li>
-            <li>Focus on growth and scalability</li>
-            <li>Modern tools and AI-driven approach</li>
-            <li>Clear guidance and structured planning</li>
-        </ul>
-    </div>
-</section>
-
-<section class="process">
-    <div class="container">
-        <h2>HOW WE WORK</h2>
+    <!-- ══════════════════════════════
+         5. HOW WE WORK
+    ══════════════════════════════ -->
+    <section class="cs-process">
+      <div class="container">
+        <div class="section-top center reveal">
+          <span class="tag light">Our Process</span>
+          <h2 class="white">How We <span class="red">Work</span></h2>
+        </div>
         <div class="process-grid">
-            <div class="step-box">
-                <h4>Understanding Your Business</h4>
-                <p>We analyze your business, goals, and challenges to identify the right strategy.</p>
-            </div>
-            <div class="step-box">
-                <h4>Strategy Planning</h4>
-                <p>We create a clear and actionable plan tailored to your needs.</p>
-            </div>
-            <div class="step-box">
-                <h4>Implementation Guidance</h4>
-                <p>We guide you step-by-step on how to execute the strategy effectively.</p>
-            </div>
-            <div class="step-box">
-                <h4>Optimization & Growth</h4>
-                <p>We continuously improve strategies to ensure long-term success and growth.</p>
-            </div>
+
+          <div class="process-card reveal">
+            <div class="p-num">01</div>
+            <h4>Understanding Your Business</h4>
+            <p>We analyze your business, goals, and challenges to identify the right strategy.</p>
+          </div>
+
+          <div class="process-card reveal" style="transition-delay:.1s">
+            <div class="p-num">02</div>
+            <h4>Strategy Planning</h4>
+            <p>We create a clear and actionable plan tailored to your needs.</p>
+          </div>
+
+          <div class="process-card reveal" style="transition-delay:.2s">
+            <div class="p-num">03</div>
+            <h4>Implementation Guidance</h4>
+            <p>We guide you step-by-step on how to execute the strategy effectively.</p>
+          </div>
+
+          <div class="process-card reveal" style="transition-delay:.3s">
+            <div class="p-num">04</div>
+            <h4>Optimization &amp; Growth</h4>
+            <p>We continuously improve strategies to ensure long-term success and growth.</p>
+          </div>
+
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<section class="cta">
-    <div class="container">
-        <h2>READY TO GROW YOUR BUSINESS?</h2>
-        <p>Let’s plan and build the right strategy for your success.</p>
-        <a href="#" class="btn">Start Your Project</a>
-    </div>
-</section>
+    <!-- ══════════════════════════════
+         6. CTA
+    ══════════════════════════════ -->
+    <section class="cs-cta">
+      <div class="container center reveal">
+        <span class="tag light">Let's Begin</span>
+        <h2 class="white">Ready to <span class="red">Grow</span> Your Business?</h2>
+        <p>Let's plan and build the right strategy for your success.</p>
+        <a href="/contact.html" class="btn-cta">Start Your Project</a>
+      </div>
+    </section>
 
+  </main>
+
+  <!-- ══════════════════════════════
+       POPUPS
+  ══════════════════════════════ -->
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup-box" id="popupBox">
+      <button class="popup-close" id="popupClose">&#10005;</button>
+      <div class="popup-img-wrap">
+        <img id="popupImg" src="" alt=""/>
+      </div>
+      <div class="popup-content">
+        <span class="popup-tag" id="popupTag"></span>
+        <h3 id="popupTitle"></h3>
+        <div class="popup-divider"></div>
+        <p id="popupText"></p>
+        <a href="/contact.html" class="popup-btn">Start Your Project</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script src="assets/js/script.js"></script>
+  <script>
+    /* ── SCROLL REVEAL ── */
+    const revEls = document.querySelectorAll('.reveal');
+    const ro = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); }
+      });
+    }, { threshold: 0.08 });
+    revEls.forEach(el => ro.observe(el));
+
+    /* ── POPUP DATA ── */
+    const popupData = {
+      'business': {
+        title: 'Business Consulting',
+        tag: 'Consulting',
+        img: 'https://i.pinimg.com/736x/a0/be/97/a0be97578c8ffcdf9fce8702a3f7a708.jpg',
+        text: `Our Business Consulting service is designed to help businesses of all sizes plan, structure, and grow effectively. We begin by deeply understanding your current business model, goals, and challenges. From there, we create a customized roadmap that covers everything from operational improvements to revenue growth strategies.
+
+We analyze your target market, competition, and industry trends to provide you with insights that lead to smarter decisions. Our consultants work closely with you to identify weak points in your business and turn them into opportunities.
+
+Whether you are a startup looking to launch correctly or an established business wanting to scale, our practical approach ensures you get real, measurable results. We don't just give advice — we build strategies that work in the real world and help your business move forward with confidence and clarity.`
+      },
+      'management': {
+        title: 'Management Consulting',
+        tag: 'Management',
+        img: 'https://i.pinimg.com/736x/a2/4b/02/a24b02af795412e7953e3d3dcd436ce3.jpg',
+        text: `Our Management Consulting service focuses on improving the way your business operates from the inside. We help you streamline workflows, improve team efficiency, and build better internal systems that save time and reduce costs.
+
+We work with business owners and managers to identify bottlenecks, miscommunications, and inefficiencies that slow down growth. By restructuring processes and introducing smarter management techniques, we help your team work better together and achieve goals faster.
+
+Our approach includes reviewing your current management structure, understanding team dynamics, and providing practical recommendations for improvement. We also help you set clear KPIs, build accountability systems, and create a culture of performance.
+
+The result is a business that runs more smoothly, where every team member understands their role, and where decisions are made faster and smarter. Good management is the foundation of every successful business.`
+      },
+      'startup': {
+        title: 'Startup Strategy',
+        tag: 'Startup',
+        img: 'https://i.pinimg.com/1200x/0c/6d/97/0c6d977e7a21cc443be345285ba371b6.jpg',
+        text: `Launching a startup is exciting, but without the right strategy, even the best ideas can fail. Our Startup Strategy service provides complete support from the very beginning — helping you turn your idea into a viable, well-planned business.
+
+We help startups with market research, business model development, brand positioning, go-to-market strategy, and more. We understand the challenges that new businesses face and provide guidance that is both practical and realistic.
+
+Our team helps you define your target audience, understand your competition, and identify the best channels to reach potential customers. We also assist with planning your online presence, choosing the right technology, and setting up systems for growth.
+
+Whether you are pre-launch or in your early stages, our startup strategy consulting gives you the direction and clarity you need to move forward confidently. We are here to make sure your startup starts strong and builds a foundation for long-term success.`
+      },
+      'website': {
+        title: 'Website Consulting',
+        tag: 'Website',
+        img: 'https://i.pinimg.com/736x/a1/73/fe/a173fe0a39beb3b54b54651ab701fd15.jpg',
+        text: `Your website is one of the most important assets of your business. Our Website Consulting service helps you make the most of it by providing expert advice on structure, design, content, performance, and user experience.
+
+We begin with a thorough audit of your existing website — analyzing speed, SEO performance, user journey, conversion paths, and mobile responsiveness. Based on our findings, we provide a clear, prioritized list of improvements that will have the biggest impact on your results.
+
+For businesses planning a new website, we guide you through the entire planning process — from choosing the right platform and defining your site architecture to planning content and setting goals.
+
+Our website consulting ensures that your site is not just visually appealing but also strategically built to attract visitors, keep them engaged, and convert them into customers. A great website is a business tool, and we make sure yours works as hard as you do.`
+      },
+      'digital': {
+        title: 'Digital Growth Strategy',
+        tag: 'Digital Growth',
+        img: 'https://i.pinimg.com/736x/5d/26/12/5d26121f04c4ade55daa7b771e99d871.jpg',
+        text: `Growing a business in today's digital world requires more than just having a website. Our Digital Growth Strategy service provides a complete roadmap for increasing your online presence, attracting more customers, and scaling your business effectively.
+
+We analyze your current digital performance — including your website, social media, search rankings, and content strategy — and identify the biggest opportunities for growth. From there, we develop a data-driven plan that targets the right channels and audiences.
+
+Our strategy covers SEO, content marketing, social media growth, paid advertising recommendations, email marketing, and more. We focus on sustainable, long-term growth rather than quick fixes that don't last.
+
+We also track and measure results, continuously refining the strategy based on what is working and what can be improved. Our goal is to help you build a strong digital presence that consistently generates leads, builds brand awareness, and drives real business growth.`
+      },
+      'ai-consulting': {
+        title: 'AI Consulting for Businesses',
+        tag: 'AI',
+        img: 'https://i.pinimg.com/736x/e8/98/8d/e8988dc3af22c8cbf77f1708dc7d05a2.jpg',
+        text: `Artificial Intelligence is transforming the way businesses operate, and our AI Consulting service helps you take advantage of this revolution. We guide businesses on how to intelligently integrate AI tools and solutions into their operations for maximum efficiency and impact.
+
+We start by understanding your business processes and identifying areas where AI can save time, reduce costs, or improve results. This could include customer service automation, data analysis, content generation, lead management, or workflow optimization.
+
+Our consultants explain AI solutions in simple, practical terms — no technical jargon. We help you choose the right tools, implement them correctly, and train your team to use them effectively.
+
+Whether you want to add an AI chatbot to your website, automate your customer follow-ups, or use AI for better business insights, we provide the guidance you need. AI is the future of business, and we help you stay ahead by adopting it smartly and strategically.`
+      },
+      'ai-automation': {
+        title: 'AI Automation Strategy',
+        tag: 'Automation',
+        img: 'https://i.pinimg.com/736x/0f/21/cc/0f21ccf8f0a16ec07e7c6f2f5bcac07f.jpg',
+        text: `Repetitive tasks drain time, energy, and resources from your business. Our AI Automation Strategy service helps you identify and automate these tasks so your team can focus on what truly matters — growing your business.
+
+We analyze your current workflows and business processes to find opportunities for automation. From email responses and lead follow-ups to data entry and report generation, we map out exactly what can be automated and how.
+
+We then create a customized automation strategy using modern AI-powered tools that integrate smoothly with your existing systems. Our approach is practical and step-by-step, ensuring minimal disruption while maximizing efficiency gains.
+
+The results speak for themselves — faster response times, reduced human error, lower operational costs, and a team that can focus on high-value work. AI automation is not about replacing people; it is about empowering them to work smarter. We make sure your automation journey is smooth, effective, and built for long-term growth.`
+      },
+      'online-growth': {
+        title: 'Online Business Growth Consulting',
+        tag: 'Online Growth',
+        img: 'https://i.pinimg.com/1200x/dc/38/07/dc3807e84cad06846cc5892e914034a6.jpg',
+        text: `Scaling an online business requires the right combination of strategy, technology, and execution. Our Online Business Growth Consulting service provides end-to-end guidance for businesses that want to grow their digital presence and revenue significantly.
+
+We work with e-commerce stores, service businesses, digital brands, and online startups to develop growth strategies that are tailored to their specific industry and goals. Our approach covers every aspect of online growth — from attracting more traffic and improving conversions to building customer loyalty and expanding into new markets.
+
+We help you identify your most profitable customer segments, optimize your pricing and positioning, and build systems that support sustainable growth. We also advise on the best platforms, tools, and technologies to support your business as it scales.
+
+Our consulting is hands-on and results-driven. We stay involved throughout the process, providing guidance, reviewing progress, and adjusting strategies based on real data. If you are serious about growing your online business, we are the partner you need to make it happen.`
+      }
+    };
+
+    /* ── POPUP LOGIC ── */
+    const overlay   = document.getElementById('popupOverlay');
+    const popupBox  = document.getElementById('popupBox');
+    const closeBtn  = document.getElementById('popupClose');
+
+    document.querySelectorAll('.srv-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const key  = card.getAttribute('data-service');
+        const data = popupData[key];
+        if (!data) return;
+
+        document.getElementById('popupImg').src   = data.img;
+        document.getElementById('popupImg').alt   = data.title;
+        document.getElementById('popupTag').textContent   = data.tag;
+        document.getElementById('popupTitle').textContent = data.title;
+        document.getElementById('popupText').textContent  = data.text;
+
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+
+        // reset scroll
+        popupBox.scrollTop = 0;
+      });
+    });
+
+    function closePopup() {
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    closeBtn.addEventListener('click', closePopup);
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) closePopup();
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closePopup();
+    });
+  </script>
 </body>
 </html>
