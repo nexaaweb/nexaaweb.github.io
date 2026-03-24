@@ -574,3 +574,59 @@ section h2 {
   .github-badges { grid-template-columns: 1fr 1fr; }
   .price-table { font-size: 13px; }
 }
+
+/* ══════════════════════════════════════
+   TOGGLES ROW + CURRENCY BUTTONS
+══════════════════════════════════════ */
+.toggles-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.toggle-divider {
+  width: 1px; height: 36px;
+  background: rgba(255,255,255,0.15);
+  flex-shrink: 0;
+}
+
+.currency-toggle-wrap {
+  display: flex; align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 6px 8px; border-radius: 50px;
+}
+
+.currency-btn {
+  padding: 7px 16px;
+  background: transparent;
+  border: none; border-radius: 50px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px; font-weight: 600;
+  color: rgba(255,255,255,0.45);
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s;
+  white-space: nowrap;
+}
+.currency-btn.active-currency {
+  background: var(--red);
+  color: var(--white);
+}
+.currency-btn:hover:not(.active-currency) {
+  color: var(--white);
+  background: rgba(255,255,255,0.08);
+}
+
+/* ecom note below heading */
+.section-note {
+  font-size: 13px; color: var(--red);
+  font-weight: 600; margin-bottom: 32px;
+  display: block;
+  padding: 10px 16px;
+  background: rgba(185,36,37,0.06);
+  border-left: 3px solid var(--red);
+  border-radius: 2px;
+}
