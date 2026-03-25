@@ -1,1094 +1,802 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NEXAAWEB</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NexaaWeb — Web Design, Branding &amp; Digital Growth Agency</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/header.css"/>
+  <link rel="stylesheet" href="assets/css/footer.css"/>
+  <link rel="stylesheet" href="assets/css/home.css"/>
 </head>
 <body>
 
-  <!-- ================= SECTION 1: HEADER ================= -->
-  <header>
-      <div class="container header-container">
-          <div class="logo">NEXAA<span>WEB</span></div>
-          <nav>
-              <ul class="nav-links">
-                  <li><a href="index.html" class="active">Home</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li class="dropdown">
-                      <a href="services.html">Services ▾</a>
-                      <ul class="dropdown-menu">
-                          <li><a href="web-design.html">Web Design & Development</a></li>
-                          <li><a href="branding.html">Branding & Creative Design</a></li>
-                          <li><a href="consulting.html">Consulting & Strategy</a></li>
-                      </ul>
-                  </li>
-                  <li><a href="portfolio.html">Portfolio</a></li>
-                  <li><a href="blog.html">Blog</a></li>
-                  <li><a href="pricing.html">Pricing</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-              </ul>
-          </nav>
-      </div>
-  </header>
+  <div id="header-placeholder"></div>
 
-  <!-- ================= SECTION 2: HERO ================= -->
-  <section class="hero">
-      <div class="hero-left"></div>
-      <div class="hero-right">
-          <div class="hero-overlay"></div>
-          <div class="hero-text">
-              <h1>Web Design, Branding & Digital Growth Agency</h1>
-              <p>We create modern websites, powerful branding and smart strategies to help businesses grow online.</p>
-              <a href="services.html" class="btn-red">Explore Services</a>
+  <main>
+
+    <!-- ══════════════════════════════
+         1. HERO
+    ══════════════════════════════ -->
+    <section class="hero" id="hero">
+      <!-- Background slideshow -->
+      <div class="hero-bg-wrap">
+        <div class="hero-bg-slide active" style="background-image:url('https://i.pinimg.com/1200x/dc/38/07/dc3807e84cad06846cc5892e914034a6.jpg')"></div>
+        <div class="hero-bg-slide" style="background-image:url('https://i.pinimg.com/1200x/78/59/ed/7859ed888dc4e8d0fa684fb60e7ccd7a.jpg')"></div>
+        <div class="hero-bg-slide" style="background-image:url('https://i.pinimg.com/736x/38/0d/4a/380d4a59df166d70b364f653193073f2.jpg')"></div>
+        <div class="hero-bg-slide" style="background-image:url('https://i.pinimg.com/736x/db/6c/2e/db6c2e6ece08917d6a1617d9f10c1594.jpg')"></div>
+        <div class="hero-bg-slide" style="background-image:url('https://i.pinimg.com/1200x/0c/6d/97/0c6d977e7a21cc443be345285ba371b6.jpg')"></div>
+        <div class="hero-bg-slide" style="background-image:url('https://i.pinimg.com/736x/a0/be/97/a0be97578c8ffcdf9fce8702a3f7a708.jpg')"></div>
+        <div class="hero-bg-slide" style="background-image:url('https://i.pinimg.com/736x/87/88/d5/8788d54d20778e7d84dfa627b53d0ed4.jpg')"></div>
+        <div class="hero-bg-slide" style="background-image:url('https://i.pinimg.com/736x/e8/98/8d/e8988dc3af22c8cbf77f1708dc7d05a2.jpg')"></div>
+        <div class="hero-bg-slide" style="background-image:url('https://i.pinimg.com/1200x/b7/0b/5a/b70b5a0c0e7707d8c4f8fe4a8183e72d.jpg')"></div>
+        <div class="hero-bg-slide" style="background-image:url('https://i.pinimg.com/736x/5d/26/12/5d26121f04c4ade55daa7b771e99d871.jpg')"></div>
+      </div>
+      <div class="hero-overlay"></div>
+
+      <!-- Live Clock -->
+      <div class="hero-clock" id="heroClock">
+        <div class="clock-row">
+          <span class="clock-flag">🇮🇳</span>
+          <span class="clock-label">IST</span>
+          <span class="clock-time" id="clockIST"></span>
+        </div>
+        <div class="clock-row">
+          <span class="clock-flag">🌍</span>
+          <span class="clock-label">UTC</span>
+          <span class="clock-time" id="clockUTC"></span>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="hero-content">
+        <span class="hero-label">Web Design · Branding · Digital Growth</span>
+        <h1>
+          Web Design, Branding<br/>
+          &amp; <span class="red">Digital Growth</span> Agency
+        </h1>
+        <p>We build modern websites, powerful brand identities, and data-driven digital strategies that help businesses grow, scale, and stand out in the competitive online world.</p>
+        <div class="hero-btns">
+          <a href="/services.html" class="btn-primary">Explore Services <span class="btn-arrow">→</span></a>
+          <a href="/portfolio.html" class="btn-ghost">View Our Work</a>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero-scroll-line"><span></span></div>
+    </section>
+
+    <!-- ══════════════════════════════
+         2. TRUSTED BY
+    ══════════════════════════════ -->
+    <section class="trusted-section">
+      <div class="container">
+        <div class="trusted-top reveal">
+          <span class="tag">Trusted Worldwide</span>
+          <h2>Trusted by Modern Brands &amp; <span class="red">Growing Businesses</span></h2>
+          <p class="section-sub">We follow global standards and design practices used by leading companies to deliver high-quality digital experiences.</p>
+        </div>
+      </div>
+      <!-- Marquee row 1 — right to left -->
+      <div class="marquee-wrap">
+        <div class="marquee-track track-1">
+          <!-- 50 logo placeholders, 2 rows of 25 each via duplication -->
+          <div class="logo-item"><div class="logo-box">Shopify</div></div>
+          <div class="logo-item"><div class="logo-box">Stripe</div></div>
+          <div class="logo-item"><div class="logo-box">Notion</div></div>
+          <div class="logo-item"><div class="logo-box">Figma</div></div>
+          <div class="logo-item"><div class="logo-box">Webflow</div></div>
+          <div class="logo-item"><div class="logo-box">Canva</div></div>
+          <div class="logo-item"><div class="logo-box">HubSpot</div></div>
+          <div class="logo-item"><div class="logo-box">Mailchimp</div></div>
+          <div class="logo-item"><div class="logo-box">Squarespace</div></div>
+          <div class="logo-item"><div class="logo-box">Wix</div></div>
+          <div class="logo-item"><div class="logo-box">Intercom</div></div>
+          <div class="logo-item"><div class="logo-box">Slack</div></div>
+          <div class="logo-item"><div class="logo-box">Zapier</div></div>
+          <div class="logo-item"><div class="logo-box">Airtable</div></div>
+          <div class="logo-item"><div class="logo-box">Buffer</div></div>
+          <div class="logo-item"><div class="logo-box">Typeform</div></div>
+          <div class="logo-item"><div class="logo-box">Hotjar</div></div>
+          <div class="logo-item"><div class="logo-box">Semrush</div></div>
+          <div class="logo-item"><div class="logo-box">Moz</div></div>
+          <div class="logo-item"><div class="logo-box">Trello</div></div>
+          <div class="logo-item"><div class="logo-box">Monday</div></div>
+          <div class="logo-item"><div class="logo-box">Asana</div></div>
+          <div class="logo-item"><div class="logo-box">Zendesk</div></div>
+          <div class="logo-item"><div class="logo-box">Freshworks</div></div>
+          <div class="logo-item"><div class="logo-box">Klaviyo</div></div>
+          <!-- duplicate for infinite loop -->
+          <div class="logo-item"><div class="logo-box">Shopify</div></div>
+          <div class="logo-item"><div class="logo-box">Stripe</div></div>
+          <div class="logo-item"><div class="logo-box">Notion</div></div>
+          <div class="logo-item"><div class="logo-box">Figma</div></div>
+          <div class="logo-item"><div class="logo-box">Webflow</div></div>
+          <div class="logo-item"><div class="logo-box">Canva</div></div>
+          <div class="logo-item"><div class="logo-box">HubSpot</div></div>
+          <div class="logo-item"><div class="logo-box">Mailchimp</div></div>
+          <div class="logo-item"><div class="logo-box">Squarespace</div></div>
+          <div class="logo-item"><div class="logo-box">Wix</div></div>
+          <div class="logo-item"><div class="logo-box">Intercom</div></div>
+          <div class="logo-item"><div class="logo-box">Slack</div></div>
+          <div class="logo-item"><div class="logo-box">Zapier</div></div>
+          <div class="logo-item"><div class="logo-box">Airtable</div></div>
+          <div class="logo-item"><div class="logo-box">Buffer</div></div>
+          <div class="logo-item"><div class="logo-box">Typeform</div></div>
+          <div class="logo-item"><div class="logo-box">Hotjar</div></div>
+          <div class="logo-item"><div class="logo-box">Semrush</div></div>
+          <div class="logo-item"><div class="logo-box">Moz</div></div>
+          <div class="logo-item"><div class="logo-box">Trello</div></div>
+          <div class="logo-item"><div class="logo-box">Monday</div></div>
+          <div class="logo-item"><div class="logo-box">Asana</div></div>
+          <div class="logo-item"><div class="logo-box">Zendesk</div></div>
+          <div class="logo-item"><div class="logo-box">Freshworks</div></div>
+          <div class="logo-item"><div class="logo-box">Klaviyo</div></div>
+        </div>
+      </div>
+      <!-- Marquee row 2 — left to right (reverse) -->
+      <div class="marquee-wrap">
+        <div class="marquee-track track-2">
+          <div class="logo-item"><div class="logo-box">WooCommerce</div></div>
+          <div class="logo-item"><div class="logo-box">BigCommerce</div></div>
+          <div class="logo-item"><div class="logo-box">Magento</div></div>
+          <div class="logo-item"><div class="logo-box">Salesforce</div></div>
+          <div class="logo-item"><div class="logo-box">Zoho</div></div>
+          <div class="logo-item"><div class="logo-box">Adobe XD</div></div>
+          <div class="logo-item"><div class="logo-box">InVision</div></div>
+          <div class="logo-item"><div class="logo-box">Miro</div></div>
+          <div class="logo-item"><div class="logo-box">ClickUp</div></div>
+          <div class="logo-item"><div class="logo-box">Basecamp</div></div>
+          <div class="logo-item"><div class="logo-box">Dribbble</div></div>
+          <div class="logo-item"><div class="logo-box">Behance</div></div>
+          <div class="logo-item"><div class="logo-box">Unbounce</div></div>
+          <div class="logo-item"><div class="logo-box">ActiveCampaign</div></div>
+          <div class="logo-item"><div class="logo-box">ConvertKit</div></div>
+          <div class="logo-item"><div class="logo-box">Webex</div></div>
+          <div class="logo-item"><div class="logo-box">Loom</div></div>
+          <div class="logo-item"><div class="logo-box">Calendly</div></div>
+          <div class="logo-item"><div class="logo-box">Mixpanel</div></div>
+          <div class="logo-item"><div class="logo-box">Amplitude</div></div>
+          <div class="logo-item"><div class="logo-box">Segment</div></div>
+          <div class="logo-item"><div class="logo-box">Plausible</div></div>
+          <div class="logo-item"><div class="logo-box">Fathom</div></div>
+          <div class="logo-item"><div class="logo-box">Cloudflare</div></div>
+          <div class="logo-item"><div class="logo-box">Vercel</div></div>
+          <!-- duplicate -->
+          <div class="logo-item"><div class="logo-box">WooCommerce</div></div>
+          <div class="logo-item"><div class="logo-box">BigCommerce</div></div>
+          <div class="logo-item"><div class="logo-box">Magento</div></div>
+          <div class="logo-item"><div class="logo-box">Salesforce</div></div>
+          <div class="logo-item"><div class="logo-box">Zoho</div></div>
+          <div class="logo-item"><div class="logo-box">Adobe XD</div></div>
+          <div class="logo-item"><div class="logo-box">InVision</div></div>
+          <div class="logo-item"><div class="logo-box">Miro</div></div>
+          <div class="logo-item"><div class="logo-box">ClickUp</div></div>
+          <div class="logo-item"><div class="logo-box">Basecamp</div></div>
+          <div class="logo-item"><div class="logo-box">Dribbble</div></div>
+          <div class="logo-item"><div class="logo-box">Behance</div></div>
+          <div class="logo-item"><div class="logo-box">Unbounce</div></div>
+          <div class="logo-item"><div class="logo-box">ActiveCampaign</div></div>
+          <div class="logo-item"><div class="logo-box">ConvertKit</div></div>
+          <div class="logo-item"><div class="logo-box">Webex</div></div>
+          <div class="logo-item"><div class="logo-box">Loom</div></div>
+          <div class="logo-item"><div class="logo-box">Calendly</div></div>
+          <div class="logo-item"><div class="logo-box">Mixpanel</div></div>
+          <div class="logo-item"><div class="logo-box">Amplitude</div></div>
+          <div class="logo-item"><div class="logo-box">Segment</div></div>
+          <div class="logo-item"><div class="logo-box">Plausible</div></div>
+          <div class="logo-item"><div class="logo-box">Fathom</div></div>
+          <div class="logo-item"><div class="logo-box">Cloudflare</div></div>
+          <div class="logo-item"><div class="logo-box">Vercel</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         3. STATS
+    ══════════════════════════════ -->
+    <section class="stats-section">
+      <div class="stats-bg"></div>
+      <div class="container">
+        <div class="stats-top reveal">
+          <span class="tag light">Our Achievements</span>
+          <h2 class="white">Delivering <span class="red">Real Results</span> Through Design &amp; Strategy</h2>
+          <p class="white-muted">We focus on building digital solutions that create real impact. From startups to growing businesses, our work is driven by performance, user experience, and long-term success.</p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card reveal">
+            <div class="stat-icon">🚀</div>
+            <div class="stat-num"><span class="count" data-target="150">0</span>+</div>
+            <div class="stat-label">Projects Completed</div>
           </div>
+          <div class="stat-card reveal" style="transition-delay:.1s">
+            <div class="stat-icon">😊</div>
+            <div class="stat-num"><span class="count" data-target="120">0</span>+</div>
+            <div class="stat-label">Happy Clients</div>
+          </div>
+          <div class="stat-card reveal" style="transition-delay:.2s">
+            <div class="stat-icon">🏭</div>
+            <div class="stat-num"><span class="count" data-target="10">0</span>+</div>
+            <div class="stat-label">Industries Served</div>
+          </div>
+          <div class="stat-card reveal" style="transition-delay:.3s">
+            <div class="stat-icon">⭐</div>
+            <div class="stat-num">5<span style="font-size:0.5em">★</span></div>
+            <div class="stat-label">Average Rating</div>
+          </div>
+        </div>
       </div>
-  </section>
-
-</body>
-</html>
-    
-<!-- ========================= -->
-<!-- SECTION 2 – TRUSTED BY / CLIENT LOGOS -->
-<!-- ========================= -->
-
-<section class="clients">
-
-<h2 class="section-title">Trusted By Businesses Worldwide</h2>
-
-<div class="clients-slider">
-
-<!-- ROW 1 -->
-
-<div class="clients-track slide-left">
-
-<img src="https://logo.clearbit.com/google.com">
-<img src="https://logo.clearbit.com/amazon.com">
-<img src="https://logo.clearbit.com/apple.com">
-<img src="https://logo.clearbit.com/microsoft.com">
-<img src="https://logo.clearbit.com/netflix.com">
-<img src="https://logo.clearbit.com/tesla.com">
-<img src="https://logo.clearbit.com/adobe.com">
-<img src="https://logo.clearbit.com/airbnb.com">
-<img src="https://logo.clearbit.com/spotify.com">
-<img src="https://logo.clearbit.com/uber.com">
-<img src="https://logo.clearbit.com/paypal.com">
-<img src="https://logo.clearbit.com/stripe.com">
-<img src="https://logo.clearbit.com/shopify.com">
-<img src="https://logo.clearbit.com/slack.com">
-<img src="https://logo.clearbit.com/zoom.us">
-<img src="https://logo.clearbit.com/figma.com">
-<img src="https://logo.clearbit.com/notion.so">
-<img src="https://logo.clearbit.com/dropbox.com">
-<img src="https://logo.clearbit.com/intel.com">
-<img src="https://logo.clearbit.com/ibm.com">
-<img src="https://logo.clearbit.com/oracle.com">
-<img src="https://logo.clearbit.com/samsung.com">
-<img src="https://logo.clearbit.com/sony.com">
-<img src="https://logo.clearbit.com/dell.com">
-<img src="https://logo.clearbit.com/hp.com">
-
-</div>
-
-<!-- ROW 2 -->
-
-<div class="clients-track slide-right">
-
-<img src="https://logo.clearbit.com/cisco.com">
-<img src="https://logo.clearbit.com/atlassian.com">
-<img src="https://logo.clearbit.com/woocommerce.com">
-<img src="https://logo.clearbit.com/salesforce.com">
-<img src="https://logo.clearbit.com/snapchat.com">
-<img src="https://logo.clearbit.com/tiktok.com">
-<img src="https://logo.clearbit.com/instagram.com">
-<img src="https://logo.clearbit.com/facebook.com">
-<img src="https://logo.clearbit.com/twitter.com">
-<img src="https://logo.clearbit.com/linkedin.com">
-<img src="https://logo.clearbit.com/reddit.com">
-<img src="https://logo.clearbit.com/pinterest.com">
-<img src="https://logo.clearbit.com/yahoo.com">
-<img src="https://logo.clearbit.com/bbc.com">
-<img src="https://logo.clearbit.com/forbes.com">
-<img src="https://logo.clearbit.com/medium.com">
-<img src="https://logo.clearbit.com/walmart.com">
-<img src="https://logo.clearbit.com/target.com">
-<img src="https://logo.clearbit.com/ikea.com">
-<img src="https://logo.clearbit.com/pepsi.com">
-<img src="https://logo.clearbit.com/cocacola.com">
-<img src="https://logo.clearbit.com/nike.com">
-<img src="https://logo.clearbit.com/adidas.com">
-<img src="https://logo.clearbit.com/puma.com">
-<img src="https://logo.clearbit.com/zara.com">
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ========================= -->
-<!-- SECTION 3 – KEY STATS -->
-<!-- ========================= -->
-
-<section class="stats">
-
-<div class="container">
-
-<h2 class="section-title">Our Achievements</h2>
-
-<h3 class="stats-heading">Delivering Results Through Design & Technology</h3>
-
-<p class="stats-subtext">
-NexaaWeb has successfully helped businesses build powerful digital experiences through modern websites, creative branding, and smart strategies.
-</p>
-
-<div class="stats-grid">
-
-<!-- Stat 1 -->
-
-<div class="stat-card">
-
-<h4 class="stat-number" data-target="150">0</h4>
-<p>Projects Completed</p>
-
-</div>
-
-<!-- Stat 2 -->
-
-<div class="stat-card">
-
-<h4 class="stat-number" data-target="120">0</h4>
-<p>Happy Clients</p>
-
-</div>
-
-<!-- Stat 3 -->
-
-<div class="stat-card">
-
-<h4 class="stat-number" data-target="20">0</h4>
-<p>Industries Served</p>
-
-</div>
-
-<!-- Stat 4 -->
-
-<div class="stat-card">
-
-<h4 class="stat-number" data-target="100">0</h4>
-<p>Websites Designed</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-<section class="services">
-
-<h2 class="section-title">Our Core Services</h2>
-
-<div class="services-grid">
-
-<div class="service-card">
-
-<img src="https://i.pinimg.com/736x/38/0d/4a/380d4a59df166d70b364f653193073f2.jpg">
-
-<h3>Web Design & Development</h3>
-
-<p>
-Modern business websites, ecommerce stores and custom applications.
-</p>
-
-</div>
-
-
-<div class="service-card">
-
-<img src="https://i.pinimg.com/736x/db/6c/2e/db6c2e6ece08917d6a1617d9f10c1594.jpg">
-
-<h3>Branding & Creative Design</h3>
-
-<p>
-Professional logos, brand identity and marketing design solutions.
-</p>
-
-</div>
-
-
-<div class="service-card">
-
-<img src="https://i.pinimg.com/1200x/78/59/ed/7859ed888dc4e8d0fa684fb60e7ccd7a.jpg">
-
-<h3>Consulting & Strategy</h3>
-
-<p>
-Business consulting, digital growth strategy and AI solutions.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ========================= -->
-<!-- SECTION 3 – WHY CHOOSE NEXAAWEB -->
-<!-- ========================= -->
-
-<section class="why-nexaaweb">
-
-<div class="container">
-
-<h2 class="section-title">Why Choose NexaaWeb</h2>
-
-<p class="section-subtitle">
-We combine design, technology, and strategy to help businesses build a powerful digital presence and achieve long-term growth.
-</p>
-
-
-<div class="why-grid">
-
-
-<div class="why-card">
-
-<img src="https://i.pinimg.com/736x/87/88/d5/8788d54d20778e7d84dfa627b53d0ed4.jpg">
-
-<h3>Modern UI / UX Focused Design</h3>
-
-<p>
-We create modern, user-friendly, and visually appealing designs that provide a smooth experience for visitors and help businesses convert more customers online.
-</p>
-
-</div>
-
-
-<div class="why-card">
-
-<img src="https://i.pinimg.com/736x/c1/0d/19/c10d1995ec7308867bd3eaccdec70558.jpg">
-
-<h3>Complete Digital Solutions</h3>
-
-<p>
-From website design and branding to consulting and AI solutions, NexaaWeb provides everything businesses need to build a strong digital presence.
-</p>
-
-</div>
-
-
-<div class="why-card">
-
-<img src="https://i.pinimg.com/1200x/b7/0b/5a/b70b5a0c0e7707d8c4f8fe4a8183e72d.jpg">
-
-<h3>Custom Solutions for Every Business</h3>
-
-<p>
-We design websites and digital solutions tailored to your business needs, whether you are a startup, a growing company, or an established brand.
-</p>
-
-</div>
-
-
-<div class="why-card">
-
-<img src="https://i.pinimg.com/736x/03/b9/af/03b9af9561f186684cbd9dd341debfa4.jpg">
-
-<h3>Performance & SEO Optimized</h3>
-
-<p>
-Our websites are built for speed, performance, and search engine optimization to ensure better visibility and a smooth user experience.
-</p>
-
-</div>
-
-
-<div class="why-card">
-
-<img src="https://i.pinimg.com/736x/e1/20/1a/e1201ae0b16181f521f9960a3880e1be.jpg">
-
-<h3>Latest Technologies & AI Integration</h3>
-
-<p>
-We use modern technologies and AI-powered tools to create smart websites, automation systems, and innovative digital solutions for businesses.
-</p>
-
-</div>
-
-
-<div class="why-card">
-
-<img src="https://i.pinimg.com/1200x/4d/21/22/4d21221d827077418059bcd18a084f96.jpg">
-
-<h3>Long-Term Support & Growth</h3>
-
-<p>
-We believe in long-term partnerships with our clients, providing continuous support, maintenance, and strategic guidance to help their business grow.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-  <!-- ========================= -->
-<!-- SECTION 4 – ABOUT NEXAAWEB -->
-<!-- ========================= -->
-
-<section class="home-about">
-
-<div class="about-overlay">
-
-<div class="about-content">
-
-<h2>ABOUT NEXAAWEB</h2>
-
-<h3>Designing the Future of Digital Brands</h3>
-
-<p>
-NexaaWeb is a modern web design, branding, and digital growth studio creating powerful digital experiences for businesses. From high-performing websites to strong brand identities and smart digital strategies, we help brands stand out, grow faster, and succeed in the digital world.
-</p>
-
-<a href="about.html" class="about-btn">Read More</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ========================= -->
-<!-- SECTION 8 – FEATURED PROJECT -->
-<!-- ========================= -->
-
-<section class="featured-project">
-
-<div class="featured-container">
-
-<div class="featured-text">
-
-<h2 class="section-title">FEATURED PROJECT</h2>
-
-<h3 class="featured-heading">
-Logistics & Warehouse Company Website
-</h3>
-
-<p class="featured-desc">
-
-NexaaWeb designed and developed a modern, professional website for a logistics and warehousing company to help them showcase their services, improve credibility, and make it easier for clients to inquire about transportation and storage solutions.
-
-</p>
-
-<h4 class="highlight-title">Project Highlights</h4>
-
-<ul class="project-highlights">
-
-<li>Modern UI / UX website design</li>
-<li>Mobile-friendly responsive layout</li>
-<li>Clear service pages for logistics & warehousing</li>
-<li>Fast loading and performance-optimized website</li>
-
-</ul>
-
-<a href="portfolio.html" class="project-btn">
-View Full Project
-</a>
-
-</div>
-
-
-<div class="featured-image">
-
-<img src="https://i.pinimg.com/1200x/62/7b/0e/627b0e19a1581a9fcd23475a5c4cc6d2.jpg">
-
-</div>
-
-</div>
-
-</section>
-  
-<!-- ========================= -->
-<!-- SECTION 5 – PORTFOLIO -->
-<!-- ========================= -->
-
-<section class="home-portfolio">
-
-<div class="container">
-
-<h2 class="section-title">PORTFOLIO</h2>
-
-<h3 class="portfolio-heading">Our Work & Creative Projects</h3>
-
-<p class="portfolio-text">
-Explore a selection of modern websites, brand designs, and digital solutions created by NexaaWeb. Every project reflects our focus on clean design, smart strategy, and creating digital experiences that help businesses grow.
-</p>
-
-<ul class="portfolio-list">
-
-<li>Website Design & Development Projects</li>
-<li>Branding & Creative Design Works</li>
-<li>AI & Digital Solutions for Businesses and more</li>
-
-</ul>
-
-
-<div class="portfolio-grid">
-
-<div class="portfolio-card">
-<img src="https://i.pinimg.com/736x/2c/9e/66/2c9e66c2a6e2f6a31efde67c15c7e0e7.jpg">
-<div class="portfolio-overlay">
-<h4>Business Website</h4>
-</div>
-</div>
-
-<div class="portfolio-card">
-<img src="https://i.pinimg.com/736x/f9/3f/73/f93f73c8f68b9dbfd3d5d9e6b10f8c4a.jpg">
-<div class="portfolio-overlay">
-<h4>Brand Identity Design</h4>
-</div>
-</div>
-
-<div class="portfolio-card">
-<img src="https://i.pinimg.com/736x/4f/0b/3a/4f0b3a4d2c84dc2b2ed9fcd01e5e30d8.jpg">
-<div class="portfolio-overlay">
-<h4>E-commerce Store</h4>
-</div>
-</div>
-
-<div class="portfolio-card">
-<img src="https://i.pinimg.com/736x/63/77/0c/63770c5e5db43b08c9d48d5e97fa4c68.jpg">
-<div class="portfolio-overlay">
-<h4>AI Business Solution</h4>
-</div>
-</div>
-
-<div class="portfolio-card">
-<img src="https://i.pinimg.com/736x/8c/df/33/8cdf33c0dbd0d5a51e2c2c5c6b50cde2.jpg">
-<div class="portfolio-overlay">
-<h4>Landing Page Design</h4>
-</div>
-</div>
-
-<div class="portfolio-card">
-<img src="https://i.pinimg.com/736x/7c/b4/d2/7cb4d26c85c3db7a3ef3e6c2c7cbe79e.jpg">
-<div class="portfolio-overlay">
-<h4>Creative Branding</h4>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ========================= -->
-<!-- SECTION 6 – CLIENT TESTIMONIALS -->
-<!-- ========================= -->
-
-<section class="testimonials">
-
-<div class="container">
-
-<h2 class="section-title">CLIENT TESTIMONIALS</h2>
-
-<h3 class="testimonial-heading">What Our Clients Say</h3>
-
-<p class="testimonial-subtext">
-Businesses trust NexaaWeb to design powerful websites, build strong brands, and create digital strategies that deliver real results.
-</p>
-
-<div class="testimonial-slider">
-
-<div class="testimonial-track">
-
-<!-- 1 -->
-<div class="testimonial-card">
-<img src="https://randomuser.me/api/portraits/men/32.jpg">
-<h4>Daniel Carter</h4>
-<span>Startup Founder</span>
-<p>NexaaWeb designed a powerful website for our startup. The UI is modern and our customers love it.</p>
-<div class="stars">★★★★★</div>
-</div>
-
-<!-- 2 -->
-<div class="testimonial-card">
-<img src="https://randomuser.me/api/portraits/women/44.jpg">
-<h4>Sophia Williams</h4>
-<span>Marketing Manager</span>
-<p>The branding and website design exceeded our expectations. Highly professional team.</p>
-<div class="stars">★★★★★</div>
-</div>
-
-<!-- 3 -->
-<div class="testimonial-card">
-<img src="https://randomuser.me/api/portraits/men/75.jpg">
-<h4>Michael Brown</h4>
-<span>Business Owner</span>
-<p>NexaaWeb transformed our digital presence. Our website now looks modern and professional.</p>
-<div class="stars">★★★★★</div>
-</div>
-
-<!-- 4 -->
-<div class="testimonial-card">
-<img src="https://randomuser.me/api/portraits/women/68.jpg">
-<h4>Emily Johnson</h4>
-<span>Ecommerce Owner</span>
-<p>The ecommerce website they built for us increased our online sales significantly.</p>
-<div class="stars">★★★★★</div>
-</div>
-
-<!-- 5 -->
-<div class="testimonial-card">
-<img src="https://randomuser.me/api/portraits/men/54.jpg">
-<h4>David Wilson</h4>
-<span>Tech Entrepreneur</span>
-<p>The NexaaWeb team is creative, responsive and very professional.</p>
-<div class="stars">★★★★★</div>
-</div>
-
-<!-- 6 -->
-<div class="testimonial-card">
-<img src="https://randomuser.me/api/portraits/women/12.jpg">
-<h4>Olivia Martinez</h4>
-<span>Brand Manager</span>
-<p>Our new branding and website helped us stand out in the market.</p>
-<div class="stars">★★★★★</div>
-</div>
-
-<!-- 7 -->
-<div class="testimonial-card">
-<img src="https://randomuser.me/api/portraits/men/23.jpg">
-<h4>James Taylor</h4>
-<span>Consultant</span>
-<p>The website NexaaWeb built for us is fast, clean and optimized for SEO.</p>
-<div class="stars">★★★★★</div>
-</div>
-
-<!-- 8 -->
-<div class="testimonial-card">
-<img src="https://randomuser.me/api/portraits/women/25.jpg">
-<h4>Isabella Clark</h4>
-<span>Creative Director</span>
-<p>Fantastic design and excellent communication throughout the project.</p>
-<div class="stars">★★★★★</div>
-</div>
-
-<!-- 9 -->
-<div class="testimonial-card">
-<img src="https://randomuser.me/api/portraits/men/66.jpg">
-<h4>Robert Anderson</h4>
-<span>Agency Owner</span>
-<p>NexaaWeb delivered a stunning website that perfectly represents our business.</p>
-<div class="stars">★★★★★</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-  
-<!-- ========================= -->
-<!-- SECTION 7 – OUR PROCESS -->
-<!-- ========================= -->
-
-<section class="process">
-
-<div class="container">
-
-<h2 class="section-title">OUR PROCESS</h2>
-
-<h3 class="process-heading">How We Turn Ideas Into Digital Experiences</h3>
-
-<p class="process-subtext">
-We follow a clear and strategic process to ensure every project is well-planned, beautifully designed, and built for long-term success.
-</p>
-
-<div class="process-grid">
-
-<!-- STEP 1 -->
-
-<div class="process-card">
-
-<div class="process-number">01</div>
-
-<h4>Discovery & Strategy</h4>
-
-<p>
-We start by understanding your business, goals, and target audience to create a clear strategy for your website or digital project.
-</p>
-
-</div>
-
-<!-- STEP 2 -->
-
-<div class="process-card">
-
-<div class="process-number">02</div>
-
-<h4>Design & Planning</h4>
-
-<p>
-Our team designs modern UI/UX layouts and plans the structure of the project to ensure a visually appealing and user-friendly experience.
-</p>
-
-</div>
-
-<!-- STEP 3 -->
-
-<div class="process-card">
-
-<div class="process-number">03</div>
-
-<h4>Development & Testing</h4>
-
-<p>
-We transform the design into a fully functional website using modern technologies, followed by testing to ensure performance and reliability.
-</p>
-
-</div>
-
-<!-- STEP 4 -->
-
-<div class="process-card">
-
-<div class="process-number">04</div>
-
-<h4>Launch & Growth</h4>
-
-<p>
-Once everything is ready, we launch the project and provide support to help your business grow and succeed online.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ============================ -->
-<!-- SECTION – INDUSTRIES WE WORK WITH PREMIUM -->
-<!-- ============================ -->
-
-<section class="industries">
-
-<h2 class="section-title">INDUSTRIES WE WORK WITH</h2>
-
-<p class="industries-sub">
-We create modern websites and digital solutions for businesses across many industries.
-</p>
-
-<div class="industry-slider">
-
-<div class="industry-track">
-
-<!-- card -->
-<div class="industry-card">
-<div class="industry-img">
-<img src="https://i.pinimg.com/736x/eb/37/dc/eb37dc963014b28619ec3fccf3cb6128.jpg">
-</div>
-<div class="industry-text">
-<h4>Startups</h4>
-<p>Modern websites to launch and grow startups faster.</p>
-</div>
-</div>
-
-<div class="industry-card">
-<div class="industry-img">
-<img src="https://i.pinimg.com/736x/de/06/73/de0673874685fe3b33dee33a71bfd772.jpg">
-</div>
-<div class="industry-text">
-<h4>Corporate</h4>
-<p>Professional websites for companies and services.</p>
-</div>
-</div>
-
-<div class="industry-card">
-<div class="industry-img">
-<img src="https://i.pinimg.com/736x/76/8e/4b/768e4bea1736ea2ad0450a38952bfa0b.jpg">
-</div>
-<div class="industry-text">
-<h4>Restaurants</h4>
-<p>Beautiful restaurant websites with menus and bookings.</p>
-</div>
-</div>
-
-<div class="industry-card">
-<div class="industry-img">
-<img src="https://i.pinimg.com/1200x/35/85/57/358557b06dcc73994cc431d1094f755c.jpg">
-</div>
-<div class="industry-text">
-<h4>Real Estate</h4>
-<p>Property showcase websites for buyers and investors.</p>
-</div>
-</div>
-
-<div class="industry-card">
-<div class="industry-img">
-<img src="https://i.pinimg.com/1200x/2e/90/3c/2e903ce44477ba49acff9878c3d16089.jpg">
-</div>
-<div class="industry-text">
-<h4>Education</h4>
-<p>Modern websites for schools and institutes.</p>
-</div>
-</div>
-
-<div class="industry-card">
-<div class="industry-img">
-<img src="https://i.pinimg.com/736x/98/5d/fa/985dfa17307ed0533a059949d1f490c7.jpg">
-</div>
-<div class="industry-text">
-<h4>Fitness</h4>
-<p>Gym and fitness websites for memberships and programs.</p>
-</div>
-</div>
-
-<div class="industry-card">
-<div class="industry-img">
-<img src="https://i.pinimg.com/1200x/24/7e/bd/247ebd7b0312056dc4e99069b3ae985f.jpg">
-</div>
-<div class="industry-text">
-<h4>Healthcare</h4>
-<p>Professional websites for clinics and hospitals.</p>
-</div>
-</div>
-
-<div class="industry-card">
-<div class="industry-img">
-<img src="https://i.pinimg.com/1200x/11/b4/9b/11b49b84127d135f395fe370ddee4120.jpg">
-</div>
-<div class="industry-text">
-<h4>Logistics</h4>
-<p>Websites for logistics and warehousing services.</p>
-</div>
-</div>
-
-<div class="industry-card">
-<div class="industry-img">
-<img src="https://i.pinimg.com/736x/6e/88/83/6e88831da28e75113c473235af999398.jpg">
-</div>
-<div class="industry-text">
-<h4>Personal Brands</h4>
-<p>Portfolio websites for creators and influencers.</p>
-</div>
-</div>
-
-<div class="industry-card">
-<div class="industry-img">
-<img src="https://i.pinimg.com/1200x/c9/db/ad/c9dbad5b520de545f27e4585c459ad53.jpg">
-</div>
-<div class="industry-text">
-<h4>E-commerce</h4>
-<p>Online store websites that increase sales.</p>
-</div>
-</div>
-
-<div class="industry-card">
-<div class="industry-img">
-<img src="https://i.pinimg.com/1200x/00/8f/78/008f789ba97d951f30c6baf046d27c19.jpg">
-</div>
-<div class="industry-text">
-<h4>Travel</h4>
-<p>Travel websites with packages and booking systems.</p>
-</div>
-</div>
-
-<div class="industry-card">
-<div class="industry-img">
-<img src="https://i.pinimg.com/1200x/77/9f/09/779f093091dc652df12b33f69379b019.jpg">
-</div>
-<div class="industry-text">
-<h4>Construction</h4>
-<p>Websites for builders and infrastructure companies.</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ============================ -->
-<!-- SECTION – FAQ -->
-<!-- ============================ -->
-
-<section class="faq-section">
-
-<h2 class="section-title">FREQUENTLY ASKED QUESTIONS</h2>
-
-<p class="faq-sub">
-Here are some common questions businesses ask before starting a website project with NexaaWeb.
-</p>
-
-<div class="faq-container">
-
-<div class="faq-item">
-<button class="faq-question">
-How long does it take to build a website?
-<span>+</span>
-</button>
-<div class="faq-answer">
-<p>
-The timeline depends on the project type and requirements. Most business websites are completed within a few weeks.
-</p>
-</div>
-</div>
-
-<div class="faq-item">
-<button class="faq-question">
-Do you provide website maintenance and support?
-<span>+</span>
-</button>
-<div class="faq-answer">
-<p>
-Yes, we offer ongoing website maintenance, updates, and support to keep your website secure, fast, and running smoothly.
-</p>
-</div>
-</div>
-
-<div class="faq-item">
-<button class="faq-question">
-Can you redesign my existing website?
-<span>+</span>
-</button>
-<div class="faq-answer">
-<p>
-Absolutely. We can redesign and upgrade your existing website with a modern design, improved performance, and better user experience.
-</p>
-</div>
-</div>
-
-<div class="faq-item">
-<button class="faq-question">
-Do you build e-commerce websites?
-<span>+</span>
-</button>
-<div class="faq-answer">
-<p>
-Yes, we create professional online stores using Shopify, WooCommerce, and custom e-commerce solutions for businesses that want to sell products online.
-</p>
-</div>
-</div>
-
-<div class="faq-item">
-<button class="faq-question">
-Do you work with startups and small businesses?
-<span>+</span>
-</button>
-<div class="faq-answer">
-<p>
-Yes, we work with startups, small businesses, and established companies to help them build a strong digital presence.
-</p>
-</div>
-</div>
-
-<div class="faq-item">
-<button class="faq-question">
-Will my website be mobile friendly?
-<span>+</span>
-</button>
-<div class="faq-answer">
-<p>
-Yes, all websites we build are fully responsive and optimized for mobile, tablet, and desktop devices.
-</p>
-</div>
-</div>
-
-<div class="faq-item">
-<button class="faq-question">
-Will my website be optimized for SEO?
-<span>+</span>
-</button>
-<div class="faq-answer">
-<p>
-Yes, we follow SEO best practices including fast loading speed, proper structure, and optimization to help your website rank better on search engines.
-</p>
-</div>
-</div>
-
-<div class="faq-item">
-<button class="faq-question">
-Can I update the website myself?
-<span>+</span>
-</button>
-<div class="faq-answer">
-<p>
-Yes, we build websites with easy management systems so you can update content, images, and pages whenever needed.
-</p>
-</div>
-</div>
-
-</div>
-
-</section>
-
-<script>
-
-const faqItems = document.querySelectorAll(".faq-item");
-
-faqItems.forEach(item => {
-
-const btn = item.querySelector(".faq-question");
-
-btn.addEventListener("click", () => {
-
-item.classList.toggle("active");
-
-});
-
-});
-
-</script>
-
-<!-- ============================ -->
-
-<!-- SECTION – LATEST BLOG / INSIGHTS -->
-
-<!-- ============================ -->
-
-<section class="blog-section">
-
-<h2 class="section-title">Latest Blog & Insights</h2>
-
-<p class="blog-sub">
-Explore helpful insights, web design tips, and digital strategies to grow your business online.
-</p>
-
-<div class="blog-grid">
-
-<!-- Blog 1 -->
-
-<div class="blog-card">
-
-<div class="blog-img">
-<img src="https://i.pinimg.com/1200x/7d/2f/4a/7d2f4a4b63e2c43e8a7c6b6f62a2ef62.jpg">
-<span class="blog-tag">Web Design</span>
-</div>
-
-<div class="blog-content">
-
-<h3>5 Important Features Every Business Website Should Have</h3>
-
-<p>
-Discover the essential elements that make a business website modern, user-friendly, and effective for attracting customers online.
-</p>
-
-<a href="#" class="blog-btn">Read More</a>
-
-</div>
-
-</div>
-
-<!-- Blog 2 -->
-
-<div class="blog-card">
-
-<div class="blog-img">
-<img src="https://i.pinimg.com/1200x/5e/7a/4f/5e7a4f0f7c1f3d58e17d8b6e7c36f6e2.jpg">
-<span class="blog-tag">Business Growth</span>
-</div>
-
-<div class="blog-content">
-
-<h3>Why Every Business Needs a Professional Website in 2025</h3>
-
-<p>
-A strong online presence helps businesses build trust, attract more customers, and stay competitive in today’s digital world.
-</p>
-
-<a href="#" class="blog-btn">Read More</a>
-
-</div>
-
-</div>
-
-<!-- Blog 3 -->
-
-<div class="blog-card">
-
-<div class="blog-img">
-<img src="https://i.pinimg.com/1200x/1b/5f/9b/1b5f9b5a0f7c7c3e1d97b3e3a4c96e34.jpg">
-<span class="blog-tag">SEO</span>
-</div>
-
-<div class="blog-content">
-
-<h3>How SEO Helps Your Website Get More Visitors</h3>
-
-<p>
-Learn how search engine optimization improves visibility and helps your website attract more potential customers.
-</p>
-
-<a href="#" class="blog-btn">Read More</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ============================ -->
-<!-- SECTION – FINAL CTA -->
-<!-- ============================ -->
-
-<section class="cta-section">
-
-<div class="cta-overlay"></div>
-
-<div class="cta-content">
-
-<h2>Ready To Build Your Digital Presence?</h2>
-
-<p>
-Let’s create a powerful website and grow your business online.
-</p>
-
-<div class="cta-buttons">
-
-<a href="contact.html" class="cta-btn primary-btn">
-Get Started
-</a>
-
-<a href="services.html" class="cta-btn secondary-btn">
-View Services
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer class="site-footer">
-
-<div class="footer-container">
-
-...footer code...
-
-</div>
-
-</footer>
-
+    </section>
+
+    <!-- ══════════════════════════════
+         4. ABOUT SNAPSHOT
+    ══════════════════════════════ -->
+    <section class="about-snap">
+      <div class="container">
+        <div class="about-snap-grid reveal">
+          <div class="as-img-wrap">
+            <img src="https://i.pinimg.com/736x/46/b6/8c/46b68c0d85a5ef4c9be075e5035d2552.jpg" alt="About NexaaWeb"/>
+            <div class="as-img-badge">
+              <span class="badge-num">5★</span>
+              <span class="badge-txt">Rated Agency</span>
+            </div>
+          </div>
+          <div class="as-content">
+            <span class="tag">Who We Are</span>
+            <h2>A Digital Agency Built for <span class="red">Modern Businesses</span></h2>
+            <div class="red-line"></div>
+            <p>NexaaWeb combines <strong class="red">modern design</strong>, innovative technology, and <strong class="red">smart strategy</strong> to help businesses stand out online. We create websites, brand identities, and digital solutions that are visually strong, user-friendly, and focused on real business growth.</p>
+            <p>From startups launching their first website to established businesses looking to scale — we bring creativity, performance, and purpose to every project we take on.</p>
+            <a href="/about.html" class="btn-outline">Learn More About Us <span>→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         5. CORE SERVICES
+    ══════════════════════════════ -->
+    <section class="services-section">
+      <div class="container">
+        <div class="section-top reveal">
+          <span class="tag">What We Do</span>
+          <h2>Our Core <span class="red">Services</span></h2>
+          <p class="section-sub">Complete digital solutions to help your business grow and stand out online.</p>
+        </div>
+        <div class="services-grid">
+
+          <a href="/web-design.html" class="srv-card reveal">
+            <div class="srv-img">
+              <img src="https://i.pinimg.com/736x/38/0d/4a/380d4a59df166d70b364f653193073f2.jpg" alt="Web Design"/>
+              <div class="srv-img-overlay"></div>
+              <div class="srv-tag">Web Design</div>
+            </div>
+            <div class="srv-body">
+              <div class="srv-icon">💻</div>
+              <h3>Web Design &amp; Development</h3>
+              <p>We design and develop modern, responsive websites tailored to your business goals. From corporate websites to e-commerce stores, every project is built for performance and user experience.</p>
+              <span class="srv-link">Explore Service <span class="arr">→</span></span>
+            </div>
+          </a>
+
+          <a href="/branding.html" class="srv-card reveal" style="transition-delay:.1s">
+            <div class="srv-img">
+              <img src="https://i.pinimg.com/736x/db/6c/2e/db6c2e6ece08917d6a1617d9f10c1594.jpg" alt="Branding"/>
+              <div class="srv-img-overlay"></div>
+              <div class="srv-tag">Branding</div>
+            </div>
+            <div class="srv-body">
+              <div class="srv-icon">🎨</div>
+              <h3>Branding &amp; Creative Design</h3>
+              <p>We create strong brand identities, professional logos, and marketing creatives that help businesses stand out and build trust in the market.</p>
+              <span class="srv-link">Explore Service <span class="arr">→</span></span>
+            </div>
+          </a>
+
+          <a href="/consulting.html" class="srv-card reveal" style="transition-delay:.2s">
+            <div class="srv-img">
+              <img src="https://i.pinimg.com/1200x/78/59/ed/7859ed888dc4e8d0fa684fb60e7ccd7a.jpg" alt="Consulting"/>
+              <div class="srv-img-overlay"></div>
+              <div class="srv-tag">Consulting</div>
+            </div>
+            <div class="srv-body">
+              <div class="srv-icon">📊</div>
+              <h3>Consulting &amp; Strategy</h3>
+              <p>We provide smart business strategies, digital consulting, and AI-driven solutions to help businesses grow faster and make better decisions.</p>
+              <span class="srv-link">Explore Service <span class="arr">→</span></span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         6. WHY CHOOSE NEXAAWEB
+    ══════════════════════════════ -->
+    <section class="why-section">
+      <div class="container">
+        <div class="section-top center reveal">
+          <span class="tag">Our Edge</span>
+          <h2>Why Choose <span class="red">NexaaWeb</span></h2>
+          <p class="section-sub">A Complete Digital Partner for Your Business Growth</p>
+        </div>
+        <div class="why-grid">
+
+          <div class="why-card reveal">
+            <div class="why-img">
+              <img src="https://i.pinimg.com/736x/87/88/d5/8788d54d20778e7d84dfa627b53d0ed4.jpg" alt="UI/UX"/>
+              <div class="why-img-overlay"></div>
+            </div>
+            <div class="why-body">
+              <span class="why-num">01</span>
+              <h4>Modern UI/UX Design</h4>
+              <p>We create clean, user-focused designs that improve engagement and provide a smooth browsing experience.</p>
+            </div>
+          </div>
+
+          <div class="why-card reveal" style="transition-delay:.08s">
+            <div class="why-img">
+              <img src="https://i.pinimg.com/736x/c1/0d/19/c10d1995ec7308867bd3eaccdec70558.jpg" alt="Digital Solutions"/>
+              <div class="why-img-overlay"></div>
+            </div>
+            <div class="why-body">
+              <span class="why-num">02</span>
+              <h4>Complete Digital Solutions</h4>
+              <p>From websites to branding and consulting, we provide everything needed to build a strong online presence.</p>
+            </div>
+          </div>
+
+          <div class="why-card reveal" style="transition-delay:.16s">
+            <div class="why-img">
+              <img src="https://i.pinimg.com/1200x/b7/0b/5a/b70b5a0c0e7707d8c4f8fe4a8183e72d.jpg" alt="Custom Solutions"/>
+              <div class="why-img-overlay"></div>
+            </div>
+            <div class="why-body">
+              <span class="why-num">03</span>
+              <h4>Custom Business Solutions</h4>
+              <p>Every project is tailored to your business goals, ensuring maximum impact and relevance.</p>
+            </div>
+          </div>
+
+          <div class="why-card reveal" style="transition-delay:.08s">
+            <div class="why-img">
+              <img src="https://i.pinimg.com/736x/03/b9/af/03b9af9561f186684cbd9dd341debfa4.jpg" alt="Performance"/>
+              <div class="why-img-overlay"></div>
+            </div>
+            <div class="why-body">
+              <span class="why-num">04</span>
+              <h4>Performance Optimized</h4>
+              <p>Fast loading, optimized structure, and SEO-friendly builds for better results.</p>
+            </div>
+          </div>
+
+          <div class="why-card reveal" style="transition-delay:.16s">
+            <div class="why-img">
+              <img src="https://i.pinimg.com/736x/e1/20/1a/e1201ae0b16181f521f9960a3880e1be.jpg" alt="Advanced Tech"/>
+              <div class="why-img-overlay"></div>
+            </div>
+            <div class="why-body">
+              <span class="why-num">05</span>
+              <h4>Advanced Technologies</h4>
+              <p>We use modern tools and AI to build smart and scalable digital solutions.</p>
+            </div>
+          </div>
+
+          <div class="why-card reveal" style="transition-delay:.24s">
+            <div class="why-img">
+              <img src="https://i.pinimg.com/1200x/4d/21/22/4d21221d827077418059bcd18a084f96.jpg" alt="Support"/>
+              <div class="why-img-overlay"></div>
+            </div>
+            <div class="why-body">
+              <span class="why-num">06</span>
+              <h4>Long-Term Support</h4>
+              <p>We provide continuous support and improvements to help your business grow over time.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         7. PORTFOLIO PREVIEW
+    ══════════════════════════════ -->
+    <section class="portfolio-section">
+      <div class="container">
+        <div class="section-top reveal">
+          <span class="tag">Our Work</span>
+          <h2>Featured <span class="red">Projects</span></h2>
+          <p class="section-sub">A glimpse of our best work across websites, branding, and creative design.</p>
+        </div>
+
+        <!-- Featured projects -->
+        <div class="pf-featured reveal">
+
+          <div class="pf-main-card">
+            <div class="pfm-slider" id="pfSlider1">
+              <div class="pfm-track">
+                <img src="assets/portfolio/logismart-home.png" alt="Logismart Home"/>
+                <img src="assets/portfolio/logismart-booking.png" alt="Logismart Booking"/>
+                <img src="assets/portfolio/logismart-pincode.png" alt="Logismart Pincode"/>
+                <img src="assets/portfolio/logismart-customercare.png" alt="Logismart Customer"/>
+              </div>
+              <button class="pfm-prev">&#8592;</button>
+              <button class="pfm-next">&#8594;</button>
+            </div>
+            <div class="pfm-body">
+              <span class="pfm-cat">Website Design · 2024</span>
+              <h3>Logismart Platform</h3>
+              <p>Logistics platform designed for seamless booking and user experience with clear navigation and structured layout.</p>
+              <div class="pfm-tags"><span>UI/UX</span><span>Responsive</span><span>Logistics</span></div>
+            </div>
+          </div>
+
+          <div class="pf-main-card" style="transition-delay:.15s">
+            <div class="pfm-slider" id="pfSlider2">
+              <div class="pfm-track">
+                <img src="assets/portfolio/warehouse-home.png" alt="Warehouse Home"/>
+                <img src="assets/portfolio/warehouse-page1.png" alt="Warehouse Page 1"/>
+                <img src="assets/portfolio/warehouse-page2.png" alt="Warehouse Page 2"/>
+                <img src="assets/portfolio/warehouse-page3.png" alt="Warehouse Page 3"/>
+              </div>
+              <button class="pfm-prev">&#8592;</button>
+              <button class="pfm-next">&#8594;</button>
+            </div>
+            <div class="pfm-body">
+              <span class="pfm-cat">Website Design · 2024</span>
+              <h3>Warehouse &amp; Storage</h3>
+              <p>Modern warehouse website focused on clarity, service presentation, and responsive design.</p>
+              <div class="pfm-tags"><span>Business</span><span>Responsive</span><span>Modern</span></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Mini grid -->
+        <div class="pf-mini-grid reveal">
+          <div class="pf-mini-card">
+            <img src="assets/portfolio/creative-design-01.png" alt="Creative 1"/>
+            <div class="pf-mini-overlay"><span>Creative Design</span></div>
+          </div>
+          <div class="pf-mini-card">
+            <img src="assets/portfolio/poster-design-01.png" alt="Poster 1"/>
+            <div class="pf-mini-overlay"><span>Poster Design</span></div>
+          </div>
+          <div class="pf-mini-card">
+            <img src="assets/portfolio/banner-01.png" alt="Banner 1"/>
+            <div class="pf-mini-overlay"><span>Banner Design</span></div>
+          </div>
+          <div class="pf-mini-card">
+            <img src="assets/portfolio/presentation-slide-01.png" alt="Presentation 1"/>
+            <div class="pf-mini-overlay"><span>Presentation</span></div>
+          </div>
+        </div>
+
+        <div class="pf-cta-row reveal">
+          <a href="/portfolio.html" class="btn-primary">View Full Portfolio <span class="btn-arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         8. TESTIMONIALS
+    ══════════════════════════════ -->
+    <section class="testimonials-section">
+      <div class="testi-bg"></div>
+      <div class="container">
+        <div class="section-top center reveal">
+          <span class="tag light">Client Reviews</span>
+          <h2 class="white">What Our <span class="red">Clients Say</span></h2>
+          <p class="white-muted">We work closely with businesses to deliver high-quality digital solutions that create real results and long-term value.</p>
+        </div>
+        <div class="testi-grid">
+
+          <div class="testi-card reveal">
+            <div class="testi-stars">★★★★★</div>
+            <p>"NexaaWeb completely transformed our online presence. The website they built is fast, modern, and has already increased our leads significantly."</p>
+            <div class="testi-author">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client"/>
+              <div><strong>Aryan Mehta</strong><span>Startup Founder</span></div>
+            </div>
+          </div>
+
+          <div class="testi-card reveal" style="transition-delay:.08s">
+            <div class="testi-stars">★★★★★</div>
+            <p>"The branding package they created for us was beyond expectations. Our social media presence looks completely professional now."</p>
+            <div class="testi-author">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client"/>
+              <div><strong>Priya Sharma</strong><span>Marketing Manager</span></div>
+            </div>
+          </div>
+
+          <div class="testi-card reveal" style="transition-delay:.16s">
+            <div class="testi-stars">★★★★★</div>
+            <p>"Professional team, fast delivery, and excellent communication throughout. The consulting strategy they provided gave us real direction."</p>
+            <div class="testi-author">
+              <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Client"/>
+              <div><strong>Rohan Kapoor</strong><span>Business Owner</span></div>
+            </div>
+          </div>
+
+          <div class="testi-card reveal" style="transition-delay:.08s">
+            <div class="testi-stars">★★★★★</div>
+            <p>"Our e-commerce store has never looked better. Sales improved within the first month after launch. Highly recommended!"</p>
+            <div class="testi-author">
+              <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client"/>
+              <div><strong>Sneha Patel</strong><span>E-commerce Owner</span></div>
+            </div>
+          </div>
+
+          <div class="testi-card reveal" style="transition-delay:.16s">
+            <div class="testi-stars">★★★★★</div>
+            <p>"They understood our tech startup's vision perfectly. The website is clean, scalable, and makes a strong first impression on investors."</p>
+            <div class="testi-author">
+              <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Client"/>
+              <div><strong>Vikram Nair</strong><span>Tech Entrepreneur</span></div>
+            </div>
+          </div>
+
+          <div class="testi-card reveal" style="transition-delay:.24s">
+            <div class="testi-stars">★★★★★</div>
+            <p>"The logo and brand guidelines NexaaWeb delivered gave our brand the identity it was missing. Clients notice the difference."</p>
+            <div class="testi-author">
+              <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Client"/>
+              <div><strong>Kavya Joshi</strong><span>Brand Manager</span></div>
+            </div>
+          </div>
+
+          <div class="testi-card reveal" style="transition-delay:.08s">
+            <div class="testi-stars">★★★★★</div>
+            <p>"The digital growth strategy they created was practical and actionable. Within weeks we saw measurable improvement in our online traffic."</p>
+            <div class="testi-author">
+              <img src="https://randomuser.me/api/portraits/men/23.jpg" alt="Client"/>
+              <div><strong>Sameer Qureshi</strong><span>Consultant</span></div>
+            </div>
+          </div>
+
+          <div class="testi-card reveal" style="transition-delay:.16s">
+            <div class="testi-stars">★★★★★</div>
+            <p>"Working with NexaaWeb felt like working with a team that truly understood design. Every detail was thoughtful and intentional."</p>
+            <div class="testi-author">
+              <img src="https://randomuser.me/api/portraits/women/25.jpg" alt="Client"/>
+              <div><strong>Ananya Reddy</strong><span>Creative Director</span></div>
+            </div>
+          </div>
+
+          <div class="testi-card reveal" style="transition-delay:.24s">
+            <div class="testi-stars">★★★★★</div>
+            <p>"We hired NexaaWeb for multiple client projects. Their quality, speed, and professionalism make them our go-to digital partner."</p>
+            <div class="testi-author">
+              <img src="https://randomuser.me/api/portraits/men/66.jpg" alt="Client"/>
+              <div><strong>Deepak Malhotra</strong><span>Agency Owner</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         9. INDUSTRIES
+    ══════════════════════════════ -->
+    <section class="industries-section">
+      <div class="container">
+        <div class="section-top center reveal">
+          <span class="tag">Industries</span>
+          <h2>Industries We <span class="red">Work With</span></h2>
+          <p class="section-sub">We build digital solutions for a wide range of industries, helping businesses establish a strong and modern online presence.</p>
+        </div>
+        <div class="industry-grid">
+
+          <div class="ind-card reveal">
+            <div class="ind-img"><img src="https://i.pinimg.com/736x/eb/37/dc/eb37dc963014b28619ec3fccf3cb6128.jpg" alt="Startups"/></div>
+            <span>Startups</span>
+          </div>
+          <div class="ind-card reveal" style="transition-delay:.06s">
+            <div class="ind-img"><img src="https://i.pinimg.com/736x/de/06/73/de0673874685fe3b33dee33a71bfd772.jpg" alt="Corporate"/></div>
+            <span>Corporate</span>
+          </div>
+          <div class="ind-card reveal" style="transition-delay:.12s">
+            <div class="ind-img"><img src="https://i.pinimg.com/736x/76/8e/4b/768e4bea1736ea2ad0450a38952bfa0b.jpg" alt="Restaurants"/></div>
+            <span>Restaurants</span>
+          </div>
+          <div class="ind-card reveal" style="transition-delay:.18s">
+            <div class="ind-img"><img src="https://i.pinimg.com/1200x/35/85/57/358557b06dcc73994cc431d1094f755c.jpg" alt="Real Estate"/></div>
+            <span>Real Estate</span>
+          </div>
+          <div class="ind-card reveal" style="transition-delay:.24s">
+            <div class="ind-img"><img src="https://i.pinimg.com/1200x/2e/90/3c/2e903ce44477ba49acff9878c3d16089.jpg" alt="Education"/></div>
+            <span>Education</span>
+          </div>
+          <div class="ind-card reveal" style="transition-delay:.06s">
+            <div class="ind-img"><img src="https://i.pinimg.com/736x/98/5d/fa/985dfa17307ed0533a059949d1f490c7.jpg" alt="Fitness"/></div>
+            <span>Fitness</span>
+          </div>
+          <div class="ind-card reveal" style="transition-delay:.12s">
+            <div class="ind-img"><img src="https://i.pinimg.com/1200x/24/7e/bd/247ebd7b0312056dc4e99069b3ae985f.jpg" alt="Healthcare"/></div>
+            <span>Healthcare</span>
+          </div>
+          <div class="ind-card reveal" style="transition-delay:.18s">
+            <div class="ind-img"><img src="https://i.pinimg.com/1200x/11/b4/9b/11b49b84127d135f395fe370ddee4120.jpg" alt="Logistics"/></div>
+            <span>Logistics</span>
+          </div>
+          <div class="ind-card reveal" style="transition-delay:.24s">
+            <div class="ind-img"><img src="https://i.pinimg.com/736x/6e/88/83/6e88831da28e75113c473235af999398.jpg" alt="Personal Brands"/></div>
+            <span>Personal Brands</span>
+          </div>
+          <div class="ind-card reveal" style="transition-delay:.06s">
+            <div class="ind-img"><img src="https://i.pinimg.com/1200x/c9/db/ad/c9dbad5b520de545f27e4585c459ad53.jpg" alt="E-commerce"/></div>
+            <span>E-commerce</span>
+          </div>
+          <div class="ind-card reveal" style="transition-delay:.12s">
+            <div class="ind-img"><img src="https://i.pinimg.com/1200x/00/8f/78/008f789ba97d951f30c6baf046d27c19.jpg" alt="Travel"/></div>
+            <span>Travel</span>
+          </div>
+          <div class="ind-card reveal" style="transition-delay:.18s">
+            <div class="ind-img"><img src="https://i.pinimg.com/1200x/77/9f/09/779f093091dc652df12b33f69379b019.jpg" alt="Construction"/></div>
+            <span>Construction</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         10. BLOG PREVIEW
+    ══════════════════════════════ -->
+    <section class="blog-section">
+      <div class="container">
+        <div class="section-top reveal">
+          <span class="tag">Insights</span>
+          <h2>Latest Insights &amp; <span class="red">Resources</span></h2>
+          <p class="section-sub">Learn modern web design, branding strategies, and digital growth techniques to improve your business online.</p>
+        </div>
+        <div class="blog-grid">
+
+          <article class="blog-card reveal">
+            <div class="blog-img">
+              <img src="https://i.pinimg.com/736x/38/0d/4a/380d4a59df166d70b364f653193073f2.jpg" alt="Blog 1"/>
+              <span class="blog-cat">Web Design</span>
+            </div>
+            <div class="blog-body">
+              <span class="blog-date">March 2025</span>
+              <h4>10 Web Design Trends That Will Dominate in 2025</h4>
+              <p>Explore the biggest design trends shaping the web this year — from AI-generated layouts to immersive micro-animations.</p>
+              <a href="/blog.html" class="blog-link">Read More <span>→</span></a>
+            </div>
+          </article>
+
+          <article class="blog-card reveal" style="transition-delay:.1s">
+            <div class="blog-img">
+              <img src="https://i.pinimg.com/736x/db/6c/2e/db6c2e6ece08917d6a1617d9f10c1594.jpg" alt="Blog 2"/>
+              <span class="blog-cat">Branding</span>
+            </div>
+            <div class="blog-body">
+              <span class="blog-date">February 2025</span>
+              <h4>Why Strong Branding Is the Foundation of Business Growth</h4>
+              <p>A powerful brand identity builds trust, drives recognition, and sets you apart from competitors in any market.</p>
+              <a href="/blog.html" class="blog-link">Read More <span>→</span></a>
+            </div>
+          </article>
+
+          <article class="blog-card reveal" style="transition-delay:.2s">
+            <div class="blog-img">
+              <img src="https://i.pinimg.com/1200x/78/59/ed/7859ed888dc4e8d0fa684fb60e7ccd7a.jpg" alt="Blog 3"/>
+              <span class="blog-cat">Strategy</span>
+            </div>
+            <div class="blog-body">
+              <span class="blog-date">January 2025</span>
+              <h4>How AI Is Changing Digital Strategy for Small Businesses</h4>
+              <p>From automation to smart analytics — discover how small businesses are leveraging AI to compete with larger brands.</p>
+              <a href="/blog.html" class="blog-link">Read More <span>→</span></a>
+            </div>
+          </article>
+
+        </div>
+        <div class="blog-cta-row reveal">
+          <a href="/blog.html" class="btn-outline">View All Articles <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         11. FINAL CTA
+    ══════════════════════════════ -->
+    <section class="final-cta">
+      <div class="fcta-bg"></div>
+      <div class="container center reveal">
+        <span class="tag light">Let's Begin</span>
+        <h2 class="white">Ready to Build Your <span class="red">Digital Presence?</span></h2>
+        <p>Let's create a powerful website and digital experience that helps your business grow and succeed online.</p>
+        <div class="fcta-btns">
+          <a href="/contact.html" class="btn-primary">Get Started <span class="btn-arrow">→</span></a>
+          <a href="/services.html" class="btn-ghost-white">View Services</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="assets/js/script.js"></script>
+  <script>
+  /* ══ HERO BG AUTO SLIDESHOW ══ */
+  (function() {
+    const slides = document.querySelectorAll('.hero-bg-slide');
+    let cur = 0;
+    setInterval(() => {
+      slides[cur].classList.remove('active');
+      cur = (cur + 1) % slides.length;
+      slides[cur].classList.add('active');
+    }, 4000);
+  })();
+
+  /* ══ LIVE CLOCK ══ */
+  function updateClocks() {
+    const now = new Date();
+    // IST = UTC+5:30
+    const ist = new Date(now.getTime() + (5.5 * 60 * 60 * 1000));
+    const istStr = ist.toUTCString().slice(17, 25);
+    // UTC
+    const utcStr = now.toUTCString().slice(17, 25);
+
+    const fmt = (s) => {
+      const parts = s.split(':');
+      let h = parseInt(parts[0]);
+      const ampm = h >= 12 ? 'PM' : 'AM';
+      h = h % 12 || 12;
+      return `${h}:${parts[1]}:${parts[2]} ${ampm}`;
+    };
+
+    document.getElementById('clockIST').textContent = fmt(istStr);
+    document.getElementById('clockUTC').textContent = utcStr;
+  }
+  updateClocks();
+  setInterval(updateClocks, 1000);
+
+  /* ══ SCROLL REVEAL ══ */
+  const ro = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+  /* ══ COUNT UP ══ */
+  let counted = false;
+  const countObs = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting && !counted) {
+      counted = true;
+      document.querySelectorAll('.count').forEach(el => {
+        const target = +el.getAttribute('data-target');
+        let cur = 0;
+        const step = Math.ceil(target / 60);
+        const t = setInterval(() => {
+          cur += step;
+          if (cur >= target) { cur = target; clearInterval(t); }
+          el.textContent = cur;
+        }, 22);
+      });
+    }
+  }, { threshold: 0.4 });
+  const statsEl = document.querySelector('.stats-section');
+  if (statsEl) countObs.observe(statsEl);
+
+  /* ══ PORTFOLIO CARD SLIDERS ══ */
+  document.querySelectorAll('.pfm-slider').forEach(slider => {
+    const track = slider.querySelector('.pfm-track');
+    const imgs = track.querySelectorAll('img');
+    const prev = slider.querySelector('.pfm-prev');
+    const next = slider.querySelector('.pfm-next');
+    let cur = 0;
+
+    function goTo(n) {
+      cur = (n + imgs.length) % imgs.length;
+      track.style.transform = `translateX(-${cur * 100}%)`;
+    }
+    prev.addEventListener('click', () => goTo(cur - 1));
+    next.addEventListener('click', () => goTo(cur + 1));
+    setInterval(() => goTo(cur + 1), 3500);
+  });
+  </script>
 </body>
 </html>
