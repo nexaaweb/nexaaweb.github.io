@@ -1,200 +1,467 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio | Your Brand</title>
-
-<link rel="stylesheet" href="style.css">
-
-<style>
-body{
-    margin:0;
-    font-family: 'Segoe UI', sans-serif;
-    background:#0f0f14;
-    color:white;
-}
-
-/* Glass Navbar */
-.navbar{
-    position:fixed;
-    width:100%;
-    top:0;
-    padding:15px 50px;
-    backdrop-filter: blur(15px);
-    background:rgba(255,255,255,0.05);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    z-index:1000;
-}
-
-.navbar a{
-    color:white;
-    text-decoration:none;
-    margin:0 15px;
-    transition:0.3s;
-}
-
-.navbar a:hover{
-    color:#ff4c4c;
-}
-
-/* Hero Section */
-.portfolio-hero{
-    padding-top:120px;
-    text-align:center;
-}
-
-.portfolio-hero h1{
-    font-size:42px;
-    margin-bottom:10px;
-}
-
-.portfolio-hero p{
-    color:#ccc;
-}
-
-/* Dropdown Filter Buttons */
-.filter-buttons{
-    text-align:center;
-    margin:40px 0;
-}
-
-.filter-buttons button{
-    padding:10px 20px;
-    margin:10px;
-    background:rgba(255,255,255,0.08);
-    border:none;
-    color:white;
-    cursor:pointer;
-    border-radius:30px;
-    transition:0.3s;
-}
-
-.filter-buttons button:hover{
-    background:#ff4c4c;
-}
-
-/* Portfolio Grid */
-.portfolio-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
-    gap:30px;
-    padding:40px 80px;
-}
-
-.portfolio-item{
-    overflow:hidden;
-    border-radius:15px;
-    position:relative;
-    transform:translateY(50px);
-    opacity:0;
-    transition:0.6s ease;
-}
-
-.portfolio-item img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:0.5s;
-}
-
-.portfolio-item:hover img{
-    transform:scale(1.1);
-}
-
-/* Reveal Animation */
-.show{
-    transform:translateY(0);
-    opacity:1;
-}
-
-</style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio &#8212; NexaaWeb</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/header.css"/>
+  <link rel="stylesheet" href="assets/css/footer.css"/>
+  <link rel="stylesheet" href="assets/css/portfolio.css"/>
 </head>
-
 <body>
 
-<div class="navbar">
-    <div><b>YourLogo</b></div>
-    <div>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="blog.html">Blog</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="contact.html">Contact</a>
+  <div id="header-placeholder"></div>
+
+  <main>
+
+    <!-- ══════════════════════════════
+         1. HERO
+    ══════════════════════════════ -->
+    <section class="pf-hero">
+      <div class="pf-hero-left">
+        <span class="pf-label">Our Portfolio</span>
+        <h1>Crafting <span class="red">Digital Experiences</span> That Drive Results</h1>
+        <p>Explore our work across websites, branding, and creative design. Every project reflects our focus on clarity, performance, and modern design.</p>
+        <div class="hero-actions">
+          <a href="#featured" class="btn-primary">View Featured Work</a>
+          <a href="/contact.html" class="btn-ghost">Start a Project</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hs-item"><span class="hs-num">50+</span><span class="hs-lbl">Projects</span></div>
+          <div class="hs-sep"></div>
+          <div class="hs-item"><span class="hs-num">100%</span><span class="hs-lbl">Satisfaction</span></div>
+          <div class="hs-sep"></div>
+          <div class="hs-item"><span class="hs-num">10+</span><span class="hs-lbl">Categories</span></div>
+        </div>
+      </div>
+      <div class="pf-hero-right">
+        <div class="hero-slider" id="heroSlider">
+          <div class="hs-slide active">
+            <img src="assets/images/logismart-home.png" alt="Logismart"/>
+            <div class="hs-tag">Website Design</div>
+          </div>
+          <div class="hs-slide">
+            <img src="assets/images/warehouse-home.png" alt="Warehouse"/>
+            <div class="hs-tag">Website Design</div>
+          </div>
+          <div class="hs-slide">
+            <img src="assets/images/poster-design-01.png" alt="Poster Design"/>
+            <div class="hs-tag">Poster Design</div>
+          </div>
+          <div class="hs-slide">
+            <img src="assets/images/creative-design-01.png" alt="Creative Design"/>
+            <div class="hs-tag">Creative Design</div>
+          </div>
+        </div>
+        <div class="hs-dots" id="hsDots">
+          <span class="hs-dot active" data-i="0"></span>
+          <span class="hs-dot" data-i="1"></span>
+          <span class="hs-dot" data-i="2"></span>
+          <span class="hs-dot" data-i="3"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         2. FEATURED WORK
+    ══════════════════════════════ -->
+    <section class="featured-section" id="featured">
+      <div class="container">
+        <div class="section-top reveal">
+          <span class="tag">Spotlight</span>
+          <h2>Featured <span class="red">Projects</span></h2>
+          <p class="section-sub">Our Best &amp; High-Impact Work</p>
+        </div>
+
+        <div class="featured-grid">
+
+          <!-- PROJECT 1 -->
+          <div class="feat-card reveal">
+            <div class="feat-slider" data-slides='["assets/images/logismart-home.png","assets/images/logismart-booking.png","assets/images/logismart-pincode.png","assets/images/logismart-customercare.png"]'>
+              <div class="fs-track">
+                <img src="assets/images/logismart-home.png" alt="Logismart Home"/>
+                <img src="assets/images/logismart-booking.png" alt="Logismart Booking"/>
+                <img src="assets/images/logismart-pincode.png" alt="Logismart Pincode"/>
+                <img src="assets/images/logismart-customercare.png" alt="Logismart Customer Care"/>
+              </div>
+              <button class="fs-prev">&#8592;</button>
+              <button class="fs-next">&#8594;</button>
+              <div class="fs-dots"></div>
+            </div>
+            <div class="feat-body">
+              <div class="feat-meta">
+                <span class="feat-cat">Website Design</span>
+                <span class="feat-year">2024</span>
+              </div>
+              <h3>Logismart</h3>
+              <p>Logistics platform designed for seamless booking and user experience with clear navigation and structured layout.</p>
+              <div class="feat-tags">
+                <span>UI/UX</span><span>Responsive</span><span>Logistics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 2 -->
+          <div class="feat-card reveal" style="transition-delay:.15s">
+            <div class="feat-slider">
+              <div class="fs-track">
+                <img src="assets/images/warehouse-home.png" alt="Warehouse Home"/>
+                <img src="assets/images/warehouse-page1.png" alt="Warehouse Page 1"/>
+                <img src="assets/images/warehouse-page2.png" alt="Warehouse Page 2"/>
+                <img src="assets/images/warehouse-page3.png" alt="Warehouse Page 3"/>
+              </div>
+              <button class="fs-prev">&#8592;</button>
+              <button class="fs-next">&#8594;</button>
+              <div class="fs-dots"></div>
+            </div>
+            <div class="feat-body">
+              <div class="feat-meta">
+                <span class="feat-cat">Website Design</span>
+                <span class="feat-year">2024</span>
+              </div>
+              <h3>Warehouse &amp; Storage</h3>
+              <p>Modern warehouse and storage website focused on clarity, service presentation, and responsive design.</p>
+              <div class="feat-tags">
+                <span>Business</span><span>Responsive</span><span>Modern</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         3. WEBSITE PROJECTS GRID
+    ══════════════════════════════ -->
+    <section class="websites-section">
+      <div class="container">
+        <div class="section-top reveal">
+          <span class="tag">Web Projects</span>
+          <h2>Website <span class="red">Designs</span></h2>
+          <p class="section-sub">Responsive &amp; Performance-Focused Websites</p>
+        </div>
+        <div class="web-grid">
+
+          <div class="web-card reveal">
+            <div class="wc-img">
+              <img src="assets/images/logismart-home.png" alt="Logismart"/>
+              <div class="wc-overlay">
+                <span class="wc-label">Logismart</span>
+                <span class="wc-view">View Project</span>
+              </div>
+            </div>
+            <div class="wc-body">
+              <h4>Logismart Platform</h4>
+              <span class="wc-cat">Website Design</span>
+            </div>
+          </div>
+
+          <div class="web-card reveal" style="transition-delay:.1s">
+            <div class="wc-img">
+              <img src="assets/images/warehouse-home.png" alt="Warehouse"/>
+              <div class="wc-overlay">
+                <span class="wc-label">Warehouse</span>
+                <span class="wc-view">View Project</span>
+              </div>
+            </div>
+            <div class="wc-body">
+              <h4>Warehouse &amp; Storage</h4>
+              <span class="wc-cat">Website Design</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         4. PRESENTATIONS
+    ══════════════════════════════ -->
+    <section class="ppt-section">
+      <div class="container">
+        <div class="section-top reveal">
+          <span class="tag">Slide Decks</span>
+          <h2>Presentation <span class="red">Designs</span></h2>
+        </div>
+      </div>
+      <div class="ppt-slider-wrap">
+        <div class="ppt-track" id="pptTrack">
+          <div class="ppt-item reveal"><img src="assets/images/presentation-slide-01.png" alt="Slide 1"/></div>
+          <div class="ppt-item reveal" style="transition-delay:.08s"><img src="assets/images/presentation-slide-02.png" alt="Slide 2"/></div>
+          <div class="ppt-item reveal" style="transition-delay:.16s"><img src="assets/images/presentation-slide-03.png" alt="Slide 3"/></div>
+          <div class="ppt-item reveal" style="transition-delay:.24s"><img src="assets/images/presentation-slide-04.png" alt="Slide 4"/></div>
+          <div class="ppt-item reveal" style="transition-delay:.32s"><img src="assets/images/presentation-slide-05.png" alt="Slide 5"/></div>
+          <div class="ppt-item reveal" style="transition-delay:.40s"><img src="assets/images/presentation-slide-06.png" alt="Slide 6"/></div>
+        </div>
+        <div class="ppt-nav">
+          <button class="ppt-btn" id="pptPrev">&#8592;</button>
+          <button class="ppt-btn" id="pptNext">&#8594;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         5. POSTERS & SOCIAL MEDIA
+    ══════════════════════════════ -->
+    <section class="posters-section">
+      <div class="container">
+        <div class="section-top reveal">
+          <span class="tag">Print &amp; Digital</span>
+          <h2>Posters &amp; <span class="red">Social Media</span></h2>
+        </div>
+        <div class="masonry-grid" id="masonryGrid">
+
+          <div class="masonry-item reveal tall">
+            <img src="assets/images/poster-design-01.png" alt="Poster 1"/>
+            <div class="masonry-overlay"><span>Poster Design</span></div>
+          </div>
+          <div class="masonry-item reveal">
+            <img src="assets/images/poster-design-02.png" alt="Poster 2"/>
+            <div class="masonry-overlay"><span>Poster Design</span></div>
+          </div>
+          <div class="masonry-item reveal">
+            <img src="assets/images/social-post-01.png" alt="Social 1"/>
+            <div class="masonry-overlay"><span>Social Media</span></div>
+          </div>
+          <div class="masonry-item reveal tall">
+            <img src="assets/images/poster-design-03.png" alt="Poster 3"/>
+            <div class="masonry-overlay"><span>Poster Design</span></div>
+          </div>
+          <div class="masonry-item reveal">
+            <img src="assets/images/social-post-02.png" alt="Social 2"/>
+            <div class="masonry-overlay"><span>Social Media</span></div>
+          </div>
+          <div class="masonry-item reveal">
+            <img src="assets/images/poster-design-04.png" alt="Poster 4"/>
+            <div class="masonry-overlay"><span>Poster Design</span></div>
+          </div>
+          <div class="masonry-item reveal">
+            <img src="assets/images/social-post-03.png" alt="Social 3"/>
+            <div class="masonry-overlay"><span>Social Media</span></div>
+          </div>
+          <div class="masonry-item reveal tall">
+            <img src="assets/images/poster-design-05.png" alt="Poster 5"/>
+            <div class="masonry-overlay"><span>Poster Design</span></div>
+          </div>
+          <div class="masonry-item reveal">
+            <img src="assets/images/poster-design-06.png" alt="Poster 6"/>
+            <div class="masonry-overlay"><span>Poster Design</span></div>
+          </div>
+          <div class="masonry-item reveal">
+            <img src="assets/images/social-post-04.png" alt="Social 4"/>
+            <div class="masonry-overlay"><span>Social Media</span></div>
+          </div>
+          <div class="masonry-item reveal">
+            <img src="assets/images/poster-design-07.png" alt="Poster 7"/>
+            <div class="masonry-overlay"><span>Poster Design</span></div>
+          </div>
+          <div class="masonry-item reveal tall">
+            <img src="assets/images/poster-design-08.png" alt="Poster 8"/>
+            <div class="masonry-overlay"><span>Poster Design</span></div>
+          </div>
+          <div class="masonry-item reveal">
+            <img src="assets/images/poster-design-09.png" alt="Poster 9"/>
+            <div class="masonry-overlay"><span>Poster Design</span></div>
+          </div>
+          <div class="masonry-item reveal">
+            <img src="assets/images/poster-design-10.png" alt="Poster 10"/>
+            <div class="masonry-overlay"><span>Poster Design</span></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         6. BANNERS
+    ══════════════════════════════ -->
+    <section class="banners-section">
+      <div class="container">
+        <div class="section-top reveal">
+          <span class="tag">Marketing</span>
+          <h2>Banner <span class="red">Designs</span></h2>
+        </div>
+        <div class="banners-list">
+          <div class="banner-item reveal slide-left">
+            <img src="assets/images/banner-01.png" alt="Banner 1"/>
+            <div class="banner-overlay"></div>
+          </div>
+          <div class="banner-item reveal slide-right">
+            <img src="assets/images/banner-02.png" alt="Banner 2"/>
+            <div class="banner-overlay"></div>
+          </div>
+          <div class="banner-item reveal slide-left">
+            <img src="assets/images/banner-03.png" alt="Banner 3"/>
+            <div class="banner-overlay"></div>
+          </div>
+          <div class="banner-item reveal slide-right">
+            <img src="assets/images/banner-04.png" alt="Banner 4"/>
+            <div class="banner-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         7. CREATIVE DESIGNS
+    ══════════════════════════════ -->
+    <section class="creative-section">
+      <div class="container">
+        <div class="section-top reveal">
+          <span class="tag">Creative Work</span>
+          <h2>Creative <span class="red">Designs</span></h2>
+        </div>
+        <div class="creative-grid">
+          <div class="creative-card reveal"><img src="assets/images/creative-design-01.png" alt="Creative 1"/><div class="cc-overlay"><span>Creative Design</span></div></div>
+          <div class="creative-card reveal" style="transition-delay:.06s"><img src="assets/images/creative-design-02.png" alt="Creative 2"/><div class="cc-overlay"><span>Creative Design</span></div></div>
+          <div class="creative-card reveal" style="transition-delay:.12s"><img src="assets/images/creative-design-03.png" alt="Creative 3"/><div class="cc-overlay"><span>Creative Design</span></div></div>
+          <div class="creative-card reveal" style="transition-delay:.18s"><img src="assets/images/creative-design-04.png" alt="Creative 4"/><div class="cc-overlay"><span>Creative Design</span></div></div>
+          <div class="creative-card reveal" style="transition-delay:.06s"><img src="assets/images/creative-design-05.png" alt="Creative 5"/><div class="cc-overlay"><span>Creative Design</span></div></div>
+          <div class="creative-card reveal" style="transition-delay:.12s"><img src="assets/images/creative-design-06.png" alt="Creative 6"/><div class="cc-overlay"><span>Creative Design</span></div></div>
+          <div class="creative-card reveal" style="transition-delay:.18s"><img src="assets/images/creative-design-07.png" alt="Creative 7"/><div class="cc-overlay"><span>Creative Design</span></div></div>
+          <div class="creative-card reveal" style="transition-delay:.06s"><img src="assets/images/creative-design-08.png" alt="Creative 8"/><div class="cc-overlay"><span>Creative Design</span></div></div>
+          <div class="creative-card reveal" style="transition-delay:.12s"><img src="assets/images/creative-design-09.png" alt="Creative 9"/><div class="cc-overlay"><span>Creative Design</span></div></div>
+          <div class="creative-card reveal" style="transition-delay:.18s"><img src="assets/images/creative-design-10.png" alt="Creative 10"/><div class="cc-overlay"><span>Creative Design</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         8. RESUME
+    ══════════════════════════════ -->
+    <section class="resume-section">
+      <div class="container center">
+        <div class="section-top reveal">
+          <span class="tag">Career Docs</span>
+          <h2>Resume <span class="red">Designs</span></h2>
+        </div>
+        <div class="resume-wrap reveal">
+          <div class="resume-card" id="resumeCard">
+            <img src="assets/images/resume-design-01.png" alt="Resume Design"/>
+            <div class="resume-overlay">
+              <button class="resume-preview-btn" id="resumePreviewBtn">&#128065; Full Preview</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         RESUME MODAL
+    ══════════════════════════════ -->
+    <div class="modal-overlay" id="resumeModal">
+      <div class="modal-box">
+        <button class="modal-close" id="modalClose">&#10005;</button>
+        <img src="assets/images/resume-design-01.png" alt="Resume Full Preview"/>
+      </div>
     </div>
-</div>
 
-<section class="portfolio-hero">
-    <h1>Our Creative Portfolio</h1>
-    <p>Explore our real work & creative projects</p>
-</section>
+    <!-- ══════════════════════════════
+         9. FINAL CTA
+    ══════════════════════════════ -->
+    <section class="pf-cta">
+      <div class="pf-cta-bg"></div>
+      <div class="container center reveal">
+        <span class="tag light">Next Project?</span>
+        <h2 class="white">Let's Build Something <span class="red">Amazing</span></h2>
+        <p>Have a project in mind? Let's create something impactful and results-driven together.</p>
+        <a href="/contact.html" class="btn-cta">Start Your Project</a>
+      </div>
+    </section>
 
-<div class="filter-buttons">
-    <button onclick="filterSelection('all')">All</button>
-    <button onclick="filterSelection('web')">Websites Design Samples</button>
-    <button onclick="filterSelection('branding')">Branding & Posters</button>
-    <button onclick="filterSelection('office')">Office Designs</button>
-</div>
+  </main>
 
-<div class="portfolio-grid">
+  <div id="footer-placeholder"></div>
+  <script src="assets/js/script.js"></script>
+  <script>
+  /* ── SCROLL REVEAL ── */
+  const ro = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
-    <!-- Website Samples -->
-    <div class="portfolio-item web">
-        <img src="assets/images/web1.jpg" alt="">
-    </div>
-    <div class="portfolio-item web">
-        <img src="assets/images/web2.jpg" alt="">
-    </div>
+  /* ── HERO SLIDER ── */
+  (function() {
+    const slides = document.querySelectorAll('#heroSlider .hs-slide');
+    const dots   = document.querySelectorAll('#hsDots .hs-dot');
+    let cur = 0, timer;
 
-    <!-- Branding -->
-    <div class="portfolio-item branding">
-        <img src="assets/images/branding1.jpg" alt="">
-    </div>
-    <div class="portfolio-item branding">
-        <img src="assets/images/poster1.jpg" alt="">
-    </div>
-
-    <!-- Office -->
-    <div class="portfolio-item office">
-        <img src="assets/images/office1.jpg" alt="">
-    </div>
-    <div class="portfolio-item office">
-        <img src="assets/images/office2.jpg" alt="">
-    </div>
-
-</div>
-
-<script>
-function filterSelection(category){
-    let items = document.getElementsByClassName("portfolio-item");
-
-    if(category == "all") category = "";
-
-    for(let i=0;i<items.length;i++){
-        items[i].style.display = "none";
-        if(items[i].className.indexOf(category) > -1){
-            items[i].style.display = "block";
-        }
+    function goTo(n) {
+      slides[cur].classList.remove('active');
+      dots[cur].classList.remove('active');
+      cur = (n + slides.length) % slides.length;
+      slides[cur].classList.add('active');
+      dots[cur].classList.add('active');
     }
-}
 
-window.addEventListener("scroll", function(){
-    let items = document.querySelectorAll(".portfolio-item");
-    let windowHeight = window.innerHeight;
+    function auto() { timer = setInterval(() => goTo(cur + 1), 2800); }
+    auto();
 
-    items.forEach(item=>{
-        let position = item.getBoundingClientRect().top;
+    dots.forEach(d => d.addEventListener('click', () => { clearInterval(timer); goTo(+d.dataset.i); auto(); }));
+  })();
 
-        if(position < windowHeight - 100){
-            item.classList.add("show");
-        }
+  /* ── FEATURED CARD SLIDERS ── */
+  document.querySelectorAll('.feat-slider').forEach(slider => {
+    const track = slider.querySelector('.fs-track');
+    const imgs  = track.querySelectorAll('img');
+    const prev  = slider.querySelector('.fs-prev');
+    const next  = slider.querySelector('.fs-next');
+    const dotsWrap = slider.querySelector('.fs-dots');
+    let cur = 0;
+
+    imgs.forEach((_, i) => {
+      const d = document.createElement('span');
+      d.className = 'fsd' + (i === 0 ? ' active' : '');
+      d.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(d);
     });
-});
-</script>
 
+    function goTo(n) {
+      cur = (n + imgs.length) % imgs.length;
+      track.style.transform = `translateX(-${cur * 100}%)`;
+      dotsWrap.querySelectorAll('span').forEach((d, i) => d.classList.toggle('active', i === cur));
+    }
+
+    prev.addEventListener('click', () => goTo(cur - 1));
+    next.addEventListener('click', () => goTo(cur + 1));
+
+    // auto slide
+    setInterval(() => goTo(cur + 1), 3500);
+  });
+
+  /* ── PPT SLIDER ── */
+  (function() {
+    const track = document.getElementById('pptTrack');
+    if (!track) return;
+    const items = track.querySelectorAll('.ppt-item');
+    let pos = 0;
+    const visible = () => window.innerWidth > 860 ? 3 : window.innerWidth > 560 ? 2 : 1;
+
+    function slide(dir) {
+      const max = items.length - visible();
+      pos = Math.max(0, Math.min(pos + dir, max));
+      const w = items[0].offsetWidth + 24;
+      track.style.transform = `translateX(-${pos * w}px)`;
+    }
+
+    document.getElementById('pptPrev').addEventListener('click', () => slide(-1));
+    document.getElementById('pptNext').addEventListener('click', () => slide(1));
+  })();
+
+  /* ── RESUME MODAL ── */
+  document.getElementById('resumePreviewBtn').addEventListener('click', () => {
+    document.getElementById('resumeModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  });
+  function closeModal() {
+    document.getElementById('resumeModal').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('modalClose').addEventListener('click', closeModal);
+  document.getElementById('resumeModal').addEventListener('click', e => { if (e.target === document.getElementById('resumeModal')) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+  </script>
 </body>
 </html>
