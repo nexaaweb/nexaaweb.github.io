@@ -8,6 +8,13 @@
   <link rel="stylesheet" href="assets/css/header.css"/>
   <link rel="stylesheet" href="assets/css/footer.css"/>
   <link rel="stylesheet" href="assets/css/contact.css"/>
+
+  <!-- ✅ EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    // ✅ Apna EmailJS Public Key yahan daalo (signup: https://www.emailjs.com)
+    emailjs.init("YOUR_PUBLIC_KEY");
+  </script>
 </head>
 <body>
 
@@ -172,8 +179,13 @@
                   <div class="success-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
                   </div>
-                  <h4>Message Sent!</h4>
-                  <p>Thank you for reaching out. We'll get back to you within 24 hours.</p>
+                  <h4>Message Sent Successfully! 🎉</h4>
+                  <p>Thank you for reaching out to NexaaWeb! Your message has been received. We'll review your project details and get back to you within 24 hours.</p>
+                </div>
+
+                <!-- ERROR MESSAGE -->
+                <div class="form-error-msg" id="formErrorMsg">
+                  <p>⚠️ Something went wrong. Please try again or email us directly at <a href="mailto:nexaawebofficial@gmail.com">nexaawebofficial@gmail.com</a></p>
                 </div>
 
               </form>
@@ -196,7 +208,8 @@
             <p>NexaaWeb operates remotely, allowing us to collaborate with businesses from around the world. No matter where you're located, we ensure smooth communication and efficient project delivery.</p>
             <div class="map-stats">
               <div class="ms-item">
-                <span class="ms-num">50+</span>
+                <!-- ✅ Changed from 50+ to 150+ -->
+                <span class="ms-num">150+</span>
                 <span class="ms-lbl">Projects</span>
               </div>
               <div class="ms-item">
@@ -252,14 +265,15 @@
     }, { threshold: 0.08 });
     revEls.forEach(el => ro.observe(el));
 
-    /* ── FORM SUBMIT ── */
+    /* ── FORM SUBMIT with EmailJS ── */
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      const form    = this;
-      const btn     = form.querySelector('.submit-btn');
-      const success = document.getElementById('formSuccess');
+      const form      = this;
+      const btn       = form.querySelector('.submit-btn');
+      const success   = document.getElementById('formSuccess');
+      const errorMsg  = document.getElementById('formErrorMsg');
 
-      // basic validation
+      // Basic validation
       const req = form.querySelectorAll('[required]');
       let valid = true;
       req.forEach(f => {
@@ -272,17 +286,33 @@
       });
       if (!valid) return;
 
-      // loading state
+      // Loading state
       btn.classList.add('loading');
       btn.querySelector('.btn-text').textContent = 'Sending...';
+      errorMsg.classList.remove('show');
 
-      setTimeout(() => {
+      // ✅ EmailJS — form data directly send karo
+      // Template variables: {{fname}}, {{femail}}, {{fphone}}, {{fservice}}, {{fbudget}}, {{fmessage}}
+      emailjs.sendForm(
+        'YOUR_SERVICE_ID',   // EmailJS Service ID (Gmail connect karo)
+        'YOUR_TEMPLATE_ID',  // EmailJS Template ID
+        form
+      )
+      .then(function() {
+        // SUCCESS
         form.style.display = 'none';
         success.classList.add('show');
-      }, 1600);
+      })
+      .catch(function(error) {
+        // ERROR
+        console.error('EmailJS Error:', error);
+        btn.classList.remove('loading');
+        btn.querySelector('.btn-text').textContent = 'Send Message';
+        errorMsg.classList.add('show');
+      });
     });
 
-    /* remove error on input */
+    /* Remove error on input */
     document.querySelectorAll('.field-group input, .field-group textarea, .field-group select').forEach(el => {
       el.addEventListener('input', () => el.closest('.field-group').classList.remove('error'));
     });
