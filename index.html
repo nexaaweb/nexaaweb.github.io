@@ -13,6 +13,15 @@
 
   <div id="header-placeholder"></div>
 
+  <!-- PORTFOLIO PREVIEW MODAL -->
+  <div class="pf-modal-overlay" id="pfModal">
+    <div class="pf-modal-box">
+      <button class="pf-modal-close" id="pfModalClose">&#10005;</button>
+      <img src="" alt="Preview" id="pfModalImg"/>
+      <div class="pf-modal-label" id="pfModalLabel"></div>
+    </div>
+  </div>
+
   <main>
 
     <!-- ══════════════════════════════
@@ -34,17 +43,17 @@
       </div>
       <div class="hero-overlay"></div>
 
-      <!-- Live Clock -->
+      <!-- Live Date (user's local date) -->
       <div class="hero-clock" id="heroClock">
         <div class="clock-row">
-          <span class="clock-flag">🇮🇳</span>
-          <span class="clock-label">IST</span>
-          <span class="clock-time" id="clockIST"></span>
+          <span class="clock-flag" id="clockFlag">📅</span>
+          <span class="clock-label">TODAY</span>
+          <span class="clock-time" id="clockDate"></span>
         </div>
         <div class="clock-row">
-          <span class="clock-flag">🌍</span>
-          <span class="clock-label">UTC</span>
-          <span class="clock-time" id="clockUTC"></span>
+          <span class="clock-flag" id="clockCountryFlag"></span>
+          <span class="clock-label" id="clockRegion">LOCAL</span>
+          <span class="clock-time" id="clockLocal"></span>
         </div>
       </div>
 
@@ -80,7 +89,6 @@
       <!-- Marquee row 1 — right to left -->
       <div class="marquee-wrap">
         <div class="marquee-track track-1">
-          <!-- 50 logo placeholders, 2 rows of 25 each via duplication -->
           <div class="logo-item"><div class="logo-box">Shopify</div></div>
           <div class="logo-item"><div class="logo-box">Stripe</div></div>
           <div class="logo-item"><div class="logo-box">Notion</div></div>
@@ -216,7 +224,7 @@
           </div>
           <div class="stat-card reveal" style="transition-delay:.2s">
             <div class="stat-icon">🏭</div>
-            <div class="stat-num"><span class="count" data-target="10">0</span>+</div>
+            <div class="stat-num"><span class="count" data-target="20">0</span>+</div>
             <div class="stat-label">Industries Served</div>
           </div>
           <div class="stat-card reveal" style="transition-delay:.3s">
@@ -425,7 +433,7 @@
               <button class="pfm-next">&#8594;</button>
             </div>
             <div class="pfm-body">
-              <span class="pfm-cat">Website Design · 2024</span>
+              <span class="pfm-cat">Website Design · 2025</span>
               <h3>Logismart Platform</h3>
               <p>Logistics platform designed for seamless booking and user experience with clear navigation and structured layout.</p>
               <div class="pfm-tags"><span>UI/UX</span><span>Responsive</span><span>Logistics</span></div>
@@ -444,7 +452,7 @@
               <button class="pfm-next">&#8594;</button>
             </div>
             <div class="pfm-body">
-              <span class="pfm-cat">Website Design · 2024</span>
+              <span class="pfm-cat">Website Design · 2025</span>
               <h3>Warehouse &amp; Storage</h3>
               <p>Modern warehouse website focused on clarity, service presentation, and responsive design.</p>
               <div class="pfm-tags"><span>Business</span><span>Responsive</span><span>Modern</span></div>
@@ -453,23 +461,27 @@
 
         </div>
 
-        <!-- Mini grid -->
+        <!-- Mini grid — clickable with full preview -->
         <div class="pf-mini-grid reveal">
-          <div class="pf-mini-card">
+          <div class="pf-mini-card" data-src="assets/portfolio/creative-design-01.png" data-label="Creative Design">
             <img src="assets/portfolio/creative-design-01.png" alt="Creative 1"/>
             <div class="pf-mini-overlay"><span>Creative Design</span></div>
+            <div class="pf-mini-zoom">🔍</div>
           </div>
-          <div class="pf-mini-card">
+          <div class="pf-mini-card" data-src="assets/portfolio/poster-design-01.png" data-label="Poster Design">
             <img src="assets/portfolio/poster-design-01.png" alt="Poster 1"/>
             <div class="pf-mini-overlay"><span>Poster Design</span></div>
+            <div class="pf-mini-zoom">🔍</div>
           </div>
-          <div class="pf-mini-card">
+          <div class="pf-mini-card" data-src="assets/portfolio/banner-01.png" data-label="Banner Design">
             <img src="assets/portfolio/banner-01.png" alt="Banner 1"/>
             <div class="pf-mini-overlay"><span>Banner Design</span></div>
+            <div class="pf-mini-zoom">🔍</div>
           </div>
-          <div class="pf-mini-card">
+          <div class="pf-mini-card" data-src="assets/portfolio/presentation-slide-01.png" data-label="Presentation">
             <img src="assets/portfolio/presentation-slide-01.png" alt="Presentation 1"/>
             <div class="pf-mini-overlay"><span>Presentation</span></div>
+            <div class="pf-mini-zoom">🔍</div>
           </div>
         </div>
 
@@ -660,8 +672,8 @@
               <span class="blog-cat">Web Design</span>
             </div>
             <div class="blog-body">
-              <span class="blog-date">March 2025</span>
-              <h4>10 Web Design Trends That Will Dominate in 2025</h4>
+              <span class="blog-date">March 2026</span>
+              <h4>10 Web Design Trends That Will Dominate in 2026</h4>
               <p>Explore the biggest design trends shaping the web this year — from AI-generated layouts to immersive micro-animations.</p>
               <a href="/blog.html" class="blog-link">Read More <span>→</span></a>
             </div>
@@ -673,7 +685,7 @@
               <span class="blog-cat">Branding</span>
             </div>
             <div class="blog-body">
-              <span class="blog-date">February 2025</span>
+              <span class="blog-date">February 2026</span>
               <h4>Why Strong Branding Is the Foundation of Business Growth</h4>
               <p>A powerful brand identity builds trust, drives recognition, and sets you apart from competitors in any market.</p>
               <a href="/blog.html" class="blog-link">Read More <span>→</span></a>
@@ -686,7 +698,7 @@
               <span class="blog-cat">Strategy</span>
             </div>
             <div class="blog-body">
-              <span class="blog-date">January 2025</span>
+              <span class="blog-date">January 2026</span>
               <h4>How AI Is Changing Digital Strategy for Small Businesses</h4>
               <p>From automation to smart analytics — discover how small businesses are leveraging AI to compete with larger brands.</p>
               <a href="/blog.html" class="blog-link">Read More <span>→</span></a>
@@ -708,7 +720,7 @@
       <div class="container center reveal">
         <span class="tag light">Let's Begin</span>
         <h2 class="white">Ready to Build Your <span class="red">Digital Presence?</span></h2>
-        <p>Let's create a powerful website and digital experience that helps your business grow and succeed online.</p>
+        <p class="fcta-para">Let's create a powerful website and digital experience that helps your business grow and succeed online.</p>
         <div class="fcta-btns">
           <a href="/contact.html" class="btn-primary">Get Started <span class="btn-arrow">→</span></a>
           <a href="/services.html" class="btn-ghost-white">View Services</a>
@@ -732,28 +744,38 @@
     }, 4000);
   })();
 
-  /* ══ LIVE CLOCK ══ */
-  function updateClocks() {
+  /* ══ LOCAL DATE DISPLAY (visitor's local date by timezone) ══ */
+  (function() {
     const now = new Date();
-    // IST = UTC+5:30
-    const ist = new Date(now.getTime() + (5.5 * 60 * 60 * 1000));
-    const istStr = ist.toUTCString().slice(17, 25);
-    // UTC
-    const utcStr = now.toUTCString().slice(17, 25);
 
-    const fmt = (s) => {
-      const parts = s.split(':');
-      let h = parseInt(parts[0]);
-      const ampm = h >= 12 ? 'PM' : 'AM';
-      h = h % 12 || 12;
-      return `${h}:${parts[1]}:${parts[2]} ${ampm}`;
+    // Format date: e.g. "Thursday, 26 March 2026"
+    const dateStr = now.toLocaleDateString(undefined, {
+      weekday: 'long',
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric'
+    });
+
+    // Get timezone region label e.g. "Asia/Kolkata" → "IST"
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || 'LOCAL';
+    const tzShort = now.toLocaleTimeString(undefined, { timeZoneName: 'short' })
+                       .split(' ').pop() || tz.split('/').pop().replace('_', ' ');
+
+    // Country flag based on timezone region
+    const tzRegionFlags = {
+      'Asia': '🌏', 'America': '🌎', 'Europe': '🌍',
+      'Africa': '🌍', 'Australia': '🌏', 'Pacific': '🌏',
+      'Atlantic': '🌎', 'Indian': '🌏', 'Arctic': '🌍',
+      'Antarctica': '🌏'
     };
+    const region = tz.split('/')[0];
+    const flag = tzRegionFlags[region] || '🌐';
 
-    document.getElementById('clockIST').textContent = fmt(istStr);
-    document.getElementById('clockUTC').textContent = utcStr;
-  }
-  updateClocks();
-  setInterval(updateClocks, 1000);
+    document.getElementById('clockDate').textContent = dateStr;
+    document.getElementById('clockRegion').textContent = tzShort;
+    document.getElementById('clockLocal').textContent = tz.split('/').pop().replace(/_/g, ' ');
+    document.getElementById('clockCountryFlag').textContent = flag;
+  })();
 
   /* ══ SCROLL REVEAL ══ */
   const ro = new IntersectionObserver(entries => {
@@ -797,6 +819,38 @@
     next.addEventListener('click', () => goTo(cur + 1));
     setInterval(() => goTo(cur + 1), 3500);
   });
+
+  /* ══ MINI GRID FULL PREVIEW MODAL ══ */
+  const modal = document.getElementById('pfModal');
+  const modalImg = document.getElementById('pfModalImg');
+  const modalLabel = document.getElementById('pfModalLabel');
+  const modalClose = document.getElementById('pfModalClose');
+
+  document.querySelectorAll('.pf-mini-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const src = card.getAttribute('data-src');
+      const label = card.getAttribute('data-label');
+      modalImg.src = src;
+      modalImg.alt = label;
+      modalLabel.textContent = label;
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  modalClose.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+    setTimeout(() => { modalImg.src = ''; }, 300);
+  }
   </script>
 </body>
 </html>
