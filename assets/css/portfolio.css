@@ -631,3 +631,58 @@ section h2 {
   .ppt-item { min-width: calc(100% - 0px); }
   .hero-stats { gap: 16px; }
 }
+
+/* ── FEAT LIVE BTN ── */
+.feat-links { margin-top: 16px; }
+.feat-live-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 22px;
+  background: transparent; color: var(--red);
+  border: 1.5px solid rgba(185,36,37,0.35);
+  border-radius: 2px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px; font-weight: 700;
+  text-decoration: none;
+  transition: background 0.22s, color 0.22s, border-color 0.22s, transform 0.22s;
+}
+.feat-live-btn:hover {
+  background: var(--red); color: var(--white);
+  border-color: var(--red); transform: translateY(-2px);
+}
+
+/* ── INSTAGRAM SECTION ── */
+.insta-section {
+  padding: 80px 0;
+  background: var(--black);
+  position: relative; overflow: hidden;
+}
+.insta-section::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(185,36,37,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(185,36,37,0.04) 1px, transparent 1px);
+  background-size: 52px 52px; pointer-events: none;
+}
+.insta-section .container { position: relative; z-index: 1; }
+.insta-section h2 { color: var(--white); }
+.insta-sub {
+  font-size: 15px; color: rgba(255,255,255,0.45);
+  font-weight: 300; line-height: 1.8;
+  max-width: 560px; margin: 0 auto 32px;
+}
+.insta-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 36px;
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px; font-weight: 700;
+  text-decoration: none; border-radius: 50px;
+  transition: transform 0.25s, box-shadow 0.25s, opacity 0.25s;
+}
+.insta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(253,29,29,0.35);
+  opacity: 0.92;
+}
