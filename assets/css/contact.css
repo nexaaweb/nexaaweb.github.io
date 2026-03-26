@@ -391,7 +391,7 @@ a.info-value:hover { color: #e63535; }
 /* loading */
 .submit-btn.loading { pointer-events: none; opacity: 0.8; }
 
-/* SUCCESS */
+/* ✅ SUCCESS */
 .form-success {
   display: none; text-align: center; padding: 40px 20px;
 }
@@ -421,6 +421,21 @@ a.info-value:hover { color: #e63535; }
   font-size: 15px; color: var(--muted);
   font-weight: 300; line-height: 1.7;
 }
+
+/* ✅ ERROR MESSAGE */
+.form-error-msg {
+  display: none;
+  margin-top: 16px;
+  padding: 14px 18px;
+  background: #fff5f5;
+  border: 1px solid rgba(229,57,53,0.3);
+  border-left: 3px solid #e53935;
+  border-radius: 4px;
+  font-size: 13.5px; color: #c62828;
+  line-height: 1.6;
+}
+.form-error-msg.show { display: block; animation: fadeUp 0.3s ease both; }
+.form-error-msg a { color: var(--red); font-weight: 600; text-decoration: underline; }
 
 /* ══════════════════════════════════════
    4. MAP
