@@ -117,8 +117,9 @@
 
           <div class="form-right reveal" style="transition-delay:.12s">
             <div class="form-card">
-              <form id="contactForm" novalidate>
 
+              <!-- FORM -->
+              <form id="contactForm" novalidate>
                 <div class="field-row">
                   <div class="field-group">
                     <input type="text" id="fname" name="fname" required placeholder=" "/>
@@ -172,22 +173,22 @@
                   </span>
                   <span class="btn-shine"></span>
                 </button>
-
-                <!-- SUCCESS MESSAGE -->
-                <div class="form-success" id="formSuccess">
-                  <div class="success-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                  </div>
-                  <h4>Message Sent Successfully! 🎉</h4>
-                  <p>Thank you for reaching out to NexaaWeb! Your message has been received. We'll review your project details and get back to you within 24 hours.</p>
-                </div>
-
-                <!-- ERROR MESSAGE -->
-                <div class="form-error-msg" id="formErrorMsg">
-                  <p>⚠️ Something went wrong. Please try again or email us directly at <a href="mailto:nexaawebofficial@gmail.com">nexaawebofficial@gmail.com</a></p>
-                </div>
-
               </form>
+
+              <!-- SUCCESS MESSAGE — form ke bahar, form-card ke andar -->
+              <div class="form-success" id="formSuccess">
+                <div class="success-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <h4>Message Sent Successfully! 🎉</h4>
+                <p>Thank you for reaching out to NexaaWeb! Your message has been received. We'll review your project details and get back to you within 24 hours.</p>
+              </div>
+
+              <!-- ERROR MESSAGE -->
+              <div class="form-error-msg" id="formErrorMsg">
+                <p>⚠️ Something went wrong. Please try again or email us directly at <a href="mailto:nexaawebofficial@gmail.com">nexaawebofficial@gmail.com</a></p>
+              </div>
+
             </div>
           </div>
 
@@ -287,26 +288,24 @@
       // Loading state
       btn.classList.add('loading');
       btn.querySelector('.btn-text').textContent = 'Sending...';
-      errorMsg.classList.remove('show');
+      errorMsg.style.display = 'none';
 
-      // EmailJS — send form data
-      emailjs.sendForm(
-        'service_zvv7h0k',
-        'template_a2p61gw',
-        form
-      )
-      .then(function() {
-        // SUCCESS
-        form.style.display = 'none';
-        success.classList.add('show');
-      })
-      .catch(function(error) {
-        // ERROR
-        console.error('EmailJS Error:', error);
-        btn.classList.remove('loading');
-        btn.querySelector('.btn-text').textContent = 'Send Message';
-        errorMsg.classList.add('show');
-      });
+      // EmailJS send
+      emailjs.sendForm('service_zvv7h0k', 'template_a2p61gw', form)
+        .then(function() {
+          // Hide form, show success
+          form.style.display = 'none';
+          success.style.display = 'block';
+          success.style.animation = 'none';
+          success.offsetHeight; // reflow trigger
+          success.style.animation = 'popIn 0.5s cubic-bezier(.22,1,.36,1) both';
+        })
+        .catch(function(error) {
+          console.error('EmailJS Error:', error);
+          btn.classList.remove('loading');
+          btn.querySelector('.btn-text').textContent = 'Send Message';
+          errorMsg.style.display = 'block';
+        });
     });
 
     /* Remove error on input */
