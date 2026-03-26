@@ -9,11 +9,10 @@
   <link rel="stylesheet" href="assets/css/footer.css"/>
   <link rel="stylesheet" href="assets/css/contact.css"/>
 
-  <!-- ✅ EmailJS SDK -->
+  <!-- EmailJS SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
-    // ✅ Apna EmailJS Public Key yahan daalo (signup: https://www.emailjs.com)
-    emailjs.init("YOUR_PUBLIC_KEY");
+    emailjs.init("mbrDQWtNOnp2oh03_");
   </script>
 </head>
 <body>
@@ -208,7 +207,6 @@
             <p>NexaaWeb operates remotely, allowing us to collaborate with businesses from around the world. No matter where you're located, we ensure smooth communication and efficient project delivery.</p>
             <div class="map-stats">
               <div class="ms-item">
-                <!-- ✅ Changed from 50+ to 150+ -->
                 <span class="ms-num">150+</span>
                 <span class="ms-lbl">Projects</span>
               </div>
@@ -268,10 +266,10 @@
     /* ── FORM SUBMIT with EmailJS ── */
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      const form      = this;
-      const btn       = form.querySelector('.submit-btn');
-      const success   = document.getElementById('formSuccess');
-      const errorMsg  = document.getElementById('formErrorMsg');
+      const form     = this;
+      const btn      = form.querySelector('.submit-btn');
+      const success  = document.getElementById('formSuccess');
+      const errorMsg = document.getElementById('formErrorMsg');
 
       // Basic validation
       const req = form.querySelectorAll('[required]');
@@ -291,11 +289,10 @@
       btn.querySelector('.btn-text').textContent = 'Sending...';
       errorMsg.classList.remove('show');
 
-      // ✅ EmailJS — form data directly send karo
-      // Template variables: {{fname}}, {{femail}}, {{fphone}}, {{fservice}}, {{fbudget}}, {{fmessage}}
+      // EmailJS — send form data
       emailjs.sendForm(
-        'YOUR_SERVICE_ID',   // EmailJS Service ID (Gmail connect karo)
-        'YOUR_TEMPLATE_ID',  // EmailJS Template ID
+        'service_zvv7h0k',
+        'template_a2p61gw',
         form
       )
       .then(function() {
