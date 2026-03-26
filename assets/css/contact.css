@@ -59,12 +59,6 @@ section h2 {
 
 .ct-hero-bg {
   position: absolute; inset: 0;
-  background:
-    radial-gradient(ellipse at 20% 50%, rgba(185,36,37,0.07) 0%, transparent 55%),
-    radial-gradient(ellipse at 80% 20%, rgba(185,36,37,0.05) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 100%, rgba(185,36,37,0.04) 0%, transparent 50%),
-    linear-gradient(160deg, #fff 0%, #fdf4f4 40%, #fff8f8 100%);
-  /* subtle grid */
   background-image:
     radial-gradient(ellipse at 20% 50%, rgba(185,36,37,0.07) 0%, transparent 55%),
     radial-gradient(ellipse at 80% 20%, rgba(185,36,37,0.05) 0%, transparent 50%),
@@ -174,7 +168,6 @@ section h2 {
   transition: transform 0.32s ease, box-shadow 0.32s ease, border-color 0.32s ease, background 0.32s ease;
   cursor: default;
 }
-/* gradient border glow on hover */
 .info-card::before {
   content: '';
   position: absolute; inset: -1px;
@@ -315,7 +308,6 @@ a.info-value:hover { color: #e63535; }
   cursor: pointer;
 }
 
-/* floating label */
 .field-group label {
   position: absolute;
   left: 0; top: 16px;
@@ -330,8 +322,6 @@ a.info-value:hover { color: #e63535; }
   top: 0; font-size: 10.5px; color: var(--red);
   font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
 }
-
-/* select label always up when value chosen */
 .field-group select:focus ~ label,
 .field-group select:valid ~ label {
   top: 0; font-size: 10.5px; color: var(--red);
@@ -339,7 +329,6 @@ a.info-value:hover { color: #e63535; }
 }
 .select-label { top: 16px; }
 
-/* animated bottom line */
 .field-line {
   position: absolute; bottom: 0; left: 0;
   width: 0; height: 2px;
@@ -350,7 +339,6 @@ a.info-value:hover { color: #e63535; }
 .field-group textarea:focus ~ .field-line,
 .field-group select:focus ~ .field-line { width: 100%; }
 
-/* error state */
 .field-group.error input,
 .field-group.error textarea,
 .field-group.error select { border-bottom-color: #e53935; }
@@ -374,11 +362,9 @@ a.info-value:hover { color: #e63535; }
   box-shadow: 0 12px 32px rgba(185,36,37,0.4);
 }
 .submit-btn:active { transform: translateY(0); }
-
 .submit-btn .btn-icon svg { width: 16px; height: 16px; transition: transform 0.2s; }
 .submit-btn:hover .btn-icon svg { transform: translateX(4px); }
 
-/* shine sweep */
 .btn-shine {
   position: absolute; top: 0; left: -100%;
   width: 60%; height: 100%;
@@ -387,15 +373,14 @@ a.info-value:hover { color: #e63535; }
   transition: left 0.5s ease;
 }
 .submit-btn:hover .btn-shine { left: 150%; }
-
-/* loading */
 .submit-btn.loading { pointer-events: none; opacity: 0.8; }
 
-/* ✅ SUCCESS */
+/* ✅ SUCCESS MESSAGE */
 .form-success {
-  display: none; text-align: center; padding: 40px 20px;
+  display: none;
+  text-align: center;
+  padding: 40px 20px;
 }
-.form-success.show { display: block; animation: popIn 0.5s cubic-bezier(.22,1,.36,1) both; }
 
 @keyframes popIn {
   from { opacity:0; transform:scale(0.88); }
@@ -434,7 +419,6 @@ a.info-value:hover { color: #e63535; }
   font-size: 13.5px; color: #c62828;
   line-height: 1.6;
 }
-.form-error-msg.show { display: block; animation: fadeUp 0.3s ease both; }
 .form-error-msg a { color: var(--red); font-weight: 600; text-decoration: underline; }
 
 /* ══════════════════════════════════════
@@ -501,8 +485,6 @@ a.info-value:hover { color: #e63535; }
   background: linear-gradient(160deg, var(--dark) 0%, #000 100%);
   position: relative; overflow: hidden;
 }
-
-/* red glow */
 .ct-cta::before {
   content: '';
   position: absolute;
@@ -518,7 +500,6 @@ a.info-value:hover { color: #e63535; }
   50%      { opacity: 1;   transform: translate(-50%,-50%) scale(1.15); }
 }
 
-/* particles */
 .cta-particles {
   position: absolute; inset: 0;
   pointer-events: none; overflow: hidden;
