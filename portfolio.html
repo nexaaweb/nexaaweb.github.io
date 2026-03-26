@@ -13,6 +13,16 @@
 
   <div id="header-placeholder"></div>
 
+  <!-- ══════════════════════════════
+       LIGHTBOX MODAL (shared)
+  ══════════════════════════════ -->
+  <div class="lightbox-overlay" id="lightboxOverlay">
+    <button class="lightbox-close" id="lightboxClose">&#10005;</button>
+    <div class="lightbox-inner">
+      <img src="" alt="Preview" id="lightboxImg"/>
+    </div>
+  </div>
+
   <main>
 
     <!-- ══════════════════════════════
@@ -28,29 +38,37 @@
           <a href="/contact.html" class="btn-ghost">Start a Project</a>
         </div>
         <div class="hero-stats">
-          <div class="hs-item"><span class="hs-num">50+</span><span class="hs-lbl">Projects</span></div>
+          <div class="hs-item"><span class="hs-num">150+</span><span class="hs-lbl">Projects</span></div>
           <div class="hs-sep"></div>
           <div class="hs-item"><span class="hs-num">100%</span><span class="hs-lbl">Satisfaction</span></div>
           <div class="hs-sep"></div>
-          <div class="hs-item"><span class="hs-num">10+</span><span class="hs-lbl">Categories</span></div>
+          <div class="hs-item"><span class="hs-num">20+</span><span class="hs-lbl">Categories</span></div>
         </div>
       </div>
       <div class="pf-hero-right">
         <div class="hero-slider" id="heroSlider">
           <div class="hs-slide active">
-            <img src="assets/portfolio/logismart-home.png" alt="Logismart"/>
+            <div class="hs-img-wrap">
+              <img src="assets/portfolio/logismart-home.png" alt="Logismart"/>
+            </div>
             <div class="hs-tag">Website Design</div>
           </div>
           <div class="hs-slide">
-            <img src="assets/portfolio/warehouse-home.png" alt="Warehouse"/>
+            <div class="hs-img-wrap">
+              <img src="assets/portfolio/warehouse-home.png" alt="Warehouse"/>
+            </div>
             <div class="hs-tag">Website Design</div>
           </div>
           <div class="hs-slide">
-            <img src="assets/portfolio/poster-design-01.png" alt="Poster Design"/>
+            <div class="hs-img-wrap">
+              <img src="assets/portfolio/poster-design-01.png" alt="Poster Design"/>
+            </div>
             <div class="hs-tag">Poster Design</div>
           </div>
           <div class="hs-slide">
-            <img src="assets/portfolio/creative-design-01.png" alt="Creative Design"/>
+            <div class="hs-img-wrap">
+              <img src="assets/portfolio/creative-design-01.png" alt="Creative Design"/>
+            </div>
             <div class="hs-tag">Creative Design</div>
           </div>
         </div>
@@ -150,33 +168,33 @@
         </div>
         <div class="web-grid">
 
-          <div class="web-card reveal">
+          <a href="https://logismart.in" target="_blank" rel="noopener" class="web-card reveal" style="text-decoration:none;">
             <div class="wc-img">
               <img src="assets/portfolio/logismart-home.png" alt="Logismart"/>
               <div class="wc-overlay">
                 <span class="wc-label">Logismart</span>
-                <span class="wc-view">View Project</span>
+                <span class="wc-view">&#127760; Visit Website</span>
               </div>
             </div>
             <div class="wc-body">
               <h4>Logismart Platform</h4>
               <span class="wc-cat">Website Design</span>
             </div>
-          </div>
+          </a>
 
-          <div class="web-card reveal" style="transition-delay:.1s">
+          <a href="https://warehousingstock.com" target="_blank" rel="noopener" class="web-card reveal" style="transition-delay:.1s;text-decoration:none;">
             <div class="wc-img">
               <img src="assets/portfolio/warehouse-home.png" alt="Warehouse"/>
               <div class="wc-overlay">
                 <span class="wc-label">Warehouse</span>
-                <span class="wc-view">View Project</span>
+                <span class="wc-view">&#127760; Visit Website</span>
               </div>
             </div>
             <div class="wc-body">
               <h4>Warehouse &amp; Storage</h4>
               <span class="wc-cat">Website Design</span>
             </div>
-          </div>
+          </a>
 
         </div>
       </div>
@@ -217,63 +235,63 @@
           <span class="tag">Print &amp; Digital</span>
           <h2>Posters &amp; <span class="red">Social Media</span></h2>
         </div>
-        <div class="masonry-grid" id="masonryGrid">
+        <div class="poster-grid">
 
-          <div class="masonry-item reveal tall">
-            <img src="assets/portfolio/poster-design-01.png" alt="Poster 1"/>
-            <div class="masonry-overlay"><span>Poster Design</span></div>
+          <div class="poster-card reveal" data-img="assets/portfolio/poster-design-01.png">
+            <div class="poster-img-wrap"><img src="assets/portfolio/poster-design-01.png" alt="Poster 1"/></div>
+            <div class="poster-overlay"><span>&#128065; View Full</span></div>
           </div>
-          <div class="masonry-item reveal">
-            <img src="assets/portfolio/poster-design-02.png" alt="Poster 2"/>
-            <div class="masonry-overlay"><span>Poster Design</span></div>
+          <div class="poster-card reveal" data-img="assets/portfolio/poster-design-02.png">
+            <div class="poster-img-wrap"><img src="assets/portfolio/poster-design-02.png" alt="Poster 2"/></div>
+            <div class="poster-overlay"><span>&#128065; View Full</span></div>
           </div>
-          <div class="masonry-item reveal">
-            <img src="assets/portfolio/social-post-01.png" alt="Social 1"/>
-            <div class="masonry-overlay"><span>Social Media</span></div>
+          <div class="poster-card reveal" data-img="assets/portfolio/social-post-01.png">
+            <div class="poster-img-wrap"><img src="assets/portfolio/social-post-01.png" alt="Social 1"/></div>
+            <div class="poster-overlay"><span>&#128065; View Full</span></div>
           </div>
-          <div class="masonry-item reveal tall">
-            <img src="assets/portfolio/poster-design-03.png" alt="Poster 3"/>
-            <div class="masonry-overlay"><span>Poster Design</span></div>
+          <div class="poster-card reveal" data-img="assets/portfolio/poster-design-03.png">
+            <div class="poster-img-wrap"><img src="assets/portfolio/poster-design-03.png" alt="Poster 3"/></div>
+            <div class="poster-overlay"><span>&#128065; View Full</span></div>
           </div>
-          <div class="masonry-item reveal">
-            <img src="assets/portfolio/social-post-02.png" alt="Social 2"/>
-            <div class="masonry-overlay"><span>Social Media</span></div>
+          <div class="poster-card reveal" data-img="assets/portfolio/social-post-02.png">
+            <div class="poster-img-wrap"><img src="assets/portfolio/social-post-02.png" alt="Social 2"/></div>
+            <div class="poster-overlay"><span>&#128065; View Full</span></div>
           </div>
-          <div class="masonry-item reveal">
-            <img src="assets/portfolio/poster-design-04.png" alt="Poster 4"/>
-            <div class="masonry-overlay"><span>Poster Design</span></div>
+          <div class="poster-card reveal" data-img="assets/portfolio/poster-design-04.png">
+            <div class="poster-img-wrap"><img src="assets/portfolio/poster-design-04.png" alt="Poster 4"/></div>
+            <div class="poster-overlay"><span>&#128065; View Full</span></div>
           </div>
-          <div class="masonry-item reveal">
-            <img src="assets/portfolio/social-post-03.png" alt="Social 3"/>
-            <div class="masonry-overlay"><span>Social Media</span></div>
+          <div class="poster-card reveal" data-img="assets/portfolio/social-post-03.png">
+            <div class="poster-img-wrap"><img src="assets/portfolio/social-post-03.png" alt="Social 3"/></div>
+            <div class="poster-overlay"><span>&#128065; View Full</span></div>
           </div>
-          <div class="masonry-item reveal tall">
-            <img src="assets/portfolio/poster-design-05.png" alt="Poster 5"/>
-            <div class="masonry-overlay"><span>Poster Design</span></div>
+          <div class="poster-card reveal" data-img="assets/portfolio/poster-design-05.png">
+            <div class="poster-img-wrap"><img src="assets/portfolio/poster-design-05.png" alt="Poster 5"/></div>
+            <div class="poster-overlay"><span>&#128065; View Full</span></div>
           </div>
-          <div class="masonry-item reveal">
-            <img src="assets/portfolio/poster-design-06.png" alt="Poster 6"/>
-            <div class="masonry-overlay"><span>Poster Design</span></div>
+          <div class="poster-card reveal" data-img="assets/portfolio/poster-design-06.png">
+            <div class="poster-img-wrap"><img src="assets/portfolio/poster-design-06.png" alt="Poster 6"/></div>
+            <div class="poster-overlay"><span>&#128065; View Full</span></div>
           </div>
-          <div class="masonry-item reveal">
-            <img src="assets/portfolio/social-post-04.png" alt="Social 4"/>
-            <div class="masonry-overlay"><span>Social Media</span></div>
+          <div class="poster-card reveal" data-img="assets/portfolio/social-post-04.png">
+            <div class="poster-img-wrap"><img src="assets/portfolio/social-post-04.png" alt="Social 4"/></div>
+            <div class="poster-overlay"><span>&#128065; View Full</span></div>
           </div>
-          <div class="masonry-item reveal">
-            <img src="assets/portfolio/poster-design-07.png" alt="Poster 7"/>
-            <div class="masonry-overlay"><span>Poster Design</span></div>
+          <div class="poster-card reveal" data-img="assets/portfolio/poster-design-07.png">
+            <div class="poster-img-wrap"><img src="assets/portfolio/poster-design-07.png" alt="Poster 7"/></div>
+            <div class="poster-overlay"><span>&#128065; View Full</span></div>
           </div>
-          <div class="masonry-item reveal tall">
-            <img src="assets/portfolio/poster-design-08.png" alt="Poster 8"/>
-            <div class="masonry-overlay"><span>Poster Design</span></div>
+          <div class="poster-card reveal" data-img="assets/portfolio/poster-design-08.png">
+            <div class="poster-img-wrap"><img src="assets/portfolio/poster-design-08.png" alt="Poster 8"/></div>
+            <div class="poster-overlay"><span>&#128065; View Full</span></div>
           </div>
-          <div class="masonry-item reveal">
-            <img src="assets/portfolio/poster-design-09.png" alt="Poster 9"/>
-            <div class="masonry-overlay"><span>Poster Design</span></div>
+          <div class="poster-card reveal" data-img="assets/portfolio/poster-design-09.png">
+            <div class="poster-img-wrap"><img src="assets/portfolio/poster-design-09.png" alt="Poster 9"/></div>
+            <div class="poster-overlay"><span>&#128065; View Full</span></div>
           </div>
-          <div class="masonry-item reveal">
-            <img src="assets/portfolio/poster-design-10.png" alt="Poster 10"/>
-            <div class="masonry-overlay"><span>Poster Design</span></div>
+          <div class="poster-card reveal" data-img="assets/portfolio/poster-design-10.png">
+            <div class="poster-img-wrap"><img src="assets/portfolio/poster-design-10.png" alt="Poster 10"/></div>
+            <div class="poster-overlay"><span>&#128065; View Full</span></div>
           </div>
 
         </div>
@@ -281,7 +299,7 @@
     </section>
 
     <!-- ══════════════════════════════
-         6. BANNERS
+         6. BANNERS — horizontal auto-scroll
     ══════════════════════════════ -->
     <section class="banners-section">
       <div class="container">
@@ -289,29 +307,24 @@
           <span class="tag">Marketing</span>
           <h2>Banner <span class="red">Designs</span></h2>
         </div>
-        <div class="banners-list">
-          <div class="banner-item reveal slide-left">
-            <img src="assets/portfolio/banner-01.png" alt="Banner 1"/>
-            <div class="banner-overlay"></div>
-          </div>
-          <div class="banner-item reveal slide-right">
-            <img src="assets/portfolio/banner-02.png" alt="Banner 2"/>
-            <div class="banner-overlay"></div>
-          </div>
-          <div class="banner-item reveal slide-left">
-            <img src="assets/portfolio/banner-03.png" alt="Banner 3"/>
-            <div class="banner-overlay"></div>
-          </div>
-          <div class="banner-item reveal slide-right">
-            <img src="assets/portfolio/banner-04.png" alt="Banner 4"/>
-            <div class="banner-overlay"></div>
-          </div>
+      </div>
+      <div class="banners-scroll-wrap">
+        <div class="banners-track" id="bannersTrack">
+          <div class="banner-slide"><img src="assets/portfolio/banner-01.png" alt="Banner 1"/></div>
+          <div class="banner-slide"><img src="assets/portfolio/banner-02.png" alt="Banner 2"/></div>
+          <div class="banner-slide"><img src="assets/portfolio/banner-03.png" alt="Banner 3"/></div>
+          <div class="banner-slide"><img src="assets/portfolio/banner-04.png" alt="Banner 4"/></div>
+          <!-- duplicated for seamless loop -->
+          <div class="banner-slide"><img src="assets/portfolio/banner-01.png" alt="Banner 1"/></div>
+          <div class="banner-slide"><img src="assets/portfolio/banner-02.png" alt="Banner 2"/></div>
+          <div class="banner-slide"><img src="assets/portfolio/banner-03.png" alt="Banner 3"/></div>
+          <div class="banner-slide"><img src="assets/portfolio/banner-04.png" alt="Banner 4"/></div>
         </div>
       </div>
     </section>
 
     <!-- ══════════════════════════════
-         7. CREATIVE DESIGNS
+         7. CREATIVE DESIGNS — clickable lightbox
     ══════════════════════════════ -->
     <section class="creative-section">
       <div class="container">
@@ -320,16 +333,16 @@
           <h2>Creative <span class="red">Designs</span></h2>
         </div>
         <div class="creative-grid">
-          <div class="creative-card reveal"><img src="assets/portfolio/creative-design-01.png" alt="Creative 1"/><div class="cc-overlay"><span>Creative Design</span></div></div>
-          <div class="creative-card reveal" style="transition-delay:.06s"><img src="assets/portfolio/creative-design-02.png" alt="Creative 2"/><div class="cc-overlay"><span>Creative Design</span></div></div>
-          <div class="creative-card reveal" style="transition-delay:.12s"><img src="assets/portfolio/creative-design-03.png" alt="Creative 3"/><div class="cc-overlay"><span>Creative Design</span></div></div>
-          <div class="creative-card reveal" style="transition-delay:.18s"><img src="assets/portfolio/creative-design-04.png" alt="Creative 4"/><div class="cc-overlay"><span>Creative Design</span></div></div>
-          <div class="creative-card reveal" style="transition-delay:.06s"><img src="assets/portfolio/creative-design-05.png" alt="Creative 5"/><div class="cc-overlay"><span>Creative Design</span></div></div>
-          <div class="creative-card reveal" style="transition-delay:.12s"><img src="assets/portfolio/creative-design-06.png" alt="Creative 6"/><div class="cc-overlay"><span>Creative Design</span></div></div>
-          <div class="creative-card reveal" style="transition-delay:.18s"><img src="assets/portfolio/creative-design-07.png" alt="Creative 7"/><div class="cc-overlay"><span>Creative Design</span></div></div>
-          <div class="creative-card reveal" style="transition-delay:.06s"><img src="assets/portfolio/creative-design-08.png" alt="Creative 8"/><div class="cc-overlay"><span>Creative Design</span></div></div>
-          <div class="creative-card reveal" style="transition-delay:.12s"><img src="assets/portfolio/creative-design-09.png" alt="Creative 9"/><div class="cc-overlay"><span>Creative Design</span></div></div>
-          <div class="creative-card reveal" style="transition-delay:.18s"><img src="assets/portfolio/creative-design-10.png" alt="Creative 10"/><div class="cc-overlay"><span>Creative Design</span></div></div>
+          <div class="creative-card reveal" data-img="assets/portfolio/creative-design-01.png"><img src="assets/portfolio/creative-design-01.png" alt="Creative 1"/><div class="cc-overlay"><span>&#128065; View Full</span></div></div>
+          <div class="creative-card reveal" style="transition-delay:.06s" data-img="assets/portfolio/creative-design-02.png"><img src="assets/portfolio/creative-design-02.png" alt="Creative 2"/><div class="cc-overlay"><span>&#128065; View Full</span></div></div>
+          <div class="creative-card reveal" style="transition-delay:.12s" data-img="assets/portfolio/creative-design-03.png"><img src="assets/portfolio/creative-design-03.png" alt="Creative 3"/><div class="cc-overlay"><span>&#128065; View Full</span></div></div>
+          <div class="creative-card reveal" style="transition-delay:.18s" data-img="assets/portfolio/creative-design-04.png"><img src="assets/portfolio/creative-design-04.png" alt="Creative 4"/><div class="cc-overlay"><span>&#128065; View Full</span></div></div>
+          <div class="creative-card reveal" style="transition-delay:.06s" data-img="assets/portfolio/creative-design-05.png"><img src="assets/portfolio/creative-design-05.png" alt="Creative 5"/><div class="cc-overlay"><span>&#128065; View Full</span></div></div>
+          <div class="creative-card reveal" style="transition-delay:.12s" data-img="assets/portfolio/creative-design-06.png"><img src="assets/portfolio/creative-design-06.png" alt="Creative 6"/><div class="cc-overlay"><span>&#128065; View Full</span></div></div>
+          <div class="creative-card reveal" style="transition-delay:.18s" data-img="assets/portfolio/creative-design-07.png"><img src="assets/portfolio/creative-design-07.png" alt="Creative 7"/><div class="cc-overlay"><span>&#128065; View Full</span></div></div>
+          <div class="creative-card reveal" style="transition-delay:.06s" data-img="assets/portfolio/creative-design-08.png"><img src="assets/portfolio/creative-design-08.png" alt="Creative 8"/><div class="cc-overlay"><span>&#128065; View Full</span></div></div>
+          <div class="creative-card reveal" style="transition-delay:.12s" data-img="assets/portfolio/creative-design-09.png"><img src="assets/portfolio/creative-design-09.png" alt="Creative 9"/><div class="cc-overlay"><span>&#128065; View Full</span></div></div>
+          <div class="creative-card reveal" style="transition-delay:.18s" data-img="assets/portfolio/creative-design-10.png"><img src="assets/portfolio/creative-design-10.png" alt="Creative 10"/><div class="cc-overlay"><span>&#128065; View Full</span></div></div>
         </div>
       </div>
     </section>
@@ -408,7 +421,6 @@
     const slides = document.querySelectorAll('#heroSlider .hs-slide');
     const dots   = document.querySelectorAll('#hsDots .hs-dot');
     let cur = 0, timer;
-
     function goTo(n) {
       slides[cur].classList.remove('active');
       dots[cur].classList.remove('active');
@@ -416,10 +428,8 @@
       slides[cur].classList.add('active');
       dots[cur].classList.add('active');
     }
-
     function auto() { timer = setInterval(() => goTo(cur + 1), 2800); }
     auto();
-
     dots.forEach(d => d.addEventListener('click', () => { clearInterval(timer); goTo(+d.dataset.i); auto(); }));
   })();
 
@@ -431,24 +441,19 @@
     const next  = slider.querySelector('.fs-next');
     const dotsWrap = slider.querySelector('.fs-dots');
     let cur = 0;
-
     imgs.forEach((_, i) => {
       const d = document.createElement('span');
       d.className = 'fsd' + (i === 0 ? ' active' : '');
       d.addEventListener('click', () => goTo(i));
       dotsWrap.appendChild(d);
     });
-
     function goTo(n) {
       cur = (n + imgs.length) % imgs.length;
       track.style.transform = `translateX(-${cur * 100}%)`;
       dotsWrap.querySelectorAll('span').forEach((d, i) => d.classList.toggle('active', i === cur));
     }
-
     prev.addEventListener('click', () => goTo(cur - 1));
     next.addEventListener('click', () => goTo(cur + 1));
-
-    // auto slide
     setInterval(() => goTo(cur + 1), 3500);
   });
 
@@ -459,14 +464,12 @@
     const items = track.querySelectorAll('.ppt-item');
     let pos = 0;
     const visible = () => window.innerWidth > 860 ? 3 : window.innerWidth > 560 ? 2 : 1;
-
     function slide(dir) {
       const max = items.length - visible();
       pos = Math.max(0, Math.min(pos + dir, max));
       const w = items[0].offsetWidth + 24;
       track.style.transform = `translateX(-${pos * w}px)`;
     }
-
     document.getElementById('pptPrev').addEventListener('click', () => slide(-1));
     document.getElementById('pptNext').addEventListener('click', () => slide(1));
   })();
@@ -482,7 +485,57 @@
   }
   document.getElementById('modalClose').addEventListener('click', closeModal);
   document.getElementById('resumeModal').addEventListener('click', e => { if (e.target === document.getElementById('resumeModal')) closeModal(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  /* ── SHARED LIGHTBOX ── */
+  const lightboxOverlay = document.getElementById('lightboxOverlay');
+  const lightboxImg     = document.getElementById('lightboxImg');
+  const lightboxClose   = document.getElementById('lightboxClose');
+
+  function openLightbox(src) {
+    lightboxImg.src = src;
+    lightboxOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    lightboxOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightboxOverlay.addEventListener('click', e => { if (e.target === lightboxOverlay) closeLightbox(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeLightbox(); closeModal(); } });
+
+  /* Poster cards lightbox */
+  document.querySelectorAll('.poster-card').forEach(card => {
+    card.addEventListener('click', () => openLightbox(card.dataset.img));
+  });
+
+  /* Creative cards lightbox */
+  document.querySelectorAll('.creative-card').forEach(card => {
+    card.addEventListener('click', () => openLightbox(card.dataset.img));
+  });
+
+  /* ── BANNERS AUTO SCROLL ── */
+  (function() {
+    const track = document.getElementById('bannersTrack');
+    if (!track) return;
+    let paused = false;
+    track.addEventListener('mouseenter', () => paused = true);
+    track.addEventListener('mouseleave', () => paused = false);
+
+    let x = 0;
+    const speed = 0.6; // px per frame
+    function animate() {
+      if (!paused) {
+        x += speed;
+        const half = track.scrollWidth / 2;
+        if (x >= half) x = 0;
+        track.style.transform = `translateX(-${x}px)`;
+      }
+      requestAnimationFrame(animate);
+    }
+    animate();
+  })();
   </script>
 </body>
 </html>
