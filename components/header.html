@@ -65,14 +65,22 @@
     <ul class="mobile-nav-list">
       <li><a href="/index.html">Home</a></li>
       <li><a href="/about.html">About</a></li>
-      <li>
-        <button class="mobile-dropdown-btn" id="mBtn">Services <span class="m-arrow">&#9660;</span></button>
+
+      <!-- SERVICES: link alag, arrow alag -->
+      <li class="mobile-has-sub">
+        <div class="mobile-srv-row">
+          <a href="/services.html" class="mobile-srv-link">Services</a>
+          <button class="mobile-arrow-btn" id="mBtn" aria-label="Toggle services">
+            <span class="m-arrow" id="mArrow">&#9660;</span>
+          </button>
+        </div>
         <ul class="mobile-sub" id="mSub">
-          <li><a href="/web-design.html">Web Design &amp; Development</a></li>
-          <li><a href="/branding.html">Branding &amp; Creative Design</a></li>
-          <li><a href="/consulting.html">Consulting &amp; Strategy</a></li>
+          <li><a href="/web-design.html">&#128187; Web Design &amp; Development</a></li>
+          <li><a href="/branding.html">&#10022; Branding &amp; Creative Design</a></li>
+          <li><a href="/consulting.html">&#128200; Consulting &amp; Strategy</a></li>
         </ul>
       </li>
+
       <li><a href="/portfolio.html">Portfolio</a></li>
       <li><a href="/blog.html">Blog</a></li>
       <li><a href="/pricing.html">Pricing</a></li>
