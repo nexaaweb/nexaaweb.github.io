@@ -20,7 +20,7 @@ function initHeader() {
   const header     = document.getElementById('siteHeader');
   const hamburger  = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
-  const mBtn       = document.getElementById('mBtn');
+  const mBtn       = document.getElementById('mBtn');   /* arrow button only */
   const mSub       = document.getElementById('mSub');
 
   /* scroll shadow */
@@ -37,15 +37,17 @@ function initHeader() {
     });
   }
 
-  /* mobile services sub-dropdown */
+  /* mobile services — ONLY arrow button toggles sub-menu
+     services link itself navigates to /services.html normally */
   if (mBtn && mSub) {
-    mBtn.addEventListener('click', function () {
-      this.classList.toggle('open');
-      mSub.classList.toggle('open');
+    mBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      const isOpen = mSub.classList.toggle('open');
+      this.classList.toggle('open', isOpen);
     });
   }
 
-  /* active nav link */
+  /* active nav link highlight */
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-link').forEach(link => {
     const linkPage = (link.getAttribute('href') || '').split('/').pop();
