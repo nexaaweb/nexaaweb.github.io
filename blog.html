@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Blog &amp; Insights — NexaaWeb</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
 <link rel="stylesheet" href="assets/css/header.css"/>
 <link rel="stylesheet" href="assets/css/footer.css"/>
@@ -31,24 +31,30 @@
     overflow-x: hidden;
   }
 
-  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+  }
 
   .label {
     font-family: 'DM Sans', sans-serif;
-    font-size: 11px; font-weight: 700;
-    letter-spacing: 3px; text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
     color: var(--red);
   }
 
-  /* ══════════════════════════════
-     HERO
-  ══════════════════════════════ */
+  /* ==============================
+     SECTION 1 — HERO
+  ============================== */
   .hero {
     background: var(--white);
     text-align: center;
     padding: 100px 24px 80px;
-    position: relative; overflow: hidden;
+    position: relative;
+    overflow: hidden;
   }
+  /* subtle bg pattern */
   .hero::before {
     content: '';
     position: absolute; inset: 0;
@@ -59,17 +65,24 @@
     pointer-events: none;
   }
   .hero > * { position: relative; z-index: 1; }
+
   .hero .label { margin-bottom: 18px; display: block; }
+
   .hero h1 {
-    font-size: clamp(40px, 6vw, 72px); font-weight: 900;
-    color: var(--black); line-height: 1.1;
-    margin-bottom: 22px; letter-spacing: -2px;
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 900;
+    color: var(--black);
+    line-height: 1.1;
+    margin-bottom: 22px;
+    letter-spacing: -2px;
   }
   .hero h1 span { color: var(--red); }
+
   .hero p {
     max-width: 620px; margin: 0 auto 48px;
     font-size: 16px; line-height: 1.85;
-    color: var(--text-light); font-weight: 300;
+    color: var(--text-light);
+    font-weight: 300;
   }
 
   /* Search */
@@ -88,8 +101,10 @@
     border: 1.5px solid var(--border);
     border-radius: 50px;
     font-family: 'DM Sans', sans-serif;
-    font-size: 15px; color: var(--black);
-    outline: none; background: var(--white);
+    font-size: 15px;
+    color: var(--black);
+    outline: none;
+    background: var(--white);
     transition: border-color 0.2s, box-shadow 0.2s;
   }
   .search-wrap input:focus {
@@ -104,12 +119,13 @@
     pointer-events: none;
   }
 
-  /* ══════════════════════════════
-     CATEGORIES
-  ══════════════════════════════ */
+  /* ==============================
+     SECTION 2 — CATEGORIES
+  ============================== */
   .categories-nav {
     background: var(--white);
-    padding: 28px 24px; text-align: center;
+    padding: 28px 24px;
+    text-align: center;
     border-bottom: 1px solid rgba(0,0,0,0.07);
     position: sticky; top: 72px; z-index: 100;
   }
@@ -120,10 +136,12 @@
   }
   .cat-list li {
     font-size: 14px; font-weight: 600;
-    padding: 10px 22px; cursor: pointer;
+    padding: 10px 22px;
+    cursor: pointer;
     color: var(--black);
     transition: color 0.2s;
-    position: relative; white-space: nowrap;
+    position: relative;
+    white-space: nowrap;
     font-family: 'DM Sans', sans-serif;
   }
   .cat-list li:not(:last-child)::after {
@@ -138,20 +156,26 @@
     border-bottom: 2px solid var(--red);
   }
 
-  /* ══════════════════════════════
-     FEATURED
-  ══════════════════════════════ */
+  /* ==============================
+     SECTION 3 — FEATURED
+  ============================== */
   .featured {
     background: var(--black);
     padding: 80px 8%;
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 60px; align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
   }
-  .featured-text .label { color: rgba(255,255,255,0.45); margin-bottom: 16px; display: block; }
+  .featured-text .label {
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 16px; display: block;
+  }
   .featured-text h2 {
     font-size: clamp(28px, 3.5vw, 46px);
-    color: var(--white); line-height: 1.15;
-    margin-bottom: 20px; letter-spacing: -1px;
+    color: var(--white);
+    line-height: 1.15; margin-bottom: 20px;
+    letter-spacing: -1px;
   }
   .featured-text h2 span { color: var(--red); }
   .featured-text p {
@@ -163,10 +187,10 @@
     display: inline-flex; align-items: center; gap: 8px;
     color: var(--red); font-size: 14px; font-weight: 700;
     text-decoration: none; margin-top: 14px;
-    cursor: pointer;
     transition: gap 0.2s;
   }
   .featured-text .read-link:hover { gap: 14px; }
+
   .featured-img {
     width: 100%; height: 420px;
     background:
@@ -186,95 +210,28 @@
     text-transform: uppercase; padding: 6px 14px;
   }
 
-  /* ══════════════════════════════
-     HOME INSIGHTS SECTION (new)
-  ══════════════════════════════ */
-  .home-insights-section {
-    padding: 90px 8%;
-    background: var(--off-white);
-  }
-  .home-insights-section .section-header { text-align: left; margin-bottom: 52px; }
-  .home-insights-section .section-header p {
-    font-size: 15px; color: var(--text-light);
-    font-weight: 300; line-height: 1.8;
-    max-width: 560px; margin-top: 10px;
-  }
-
-  .hi-grid {
-    display: grid; grid-template-columns: repeat(3,1fr); gap: 28px;
-  }
-
-  .hi-card {
-    background: var(--white);
-    border-radius: 4px; overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
-    cursor: pointer;
-    transition: transform 0.32s ease, box-shadow 0.32s ease;
-  }
-  .hi-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 22px 52px rgba(0,0,0,0.13);
-  }
-  .hi-card-img {
-    position: relative; height: 200px; overflow: hidden;
-  }
-  .hi-card-img img {
-    width: 100%; height: 100%; object-fit: cover;
-    transition: transform 0.55s ease;
-  }
-  .hi-card:hover .hi-card-img img { transform: scale(1.07); }
-  .hi-cat-badge {
-    position: absolute; top: 14px; left: 14px;
-    background: var(--red); color: var(--white);
-    font-size: 10px; font-weight: 700;
-    letter-spacing: 2px; text-transform: uppercase;
-    padding: 4px 12px; border-radius: 2px;
-  }
-  .hi-card-body { padding: 22px 24px 26px; }
-  .hi-card-date {
-    font-size: 11px; color: var(--text-light);
-    letter-spacing: 1px; text-transform: uppercase;
-    display: block; margin-bottom: 10px;
-  }
-  .hi-card-body h4 {
-    font-size: 17px; font-weight: 700;
-    color: var(--black); line-height: 1.35;
-    margin-bottom: 10px;
-    transition: color 0.25s;
-  }
-  .hi-card:hover .hi-card-body h4 { color: var(--red); }
-  .hi-card-body p {
-    font-size: 13px; color: #666;
-    line-height: 1.75; font-weight: 300; margin-bottom: 18px;
-  }
-  .hi-read-link {
-    display: inline-flex; align-items: center; gap: 5px;
-    font-size: 12.5px; font-weight: 700;
-    color: var(--red); text-decoration: none;
-    cursor: pointer;
-    background: none; border: none; padding: 0;
-  }
-  .hi-read-link span { transition: transform 0.2s; }
-  .hi-card:hover .hi-read-link span { transform: translateX(5px); }
-
-  /* ══════════════════════════════
-     MAIN BLOG ARTICLES
-  ══════════════════════════════ */
+  /* ==============================
+     SECTION 4 — MAIN BLOG CONTENT
+  ============================== */
   .blog-section {
     padding: 80px 8%;
     background: var(--white);
   }
-  .section-header { text-align: center; margin-bottom: 60px; }
+  .section-header {
+    text-align: center; margin-bottom: 60px;
+  }
   .section-header h2 {
     font-size: clamp(28px, 3vw, 42px);
-    color: var(--black); margin-top: 12px; letter-spacing: -1px;
+    color: var(--black); margin-top: 12px;
+    letter-spacing: -1px;
   }
 
   .article-list { max-width: 900px; margin: 0 auto; }
 
-  .article-item { padding: 44px 0; cursor: pointer; }
-  .article-item:not(:last-child) { border-bottom: 1.5px solid var(--red); }
-  .article-item:hover h3 { color: var(--red); }
+  .article-item { padding: 44px 0; }
+  .article-item:not(:last-child) {
+    border-bottom: 1.5px solid var(--red);
+  }
 
   .article-meta {
     display: flex; align-items: center; gap: 16px;
@@ -285,19 +242,23 @@
     text-transform: uppercase; color: var(--red);
     font-family: 'DM Sans', sans-serif;
   }
-  .article-date { font-size: 12px; color: var(--text-light); }
+  .article-date {
+    font-size: 12px; color: var(--text-light);
+  }
   .article-item h3 {
     font-size: clamp(22px, 2.5vw, 30px);
-    color: var(--black); line-height: 1.2;
-    margin-bottom: 14px; font-weight: 800;
-    letter-spacing: -0.5px;
-    transition: color 0.25s;
+    color: var(--black);
+    line-height: 1.2; margin-bottom: 14px;
+    font-weight: 800; letter-spacing: -0.5px;
   }
   .article-item p {
     font-size: 15px; line-height: 1.88;
-    color: #444; font-weight: 300; max-width: 760px;
+    color: #444; font-weight: 300;
+    max-width: 760px;
   }
   .article-item p + p { margin-top: 12px; }
+
+  /* article tags — extra touch */
   .article-tags {
     display: flex; gap: 8px; flex-wrap: wrap;
     margin-top: 20px;
@@ -308,32 +269,35 @@
     color: var(--text-light);
     background: rgba(0,0,0,0.05);
     padding: 4px 12px; border-radius: 50px;
-    transition: background 0.2s, color 0.2s; cursor: default;
+    transition: background 0.2s, color 0.2s;
+    cursor: default;
   }
   .article-tag:hover { background: rgba(185,36,37,0.08); color: var(--red); }
-  .read-time { font-size: 11.5px; color: var(--text-light); font-weight: 400; }
+
+  /* estimated read time */
+  .read-time {
+    font-size: 11.5px; color: var(--text-light);
+    font-weight: 400;
+  }
   .read-time::before { content: '· '; }
 
-  /* Arrow row on article items */
-  .article-arrow-row {
-    display: flex; align-items: center; gap: 8px;
-    margin-top: 18px;
-    color: var(--red); font-size: 13px; font-weight: 700;
-    transition: gap 0.2s;
-  }
-  .article-item:hover .article-arrow-row { gap: 14px; }
-
-  /* ══════════════════════════════
-     MID CTA
-  ══════════════════════════════ */
+  /* ==============================
+     SECTION 5 — MID CTA
+  ============================== */
   .mid-cta {
-    background: var(--red); padding: 80px 24px; text-align: center;
+    background: var(--red);
+    padding: 80px 24px;
+    text-align: center;
   }
   .mid-cta h2 {
     font-size: clamp(26px, 3vw, 42px);
-    color: var(--white); margin-bottom: 14px; letter-spacing: -1px;
+    color: var(--white); margin-bottom: 14px;
+    letter-spacing: -1px;
   }
-  .mid-cta p { color: rgba(255,255,255,0.85); font-size: 16px; margin-bottom: 36px; font-weight: 300; }
+  .mid-cta p {
+    color: rgba(255,255,255,0.8);
+    font-size: 16px; margin-bottom: 36px; font-weight: 300;
+  }
   .btn-white {
     display: inline-block;
     background: var(--white); color: var(--red);
@@ -346,43 +310,60 @@
   }
   .btn-white:hover { background: transparent; color: var(--white); }
 
-  /* ══════════════════════════════
-     SMART SOLUTIONS
-  ══════════════════════════════ */
-  .solutions { padding: 90px 8%; background: var(--white); }
+  /* ==============================
+     SECTION 6 — SMART SOLUTIONS
+  ============================== */
+  .solutions {
+    padding: 90px 8%;
+    background: var(--white);
+  }
   .solutions-grid {
     max-width: 820px; margin: 0 auto;
     display: flex; flex-direction: column; gap: 52px;
   }
   .solution-num {
-    font-size: 10.5px; font-weight: 700; letter-spacing: 3px;
-    color: var(--red); text-transform: uppercase;
-    margin-bottom: 10px; display: block;
-    font-family: 'DM Sans', sans-serif;
+    font-size: 10.5px; font-weight: 700;
+    letter-spacing: 3px; color: var(--red);
+    text-transform: uppercase; margin-bottom: 10px;
+    display: block; font-family: 'DM Sans', sans-serif;
   }
   .solution-block h3 {
     font-size: clamp(20px, 2vw, 28px);
-    color: var(--black); margin-bottom: 12px; letter-spacing: -0.5px;
+    color: var(--black); margin-bottom: 12px;
+    letter-spacing: -0.5px;
   }
   .solution-block h3 span { color: var(--red); }
-  .solution-block p { font-size: 15px; line-height: 1.85; color: #555; font-weight: 300; max-width: 680px; }
+  .solution-block p {
+    font-size: 15px; line-height: 1.85;
+    color: #555; font-weight: 300; max-width: 680px;
+  }
 
-  /* ══════════════════════════════
-     BUDGET
-  ══════════════════════════════ */
-  .budget { background: var(--white); padding: 90px 8%; text-align: center; }
+  /* ==============================
+     SECTION 7 — BUDGET-FRIENDLY
+  ============================== */
+  .budget {
+    background: var(--white);
+    padding: 90px 8%; text-align: center;
+  }
   .budget-inner { max-width: 740px; margin: 0 auto; }
   .budget-inner h2 {
     font-size: clamp(26px, 3vw, 40px);
-    color: var(--black); margin: 12px 0 24px; letter-spacing: -1px;
+    color: var(--black); margin: 12px 0 24px;
+    letter-spacing: -1px;
   }
   .budget-inner h2 span { color: var(--red); }
-  .budget-inner p { font-size: 15px; line-height: 1.9; color: #555; margin-bottom: 16px; font-weight: 300; }
+  .budget-inner p {
+    font-size: 15px; line-height: 1.9;
+    color: #555; margin-bottom: 16px; font-weight: 300;
+  }
 
-  /* ══════════════════════════════
-     REAL PROJECT INSIGHTS
-  ══════════════════════════════ */
-  .projects { padding: 90px 8%; background: var(--white); }
+  /* ==============================
+     SECTION 8 — REAL PROJECT INSIGHTS
+  ============================== */
+  .projects {
+    padding: 90px 8%;
+    background: var(--white);
+  }
   .projects-list {
     max-width: 820px; margin: 0 auto;
     display: flex; flex-direction: column; gap: 44px;
@@ -394,10 +375,11 @@
     left: 12px; top: 10px; bottom: 10px; width: 2px;
     background: linear-gradient(to bottom, var(--red), rgba(185,36,37,0.1));
   }
-  .project-item { position: relative; cursor: pointer; }
+  .project-item { position: relative; }
   .project-item::before {
     content: '';
-    position: absolute; left: -42px; top: 8px;
+    position: absolute;
+    left: -42px; top: 8px;
     width: 14px; height: 14px; border-radius: 50%;
     background: var(--red);
     border: 3px solid var(--white);
@@ -405,24 +387,22 @@
   }
   .project-item h3 {
     font-size: clamp(18px, 2vw, 26px);
-    color: var(--black); margin-bottom: 10px; letter-spacing: -0.3px;
-    transition: color 0.25s;
+    color: var(--black); margin-bottom: 10px;
+    letter-spacing: -0.3px;
   }
-  .project-item:hover h3 { color: var(--red); }
   .project-item h3 span { color: var(--red); }
-  .project-item p { font-size: 15px; line-height: 1.8; color: #555; font-weight: 300; }
-  .project-arrow {
-    display: inline-flex; align-items: center; gap: 6px;
-    margin-top: 10px; color: var(--red);
-    font-size: 13px; font-weight: 700;
-    transition: gap 0.2s;
+  .project-item p {
+    font-size: 15px; line-height: 1.8;
+    color: #555; font-weight: 300;
   }
-  .project-item:hover .project-arrow { gap: 12px; }
 
-  /* ══════════════════════════════
-     QUICK TIPS
-  ══════════════════════════════ */
-  .tips { background: var(--white); padding: 90px 8%; }
+  /* ==============================
+     SECTION 9 — QUICK TIPS
+  ============================== */
+  .tips {
+    background: var(--white);
+    padding: 90px 8%;
+  }
   .tips-grid {
     max-width: 820px; margin: 40px auto 0;
     display: grid; grid-template-columns: 1fr 1fr;
@@ -435,13 +415,17 @@
   }
   .tip-dot {
     width: 8px; height: 8px; border-radius: 50%;
-    background: var(--red); flex-shrink: 0; margin-top: 7px;
+    background: var(--red);
+    flex-shrink: 0; margin-top: 7px;
   }
 
-  /* ══════════════════════════════
-     BUSINESS INSIGHTS
-  ══════════════════════════════ */
-  .biz-insights { background: var(--white); padding: 90px 8%; }
+  /* ==============================
+     SECTION 10 — BUSINESS INSIGHTS
+  ============================== */
+  .biz-insights {
+    background: var(--white);
+    padding: 90px 8%;
+  }
   .biz-list {
     max-width: 820px; margin: 0 auto;
     display: flex; flex-direction: column;
@@ -458,29 +442,46 @@
   .biz-item:first-child { border-top: 1px solid rgba(0,0,0,0.07); }
   .biz-item h3 {
     font-size: clamp(17px, 1.8vw, 23px);
-    color: var(--black); margin-bottom: 8px; letter-spacing: -0.3px;
+    color: var(--black); margin-bottom: 8px;
+    letter-spacing: -0.3px;
   }
-  .biz-item p { font-size: 14px; color: var(--text-light); font-weight: 300; line-height: 1.6; max-width: 600px; }
-  .biz-arrow { color: var(--red); font-size: 22px; flex-shrink: 0; transition: transform 0.2s; }
+  .biz-item p {
+    font-size: 14px; color: var(--text-light);
+    font-weight: 300; line-height: 1.6; max-width: 600px;
+  }
+  .biz-arrow {
+    color: var(--red); font-size: 22px; flex-shrink: 0;
+    transition: transform 0.2s;
+  }
   .biz-item:hover .biz-arrow { transform: translateX(6px); }
 
-  /* ══════════════════════════════
-     NEWSLETTER
-  ══════════════════════════════ */
-  .newsletter { background: var(--black); padding: 72px 24px; text-align: center; }
+  /* ==============================
+     NEWSLETTER — EXTRA SECTION
+  ============================== */
+  .newsletter {
+    background: var(--black);
+    padding: 72px 24px;
+    text-align: center;
+  }
   .newsletter h2 {
     font-size: clamp(24px, 3vw, 38px);
-    color: var(--white); margin-bottom: 12px; letter-spacing: -1px;
+    color: var(--white); margin-bottom: 12px;
+    letter-spacing: -1px;
   }
   .newsletter h2 span { color: var(--red); }
-  .newsletter p { color: rgba(255,255,255,0.5); font-size: 15px; margin-bottom: 32px; font-weight: 300; }
+  .newsletter p {
+    color: rgba(255,255,255,0.5);
+    font-size: 15px; margin-bottom: 32px; font-weight: 300;
+  }
   .newsletter-form {
     display: flex; justify-content: center;
     gap: 0; max-width: 480px; margin: 0 auto;
   }
   .newsletter-form input {
-    flex: 1; padding: 14px 22px;
-    font-family: 'DM Sans', sans-serif; font-size: 14px;
+    flex: 1;
+    padding: 14px 22px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
     border: 1.5px solid rgba(255,255,255,0.15);
     background: rgba(255,255,255,0.06);
     color: var(--white); outline: none;
@@ -501,16 +502,23 @@
   }
   .newsletter-form button:hover { background: #9b1d1e; }
 
-  /* ══════════════════════════════
+  /* ==============================
      FINAL CTA
-  ══════════════════════════════ */
-  .final-cta { background: var(--black); padding: 100px 24px; text-align: center; }
+  ============================== */
+  .final-cta {
+    background: var(--black);
+    padding: 100px 24px; text-align: center;
+  }
   .final-cta h2 {
     font-size: clamp(28px, 4vw, 52px);
-    color: var(--white); margin-bottom: 16px; letter-spacing: -1.5px;
+    color: var(--white); margin-bottom: 16px;
+    letter-spacing: -1.5px;
   }
   .final-cta h2 span { color: var(--red); }
-  .final-cta p { color: rgba(255,255,255,0.55); font-size: 16px; margin-bottom: 40px; font-weight: 300; }
+  .final-cta p {
+    color: rgba(255,255,255,0.55);
+    font-size: 16px; margin-bottom: 40px; font-weight: 300;
+  }
   .btn-red {
     display: inline-block;
     background: var(--red); color: var(--white);
@@ -525,137 +533,6 @@
     background: transparent; color: var(--red);
     box-shadow: 0 0 24px rgba(185,36,37,0.4), 0 0 48px rgba(185,36,37,0.15);
   }
-
-  /* ══════════════════════════════
-     ARTICLE POP-UP MODAL
-  ══════════════════════════════ */
-  .art-modal-overlay {
-    position: fixed; inset: 0; z-index: 9999;
-    background: rgba(0,0,0,0.85);
-    backdrop-filter: blur(6px);
-    display: flex; align-items: flex-start; justify-content: center;
-    overflow-y: auto;
-    padding: 40px 16px;
-    opacity: 0; pointer-events: none;
-    transition: opacity 0.3s ease;
-  }
-  .art-modal-overlay.active { opacity: 1; pointer-events: all; }
-
-  .art-modal-box {
-    background: var(--white);
-    max-width: 860px; width: 100%;
-    border-radius: 8px; overflow: hidden;
-    position: relative;
-    transform: translateY(28px);
-    transition: transform 0.35s cubic-bezier(.22,1,.36,1);
-    box-shadow: 0 40px 100px rgba(0,0,0,0.5);
-  }
-  .art-modal-overlay.active .art-modal-box { transform: translateY(0); }
-
-  .art-modal-hero {
-    width: 100%; height: 320px; object-fit: cover;
-    display: block;
-  }
-  .art-modal-body { padding: 40px 44px 52px; }
-  .art-modal-meta {
-    display: flex; align-items: center; gap: 14px;
-    margin-bottom: 16px;
-  }
-  .art-modal-cat {
-    font-size: 10.5px; font-weight: 700; letter-spacing: 2.5px;
-    text-transform: uppercase; color: var(--red);
-  }
-  .art-modal-date { font-size: 12px; color: var(--text-light); }
-  .art-modal-read { font-size: 12px; color: var(--text-light); }
-  .art-modal-read::before { content: '· '; }
-  .art-modal-body h2 {
-    font-size: clamp(24px, 3vw, 36px);
-    color: var(--black); line-height: 1.2;
-    margin-bottom: 18px; letter-spacing: -1px;
-  }
-  .art-modal-body .art-intro {
-    font-size: 16px; color: #555;
-    line-height: 1.85; font-weight: 300;
-    margin-bottom: 28px;
-    border-left: 3px solid var(--red);
-    padding-left: 18px;
-  }
-
-  /* Content blocks inside modal */
-  .art-section { margin-bottom: 36px; }
-  .art-section h3 {
-    font-size: 20px; color: var(--black);
-    margin-bottom: 10px; letter-spacing: -0.3px;
-  }
-  .art-section h3 .num {
-    display: inline-block;
-    width: 28px; height: 28px; border-radius: 50%;
-    background: var(--red); color: var(--white);
-    font-size: 12px; font-weight: 700;
-    text-align: center; line-height: 28px;
-    margin-right: 10px; vertical-align: middle;
-    font-family: 'DM Sans', sans-serif;
-  }
-  .art-section p {
-    font-size: 15px; color: #444;
-    line-height: 1.88; font-weight: 300;
-  }
-
-  /* Image pair inside modal */
-  .art-img-row {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
-    margin: 28px 0;
-  }
-  .art-img-row img {
-    width: 100%; height: 200px; object-fit: cover;
-    border-radius: 4px;
-  }
-  .art-img-single { margin: 28px 0; }
-  .art-img-single img { width: 100%; height: 260px; object-fit: cover; border-radius: 4px; }
-  .art-img-caption {
-    font-size: 11.5px; color: var(--text-light);
-    text-align: center; margin-top: 8px;
-    font-style: italic;
-  }
-
-  /* Stat pills */
-  .art-stat-row {
-    display: flex; gap: 16px; flex-wrap: wrap;
-    margin: 24px 0;
-  }
-  .art-stat {
-    background: rgba(185,36,37,0.06);
-    border: 1px solid rgba(185,36,37,0.2);
-    border-radius: 4px;
-    padding: 12px 20px; text-align: center;
-  }
-  .art-stat strong {
-    display: block; font-size: 22px; font-weight: 900;
-    color: var(--red); font-family: 'Playfair Display', serif;
-  }
-  .art-stat span { font-size: 11px; color: var(--text-light); letter-spacing: 1px; text-transform: uppercase; }
-
-  /* Tags inside modal */
-  .art-modal-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 28px; }
-  .art-modal-tag {
-    font-size: 10.5px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
-    color: var(--text-light); background: rgba(0,0,0,0.05);
-    padding: 4px 12px; border-radius: 50px;
-  }
-
-  /* Close button */
-  .art-modal-close {
-    position: absolute; top: 16px; right: 16px;
-    width: 38px; height: 38px; border-radius: 50%;
-    background: rgba(255,255,255,0.9);
-    border: 1px solid rgba(0,0,0,0.1);
-    color: var(--black); font-size: 16px;
-    cursor: pointer; z-index: 10;
-    display: flex; align-items: center; justify-content: center;
-    transition: background 0.2s, transform 0.2s;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-  }
-  .art-modal-close:hover { background: var(--red); color: var(--white); transform: rotate(90deg); }
 
   /* ANIMATIONS */
   .fade-up { animation: fadeUp 0.7s cubic-bezier(.22,1,.36,1) both; }
@@ -680,9 +557,6 @@
     .newsletter-form { flex-direction: column; }
     .newsletter-form input,
     .newsletter-form button { border-radius: 2px; width: 100%; }
-    .hi-grid { grid-template-columns: 1fr; }
-    .art-modal-body { padding: 28px 22px 40px; }
-    .art-img-row { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -690,15 +564,7 @@
 
   <div id="header-placeholder"></div>
 
-  <!-- ══ ARTICLE POP-UP MODAL ══ -->
-  <div class="art-modal-overlay" id="artModal">
-    <div class="art-modal-box" id="artModalBox">
-      <button class="art-modal-close" id="artModalClose">✕</button>
-      <div id="artModalContent"></div>
-    </div>
-  </div>
-
-  <!-- ══ HERO ══ -->
+  <!-- ⭐ HERO -->
   <section class="hero">
     <span class="label fade-up fade-up-d1">Blog &amp; Insights</span>
     <h1 class="fade-up fade-up-d2">Learn, <span>Grow</span> &amp; Stay Ahead</h1>
@@ -709,7 +575,7 @@
     </div>
   </section>
 
-  <!-- ══ CATEGORIES ══ -->
+  <!-- ⭐ CATEGORIES -->
   <nav class="categories-nav" aria-label="Categories">
     <ul class="cat-list" id="catList">
       <li class="active" data-cat="all">All</li>
@@ -721,75 +587,21 @@
     </ul>
   </nav>
 
-  <!-- ══ FEATURED ══ -->
-  <section class="featured" id="section-all">
+  <!-- ⭐ FEATURED -->
+  <section class="featured">
     <div class="featured-text" data-aos="fade-right" data-aos-duration="800">
       <span class="label">Featured Article</span>
       <h2>How Much Time Does It Take to <span>Build a Website?</span></h2>
       <p>Building a website depends on the complexity, number of pages, and features required. Simple websites with basic structure can be completed within a few days, while business websites with multiple pages, forms, and integrations may take more time.</p>
       <p>Advanced websites with custom design, unique UI/UX, and complex functionality require detailed planning, development, and testing. Choosing the right approach helps ensure better performance, user experience, and long-term growth.</p>
-      <span class="read-link" onclick="openArticle('website-time')">Read Full Article →</span>
+      <a href="#" class="read-link">Read Full Article →</a>
     </div>
     <div class="featured-img" data-aos="fade-left" data-aos-duration="800">
       <div class="img-tag">Featured</div>
     </div>
   </section>
 
-  <!-- ══ HOME INSIGHTS SECTION (3 cards from homepage) ══ -->
-  <section class="home-insights-section" id="section-insights" data-aos="fade-up">
-    <div class="section-header">
-      <span class="label">Insights</span>
-      <h2>Latest Insights &amp; <span style="color:var(--red)">Resources</span></h2>
-      <p>Learn modern web design, branding strategies, and digital growth techniques to improve your business online.</p>
-    </div>
-    <div class="hi-grid">
-
-      <!-- Card 1: Web Design Trends -->
-      <div class="hi-card" data-aos="fade-up" data-aos-delay="0" onclick="openArticle('web-design-trends')">
-        <div class="hi-card-img">
-          <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=700&q=80" alt="Web Design Trends 2026"/>
-          <span class="hi-cat-badge">Web Design</span>
-        </div>
-        <div class="hi-card-body">
-          <span class="hi-card-date">March 2026</span>
-          <h4>10 Web Design Trends That Will Dominate in 2026</h4>
-          <p>Explore the biggest design trends shaping the web this year — from AI-generated layouts to immersive micro-animations.</p>
-          <button class="hi-read-link">Read More <span>→</span></button>
-        </div>
-      </div>
-
-      <!-- Card 2: Branding -->
-      <div class="hi-card" data-aos="fade-up" data-aos-delay="100" onclick="openArticle('branding-growth')">
-        <div class="hi-card-img">
-          <img src="https://images.unsplash.com/photo-1493421419110-74f4e85ba126?w=700&q=80" alt="Branding & Business Growth"/>
-          <span class="hi-cat-badge">Branding</span>
-        </div>
-        <div class="hi-card-body">
-          <span class="hi-card-date">February 2026</span>
-          <h4>Why Strong Branding Is the Foundation of Business Growth</h4>
-          <p>A powerful brand identity builds trust, drives recognition, and sets you apart from competitors in any market.</p>
-          <button class="hi-read-link">Read More <span>→</span></button>
-        </div>
-      </div>
-
-      <!-- Card 3: AI Strategy -->
-      <div class="hi-card" data-aos="fade-up" data-aos-delay="200" onclick="openArticle('ai-strategy')">
-        <div class="hi-card-img">
-          <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=700&q=80" alt="AI Digital Strategy"/>
-          <span class="hi-cat-badge">Strategy</span>
-        </div>
-        <div class="hi-card-body">
-          <span class="hi-card-date">January 2026</span>
-          <h4>How AI Is Changing Digital Strategy for Small Businesses</h4>
-          <p>From automation to smart analytics — discover how small businesses are leveraging AI to compete with larger brands.</p>
-          <button class="hi-read-link">Read More <span>→</span></button>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══ MAIN BLOG ARTICLES ══ -->
+  <!-- ⭐ MAIN BLOG -->
   <section class="blog-section">
     <div class="section-header" data-aos="fade-up">
       <span class="label">Latest Articles</span>
@@ -798,9 +610,7 @@
 
     <div class="article-list" id="articleList">
 
-      <article class="article-item" data-aos="fade-up" data-category="web-design"
-        data-title="How to Build a Professional Website for Your Business"
-        onclick="openArticle('build-website')">
+      <article class="article-item" id="article-web-design" data-aos="fade-up" data-category="web-design" data-title="How to Build a Professional Website for Your Business">
         <div class="article-meta">
           <span class="article-cat">Web Design</span>
           <span class="read-time">5 min read</span>
@@ -814,12 +624,9 @@
           <span class="article-tag">Design</span>
           <span class="article-tag">Business</span>
         </div>
-        <div class="article-arrow-row">Read Full Article →</div>
       </article>
 
-      <article class="article-item" data-aos="fade-up" data-aos-delay="50" data-category="branding"
-        data-title="Why Your Brand Identity Matters Online"
-        onclick="openArticle('brand-identity')">
+      <article class="article-item" id="article-branding" data-aos="fade-up" data-aos-delay="50" data-category="branding" data-title="Why Your Brand Identity Matters Online">
         <div class="article-meta">
           <span class="article-cat">Branding</span>
           <span class="read-time">4 min read</span>
@@ -833,12 +640,9 @@
           <span class="article-tag">Identity</span>
           <span class="article-tag">Logo</span>
         </div>
-        <div class="article-arrow-row">Read Full Article →</div>
       </article>
 
-      <article class="article-item" data-aos="fade-up" data-aos-delay="100" data-category="seo"
-        data-title="Understanding SEO for Small Businesses"
-        onclick="openArticle('seo-basics')">
+      <article class="article-item" id="article-seo" data-aos="fade-up" data-aos-delay="100" data-category="seo" data-title="Understanding SEO for Small Businesses">
         <div class="article-meta">
           <span class="article-cat">SEO</span>
           <span class="read-time">6 min read</span>
@@ -852,12 +656,9 @@
           <span class="article-tag">Traffic</span>
           <span class="article-tag">Google</span>
         </div>
-        <div class="article-arrow-row">Read Full Article →</div>
       </article>
 
-      <article class="article-item" data-aos="fade-up" data-aos-delay="150" data-category="business-growth"
-        data-title="How a Website Helps Your Business Grow"
-        onclick="openArticle('website-growth')">
+      <article class="article-item" id="article-business-growth" data-aos="fade-up" data-aos-delay="150" data-category="business-growth" data-title="How a Website Helps Your Business Grow">
         <div class="article-meta">
           <span class="article-cat">Business Growth</span>
           <span class="read-time">4 min read</span>
@@ -871,12 +672,9 @@
           <span class="article-tag">Strategy</span>
           <span class="article-tag">Sales</span>
         </div>
-        <div class="article-arrow-row">Read Full Article →</div>
       </article>
 
-      <article class="article-item" data-aos="fade-up" data-aos-delay="200" data-category="ai-technology"
-        data-title="How AI is Changing the Way Businesses Work"
-        onclick="openArticle('ai-business')">
+      <article class="article-item" id="article-ai" data-aos="fade-up" data-aos-delay="200" data-category="ai-technology" data-title="How AI is Changing the Way Businesses Work">
         <div class="article-meta">
           <span class="article-cat">AI &amp; Technology</span>
           <span class="read-time">5 min read</span>
@@ -890,21 +688,20 @@
           <span class="article-tag">Automation</span>
           <span class="article-tag">Technology</span>
         </div>
-        <div class="article-arrow-row">Read Full Article →</div>
       </article>
 
     </div>
     <div class="no-results" id="noResults">No articles found. Try a different search or category.</div>
   </section>
 
-  <!-- ══ MID CTA ══ -->
+  <!-- ⭐ MID CTA -->
   <section class="mid-cta" data-aos="zoom-in" data-aos-duration="600">
     <h2>Need Help With Your Website or Brand?</h2>
     <p>Let's build something powerful for your business.</p>
     <a href="/contact.html" class="btn-white">Start Your Project</a>
   </section>
 
-  <!-- ══ SMART SOLUTIONS ══ -->
+  <!-- ⭐ SMART SOLUTIONS -->
   <section class="solutions">
     <div class="section-header" data-aos="fade-up">
       <span class="label">What We Provide</span>
@@ -934,7 +731,7 @@
     </div>
   </section>
 
-  <!-- ══ BUDGET ══ -->
+  <!-- ⭐ BUDGET -->
   <section class="budget">
     <div class="budget-inner" data-aos="fade-up" data-aos-duration="900">
       <span class="label">Affordable Options</span>
@@ -945,32 +742,29 @@
     </div>
   </section>
 
-  <!-- ══ REAL PROJECT INSIGHTS ══ -->
+  <!-- ⭐ REAL PROJECT INSIGHTS -->
   <section class="projects">
     <div class="section-header" data-aos="fade-up">
       <span class="label">Case Studies</span>
       <h2>Real Project Insights</h2>
     </div>
     <div class="projects-list">
-      <div class="project-item" data-aos="fade-up" data-aos-delay="0" onclick="openArticle('case-1')">
+      <div class="project-item" data-aos="fade-up" data-aos-delay="0">
         <h3>How We Built a Business Website in <span>5 Days</span></h3>
         <p>A simple and fast website designed for a small business with a clean layout and essential features.</p>
-        <div class="project-arrow">Read More →</div>
       </div>
-      <div class="project-item" data-aos="fade-up" data-aos-delay="100" onclick="openArticle('case-2')">
+      <div class="project-item" data-aos="fade-up" data-aos-delay="100">
         <h3>How a Small Business Started Online with <span>Zero Maintenance Cost</span></h3>
         <p>We created a website using free hosting solutions, helping the business go online without ongoing expenses.</p>
-        <div class="project-arrow">Read More →</div>
       </div>
-      <div class="project-item" data-aos="fade-up" data-aos-delay="200" onclick="openArticle('case-3')">
+      <div class="project-item" data-aos="fade-up" data-aos-delay="200">
         <h3>From <span>Idea to Website:</span> A Complete Setup</h3>
         <p>A complete process of turning a business idea into a fully functional website ready for customers.</p>
-        <div class="project-arrow">Read More →</div>
       </div>
     </div>
   </section>
 
-  <!-- ══ QUICK TIPS ══ -->
+  <!-- ⭐ QUICK TIPS -->
   <section class="tips">
     <div class="section-header" data-aos="fade-up">
       <span class="label">Pro Advice</span>
@@ -1000,35 +794,35 @@
     </div>
   </section>
 
-  <!-- ══ BUSINESS INSIGHTS ══ -->
+  <!-- ⭐ BUSINESS INSIGHTS -->
   <section class="biz-insights">
     <div class="section-header" data-aos="fade-up">
       <span class="label">Knowledge Hub</span>
       <h2>Business &amp; Website Insights</h2>
     </div>
     <div class="biz-list" data-aos="fade-up" data-aos-delay="100">
-      <div class="biz-item" onclick="openArticle('why-website')">
+      <div class="biz-item">
         <div>
           <h3>Why Every Business Needs a Website</h3>
           <p>A website helps build trust, improve visibility, and attract more customers online.</p>
         </div>
         <span class="biz-arrow">→</span>
       </div>
-      <div class="biz-item" onclick="openArticle('best-solutions')">
+      <div class="biz-item">
         <div>
           <h3>Best Website Solutions for Small Businesses</h3>
           <p>Simple and effective website options for businesses starting their digital journey.</p>
         </div>
         <span class="biz-arrow">→</span>
       </div>
-      <div class="biz-item" onclick="openArticle('ai-modern')">
+      <div class="biz-item">
         <div>
           <h3>How AI is Changing Modern Businesses</h3>
           <p>AI tools and automation are helping businesses work smarter and grow faster.</p>
         </div>
         <span class="biz-arrow">→</span>
       </div>
-      <div class="biz-item" onclick="openArticle('choose-website')">
+      <div class="biz-item">
         <div>
           <h3>Choosing the Right Website for Your Business</h3>
           <p>Understanding different types of websites and selecting the best one based on your needs.</p>
@@ -1038,7 +832,7 @@
     </div>
   </section>
 
-  <!-- ══ NEWSLETTER ══ -->
+  <!-- ⭐ NEWSLETTER (EXTRA) -->
   <section class="newsletter" data-aos="fade-up">
     <h2>Stay <span>Updated</span> with NexaaWeb</h2>
     <p>Get the latest tips, insights, and strategies delivered straight to your inbox.</p>
@@ -1048,7 +842,7 @@
     </div>
   </section>
 
-  <!-- ══ FINAL CTA ══ -->
+  <!-- ⭐ FINAL CTA -->
   <section class="final-cta" data-aos="fade-up" data-aos-duration="700">
     <h2>Ready to <span>Build</span> Your Website?</h2>
     <p>Let's create a powerful and professional online presence for your business.</p>
@@ -1062,9 +856,7 @@
   <script>
     AOS.init({ once: true, duration: 700, easing: 'ease-out-quart' });
 
-    /* ══════════════════════════════
-       SEARCH — working filter
-    ══════════════════════════════ */
+    /* SEARCH */
     const searchInput = document.getElementById('searchInput');
     const articleList = document.getElementById('articleList');
     const noResults   = document.getElementById('noResults');
@@ -1076,9 +868,8 @@
       let visible = 0;
       articles.forEach(art => {
         const title    = art.getAttribute('data-title').toLowerCase();
-        const text     = art.innerText.toLowerCase();
         const category = art.getAttribute('data-category');
-        const matchSearch = query === '' || title.includes(query) || text.includes(query);
+        const matchSearch = query === '' || title.includes(query);
         const matchCat    = activeCat === 'all' || category === activeCat;
         if (matchSearch && matchCat) { art.style.display = ''; visible++; }
         else { art.style.display = 'none'; }
@@ -1087,494 +878,15 @@
     }
     searchInput.addEventListener('input', filterArticles);
 
-    /* ══════════════════════════════
-       CATEGORY FILTER — click + scroll
-    ══════════════════════════════ */
-    const sectionMap = {
-      'all':             '#section-all',
-      'web-design':      '#section-insights',
-      'branding':        '#section-insights',
-      'seo':             '.blog-section',
-      'business-growth': '.blog-section',
-      'ai-technology':   '.blog-section',
-    };
-
+    /* CATEGORY FILTER */
     document.querySelectorAll('#catList li').forEach(li => {
       li.addEventListener('click', () => {
         document.querySelectorAll('#catList li').forEach(i => i.classList.remove('active'));
         li.classList.add('active');
         activeCat = li.getAttribute('data-cat');
         filterArticles();
-
-        // Smooth scroll to relevant section
-        const target = sectionMap[activeCat];
-        if (target) {
-          const el = document.querySelector(target);
-          if (el) { setTimeout(() => { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 80); }
-        }
       });
     });
-
-    /* ══════════════════════════════
-       ARTICLE DATA (full content)
-    ══════════════════════════════ */
-    const articleData = {
-
-      /* ── FEATURED: How Much Time ─────────────────────────────── */
-      'website-time': {
-        cat: 'Web Design', date: 'March 2026', read: '5 min read',
-        title: 'How Much Time Does It Take to Build a Website?',
-        img: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=900&q=80',
-        intro: 'Building a professional website is a process that requires careful planning, skilled design, and thorough testing. The time it takes depends on your goals, the complexity of your site, and the team behind it.',
-        sections: [
-          { num: 1, title: 'Simple Landing Page (3–7 Days)',
-            body: 'A simple one-page or landing page website can typically be delivered in 3 to 7 working days. This type of site includes a clean layout, basic sections like About, Services, and Contact, and a mobile-friendly design. It is ideal for freelancers, small local businesses, or product launches.' },
-          { num: 2, title: 'Business Website (1–3 Weeks)',
-            body: 'A multi-page business website with 5–10 pages, contact forms, service listings, and a blog section generally takes 1 to 3 weeks. This timeline includes design mockups, content integration, responsive testing, and basic SEO setup.' },
-          { num: 3, title: 'E-commerce Store (3–6 Weeks)',
-            body: 'An e-commerce website with product pages, a shopping cart, payment gateway integration, and inventory management typically requires 3 to 6 weeks. Complexity increases with the number of products and custom features needed.' },
-          { num: 4, title: 'Custom Web Application (2–4 Months)',
-            body: 'Advanced web platforms with user dashboards, custom databases, third-party integrations, or AI-powered features can take 2 to 4 months. These projects involve detailed planning, multiple development sprints, and thorough quality assurance.' },
-        ],
-        imgPair: [
-          'https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?w=600&q=80',
-          'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1600&q=80',
-        ],
-        imgCaption: 'Design timeline and wireframing are key steps in every project.',
-        tags: ['Timeline', 'Web Design', 'Development', 'Planning'],
-      },
-
-      /* ── 10 Web Design Trends ─────────────────────────────────── */
-      'web-design-trends': {
-        cat: 'Web Design', date: 'March 2026', read: '8 min read',
-        title: '10 Web Design Trends That Will Dominate in 2026',
-        img: 'https://images.unsplash.com/photo-1547658719-da2b51169166?w=900&q=80',
-        intro: 'From AI-assisted layouts to immersive 3D experiences, 2026 is shaping up to be the most creative and performance-focused year in web design history. Here are the 10 biggest trends reshaping digital experiences right now.',
-        sections: [
-          { num: 1, title: 'AI-Generated Layouts & Personalization',
-            body: 'Artificial intelligence is now actively collaborating with designers — generating layout suggestions, recommending typography, and adapting content in real time based on user behavior. AI-driven websites adjust imagery, copy, and calls-to-action to fit individual visitors, creating truly personalized experiences at scale.' },
-          { num: 2, title: 'Immersive 3D & WebGL Experiences',
-            body: 'Technologies like WebGL are making immersive 3D visuals and interactive models accessible to all websites. In 2026, brands like Nike and IKEA lead the way with product previews that users can rotate 360°, virtual try-ons, and animated environments that react to scroll and cursor movement.' },
-          { num: 3, title: 'Kinetic & Expressive Typography',
-            body: 'Typography is no longer just text — it\'s storytelling. Oversized headlines, animated fonts, and layered type styles make bold first impressions. Variable fonts (from Google Fonts) allow designers to control weight and width fluidly from a single file, improving load times while adding personality.' },
-          { num: 4, title: 'Dopamine Color Palettes',
-            body: 'High-energy, saturated palettes — neon pinks, electric blues, bold reds — are fueling a "dopamine design" movement. These vibrant hues communicate confidence and vitality, transforming every scroll into a visual boost. Brands like Lush and Headspace are early adopters of this joyful aesthetic.' },
-          { num: 5, title: 'Organic Shapes & Anti-Grid Layouts',
-            body: 'After years of strict grids and sharp minimalism, design is softening. Flowing lines, irregular shapes, and layered gradients make digital spaces feel warmer and more human. Anti-grid layouts introduce rhythm and playfulness — a direct response to users craving authenticity over corporate sameness.' },
-          { num: 6, title: 'Neobrutalism & Raw Aesthetics',
-            body: 'Neobrutalism embraces raw visuals, high-contrast palettes, and asymmetry to showcase individuality. This bold style works powerfully for creative agencies and tech brands seeking differentiation. Awwwards showcases standout examples like Toggl\'s brutalist design with interactive elements.' },
-          { num: 7, title: 'Sustainable & Accessible Design',
-            body: 'Sustainability is central to web design in 2026. Leaner code, optimized images, and low-impact hosting reduce digital carbon footprints. Simultaneously, accessibility-first design — WCAG compliance, keyboard navigation, high-contrast palettes — is becoming a foundational requirement, not an afterthought.' },
-          { num: 8, title: 'AI-Powered Micro-Interactions',
-            body: 'Small animations that respond to user behavior — branded loaders, hover effects, adaptive feedback — create smoother, more intuitive experiences. In 2026, these micro-interactions adapt dynamically based on how users engage, reducing cognitive load and reinforcing brand recognition.' },
-          { num: 9, title: 'Glassmorphism 2.0',
-            body: 'Glassmorphism has evolved significantly, now using dynamic lighting, realistic material textures, and refined transparency to simulate physical depth on flat screens. Supported by modern CSS, it creates sleek, multidimensional interfaces that feel tactile, immersive, and unmistakably modern.' },
-          { num: 10, title: 'Performance-First Design',
-            body: 'Mobile devices account for 57–59% of global e-commerce transactions. A one-second delay in mobile load time can reduce conversions by up to 20%. In 2026, performance is embedded into the design process from day one — image optimization, lazy loading, and Core Web Vitals are baseline expectations.' },
-        ],
-        imgPair: [
-          'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
-          'https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?w=600&q=80',
-        ],
-        imgCaption: 'Modern websites blend immersive 3D visuals with clean, fast-loading performance.',
-        tags: ['Trends', 'UI/UX', 'Design', '2026', 'AI', '3D'],
-      },
-
-      /* ── Branding & Growth ────────────────────────────────────── */
-      'branding-growth': {
-        cat: 'Branding', date: 'February 2026', read: '7 min read',
-        title: 'Why Strong Branding Is the Foundation of Business Growth',
-        img: 'https://images.unsplash.com/photo-1493421419110-74f4e85ba126?w=900&q=80',
-        intro: 'In 2026, brand strength is no longer optional — it is the engine of sustainable business growth. Research shows that consistent brand presentation drives up to a 23% average revenue increase, regardless of business size.',
-        sections: [
-          { num: 1, title: 'What Makes a Brand Strong in 2026',
-            body: 'A strong brand combines a clear visual identity, a consistent tone of voice, and a defined market position. You have just 10 seconds to capture your audience\'s attention with your logo. Consumers are 81% more likely to remember a brand\'s color than its name. Strong brands command premium pricing and reduce reliance on discounting.' },
-          { num: 2, title: 'Consistency as a Growth Strategy',
-            body: 'Brands with consistent presentation are 3.5 times more visible than inconsistent ones. Companies that maintain branding consistency see revenue grow by up to 23%. Yet fewer than 10% of brands maintain consistency across all products and marketing channels — a massive opportunity for businesses that commit to it.' },
-          { num: 3, title: 'Emotional Branding & Storytelling',
-            body: 'In 2026, audiences demand brands that communicate who they are, why they exist, and why it matters. Emotional branding — crafting narratives that resonate on a human level — builds loyalty that advertising alone cannot buy. Micro-interactions and authentic storytelling establish deep emotional connections with customers.' },
-          { num: 4, title: 'AI & Dynamic Brand Identities',
-            body: 'AI is reshaping the brand experience in 2026. Dynamic brand identities now adapt in real-time to context, user behavior, and platform — creating ultra-personalized touchpoints. Spotify\'s Wrapped campaigns are a leading example of AI-powered storytelling that makes every user feel individually seen.' },
-          { num: 5, title: 'Modular Identity Systems for Growth',
-            body: 'Growing businesses need brand systems that scale. Modular identity systems — flexible yet consistent visual frameworks — allow a brand to remain recognizable as it expands into new products, markets, or formats. This is not one rigid template but a constructor where elements connect by rules while allowing variation.' },
-        ],
-        imgPair: [
-          'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80',
-          'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80',
-        ],
-        imgCaption: 'A unified brand identity across all channels builds trust and drives revenue.',
-        stats: [
-          { num: '23%', label: 'Revenue Increase' },
-          { num: '3.5×', label: 'More Visible' },
-          { num: '81%', label: 'Remember Brand Color' },
-          { num: '10s', label: 'To Make an Impression' },
-        ],
-        tags: ['Branding', 'Identity', 'Growth', 'Strategy', 'Revenue'],
-      },
-
-      /* ── AI Strategy ──────────────────────────────────────────── */
-      'ai-strategy': {
-        cat: 'Strategy', date: 'January 2026', read: '6 min read',
-        title: 'How AI Is Changing Digital Strategy for Small Businesses',
-        img: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900&q=80',
-        intro: '"AI has moved from a tool to a strategic asset for small businesses aiming to stay resilient and grow in 2026," says LinkedIn\'s Director of Research. From automation to smart analytics, AI is democratizing capabilities once reserved for large corporations.',
-        sections: [
-          { num: 1, title: 'AI as a Strategic Asset, Not Just a Tool',
-            body: 'Most U.S. small businesses already use AI in some form — from writing emails and summarizing notes to data analysis and strategy development. Fifty-seven percent believe AI will improve their daily work lives. AI tools help save time, reduce costs, and find new opportunities that were previously invisible.' },
-          { num: 2, title: 'Automation That Frees You to Grow',
-            body: 'AI automation is transforming customer service, content creation, hiring, and decision-making. Autonomous AI agents can handle routine operations independently — overnight data analysis, customer support responses, appointment scheduling, and inventory tracking — freeing owners to focus on strategy and relationships.' },
-          { num: 3, title: 'Smarter Marketing with AI Analytics',
-            body: 'AI in digital marketing analyzes browsing behavior, purchase history, and engagement patterns to deliver personalized content and product recommendations. Predictive analytics helps businesses forecast customer churn, optimal pricing, and seasonal demand shifts — insights that once required teams of analysts.' },
-          { num: 4, title: 'Competing with Larger Brands',
-            body: 'SMBs make up over 90% of all businesses and employ half the global workforce. Growing businesses are nearly twice as likely to invest in AI compared to struggling competitors. AI levels the playing field — small businesses can now respond faster to market changes, personalize customer experiences, and operate more efficiently than ever before.' },
-          { num: 5, title: 'The Human Balance: AI + Authentic Voice',
-            body: 'While many businesses use AI to create content, nearly 75% of small business owners agree that audiences gut-check information with people they trust. Human voices, relationships, and judgment remain irreplaceable. The winning formula in 2026 combines AI efficiency with authentic human connection — using AI as support, not as a replacement for brand personality.' },
-        ],
-        imgPair: [
-          'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&q=80',
-          'https://images.unsplash.com/photo-1526378800651-c32d170fe6f8?w=600&q=80',
-        ],
-        imgCaption: 'AI-powered dashboards and automation tools help small businesses compete at scale.',
-        stats: [
-          { num: '57%', label: 'Believe AI Improves Work' },
-          { num: '2×', label: 'More Likely to Invest' },
-          { num: '86%', label: 'Increasing AI Budgets' },
-          { num: '90%+', label: 'of All Businesses Are SMBs' },
-        ],
-        tags: ['AI', 'Strategy', 'Automation', 'Small Business', 'Growth'],
-      },
-
-      /* ── Generic fallback for other articles ─────────────────── */
-      'build-website': {
-        cat: 'Web Design', date: 'March 2025', read: '5 min read',
-        title: 'How to Build a Professional Website for Your Business',
-        img: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=900&q=80',
-        intro: 'A professional website is your most powerful digital asset. It works 24/7, reaches audiences far beyond your local area, and communicates your brand value before a single conversation takes place.',
-        sections: [
-          { num: 1, title: 'Start with a Clear Plan',
-            body: 'Before any design work begins, define your goals, your target audience, and the key pages your website needs. A sitemap helps structure the user journey from landing to conversion. Clear planning prevents expensive redesigns later.' },
-          { num: 2, title: 'Design for Your Users, Not Yourself',
-            body: 'Great website design is invisible — users don\'t notice it because it simply works. Focus on fast load times, clear navigation, legible fonts, and mobile responsiveness. Every design decision should serve your visitor\'s needs first.' },
-          { num: 3, title: 'Content Is the Core',
-            body: 'High-quality content — clear service descriptions, genuine testimonials, and compelling calls-to-action — converts visitors into customers. Pair strong copy with professional images that reflect your brand authentically.' },
-        ],
-        imgPair: [
-          'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&q=80',
-          'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=600&q=80',
-        ],
-        imgCaption: 'Planning and design wireframes are the foundation of every great website.',
-        tags: ['Website', 'Design', 'Business', 'Planning'],
-      },
-
-      'brand-identity': {
-        cat: 'Branding', date: 'March 2025', read: '4 min read',
-        title: 'Why Your Brand Identity Matters Online',
-        img: 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=900&q=80',
-        intro: 'Your brand identity is the visual and emotional language your business speaks. In the digital age, where customers form opinions within seconds of landing on your website, a strong brand identity is not optional — it is essential.',
-        sections: [
-          { num: 1, title: 'More Than Just a Logo',
-            body: 'Brand identity encompasses your logo, color palette, typography, tone of voice, imagery style, and how all these elements work together consistently across every touchpoint — from your website to your social media profiles and email newsletters.' },
-          { num: 2, title: 'Building Trust Through Consistency',
-            body: 'Consistent branding makes your business 3.5 times more visible and can increase revenue by up to 23%. When customers encounter the same visual language and tone across all channels, recognition builds — and recognition builds trust.' },
-          { num: 3, title: 'Standing Out in a Crowded Market',
-            body: '73% of companies use design as a key differentiator from competitors. A distinctive brand identity gives potential customers a clear reason to choose you over alternatives, even before they read a single word of your copy.' },
-        ],
-        imgPair: [
-          'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80',
-          'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
-        ],
-        imgCaption: 'Consistent visual identity builds brand recognition across all digital platforms.',
-        tags: ['Branding', 'Identity', 'Logo', 'Trust'],
-      },
-
-      'seo-basics': {
-        cat: 'SEO', date: 'February 2025', read: '6 min read',
-        title: 'Understanding SEO for Small Businesses',
-        img: 'https://images.unsplash.com/photo-1571786256017-aee7a0c009b6?w=900&q=80',
-        intro: 'Search Engine Optimization (SEO) is the practice of making your website more visible on search engines like Google. For small businesses, it is one of the most cost-effective ways to attract new customers without relying solely on paid advertising.',
-        sections: [
-          { num: 1, title: 'Keywords: Speak Your Customer\'s Language',
-            body: 'Effective SEO starts with understanding what your potential customers search for. Use tools like Google Keyword Planner to find relevant search terms, then incorporate them naturally into your page titles, headings, and content.' },
-          { num: 2, title: 'Technical SEO Basics',
-            body: 'Fast loading speed, mobile-friendly design, clean URL structures, and secure HTTPS connections are foundational technical requirements. Google\'s Core Web Vitals directly influence rankings — a slow or unstable site loses positions regardless of content quality.' },
-          { num: 3, title: 'Content That Earns Rankings',
-            body: 'Publishing helpful, well-structured content consistently signals to Google that your website is authoritative and relevant. Blog posts, FAQs, and service pages that genuinely answer customer questions build long-term organic traffic.' },
-        ],
-        imgPair: [
-          'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&q=80',
-          'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80',
-        ],
-        imgCaption: 'SEO analytics and keyword research are essential for online visibility.',
-        tags: ['SEO', 'Traffic', 'Google', 'Keywords', 'Rankings'],
-      },
-
-      'website-growth': {
-        cat: 'Business Growth', date: 'February 2025', read: '4 min read',
-        title: 'How a Website Helps Your Business Grow',
-        img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80',
-        intro: 'A well-designed website is your 24/7 salesperson, your brand ambassador, and your customer service desk — all in one. It reaches audiences you could never meet in person and builds trust before the first conversation.',
-        sections: [
-          { num: 1, title: 'Reach Beyond Your Geography',
-            body: 'Unlike a physical shop, your website has no opening hours and no geographical limits. A customer in another city — or another country — can discover your business, evaluate your services, and contact you at any hour. This global accessibility transforms local businesses into regional or national players.' },
-          { num: 2, title: 'Generate Leads Around the Clock',
-            body: 'With a clear call-to-action, contact forms, and well-placed service descriptions, your website generates qualified leads while you sleep. Businesses with optimized websites report significantly higher inquiry volumes compared to those relying solely on word-of-mouth or social media.' },
-          { num: 3, title: 'Build Credibility and Trust',
-            body: 'Customers research businesses online before making purchasing decisions. A professional website with clear service information, genuine testimonials, and a polished design signals trustworthiness — converting skeptical visitors into confident buyers.' },
-        ],
-        imgPair: [
-          'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80',
-          'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80',
-        ],
-        imgCaption: 'A strategic website turns online visitors into loyal, paying customers.',
-        tags: ['Growth', 'Strategy', 'Sales', 'Leads', 'Business'],
-      },
-
-      'ai-business': {
-        cat: 'AI & Technology', date: 'January 2025', read: '5 min read',
-        title: 'How AI is Changing the Way Businesses Work',
-        img: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=900&q=80',
-        intro: 'Artificial Intelligence has moved from science fiction to essential business infrastructure. In 2026, 86% of businesses are increasing their AI budgets — and the results are becoming measurable and undeniable.',
-        sections: [
-          { num: 1, title: 'Automation of Repetitive Tasks',
-            body: 'AI tools now handle routine tasks that once consumed hours of human time — scheduling, email responses, invoice processing, data entry, and customer support. This automation allows business owners and teams to focus on creative, high-value work that genuinely requires human judgment.' },
-          { num: 2, title: 'Smarter Customer Experiences',
-            body: 'AI-powered chatbots, personalized product recommendations, and adaptive website content transform how businesses interact with customers. These tools create experiences that feel individually tailored — building loyalty and increasing conversion rates without additional staff.' },
-          { num: 3, title: 'Data-Driven Decision Making',
-            body: 'Advanced analytics powered by AI give businesses unprecedented insight into customer behavior, market trends, and operational efficiency. What once required teams of analysts can now be surfaced automatically — enabling faster, more confident decisions at every level.' },
-        ],
-        imgPair: [
-          'https://images.unsplash.com/photo-1526378800651-c32d170fe6f8?w=600&q=80',
-          'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80',
-        ],
-        imgCaption: 'AI tools are transforming operations, marketing, and customer service for businesses of all sizes.',
-        tags: ['AI', 'Automation', 'Technology', 'Business', 'Data'],
-      },
-
-      /* ── Case Studies ─────────────────────────────────────────── */
-      'case-1': {
-        cat: 'Case Study', date: '2025', read: '3 min read',
-        title: 'How We Built a Business Website in 5 Days',
-        img: 'https://images.unsplash.com/photo-1531498860502-7c67cf519b9e?w=900&q=80',
-        intro: 'Speed without compromise. A small retail business needed an online presence urgently before a product launch. Here is how NexaaWeb delivered a fully functional, mobile-friendly website in just 5 working days.',
-        sections: [
-          { num: 1, title: 'Day 1–2: Planning & Design',
-            body: 'We started with a 90-minute discovery call to understand the business, its customers, and its launch goals. From there, we created a clean wireframe and selected a design direction that reflected the brand\'s identity. Fast feedback loops kept the process moving.' },
-          { num: 2, title: 'Day 3–4: Development & Content',
-            body: 'Using our proven component library, we built the site at speed without cutting quality. The client provided copy and photos; we structured and optimized every element for performance, readability, and mobile responsiveness.' },
-          { num: 3, title: 'Day 5: Testing & Launch',
-            body: 'Comprehensive cross-device testing, speed optimization, and SEO fundamentals were completed on the final day. The site launched on schedule — and the client reported their first online inquiry within 12 hours.' },
-        ],
-        imgPair: [
-          'https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?w=600&q=80',
-          'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=600&q=80',
-        ],
-        imgCaption: 'From wireframe to live website — delivered in 5 working days.',
-        tags: ['Case Study', 'Fast Delivery', 'Web Design', 'Launch'],
-      },
-
-      'case-2': {
-        cat: 'Case Study', date: '2025', read: '3 min read',
-        title: 'How a Small Business Started Online with Zero Maintenance Cost',
-        img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80',
-        intro: 'A startup consultancy with a tight budget needed a professional online presence with no ongoing hosting costs. NexaaWeb delivered a solution using GitHub Pages and a custom domain — zero monthly fees, fully professional.',
-        sections: [
-          { num: 1, title: 'The Challenge: Professional on a Shoestring',
-            body: 'The client had a strong service offering but limited startup capital. Traditional hosting and CMS subscriptions would have added ₹5,000–15,000 in annual costs. We proposed a GitHub Pages deployment strategy that eliminated recurring hosting fees entirely.' },
-          { num: 2, title: 'The Solution: Static Site + GitHub Pages',
-            body: 'We built a fast, lightweight static website with HTML, CSS, and minimal JavaScript. Hosted on GitHub Pages, the site loads in under 1.5 seconds globally. A custom domain was connected for a professional appearance at a minimal one-time cost.' },
-          { num: 3, title: 'The Result: Online in 7 Days, Zero Monthly Cost',
-            body: 'The business launched its website in 7 days with no ongoing maintenance fees. Six months later, the site continues to run flawlessly — generating leads and building credibility at absolutely no recurring cost.' },
-        ],
-        imgPair: [
-          'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&q=80',
-          'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80',
-        ],
-        imgCaption: 'GitHub Pages hosting delivers professional performance with zero monthly cost.',
-        tags: ['Case Study', 'Free Hosting', 'GitHub', 'Startup', 'Budget'],
-      },
-
-      'case-3': {
-        cat: 'Case Study', date: '2025', read: '4 min read',
-        title: 'From Idea to Website: A Complete Setup',
-        img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80',
-        intro: 'A first-time entrepreneur had a business idea but no digital presence, no brand, and no technical knowledge. NexaaWeb handled everything — from naming guidance to a live, fully operational website.',
-        sections: [
-          { num: 1, title: 'Brand Foundation First',
-            body: 'Before any design work, we helped the client define their brand positioning, target audience, and key differentiators. A simple but distinctive logo and color palette were created to establish visual identity across all touchpoints.' },
-          { num: 2, title: 'Website Design & Development',
-            body: 'A 6-page website was designed and developed with a modern, conversion-focused layout. Service pages, an About section, a contact form, and an integrated WhatsApp button were built to capture and convert leads immediately.' },
-          { num: 3, title: 'Launch & Beyond',
-            body: 'We configured Google Search Console, set up basic analytics, and provided a simple content management guide. The business launched with a complete digital toolkit — website, brand, and growth foundation — all within 3 weeks of the initial call.' },
-        ],
-        imgPair: [
-          'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80',
-          'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=600&q=80',
-        ],
-        imgCaption: 'From first concept call to live website — NexaaWeb handles the complete journey.',
-        tags: ['Case Study', 'Full Setup', 'Branding', 'Launch', 'Startup'],
-      },
-
-      /* ── Business Insights ────────────────────────────────────── */
-      'why-website': {
-        cat: 'Business Growth', date: '2026', read: '3 min read',
-        title: 'Why Every Business Needs a Website',
-        img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80',
-        intro: 'In 2026, if your business is not online, a significant portion of your potential customers will never find you. A website is not a luxury — it is the foundation of modern business credibility.',
-        sections: [
-          { num: 1, title: 'Customers Expect to Find You Online',
-            body: 'Today, customers search online before contacting any business. If they cannot find you, they find your competitor instead. A professional website with clear service information, contact details, and genuine reviews eliminates this risk.' },
-          { num: 2, title: 'A Website Works While You Sleep',
-            body: 'Unlike a shop or office, a website operates 24/7. Enquiries, appointments, and purchases can happen at any hour — without you being present. This passive lead generation is one of the highest-return investments a small business can make.' },
-          { num: 3, title: 'Build Trust Before the First Call',
-            body: 'Customers form opinions about businesses within seconds of visiting a website. A clean, professional design with authentic testimonials and clear service descriptions builds trust before a single conversation takes place.' },
-        ],
-        imgPair: [
-          'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80',
-          'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&q=80',
-        ],
-        imgCaption: 'A professional website is the digital foundation every business needs.',
-        tags: ['Business', 'Website', 'Growth', 'Credibility'],
-      },
-
-      'best-solutions': {
-        cat: 'Business Growth', date: '2026', read: '3 min read',
-        title: 'Best Website Solutions for Small Businesses',
-        img: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=900&q=80',
-        intro: 'Not every small business needs a complex, expensive website. The right solution depends on your goals, your audience, and your budget. Here is a practical guide to choosing the best option.',
-        sections: [
-          { num: 1, title: 'Free Hosting Options (GitHub Pages)',
-            body: 'For businesses with tight budgets, GitHub Pages offers professional-grade hosting at zero cost. A well-built static site on GitHub Pages loads fast, looks great, and costs nothing monthly — ideal for portfolios, landing pages, and service businesses.' },
-          { num: 2, title: 'WordPress for Growing Businesses',
-            body: 'WordPress powers 43.5% of all websites globally. It offers flexibility, thousands of plugins, and a content management system that business owners can operate without technical knowledge. Ideal for blogs, service sites, and small e-commerce stores.' },
-          { num: 3, title: 'Custom-Built for Unique Needs',
-            body: 'For businesses with specific functionality requirements — booking systems, custom dashboards, or AI-powered features — a custom-built website delivers the best long-term results. Higher upfront investment, significantly lower long-term costs.' },
-        ],
-        imgPair: [
-          'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&q=80',
-          'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=600&q=80',
-        ],
-        imgCaption: 'The right website solution matches your business goals and budget perfectly.',
-        tags: ['Solutions', 'Budget', 'WordPress', 'Small Business'],
-      },
-
-      'ai-modern': {
-        cat: 'AI & Technology', date: '2026', read: '4 min read',
-        title: 'How AI is Changing Modern Businesses',
-        img: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900&q=80',
-        intro: 'AI is no longer a future technology. In 2026, it is active infrastructure — running inside the businesses that are growing fastest. Here is what it is changing and how your business can benefit.',
-        sections: [
-          { num: 1, title: 'Operations: Doing More with Less',
-            body: 'AI automates repetitive operational tasks — customer service responses, appointment scheduling, inventory tracking, invoice processing. For small businesses with lean teams, this automation creates space for growth without proportional cost increases.' },
-          { num: 2, title: 'Marketing: Smarter Targeting',
-            body: 'AI marketing tools analyze customer data to identify the highest-value audience segments and deliver personalized messages at optimal times. Businesses using AI-powered marketing report higher conversion rates and lower cost-per-acquisition than those using traditional methods.' },
-          { num: 3, title: 'Decision Making: Data-Driven Confidence',
-            body: 'From cash flow forecasting to demand prediction, AI gives small business owners the analytical firepower of enterprise companies. Mastercard\'s new Virtual C-Suite platform brings executive-level AI intelligence directly to small businesses through their existing banking and accounting software.' },
-        ],
-        imgPair: [
-          'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&q=80',
-          'https://images.unsplash.com/photo-1526378800651-c32d170fe6f8?w=600&q=80',
-        ],
-        imgCaption: 'AI tools are levelling the playing field between small businesses and large corporations.',
-        tags: ['AI', 'Automation', 'Operations', 'Marketing', 'Growth'],
-      },
-
-      'choose-website': {
-        cat: 'Web Design', date: '2026', read: '3 min read',
-        title: 'Choosing the Right Website for Your Business',
-        img: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=900&q=80',
-        intro: 'With so many website types and platforms available, choosing the right one can feel overwhelming. This guide cuts through the noise and helps you select the right solution based on your specific business needs.',
-        sections: [
-          { num: 1, title: 'Define Your Primary Goal',
-            body: 'Before choosing a platform or design, answer one question: what is the primary goal of your website? If it is lead generation, focus on clear calls-to-action and contact forms. If it is e-commerce, prioritize product pages and payment systems. If it is credibility, invest in professional design and content.' },
-          { num: 2, title: 'Match Platform to Complexity',
-            body: 'Simple informational sites and portfolios work beautifully on static platforms or GitHub Pages. Content-heavy sites benefit from WordPress. Complex applications with custom user flows need custom development. Mismatching platform to complexity leads to either overspending or underdelivering.' },
-          { num: 3, title: 'Think Long-Term, Not Just Launch Day',
-            body: 'The cheapest solution today can become the most expensive in two years when it cannot scale. Choose a website architecture that can grow with your business — adding features, pages, and integrations without rebuilding from scratch.' },
-        ],
-        imgPair: [
-          'https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?w=600&q=80',
-          'https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=600&q=80',
-        ],
-        imgCaption: 'The right website choice aligns your platform, budget, and long-term business goals.',
-        tags: ['Website', 'Planning', 'Platform', 'Strategy', 'Business'],
-      },
-    };
-
-    /* ══════════════════════════════
-       MODAL — open & close
-    ══════════════════════════════ */
-    const modal    = document.getElementById('artModal');
-    const modalBox = document.getElementById('artModalBox');
-    const modalClose = document.getElementById('artModalClose');
-    const modalContent = document.getElementById('artModalContent');
-
-    function openArticle(key) {
-      const d = articleData[key];
-      if (!d) return;
-
-      // Build stats HTML
-      let statsHTML = '';
-      if (d.stats && d.stats.length) {
-        statsHTML = '<div class="art-stat-row">' +
-          d.stats.map(s => `<div class="art-stat"><strong>${s.num}</strong><span>${s.label}</span></div>`).join('') +
-          '</div>';
-      }
-
-      // Build sections HTML
-      const sectionsHTML = d.sections.map(s => `
-        <div class="art-section">
-          <h3><span class="num">${s.num}</span>${s.title}</h3>
-          <p>${s.body}</p>
-        </div>
-      `).join('');
-
-      // Build image pair HTML
-      const imgPairHTML = d.imgPair ? `
-        <div class="art-img-row">
-          <img src="${d.imgPair[0]}" alt="Article Image 1" loading="lazy"/>
-          <img src="${d.imgPair[1]}" alt="Article Image 2" loading="lazy"/>
-        </div>
-        <p class="art-img-caption">${d.imgCaption || ''}</p>
-      ` : '';
-
-      // Build tags HTML
-      const tagsHTML = d.tags ? `
-        <div class="art-modal-tags">
-          ${d.tags.map(t => `<span class="art-modal-tag">${t}</span>`).join('')}
-        </div>
-      ` : '';
-
-      modalContent.innerHTML = `
-        <img class="art-modal-hero" src="${d.img}" alt="${d.title}" loading="lazy"/>
-        <div class="art-modal-body">
-          <div class="art-modal-meta">
-            <span class="art-modal-cat">${d.cat}</span>
-            <span class="art-modal-date">${d.date}</span>
-            <span class="art-modal-read">${d.read}</span>
-          </div>
-          <h2>${d.title}</h2>
-          <p class="art-intro">${d.intro}</p>
-          ${statsHTML}
-          ${sectionsHTML}
-          ${imgPairHTML}
-          ${tagsHTML}
-        </div>
-      `;
-
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-      // Scroll modal box to top
-      setTimeout(() => { modal.scrollTop = 0; }, 10);
-    }
-
-    function closeModal() {
-      modal.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-
-    modalClose.addEventListener('click', closeModal);
-    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
   </script>
 </body>
 </html>
