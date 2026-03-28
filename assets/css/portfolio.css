@@ -178,7 +178,7 @@ section h2 {
 /* HERO RIGHT SLIDER */
 .pf-hero-right {
   position: relative; height: 100vh; overflow: hidden;
-  background: #1a1a1a; /* canvas background for images that don't fill */
+  background: #1a1a1a;
 }
 
 .hero-slider {
@@ -193,7 +193,6 @@ section h2 {
 }
 .hs-slide.active { opacity: 1; transform: scale(1); }
 
-/* Image wrapper — contain + show full image with dark letterbox */
 .hs-img-wrap {
   width: 100%; height: 100%;
   display: flex; align-items: center; justify-content: center;
@@ -256,7 +255,6 @@ section h2 {
   box-shadow: 0 24px 60px rgba(0,0,0,0.14);
 }
 
-/* slider inside card */
 .feat-slider {
   position: relative; height: 300px; overflow: hidden;
   background: var(--dark);
@@ -321,6 +319,63 @@ section h2 {
   font-size: 11px; font-weight: 600; letter-spacing: 1px;
   text-transform: uppercase; color: var(--muted);
   background: var(--off); padding: 4px 12px; border-radius: 50px;
+}
+
+/* ══════════════════════════════════════
+   WHATSAPP CTA STRIP
+══════════════════════════════════════ */
+.wa-cta-section {
+  background: var(--white);
+  border-top: 1px solid rgba(0,0,0,0.06);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding: 64px 0;
+}
+
+.wa-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.wa-cta-text { flex: 1; }
+.wa-cta-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(24px, 2.6vw, 38px);
+  font-weight: 700; color: var(--black);
+  line-height: 1.2; margin-bottom: 12px;
+}
+.wa-cta-text p {
+  font-size: 15px; color: var(--muted);
+  font-weight: 300; line-height: 1.8;
+  max-width: 500px;
+}
+
+.wa-cta-action {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 10px;
+  flex-shrink: 0;
+}
+
+.wa-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 15px 36px;
+  background: #25D366; color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px; font-weight: 700;
+  text-decoration: none; border-radius: 2px;
+  transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+  white-space: nowrap;
+}
+.wa-btn:hover {
+  background: #1ebe5d;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(37,211,102,0.35);
+}
+
+.wa-note {
+  font-size: 11px; color: var(--muted);
+  font-weight: 400; letter-spacing: 0.5px;
 }
 
 /* ══════════════════════════════════════
@@ -413,7 +468,6 @@ section h2 {
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
   flex-shrink: 0;
-  /* Fixed height so slides look taller & more visible */
   height: 340px;
   background: var(--dark);
   display: flex; align-items: center; justify-content: center;
@@ -513,7 +567,7 @@ section h2 {
 
 .banner-slide {
   flex-shrink: 0;
-  width: 600px; /* fixed width per banner */
+  width: 600px;
   border-radius: 6px; overflow: hidden;
   box-shadow: 0 4px 20px rgba(0,0,0,0.09);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
@@ -762,6 +816,8 @@ section h2 {
   .ppt-item { min-width: calc(50% - 12px); height: 260px; }
   section { padding: 64px 0; }
   .banner-slide { width: 340px; }
+  .wa-cta-inner { flex-direction: column; text-align: center; }
+  .wa-cta-text p { margin: 0 auto; }
 }
 @media (max-width: 560px) {
   .pf-hero-right { height: 65vw; }
