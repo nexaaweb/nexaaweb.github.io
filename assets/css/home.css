@@ -334,10 +334,11 @@ section h2 {
 .as-btns { display: flex; gap: 14px; flex-wrap: wrap; }
 
 /* ══════════════════════════════════════
-   5. CORE SERVICES — FIXED LAYOUT
-   Image on top, content below, full column card
+   5. CORE SERVICES — image top, data below
+   Same style as Why Choose & Blog sections
 ══════════════════════════════════════ */
 .services-section { padding: 100px 0; background: var(--off); }
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -346,27 +347,22 @@ section h2 {
 }
 
 .srv-card {
-  /* Column layout: image stacks on top of body */
   display: flex;
-  flex-direction: column;
+  flex-direction: column;       /* image on top, body below */
   text-decoration: none;
   background: var(--white);
   overflow: hidden;
   border-radius: 6px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.07);
   position: relative;
-  /* Entrance: cards slide up from below */
-  transition:
-    transform 0.4s cubic-bezier(.22,1,.36,1),
-    box-shadow 0.4s ease,
-    opacity 0.4s ease;
+  transition: transform 0.4s cubic-bezier(.22,1,.36,1), box-shadow 0.4s ease, opacity 0.4s ease;
 }
 .srv-card:hover {
-  transform: translateY(-16px);
-  box-shadow: 0 32px 72px rgba(0,0,0,0.16);
+  transform: translateY(-10px);
+  box-shadow: 0 22px 56px rgba(0,0,0,0.14);
 }
 
-/* Red accent line that grows on hover */
+/* Red bottom accent line */
 .srv-card::after {
   content: '';
   position: absolute;
@@ -379,11 +375,11 @@ section h2 {
 }
 .srv-card:hover::after { transform: scaleX(1); }
 
-/* ── Image area ── */
+/* ── Image area — full width on top ── */
 .srv-img {
   position: relative;
   width: 100%;
-  height: 240px;
+  height: 200px;           /* same proportions as why-card & blog-img */
   overflow: hidden;
   flex-shrink: 0;
   background: var(--dark);
@@ -393,80 +389,65 @@ section h2 {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.65s cubic-bezier(.22,1,.36,1), filter 0.45s ease;
+  transition: transform 0.55s cubic-bezier(.22,1,.36,1), filter 0.45s ease;
 }
 .srv-card:hover .srv-img img {
-  transform: scale(1.1);
+  transform: scale(1.08);
   filter: brightness(0.85);
 }
 .srv-img-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(39,19,20,0.55) 0%, transparent 55%);
+  background: linear-gradient(to top, rgba(39,19,20,0.45) 0%, transparent 55%);
   transition: background 0.4s ease;
 }
 .srv-card:hover .srv-img-overlay {
-  background: linear-gradient(to top, rgba(185,36,37,0.4) 0%, transparent 65%);
+  background: linear-gradient(to top, rgba(185,36,37,0.35) 0%, transparent 65%);
 }
 
-/* Service category tag badge on image */
+/* Category badge on top of image */
 .srv-tag {
-  position: absolute; top: 16px; left: 16px;
+  position: absolute; top: 14px; left: 14px;
   background: var(--red); color: var(--white);
   font-size: 10px; font-weight: 700; letter-spacing: 2px;
-  text-transform: uppercase; padding: 5px 12px; border-radius: 2px;
-  /* Slide in from left on load */
-  transition: background 0.2s, transform 0.3s ease;
+  text-transform: uppercase; padding: 4px 12px; border-radius: 2px;
+  transition: background 0.2s;
 }
-.srv-card:hover .srv-tag {
-  background: var(--dark);
-}
+.srv-card:hover .srv-tag { background: var(--dark); }
 
-/* ── Body area ── */
+/* ── Body area — below image ── */
 .srv-body {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 28px 28px 30px;
+  padding: 22px 22px 26px;
   position: relative;
 }
 
-/* Animated left accent border on body */
-.srv-body::before {
-  content: '';
-  position: absolute;
-  top: 28px; left: 0;
-  width: 3px; height: 0;
-  background: var(--red);
-  border-radius: 0 2px 2px 0;
-  transition: height 0.4s cubic-bezier(.22,1,.36,1);
-}
-.srv-card:hover .srv-body::before { height: calc(100% - 56px); }
-
 .srv-icon {
   font-size: 26px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   display: inline-block;
   transition: transform 0.35s cubic-bezier(.34,1.56,.64,1);
 }
-.srv-card:hover .srv-icon { transform: scale(1.25) rotate(-8deg); }
+.srv-card:hover .srv-icon { transform: scale(1.2) rotate(-8deg); }
 
 .srv-body h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 20px; font-weight: 700;
-  color: var(--black); margin-bottom: 10px;
+  font-size: 18px; font-weight: 700;
+  color: var(--black); margin-bottom: 8px;
   line-height: 1.25;
   transition: color 0.25s ease;
 }
 .srv-card:hover .srv-body h3 { color: var(--red); }
 
 .srv-body p {
-  font-size: 13.5px; color: #666;
+  font-size: 13px; color: #666;
   line-height: 1.75; font-weight: 300;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   flex: 1;
 }
 
-/* CTA button at bottom */
+/* CTA button — pinned at bottom */
 .srv-cta-wrap { margin-top: auto; }
 .srv-cta-btn {
   display: inline-flex; align-items: center;
