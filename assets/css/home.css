@@ -334,8 +334,9 @@ section h2 {
 .as-btns { display: flex; gap: 14px; flex-wrap: wrap; }
 
 /* ══════════════════════════════════════
-   5. CORE SERVICES — image top, data below
-   Same style as Blog cards (image 2)
+   5. CORE SERVICES — exactly like blog cards
+   image top, title+text middle, button bottom
+   3 cards in one row
 ══════════════════════════════════════ */
 .services-section { padding: 100px 0; background: var(--off); }
 
@@ -354,13 +355,14 @@ section h2 {
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0,0,0,0.07);
   transition: transform 0.32s ease, box-shadow 0.32s ease;
+  position: relative;
 }
 .srv-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 22px 52px rgba(0,0,0,0.13);
 }
 
-/* Image — full width on top, exactly like blog-img */
+/* Image — full width on top, exactly like .blog-img */
 .srv-img {
   position: relative;
   height: 200px;
@@ -374,26 +376,29 @@ section h2 {
   display: block;
   transition: transform 0.55s ease;
 }
-.srv-card:hover .srv-img img { transform: scale(1.07); }
+.srv-card:hover .srv-img img {
+  transform: scale(1.07);
+}
 
 .srv-img-overlay {
   position: absolute; inset: 0;
-  background: rgba(39,19,20,0);
+  background: rgba(0,0,0,0);
   transition: background 0.35s;
 }
 .srv-card:hover .srv-img-overlay {
-  background: rgba(39,19,20,0.15);
+  background: rgba(0,0,0,0.08);
 }
 
-/* Category badge on image — same as blog-cat */
+/* Category tag on image — like .blog-cat */
 .srv-tag {
-  position: absolute; top: 14px; left: 14px;
+  position: absolute; top: 14px; left: 14px; z-index: 2;
   background: var(--red); color: var(--white);
-  font-size: 10px; font-weight: 700; letter-spacing: 2px;
-  text-transform: uppercase; padding: 4px 12px; border-radius: 2px;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  padding: 4px 12px; border-radius: 2px;
 }
 
-/* Body — below image, same as blog-body */
+/* Body below image — like .blog-body */
 .srv-body {
   display: flex;
   flex-direction: column;
@@ -409,39 +414,43 @@ section h2 {
 
 .srv-body h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 17px; font-weight: 700;
-  color: var(--black); margin-bottom: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 10px;
   line-height: 1.35;
   transition: color 0.25s;
 }
 .srv-card:hover .srv-body h3 { color: var(--red); }
 
 .srv-body p {
-  font-size: 13px; color: #666;
-  line-height: 1.75; font-weight: 300;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.75;
+  font-weight: 300;
   margin-bottom: 18px;
   flex: 1;
 }
 
-/* CTA button — pinned at bottom, same as blog-link */
+/* CTA — like .blog-link at bottom */
 .srv-cta-wrap { margin-top: auto; }
 .srv-cta-btn {
-  display: inline-flex; align-items: center; gap: 5px;
-  font-size: 12.5px; font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12.5px;
+  font-weight: 700;
   color: var(--red);
-  background: transparent; border: none;
-  text-decoration: none; padding: 0;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
   transition: gap 0.2s;
 }
-.srv-card:hover .srv-cta-btn { gap: 10px; }
-```
-
-**Kya karna hai:**
-
-Apne `home.css` mein yeh wala poora block dhundho:
-```
-/* ══════════════════════════════════════
-
+.srv-card:hover .srv-cta-btn {
+  gap: 10px;
+}
 
 /* ══════════════════════════════════════
    BEFORE / AFTER TRANSFORMATION
