@@ -333,119 +333,115 @@ section h2 {
 
 .as-btns { display: flex; gap: 14px; flex-wrap: wrap; }
 
-/* ══════════════════════════════
-   SECTION 5 — CORE SERVICES FIXED
-══════════════════════════════ */
-
-.services-section {
-  padding: 80px 0;
-  background: #F4F4F4;
-}
+/* ══════════════════════════════════════
+   5. CORE SERVICES — image top, data below
+   Same style as Blog cards (image 2)
+══════════════════════════════════════ */
+.services-section { padding: 100px 0; background: var(--off); }
 
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 28px;
 }
 
-/* CARD */
 .srv-card {
   display: flex;
   flex-direction: column;
-  background: #FFFFFF;
-  border-radius: 12px;
-  overflow: hidden;
   text-decoration: none;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-  transition: 0.3s ease;
+  background: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  transition: transform 0.32s ease, box-shadow 0.32s ease;
 }
-
 .srv-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-10px);
+  box-shadow: 0 22px 52px rgba(0,0,0,0.13);
 }
 
-/* IMAGE TOP */
+/* Image — full width on top, exactly like blog-img */
 .srv-img {
   position: relative;
-  width: 100%;
   height: 200px;
   overflow: hidden;
+  flex-shrink: 0;
 }
-
 .srv-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+  transition: transform 0.55s ease;
 }
+.srv-card:hover .srv-img img { transform: scale(1.07); }
 
 .srv-img-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.25);
+  position: absolute; inset: 0;
+  background: rgba(39,19,20,0);
+  transition: background 0.35s;
+}
+.srv-card:hover .srv-img-overlay {
+  background: rgba(39,19,20,0.15);
 }
 
+/* Category badge on image — same as blog-cat */
 .srv-tag {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background: #B92425;
-  color: #fff;
-  font-size: 12px;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-weight: 600;
+  position: absolute; top: 14px; left: 14px;
+  background: var(--red); color: var(--white);
+  font-size: 10px; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; padding: 4px 12px; border-radius: 2px;
 }
 
-/* BODY */
+/* Body — below image, same as blog-body */
 .srv-body {
-  padding: 22px;
   display: flex;
   flex-direction: column;
   flex: 1;
+  padding: 22px 24px 26px;
 }
 
-/* ICON */
 .srv-icon {
   font-size: 22px;
   margin-bottom: 10px;
+  display: block;
 }
 
-/* TITLE */
 .srv-body h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #000;
+  font-size: 17px; font-weight: 700;
+  color: var(--black); margin-bottom: 10px;
+  line-height: 1.35;
+  transition: color 0.25s;
 }
+.srv-card:hover .srv-body h3 { color: var(--red); }
 
-/* TEXT */
 .srv-body p {
-  font-size: 14px;
-  color: #666666;
-  line-height: 1.6;
-  margin-bottom: 20px;
+  font-size: 13px; color: #666;
+  line-height: 1.75; font-weight: 300;
+  margin-bottom: 18px;
+  flex: 1;
 }
 
-/* BUTTON BOTTOM FIX */
-.srv-cta-wrap {
-  margin-top: auto;
-}
-
-/* BUTTON */
+/* CTA button — pinned at bottom, same as blog-link */
+.srv-cta-wrap { margin-top: auto; }
 .srv-cta-btn {
-  display: inline-block;
-  padding: 10px 16px;
-  border: 1px solid #B92425;
-  color: #B92425;
-  border-radius: 6px;
-  font-size: 14px;
-  transition: 0.3s;
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 12.5px; font-weight: 700;
+  color: var(--red);
+  background: transparent; border: none;
+  text-decoration: none; padding: 0;
+  transition: gap 0.2s;
 }
+.srv-card:hover .srv-cta-btn { gap: 10px; }
+```
 
-.srv-cta-btn:hover {
-  background: #B92425;
-  color: #fff;
-}
+**Kya karna hai:**
+
+Apne `home.css` mein yeh wala poora block dhundho:
+```
+/* ══════════════════════════════════════
+
 
 /* ══════════════════════════════════════
    BEFORE / AFTER TRANSFORMATION
