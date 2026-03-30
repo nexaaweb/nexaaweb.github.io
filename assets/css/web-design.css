@@ -186,7 +186,7 @@ section h2 {
    2.5 WHATSAPP QUICK CTA STRIP
 ══════════════════════════════════════ */
 .wd-wa-strip {
-  background: var(--dark);
+  background: var(--white);
   padding: 28px 0;
 }
 .wa-strip-inner {
@@ -199,7 +199,7 @@ section h2 {
 .wa-strip-heading {
   font-family: 'Playfair Display', serif;
   font-size: clamp(18px, 2vw, 24px); font-weight: 800;
-  color: var(--white); letter-spacing: -0.5px;
+  color: var(--red); letter-spacing: -0.5px;
 }
 .wa-strip-sub {
   font-size: 14px; color: rgba(255,255,255,0.78);
@@ -208,15 +208,15 @@ section h2 {
 .btn-whatsapp-strip {
   display: inline-flex; align-items: center; gap: 9px;
   padding: 13px 30px; flex-shrink: 0;
-  background: transparent; color: var(--white);
+  background: transparent; color: var(--red);
   font-family: 'DM Sans', sans-serif;
   font-size: 14px; font-weight: 700;
   text-decoration: none; border-radius: 2px;
-  border: 2px solid var(--white);
+  border: 2px solid var(--red);
   transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 .btn-whatsapp-strip:hover {
-  background: var(--white); color: var(--dark);
+  background: var(--red); color: var(--dark);
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(0,0,0,0.25);
 }
