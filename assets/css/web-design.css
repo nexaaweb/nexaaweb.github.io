@@ -183,51 +183,123 @@ section h2 {
 .overview-p strong { font-weight: 600; }
 
 /* ══════════════════════════════════════
-   2.5 WHATSAPP QUICK CTA STRIP
-   FIX: dark background so text is readable
+   2.5 WHATSAPP QUICK CTA STRIP — REDESIGNED
 ══════════════════════════════════════ */
 .wd-wa-strip {
-  background: var(--dark);        /* FIX: was --white, text was invisible */
-  padding: 32px 0;
-  border-top: 1px solid rgba(185,36,37,0.2);
-  border-bottom: 1px solid rgba(185,36,37,0.2);
-}
-.wa-strip-inner {
-  display: flex; align-items: center;
-  justify-content: space-between; gap: 24px; flex-wrap: wrap;
-}
-.wa-strip-text {
-  display: flex; flex-direction: column; gap: 6px;
-}
-.wa-strip-heading {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(18px, 2vw, 24px); font-weight: 800;
-  color: var(--white);            /* FIX: was --red, now white on dark bg */
-  letter-spacing: -0.5px;
-}
-.wa-strip-sub {
-  font-size: 14px;
-  color: rgba(255,255,255,0.55);  /* FIX: was white/0.78, now clearly readable */
-  font-weight: 300;
+  position: relative;
+  padding: 0;
+  overflow: hidden;
 }
 
-/* Outline style: transparent bg, red border, white text — matches site theme */
+/* Split layout: left half dark, right half red */
+.wd-wa-strip::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(105deg, var(--dark) 0%, var(--dark) 52%, var(--red) 52%, var(--red) 100%);
+}
+
+/* Subtle diagonal texture lines */
+.wd-wa-strip::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: repeating-linear-gradient(
+    -55deg,
+    rgba(255,255,255,0.03) 0px,
+    rgba(255,255,255,0.03) 1px,
+    transparent 1px,
+    transparent 28px
+  );
+  pointer-events: none;
+}
+
+.wa-strip-inner {
+  position: relative; z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: stretch;
+  min-height: 120px;
+}
+
+/* Left text block */
+.wa-strip-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  padding: 36px 52px 36px 0;
+}
+
+.wa-strip-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+
+.wa-strip-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 24px; height: 1.5px;
+  background: var(--red);
+}
+
+.wa-strip-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(20px, 2.2vw, 28px);
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.8px;
+  line-height: 1.2;
+}
+
+.wa-strip-heading em {
+  font-style: normal;
+  color: var(--red);
+}
+
+.wa-strip-sub {
+  font-size: 13.5px;
+  color: rgba(255,255,255,0.45);
+  font-weight: 300;
+  letter-spacing: 0.1px;
+}
+
+/* Right CTA block — sits on red half */
+.wa-strip-cta-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--red);
+  padding: 36px 52px 36px 52px;
+  position: relative;
+}
+
+/* Decorative vertical separator line */
+.wa-strip-cta-block::before {
+  content: '';
+  position: absolute; left: 0; top: 20%; bottom: 20%;
+  width: 1px;
+  background: rgba(255,255,255,0.15);
+}
+
 .btn-whatsapp-strip {
-  display: inline-flex; align-items: center; gap: 9px;
-  padding: 13px 30px; flex-shrink: 0;
-  background: transparent; color: var(--white);
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 15px 36px; flex-shrink: 0;
+  background: var(--white); color: var(--red);
   font-family: 'DM Sans', sans-serif;
   font-size: 14px; font-weight: 700;
   text-decoration: none; border-radius: 2px;
-  border: 2px solid var(--white);  /* FIX: was --red, white border on dark bg looks cleaner */
+  border: 2px solid var(--white);
+  letter-spacing: 0.2px;
+  white-space: nowrap;
   transition: background 0.22s, color 0.22s, border-color 0.22s, transform 0.22s, box-shadow 0.22s;
 }
 .btn-whatsapp-strip:hover {
-  background: var(--red);
-  color: var(--white);             /* FIX: was --dark (dark maroon), now white */
-  border-color: var(--red);
+  background: transparent;
+  color: var(--white);
+  border-color: rgba(255,255,255,0.7);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(185,36,37,0.35);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.25);
 }
 
 /* ══════════════════════════════════════
@@ -608,7 +680,22 @@ section h2 {
   .srv-grid { grid-template-columns: repeat(2, 1fr); }
   .process-grid { grid-template-columns: repeat(2, 1fr); }
   section { padding: 64px 0; }
-  .wa-strip-inner { flex-direction: column; text-align: center; align-items: center; }
+  .wa-strip-inner {
+    grid-template-columns: 1fr;
+  }
+  .wa-strip-text {
+    padding: 36px 0 0;
+    text-align: center;
+    align-items: center;
+  }
+  .wa-strip-eyebrow::before { display: none; }
+  .wd-wa-strip::before {
+    background: linear-gradient(170deg, var(--dark) 0%, var(--dark) 60%, var(--red) 60%, var(--red) 100%);
+  }
+  .wa-strip-cta-block {
+    padding: 32px 24px 36px;
+  }
+  .wa-strip-cta-block::before { display: none; }
 }
 @media (max-width: 560px) {
   .wd-hero { min-height: 100vh; }
@@ -622,4 +709,5 @@ section h2 {
   .popup-img-wrap { height: 200px; }
   .popup-btns { flex-direction: column; }
   .popup-btn, .popup-btn-wa { width: 100%; justify-content: center; }
+  .btn-whatsapp-strip { width: 100%; justify-content: center; }
 }
