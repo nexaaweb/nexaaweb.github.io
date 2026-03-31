@@ -882,26 +882,103 @@
     const articles    = Array.from(articleList.querySelectorAll('.article-item'));
     let activeCat = 'all';
 
+    /* ── Sections that should show/hide based on search ── */
+    /* Each entry: { el: DOM element, keywords: [...] } */
+    const searchableSections = [
+      {
+        el: document.querySelector('.featured'),
+        keywords: ['website', 'build', 'time', 'how long', 'development', 'web']
+      },
+      {
+        el: document.querySelector('.mid-cta'),
+        keywords: ['website', 'brand', 'help', 'project', 'start', 'business']
+      },
+      {
+        el: document.querySelector('.solutions'),
+        keywords: ['free hosting', 'github', 'low budget', 'affordable', 'ai', 'artificial intelligence',
+                   'ai-powered', 'fast delivery', 'solution', 'small business', 'startup', 'chatbot', 'automation']
+      },
+      {
+        el: document.querySelector('.budget'),
+        keywords: ['budget', 'affordable', 'cost', 'cheap', 'free', 'hosting', 'maintenance',
+                   'small business', 'startup', 'investment', 'low cost', 'price']
+      },
+      {
+        el: document.querySelector('.projects'),
+        keywords: ['project', 'case study', 'example', '5 days', 'zero cost', 'maintenance',
+                   'idea', 'setup', 'real', 'business', 'website']
+      },
+      {
+        el: document.querySelector('.tips'),
+        keywords: ['tip', 'advice', 'mobile', 'speed', 'navigation', 'design', 'user friendly',
+                   'simple', 'professional', 'fast', 'loading']
+      },
+      {
+        el: document.querySelector('.biz-insights'),
+        keywords: ['business', 'insight', 'why', 'need', 'website', 'ai', 'artificial intelligence',
+                   'automation', 'choose', 'right', 'small business', 'solution', 'visibility', 'trust']
+      },
+      {
+        el: document.querySelector('.wa-cta'),
+        keywords: ['quote', 'free quote', 'contact', 'whatsapp', 'consult', 'project',
+                   'start', 'build', 'website', 'help']
+      },
+      {
+        el: document.querySelector('.final-cta'),
+        keywords: ['start', 'build', 'website', 'project', 'online', 'professional', 'presence']
+      }
+    ];
+
+    /* Store original display values */
+    searchableSections.forEach(s => {
+      if (s.el) s._origDisplay = s.el.style.display || '';
+    });
+
+    function matchesQuery(keywords, query) {
+      return keywords.some(kw => kw.includes(query) || query.includes(kw) ||
+        /* word-level: any word in query found in keyword */
+        query.split(' ').filter(w => w.length > 1).some(w => kw.includes(w)));
+    }
+
     function filterArticles() {
       const query = searchInput.value.trim().toLowerCase();
-      let visible = 0;
+      const isSearching = query !== '';
+
+      /* ── Filter article cards ── */
+      let visibleArticles = 0;
       articles.forEach(art => {
-        /* search across title AND all visible text inside the article */
         const title    = (art.getAttribute('data-title') || '').toLowerCase();
         const bodyText = art.innerText.toLowerCase();
         const category = art.getAttribute('data-category');
-        const matchSearch = query === '' || title.includes(query) || bodyText.includes(query);
+        const matchSearch = !isSearching || title.includes(query) || bodyText.includes(query);
         const matchCat    = activeCat === 'all' || category === activeCat;
-        if (matchSearch && matchCat) { art.style.display = ''; visible++; }
+        if (matchSearch && matchCat) { art.style.display = ''; visibleArticles++; }
         else { art.style.display = 'none'; }
       });
-      noResults.style.display = visible === 0 ? 'block' : 'none';
+
+      /* ── Show/hide other sections based on keyword match ── */
+      searchableSections.forEach(s => {
+        if (!s.el) return;
+        if (!isSearching) {
+          /* restore everything when search is cleared */
+          s.el.style.display = s._origDisplay;
+        } else {
+          const matches = matchesQuery(s.keywords, query);
+          s.el.style.display = matches ? s._origDisplay : 'none';
+        }
+      });
+
+      /* ── No results message ── */
+      const anySectionVisible = isSearching
+        ? searchableSections.some(s => s.el && s.el.style.display !== 'none')
+        : true;
+      noResults.style.display = (visibleArticles === 0 && !anySectionVisible) ? 'block' : 'none';
     }
 
     /* live filter on every keystroke */
     searchInput.addEventListener('input', filterArticles);
 
-    /* icon click also triggers filter (and focuses input) */
+    /* icon click triggers filter and focuses input */
     searchBtn.addEventListener('click', function() {
       searchInput.focus();
       filterArticles();
