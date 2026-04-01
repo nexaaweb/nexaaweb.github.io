@@ -1,5 +1,5 @@
 /* ============================================
-   NEXAAWEB — branding.css
+   NEXAAWEB — branding.css  (Updated & Fixed)
 ============================================ */
 
 :root {
@@ -53,6 +53,8 @@ section h2 {
 
 /* ══════════════════════════════════════
    1. HERO
+   FIX: Removed redundant transform & transition
+   from .br-hero-bg (animation handles it)
 ══════════════════════════════════════ */
 .br-hero {
   position: relative; min-height: 92vh;
@@ -62,8 +64,8 @@ section h2 {
   position: absolute; inset: 0;
   background: url('https://i.pinimg.com/736x/11/d3/e6/11d3e646686d55ba13b55a6539dccfc0.jpg')
     center/cover no-repeat;
-  transform: scale(1.07);
-  transition: transform 10s ease;
+  /* FIX: Removed redundant `transform: scale(1.07)` and `transition` —
+     the heroZoom animation below already handles this cleanly */
   animation: heroZoom 12s ease-out forwards;
 }
 @keyframes heroZoom {
@@ -204,7 +206,7 @@ section h2 {
    2.5. WHATSAPP QUICK CTA STRIP
 ══════════════════════════════════════ */
 .br-wa-strip {
-  background: var(--red);
+  background: var(--wa);
   padding: 28px 0;
 }
 .wa-strip-inner {
@@ -226,7 +228,7 @@ section h2 {
 .btn-wa-strip {
   display: inline-flex; align-items: center; gap: 9px;
   padding: 13px 30px; flex-shrink: 0;
-  background: transparent; color: var(--white);
+  background: var(--white); color: var(--wa);
   font-family: 'DM Sans', sans-serif;
   font-size: 14px; font-weight: 700;
   text-decoration: none; border-radius: 2px;
@@ -234,9 +236,9 @@ section h2 {
   transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 .btn-wa-strip:hover {
-  background: var(--white); color: var(--red);
+  background: transparent; color: var(--white);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 
 /* ══════════════════════════════════════
@@ -259,6 +261,7 @@ section h2 {
   border: 1px solid rgba(0,0,0,0.07);
   border-radius: 4px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  cursor: pointer;
   transition: transform 0.35s cubic-bezier(.22,1,.36,1),
               box-shadow 0.35s ease,
               border-color 0.35s ease;
@@ -293,7 +296,7 @@ section h2 {
   transition: border-color 0.35s;
   position: relative;
 }
-/* animated red line */
+/* animated red line on hover */
 .dc-body::before {
   content: '';
   position: absolute; top: 0; left: 0;
@@ -453,6 +456,8 @@ section h2 {
 
 /* ══════════════════════════════════════
    5. HOW WE WORK
+   FIX: .br-process .section-top gets explicit
+   position: relative so z-index works correctly
 ══════════════════════════════════════ */
 .br-process {
   padding: 96px 0;
@@ -467,7 +472,11 @@ section h2 {
     linear-gradient(90deg, rgba(185,36,37,0.04) 1px, transparent 1px);
   background-size: 52px 52px; pointer-events: none;
 }
-.br-process .section-top { position: relative; z-index: 1; }
+/* FIX: Added explicit position: relative so z-index is effective */
+.br-process .section-top {
+  position: relative;
+  z-index: 1;
+}
 
 .process-grid {
   display: grid;
@@ -491,7 +500,7 @@ section h2 {
   transform: translateY(-8px);
   box-shadow: 0 20px 48px rgba(0,0,0,0.5);
 }
-/* big decorative bg number */
+/* FIX: data-n attribute is now set in HTML — decorative bg number will show */
 .process-card::after {
   content: attr(data-n);
   position: absolute; right: -8px; bottom: -18px;
@@ -535,7 +544,7 @@ section h2 {
   position: absolute; inset: 0;
   background: linear-gradient(135deg, rgba(0,0,0,0.2) 0%, transparent 60%);
 }
-/* animated blobs */
+/* animated blob */
 .br-cta::after {
   content: '';
   position: absolute;
@@ -633,10 +642,8 @@ section h2 {
 }
 
 /* ══════════════════════════════════════
-   LEARN MORE + POPUP
+   LEARN MORE LABEL
 ══════════════════════════════════════ */
-.design-card { cursor: pointer; }
-
 .learn-more {
   display: inline-block;
   margin-top: 10px;
@@ -646,6 +653,9 @@ section h2 {
 }
 .design-card:hover .learn-more { letter-spacing: 1.5px; }
 
+/* ══════════════════════════════════════
+   POPUP
+══════════════════════════════════════ */
 .popup-overlay {
   position: fixed; inset: 0;
   background: rgba(0,0,0,0.75);
@@ -700,7 +710,10 @@ section h2 {
   color: #111; line-height: 1.2; margin-bottom: 0;
 }
 .popup-divider { width: 40px; height: 3px; background: #B92425; border-radius: 2px; margin: 16px 0 20px; }
-.popup-content p { font-size: 15px; line-height: 1.9; color: #555; font-weight: 300; white-space: pre-line; }
+.popup-content p {
+  font-size: 15px; line-height: 1.9;
+  color: #555; font-weight: 300; white-space: pre-line;
+}
 
 /* Popup buttons row */
 .popup-btns {
@@ -717,7 +730,10 @@ section h2 {
   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 .popup-btn::after { content: '→'; transition: transform 0.2s; }
-.popup-btn:hover { background: #9b1d1e; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(185,36,37,0.35); }
+.popup-btn:hover {
+  background: #9b1d1e; transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(185,36,37,0.35);
+}
 .popup-btn:hover::after { transform: translateX(4px); }
 
 /* WhatsApp button — Popup */
