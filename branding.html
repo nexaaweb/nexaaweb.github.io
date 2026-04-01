@@ -1,697 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Blog &amp; Insights — NexaaWeb</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
-<link rel="stylesheet" href="assets/css/header.css"/>
-<link rel="stylesheet" href="assets/css/footer.css"/>
-<style>
-
-  :root {
-    --red:        #B92425;
-    --black:      #271314;
-    --dark:       #1a0d0d;
-    --white:      #FFFFFF;
-    --off-white:  #fafafa;
-    --text:       #333333;
-    --text-light: #666666;
-    --border:     rgba(185,36,37,0.18);
-  }
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--white);
-    color: var(--text);
-    overflow-x: hidden;
-  }
-
-  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
-
-  .label {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 11px; font-weight: 700;
-    letter-spacing: 3px; text-transform: uppercase;
-    color: var(--red);
-  }
-
-  /* HERO */
-  .hero {
-    background: var(--white);
-    text-align: center;
-    padding: 100px 24px 80px;
-    position: relative; overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background-image:
-      linear-gradient(rgba(185,36,37,0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(185,36,37,0.03) 1px, transparent 1px);
-    background-size: 60px 60px;
-    pointer-events: none;
-  }
-  .hero > * { position: relative; z-index: 1; }
-  .hero .label { margin-bottom: 18px; display: block; }
-  .hero h1 {
-    font-size: clamp(40px, 6vw, 72px); font-weight: 900;
-    color: var(--black); line-height: 1.1;
-    margin-bottom: 22px; letter-spacing: -2px;
-  }
-  .hero h1 span { color: var(--red); }
-  .hero p {
-    max-width: 620px; margin: 0 auto 48px;
-    font-size: 16px; line-height: 1.85;
-    color: var(--text-light); font-weight: 300;
-  }
-
-  /* Search */
-  .search-wrap {
-    max-width: 520px; margin: 0 auto;
-    position: relative;
-    animation: scaleIn 0.6s cubic-bezier(.22,1,.36,1) 0.4s both;
-  }
-  @keyframes scaleIn {
-    from { transform: scale(0.92); opacity: 0; }
-    to   { transform: scale(1);    opacity: 1; }
-  }
-  .search-wrap input {
-    width: 100%;
-    padding: 16px 54px 16px 22px;
-    border: 1.5px solid var(--border);
-    border-radius: 50px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px; color: var(--black); outline: none;
-    background: var(--white);
-    transition: border-color 0.2s, box-shadow 0.2s;
-  }
-  .search-wrap input:focus {
-    border-color: var(--red);
-    box-shadow: 0 0 0 4px rgba(185,36,37,0.08);
-  }
-  .search-wrap input::placeholder { color: #aaa; }
-  .search-icon {
-    position: absolute; right: 18px; top: 50%;
-    transform: translateY(-50%);
-    color: var(--red); font-size: 18px;
-    cursor: pointer;
-    transition: transform 0.15s;
-  }
-  .search-icon:hover { transform: translateY(-50%) scale(1.2); }
-
-  /* CATEGORIES */
-  .categories-nav {
-    background: var(--white);
-    padding: 28px 24px; text-align: center;
-    border-bottom: 1px solid rgba(0,0,0,0.07);
-    position: sticky; top: 72px; z-index: 100;
-  }
-  .cat-list {
-    display: flex; flex-wrap: wrap;
-    justify-content: center; align-items: center;
-    gap: 0; list-style: none;
-  }
-  .cat-list li {
-    font-size: 14px; font-weight: 600;
-    padding: 10px 22px; cursor: pointer;
-    color: var(--black); transition: color 0.2s;
-    position: relative; white-space: nowrap;
-    font-family: 'DM Sans', sans-serif;
-  }
-  .cat-list li:not(:last-child)::after {
-    content: '•'; position: absolute; right: -2px;
-    top: 50%; transform: translateY(-50%); color: #ddd;
-  }
-  .cat-list li:hover { color: var(--red); }
-  .cat-list li.active { color: var(--red); border-bottom: 2px solid var(--red); }
-
-  /* FEATURED */
-  .featured {
-    background: var(--black);
-    padding: 80px 8%;
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 60px; align-items: center;
-  }
-  .featured-text .label { color: rgba(255,255,255,0.45); margin-bottom: 16px; display: block; }
-  .featured-text h2 {
-    font-size: clamp(28px, 3.5vw, 46px); color: var(--white);
-    line-height: 1.15; margin-bottom: 20px; letter-spacing: -1px;
-  }
-  .featured-text h2 span { color: var(--red); }
-  .featured-text p { color: rgba(255,255,255,0.62); font-size: 15px; line-height: 1.85; margin-bottom: 14px; font-weight: 300; }
-  .featured-text .read-link {
-    display: inline-flex; align-items: center; gap: 8px;
-    color: var(--red); font-size: 14px; font-weight: 700;
-    text-decoration: none; margin-top: 14px; transition: gap 0.2s;
-  }
-  .featured-text .read-link:hover { gap: 14px; }
-  .featured-img {
-    width: 100%; height: 420px;
-    background:
-      linear-gradient(135deg, rgba(185,36,37,0.3) 0%, rgba(39,19,20,0.8) 100%),
-      url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80') center/cover;
-    position: relative; overflow: hidden;
-  }
-  .featured-img::before { content: ''; position: absolute; inset: 0; border: 1.5px solid rgba(185,36,37,0.3); }
-  .featured-img .img-tag {
-    position: absolute; bottom: 20px; left: 20px;
-    background: var(--red); color: white;
-    font-size: 10px; font-weight: 700; letter-spacing: 2.5px;
-    text-transform: uppercase; padding: 6px 14px;
-  }
-
-  /* MAIN BLOG */
-  .blog-section { padding: 80px 8%; background: var(--white); }
-  .section-header { text-align: center; margin-bottom: 60px; }
-  .section-header h2 { font-size: clamp(28px, 3vw, 42px); color: var(--black); margin-top: 12px; letter-spacing: -1px; }
-  .article-list { max-width: 900px; margin: 0 auto; }
-  .article-item { padding: 44px 0; }
-  .article-item:not(:last-child) { border-bottom: 1.5px solid var(--red); }
-  .article-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
-  .article-cat { font-size: 10.5px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--red); font-family: 'DM Sans', sans-serif; }
-  .article-date { font-size: 12px; color: var(--text-light); }
-  .article-item h3 { font-size: clamp(22px, 2.5vw, 30px); color: var(--black); line-height: 1.2; margin-bottom: 14px; font-weight: 800; letter-spacing: -0.5px; }
-  .article-item p { font-size: 15px; line-height: 1.88; color: #444; font-weight: 300; max-width: 760px; }
-  .article-item p + p { margin-top: 12px; }
-  .article-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px; }
-  .article-tag {
-    font-size: 10.5px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
-    color: var(--text-light); background: rgba(0,0,0,0.05);
-    padding: 4px 12px; border-radius: 50px;
-    transition: background 0.2s, color 0.2s; cursor: default;
-  }
-  .article-tag:hover { background: rgba(185,36,37,0.08); color: var(--red); }
-  .read-time { font-size: 11.5px; color: var(--text-light); font-weight: 400; }
-  .read-time::before { content: '· '; }
-
-  /* MID CTA */
-  .mid-cta { background: var(--red); padding: 80px 24px; text-align: center; }
-  .mid-cta h2 { font-size: clamp(26px, 3vw, 42px); color: var(--white); margin-bottom: 14px; letter-spacing: -1px; }
-  .mid-cta p { color: rgba(255,255,255,0.8); font-size: 16px; margin-bottom: 36px; font-weight: 300; }
-  .btn-white {
-    display: inline-block; background: var(--white); color: var(--red);
-    border: 2px solid var(--white); padding: 14px 38px;
-    font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700;
-    text-decoration: none; letter-spacing: 0.3px; transition: background 0.25s, color 0.25s;
-  }
-  .btn-white:hover { background: transparent; color: var(--white); }
-
-  /* SMART SOLUTIONS */
-  .solutions { padding: 90px 8%; background: var(--white); }
-  .solutions-grid { max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 52px; }
-  .solution-num { font-size: 10.5px; font-weight: 700; letter-spacing: 3px; color: var(--red); text-transform: uppercase; margin-bottom: 10px; display: block; font-family: 'DM Sans', sans-serif; }
-  .solution-block h3 { font-size: clamp(20px, 2vw, 28px); color: var(--black); margin-bottom: 12px; letter-spacing: -0.5px; }
-  .solution-block h3 span { color: var(--red); }
-  .solution-block p { font-size: 15px; line-height: 1.85; color: #555; font-weight: 300; max-width: 680px; }
-
-  /* BUDGET */
-  .budget { background: var(--white); padding: 90px 8%; text-align: center; }
-  .budget-inner { max-width: 740px; margin: 0 auto; }
-  .budget-inner h2 { font-size: clamp(26px, 3vw, 40px); color: var(--black); margin: 12px 0 24px; letter-spacing: -1px; }
-  .budget-inner h2 span { color: var(--red); }
-  .budget-inner p { font-size: 15px; line-height: 1.9; color: #555; margin-bottom: 16px; font-weight: 300; }
-
-  /* PROJECTS */
-  .projects { padding: 90px 8%; background: var(--white); }
-  .projects-list { max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 44px; position: relative; padding-left: 48px; }
-  .projects-list::before { content: ''; position: absolute; left: 12px; top: 10px; bottom: 10px; width: 2px; background: linear-gradient(to bottom, var(--red), rgba(185,36,37,0.1)); }
-  .project-item { position: relative; }
-  .project-item::before { content: ''; position: absolute; left: -42px; top: 8px; width: 14px; height: 14px; border-radius: 50%; background: var(--red); border: 3px solid var(--white); box-shadow: 0 0 0 2px var(--red); }
-  .project-item h3 { font-size: clamp(18px, 2vw, 26px); color: var(--black); margin-bottom: 10px; letter-spacing: -0.3px; }
-  .project-item h3 span { color: var(--red); }
-  .project-item p { font-size: 15px; line-height: 1.8; color: #555; font-weight: 300; }
-
-  /* TIPS */
-  .tips { background: var(--white); padding: 90px 8%; }
-  .tips-grid { max-width: 820px; margin: 40px auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px 40px; }
-  .tip-item { display: flex; align-items: flex-start; gap: 14px; font-size: 15px; color: var(--text); line-height: 1.6; font-weight: 400; }
-  .tip-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--red); flex-shrink: 0; margin-top: 7px; }
-
-  /* BIZ INSIGHTS */
-  .biz-insights { background: var(--white); padding: 90px 8%; }
-  .biz-list { max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; }
-  .biz-item { padding: 32px 0; border-bottom: 1px solid rgba(0,0,0,0.07); display: flex; justify-content: space-between; align-items: center; gap: 24px; cursor: pointer; transition: padding-left 0.2s; }
-  .biz-item:hover { padding-left: 12px; }
-  .biz-item:first-child { border-top: 1px solid rgba(0,0,0,0.07); }
-  .biz-item h3 { font-size: clamp(17px, 1.8vw, 23px); color: var(--black); margin-bottom: 8px; letter-spacing: -0.3px; }
-  .biz-item p { font-size: 14px; color: var(--text-light); font-weight: 300; line-height: 1.6; max-width: 600px; }
-  .biz-arrow { color: var(--red); font-size: 22px; flex-shrink: 0; transition: transform 0.2s; }
-  .biz-item:hover .biz-arrow { transform: translateX(6px); }
-
-  /* WHATSAPP CTA */
-  .whatsapp-cta {
-    background: var(--black);
-    padding: 80px 24px; text-align: center;
-    position: relative; overflow: hidden;
-  }
-  .whatsapp-cta::before {
-    content: '';
-    position: absolute; inset: 0;
-    background-image:
-      linear-gradient(rgba(185,36,37,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(185,36,37,0.04) 1px, transparent 1px);
-    background-size: 50px 50px; pointer-events: none;
-  }
-  .whatsapp-cta > * { position: relative; z-index: 1; }
-  .whatsapp-cta .label { color: rgba(255,255,255,0.4); margin-bottom: 16px; display: block; }
-  .whatsapp-cta h2 { font-size: clamp(26px, 3.5vw, 44px); color: var(--white); margin-bottom: 14px; letter-spacing: -1px; }
-  .whatsapp-cta h2 span { color: var(--red); }
-  .whatsapp-cta p { color: rgba(255,255,255,0.55); font-size: 16px; margin-bottom: 36px; font-weight: 300; max-width: 520px; margin-left: auto; margin-right: auto; }
-  .btn-whatsapp {
-    display: inline-flex; align-items: center; gap: 12px;
-    background: #25D366; color: #fff;
-    border: 2px solid #25D366;
-    padding: 16px 40px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px; font-weight: 700;
-    text-decoration: none; letter-spacing: 0.3px;
-    transition: background 0.25s, color 0.25s, box-shadow 0.3s;
-    border-radius: 2px;
-  }
-  .btn-whatsapp:hover {
-    background: transparent; color: #25D366;
-    box-shadow: 0 0 24px rgba(37,211,102,0.3), 0 0 48px rgba(37,211,102,0.1);
-  }
-  .btn-whatsapp svg { width: 20px; height: 20px; flex-shrink: 0; fill: currentColor; }
-
-  /* FINAL CTA */
-  .final-cta {
-    background: var(--black); padding: 100px 24px; text-align: center;
-    border-top: 1px solid rgba(255,255,255,0.05);
-  }
-  .final-cta h2 { font-size: clamp(28px, 4vw, 52px); color: var(--white); margin-bottom: 16px; letter-spacing: -1.5px; }
-  .final-cta h2 span { color: var(--red); }
-  .final-cta p { color: rgba(255,255,255,0.55); font-size: 16px; margin-bottom: 40px; font-weight: 300; }
-  .btn-red {
-    display: inline-block; background: var(--red); color: var(--white);
-    border: 2px solid var(--red); padding: 16px 44px;
-    font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700;
-    text-decoration: none; letter-spacing: 0.3px;
-    transition: background 0.25s, color 0.25s, box-shadow 0.3s;
-  }
-  .btn-red:hover { background: transparent; color: var(--red); box-shadow: 0 0 24px rgba(185,36,37,0.4), 0 0 48px rgba(185,36,37,0.15); }
-
-  /* ANIMATIONS */
-  .fade-up { animation: fadeUp 0.7s cubic-bezier(.22,1,.36,1) both; }
-  .fade-up-d1 { animation-delay: 0.1s; }
-  .fade-up-d2 { animation-delay: 0.2s; }
-  .fade-up-d3 { animation-delay: 0.3s; }
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-
-  .no-results { text-align: center; padding: 60px 0; color: var(--text-light); font-size: 16px; display: none; }
-  .no-results strong { color: var(--red); }
-
-  /* RESPONSIVE */
-  @media (max-width: 900px) {
-    .featured { grid-template-columns: 1fr; padding: 60px 6%; }
-    .featured-img { height: 280px; }
-    .tips-grid { grid-template-columns: 1fr; }
-  }
-</style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Branding &amp; Creative Design — NexaaWeb</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/header.css"/>
+  <link rel="stylesheet" href="assets/css/footer.css"/>
+  <link rel="stylesheet" href="assets/css/branding.css"/>
 </head>
 <body>
 
   <div id="header-placeholder"></div>
 
-  <!-- HERO -->
-  <section class="hero">
-    <span class="label fade-up fade-up-d1">Blog &amp; Insights</span>
-    <h1 class="fade-up fade-up-d2">Learn, <span>Grow</span> &amp; Stay Ahead</h1>
-    <p class="fade-up fade-up-d3">Explore expert insights, tips, and strategies on web design, branding, and digital growth. At NexaaWeb, we share practical knowledge to help businesses build a strong online presence and grow smarter.</p>
-    <div class="search-wrap">
-      <input type="text" id="searchInput" placeholder="Search Articles... (e.g. AI, SEO, Brand)"/>
-      <span class="search-icon" id="searchBtn" title="Search">&#128269;</span>
-    </div>
-  </section>
+  <main>
 
-  <!-- CATEGORIES -->
-  <nav class="categories-nav" aria-label="Categories">
-    <ul class="cat-list" id="catList">
-      <li class="active" data-cat="all">All</li>
-      <li data-cat="web-design">Web Design</li>
-      <li data-cat="branding">Branding</li>
-      <li data-cat="seo">SEO</li>
-      <li data-cat="business-growth">Business Growth</li>
-      <li data-cat="ai-technology">AI &amp; Technology</li>
-    </ul>
-  </nav>
-
-  <!-- FEATURED -->
-  <section class="featured">
-    <div class="featured-text" data-aos="fade-right" data-aos-duration="800">
-      <span class="label">Featured Article</span>
-      <h2>How Much Time Does It Take to <span>Build a Website?</span></h2>
-      <p>Building a website depends on the complexity, number of pages, and features required. Simple websites with basic structure can be completed within a few days, while business websites with multiple pages, forms, and integrations may take more time.</p>
-      <p>Advanced websites with custom design, unique UI/UX, and complex functionality require detailed planning, development, and testing. Choosing the right approach helps ensure better performance, user experience, and long-term growth.</p>
-      <a href="#" class="read-link">Read Full Article →</a>
-    </div>
-    <div class="featured-img" data-aos="fade-left" data-aos-duration="800">
-      <div class="img-tag">Featured</div>
-    </div>
-  </section>
-
-  <!-- MAIN BLOG -->
-  <section class="blog-section">
-    <div class="section-header" data-aos="fade-up">
-      <span class="label">Latest Articles</span>
-      <h2>Blog &amp; Insights</h2>
-    </div>
-
-    <div class="article-list" id="articleList">
-
-      <article class="article-item" data-aos="fade-up"
-        data-category="web-design"
-        data-title="How to Build a Professional Website for Your Business"
-        data-keywords="website design professional mobile friendly build structure navigation brand">
-        <div class="article-meta">
-          <span class="article-cat">Web Design</span>
-          <span class="read-time">5 min read</span>
-          <span class="article-date">March 2026</span>
+    <!-- ══════════════════════════════
+         1. HERO
+    ══════════════════════════════ -->
+    <section class="br-hero">
+      <div class="br-hero-bg"></div>
+      <div class="br-hero-overlay"></div>
+      <div class="br-hero-content">
+        <span class="br-label">Branding &amp; Creative Design</span>
+        <h1>Creative <span class="red">Designs</span> That Make<br/>Your Brand Stand Out</h1>
+        <p>At NexaaWeb, we create visually powerful and meaningful designs that define your brand identity. From logos to complete branding systems and marketing creatives, every design is crafted to make your business look professional, memorable, and impactful.</p>
+        <p class="hero-italic">We don't just design — we build brands that people recognize and trust.</p>
+        <div class="hero-btns">
+          <a href="/contact.html" class="btn-hero">Start Your Project</a>
+          <a href="https://wa.me/917411984925?text=Hi%20NexaaWeb%2C%20I%20am%20interested%20in%20your%20Branding%20and%20Creative%20Design%20services.%20I%20would%20like%20to%20build%20a%20strong%20brand%20identity%20for%20my%20business.%20Could%20you%20please%20share%20the%20details%20and%20pricing%3F" class="btn-hero-wa" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Build Your Brand Identity
+          </a>
         </div>
-        <h3>How to Build a Professional Website for Your Business</h3>
-        <p>A professional website is one of the most important assets for any business. It creates a first impression, builds credibility, and helps attract new customers. Whether you are starting a new business or upgrading an existing website, the process begins with clear planning.</p>
-        <p>Choosing the right structure, design, and features is essential for long-term success. A well-built website should be mobile-friendly, fast, and easy to navigate. It should also reflect your brand identity and communicate your services clearly to visitors.</p>
-        <div class="article-tags">
-          <span class="article-tag">Website</span>
-          <span class="article-tag">Design</span>
-          <span class="article-tag">Business</span>
-        </div>
-      </article>
+      </div>
+      <div class="hero-scroll"><span></span></div>
+    </section>
 
-      <article class="article-item" data-aos="fade-up" data-aos-delay="50"
-        data-category="branding"
-        data-title="Why Your Brand Identity Matters Online"
-        data-keywords="brand identity logo colors fonts trust online consistent social media visual elements">
-        <div class="article-meta">
-          <span class="article-cat">Branding</span>
-          <span class="read-time">4 min read</span>
-          <span class="article-date">March 2026</span>
+    <!-- ══════════════════════════════
+         2. OVERVIEW
+    ══════════════════════════════ -->
+    <section class="br-overview">
+      <div class="br-ov-bg"></div>
+      <div class="br-ov-overlay"></div>
+      <div class="container center br-ov-content">
+        <div class="reveal">
+          <span class="tag">Overview</span>
+          <h2>Branding &amp; <span class="red">Creative Design</span></h2>
+          <p class="ov-p">We provide complete branding and creative design solutions to help businesses build a <strong class="red">strong and consistent visual identity</strong>. Our designs are not just visually attractive — they are strategic, meaningful, and aligned with your brand goals.</p>
+          <p class="ov-p">From startups to established businesses, we create designs that improve <strong class="red">brand recognition, build trust, and leave a lasting impression</strong>.</p>
         </div>
-        <h3>Why Your Brand Identity Matters Online</h3>
-        <p>Your brand identity is how your business is perceived by the world. It includes your logo, colors, fonts, and the overall tone of your communication. A strong brand identity builds trust and makes your business memorable to customers.</p>
-        <p>Online branding goes beyond just having a logo. It involves consistent use of visual elements across your website, social media, and other digital channels. When your brand is consistent, customers recognize and trust you more easily.</p>
-        <div class="article-tags">
-          <span class="article-tag">Branding</span>
-          <span class="article-tag">Identity</span>
-          <span class="article-tag">Logo</span>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         2.5. WHATSAPP QUICK CTA STRIP
+    ══════════════════════════════ -->
+    <section class="br-wa-strip">
+      <div class="container wa-strip-inner reveal">
+        <div class="wa-strip-text">
+          <span class="wa-strip-heading">Ready to Build Your Brand Identity?</span>
+          <span class="wa-strip-sub">Chat with us on WhatsApp — get a free branding consultation in minutes.</span>
         </div>
-      </article>
+        <a href="https://wa.me/917411984925?text=Hi%20NexaaWeb%2C%20I%20am%20interested%20in%20your%20Branding%20and%20Creative%20Design%20services.%20I%20would%20like%20to%20build%20a%20strong%20brand%20identity%20for%20my%20business.%20Could%20you%20please%20share%20the%20details%20and%20pricing%3F" class="btn-wa-strip" target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Build Your Brand Identity
+        </a>
+      </div>
+    </section>
 
-      <article class="article-item" data-aos="fade-up" data-aos-delay="100"
-        data-category="seo"
-        data-title="Understanding SEO for Small Businesses"
-        data-keywords="seo search engine optimization google traffic keywords backlinks small business organic ranking visibility">
-        <div class="article-meta">
-          <span class="article-cat">SEO</span>
-          <span class="read-time">6 min read</span>
-          <span class="article-date">February 2026</span>
+    <!-- ══════════════════════════════
+         3. DESIGN SERVICES
+    ══════════════════════════════ -->
+    <section class="br-services">
+      <div class="container">
+        <div class="section-top reveal">
+          <span class="tag">What We Create</span>
+          <h2>Our Design <span class="red">Services</span></h2>
         </div>
-        <h3>Understanding SEO for Small Businesses</h3>
-        <p>Search Engine Optimization (SEO) helps your website appear higher in search results, making it easier for potential customers to find you. For small businesses, good SEO can make a significant difference in attracting organic traffic without paid advertising.</p>
-        <p>Basic SEO practices include using the right keywords, creating quality content, improving website speed, and building backlinks. Even small improvements in SEO can lead to more visibility and more customers over time.</p>
-        <div class="article-tags">
-          <span class="article-tag">SEO</span>
-          <span class="article-tag">Traffic</span>
-          <span class="article-tag">Google</span>
+        <div class="design-grid">
+
+          <div class="design-card reveal" data-service="logo">
+            <div class="dc-img"><img src="https://i.pinimg.com/1200x/b7/b3/27/b7b3274175bd59c691eb4de8d118d642.jpg" alt="Logo Design"/><div class="dc-overlay"></div></div>
+            <div class="dc-body"><h3>Logo Design</h3><p>Unique and memorable logos designed to reflect your brand identity.</p><span class="learn-more">Learn More +</span></div>
+          </div>
+
+          <div class="design-card reveal" style="transition-delay:.06s" data-service="brand-identity">
+            <div class="dc-img"><img src="https://i.pinimg.com/736x/20/fd/f2/20fdf294e2305e38cc14487485bb73e0.jpg" alt="Brand Identity"/><div class="dc-overlay"></div></div>
+            <div class="dc-body"><h3>Brand Identity Design</h3><p>Complete branding system including colors, typography, and visual style.</p><span class="learn-more">Learn More +</span></div>
+          </div>
+
+          <div class="design-card reveal" style="transition-delay:.12s" data-service="poster">
+            <div class="dc-img"><img src="https://i.pinimg.com/736x/73/83/52/738352e90bd247e34a659d01f90f0921.jpg" alt="Poster Design"/><div class="dc-overlay"></div></div>
+            <div class="dc-body"><h3>Poster &amp; Banner Design</h3><p>Creative promotional designs for marketing and advertising campaigns.</p><span class="learn-more">Learn More +</span></div>
+          </div>
+
+          <div class="design-card reveal" style="transition-delay:.18s" data-service="social-media">
+            <div class="dc-img"><img src="https://i.pinimg.com/736x/25/95/5f/25955fa89ea725c69ece2eea2567f47f.jpg" alt="Social Media"/><div class="dc-overlay"></div></div>
+            <div class="dc-body"><h3>Social Media Post Design</h3><p>Modern and engaging designs to boost your online presence.</p><span class="learn-more">Learn More +</span></div>
+          </div>
+
+          <div class="design-card reveal" style="transition-delay:.06s" data-service="business-card">
+            <div class="dc-img"><img src="https://i.pinimg.com/736x/c8/b6/17/c8b617c08c31bed91d0bb0de12f86360.jpg" alt="Business Card"/><div class="dc-overlay"></div></div>
+            <div class="dc-body"><h3>Business Card Design</h3><p>Professional cards that create a strong first impression.</p><span class="learn-more">Learn More +</span></div>
+          </div>
+
+          <div class="design-card reveal" style="transition-delay:.12s" data-service="brochure">
+            <div class="dc-img"><img src="https://i.pinimg.com/736x/47/3f/a8/473fa850646410dd526c8e6063db3985.jpg" alt="Brochure"/><div class="dc-overlay"></div></div>
+            <div class="dc-body"><h3>Brochure &amp; Flyer Design</h3><p>Informative and visually appealing marketing materials.</p><span class="learn-more">Learn More +</span></div>
+          </div>
+
+          <div class="design-card reveal" style="transition-delay:.18s" data-service="company-profile">
+            <div class="dc-img"><img src="https://i.pinimg.com/736x/5c/f2/7c/5cf27ceeb6701dda48a3703ddb991680.jpg" alt="Company Profile"/><div class="dc-overlay"></div></div>
+            <div class="dc-body"><h3>Company Profile Design</h3><p>Clean and structured profiles to present your business professionally.</p><span class="learn-more">Learn More +</span></div>
+          </div>
+
+          <div class="design-card reveal" style="transition-delay:.24s" data-service="resume">
+            <div class="dc-img"><img src="https://i.pinimg.com/1200x/ee/90/c9/ee90c9aaf686c5dc61c538bcd028916f.jpg" alt="Resume"/><div class="dc-overlay"></div></div>
+            <div class="dc-body"><h3>Resume / CV Design</h3><p>Modern and impactful resumes that stand out.</p><span class="learn-more">Learn More +</span></div>
+          </div>
+
+          <div class="design-card reveal" style="transition-delay:.06s" data-service="ppt">
+            <div class="dc-img"><img src="https://i.pinimg.com/736x/8b/1a/2b/8b1a2b26d64d16ca2c65f68c716bd29a.jpg" alt="PPT Design"/><div class="dc-overlay"></div></div>
+            <div class="dc-body"><h3>Professional PPT Design</h3><p>Clean and high-quality presentations for business and projects.</p><span class="learn-more">Learn More +</span></div>
+          </div>
+
+          <div class="design-card reveal" style="transition-delay:.12s" data-service="menu">
+            <div class="dc-img"><img src="https://i.pinimg.com/736x/3d/ed/34/3ded3445e7349bc27a0869f31c1e5b12.jpg" alt="Menu Card"/><div class="dc-overlay"></div></div>
+            <div class="dc-body"><h3>Menu Card Design</h3><p>Stylish and organized menus for restaurants and cafes.</p><span class="learn-more">Learn More +</span></div>
+          </div>
+
+          <div class="design-card reveal" style="transition-delay:.18s" data-service="nameplate">
+            <div class="dc-img"><img src="https://i.pinimg.com/736x/44/f0/51/44f051cbd27deb9beab348a43561f369.jpg" alt="Name Plate"/><div class="dc-overlay"></div></div>
+            <div class="dc-body"><h3>Name Plate Design</h3><p>Office signage and name plates that enhance brand presence.</p><span class="learn-more">Learn More +</span></div>
+          </div>
+
         </div>
-      </article>
+      </div>
+    </section>
 
-      <article class="article-item" data-aos="fade-up" data-aos-delay="150"
-        data-category="business-growth"
-        data-title="How a Website Helps Your Business Grow"
-        data-keywords="business growth website sales leads strategy digital storefront revenue customers online">
-        <div class="article-meta">
-          <span class="article-cat">Business Growth</span>
-          <span class="read-time">4 min read</span>
-          <span class="article-date">February 2026</span>
+    <!-- ══════════════════════════════
+         4. WHY CHOOSE US — SCROLL STRIP
+    ══════════════════════════════ -->
+    <section class="br-why">
+      <div class="container">
+        <div class="section-top center reveal">
+          <span class="tag light">Our Edge</span>
+          <h2 class="white">Why Choose <span class="red">Our Designs</span></h2>
         </div>
-        <h3>How a Website Helps Your Business Grow</h3>
-        <p>A website acts as your 24/7 digital storefront. It allows customers to find your business, learn about your services, and contact you at any time. Unlike a physical shop, your website is always available and reaches a much larger audience.</p>
-        <p>With the right strategy, your website can generate leads, increase sales, and build long-term relationships with customers. It is one of the most valuable investments a business can make in the digital age.</p>
-        <div class="article-tags">
-          <span class="article-tag">Growth</span>
-          <span class="article-tag">Strategy</span>
-          <span class="article-tag">Sales</span>
+      </div>
+      <div class="why-strip-wrap">
+        <div class="why-track">
+          <span class="why-pill">Creative &amp; Modern Design Approach</span>
+          <span class="why-dot-sep">✦</span>
+          <span class="why-pill">Strong &amp; Consistent Brand Identity</span>
+          <span class="why-dot-sep">✦</span>
+          <span class="why-pill">Designs Tailored to Your Business</span>
+          <span class="why-dot-sep">✦</span>
+          <span class="why-pill">High-Quality Professional Output</span>
+          <span class="why-dot-sep">✦</span>
+          <span class="why-pill">Focus on Branding, Impact &amp; Recognition</span>
+          <span class="why-dot-sep">✦</span>
+          <!-- duplicate for seamless loop -->
+          <span class="why-pill">Creative &amp; Modern Design Approach</span>
+          <span class="why-dot-sep">✦</span>
+          <span class="why-pill">Strong &amp; Consistent Brand Identity</span>
+          <span class="why-dot-sep">✦</span>
+          <span class="why-pill">Designs Tailored to Your Business</span>
+          <span class="why-dot-sep">✦</span>
+          <span class="why-pill">High-Quality Professional Output</span>
+          <span class="why-dot-sep">✦</span>
+          <span class="why-pill">Focus on Branding, Impact &amp; Recognition</span>
+          <span class="why-dot-sep">✦</span>
         </div>
-      </article>
+      </div>
+    </section>
 
-      <article class="article-item" data-aos="fade-up" data-aos-delay="200"
-        data-category="ai-technology"
-        data-title="How AI is Changing the Way Businesses Work"
-        data-keywords="ai artificial intelligence automation chatbot technology smart business efficiency machine learning data analysis powered">
-        <div class="article-meta">
-          <span class="article-cat">AI &amp; Technology</span>
-          <span class="read-time">5 min read</span>
-          <span class="article-date">January 2026</span>
+    <!-- ══════════════════════════════
+         BRAND IDENTITY SHOWCASE
+    ══════════════════════════════ -->
+    <section class="br-showcase">
+      <div class="container">
+        <div class="section-top center reveal">
+          <span class="tag">Brand Identity</span>
+          <h2>What Makes a <span class="red">Strong Brand</span></h2>
+          <p class="showcase-sub">A complete brand identity goes far beyond a logo — it's a full visual system that communicates who you are.</p>
         </div>
-        <h3>How AI is Changing the Way Businesses Work</h3>
-        <p>Artificial Intelligence is transforming business operations in ways that were not possible a few years ago. From automated customer support to smart data analysis, AI tools are helping businesses save time and improve efficiency.</p>
-        <p>AI-powered websites can include features like chatbots, personalized recommendations, and automated responses. These tools improve the user experience and allow businesses to serve customers better without increasing manual workload.</p>
-        <div class="article-tags">
-          <span class="article-tag">AI</span>
-          <span class="article-tag">Automation</span>
-          <span class="article-tag">Technology</span>
+        <div class="showcase-grid">
+
+          <div class="showcase-item reveal">
+            <div class="sc-icon red-bg">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <h4>Logo &amp; Symbol</h4>
+            <p>The face of your brand — unique, simple, and unforgettable.</p>
+          </div>
+
+          <div class="showcase-item reveal" style="transition-delay:.1s">
+            <div class="sc-icon dark-bg">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+            </div>
+            <h4>Color Palette</h4>
+            <p>Strategic color choices that create emotion and brand recognition.</p>
+          </div>
+
+          <div class="showcase-item reveal" style="transition-delay:.2s">
+            <div class="sc-icon red-bg">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
+            </div>
+            <h4>Typography</h4>
+            <p>Font systems that communicate your brand personality perfectly.</p>
+          </div>
+
+          <div class="showcase-item reveal" style="transition-delay:.3s">
+            <div class="sc-icon dark-bg">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <h4>Visual System</h4>
+            <p>Consistent layouts, patterns, and elements across all materials.</p>
+          </div>
+
         </div>
-      </article>
 
-    </div>
-    <div class="no-results" id="noResults">
-      No articles found for "<strong id="noResultsQuery"></strong>". Try a different keyword or category.
-    </div>
-  </section>
-
-  <!-- MID CTA -->
-  <section class="mid-cta" data-aos="zoom-in" data-aos-duration="600">
-    <h2>Need Help With Your Website or Brand?</h2>
-    <p>Let's build something powerful for your business.</p>
-    <a href="/contact.html" class="btn-white">Start Your Project</a>
-  </section>
-
-  <!-- SMART SOLUTIONS -->
-  <section class="solutions">
-    <div class="section-header" data-aos="fade-up">
-      <span class="label">What We Provide</span>
-      <h2>Smart Solutions We Offer</h2>
-    </div>
-    <div class="solutions-grid">
-      <div class="solution-block" data-aos="fade-up" data-aos-delay="0">
-        <span class="solution-num">01</span>
-        <h3><span>Free Hosting</span> Websites (GitHub Based)</h3>
-        <p>We build websites that can be hosted for free using platforms like GitHub, making it a perfect solution for small businesses with limited budgets. A free domain (optional) is also available, allowing you to launch your website without any initial cost.</p>
-      </div>
-      <div class="solution-block" data-aos="fade-up" data-aos-delay="80">
-        <span class="solution-num">02</span>
-        <h3>Low Budget <span>Business Websites</span></h3>
-        <p>Affordable website solutions designed for startups and small businesses that need a professional online presence without high costs.</p>
-      </div>
-      <div class="solution-block" data-aos="fade-up" data-aos-delay="160">
-        <span class="solution-num">03</span>
-        <h3><span>AI-Powered</span> Websites</h3>
-        <p>Modern websites with AI features like chatbots and automation to improve user experience and efficiency.</p>
-      </div>
-      <div class="solution-block" data-aos="fade-up" data-aos-delay="240">
-        <span class="solution-num">04</span>
-        <h3>Fast <span>Delivery</span> Projects</h3>
-        <p>Need your website quickly? We offer fast delivery options based on your project requirements.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- BUDGET -->
-  <section class="budget">
-    <div class="budget-inner" data-aos="fade-up" data-aos-duration="900">
-      <span class="label">Affordable Options</span>
-      <h2>Budget-Friendly <span>Website Solutions</span></h2>
-      <p>Many small businesses want a website but are concerned about costs like hosting and maintenance. At NexaaWeb, we provide budget-friendly solutions that help you get online without spending too much.</p>
-      <p>You can start with a simple website hosted on free platforms or choose a basic website structure that reduces development and maintenance costs. As your business grows, your website can also be upgraded with advanced features.</p>
-      <p>This approach is perfect for startups, small businesses, and individuals who want to start their digital journey with minimal investment.</p>
-    </div>
-  </section>
-
-  <!-- REAL PROJECT INSIGHTS -->
-  <section class="projects">
-    <div class="section-header" data-aos="fade-up">
-      <span class="label">Case Studies</span>
-      <h2>Real Project Insights</h2>
-    </div>
-    <div class="projects-list">
-      <div class="project-item" data-aos="fade-up" data-aos-delay="0">
-        <h3>How We Built a Business Website in <span>5 Days</span></h3>
-        <p>A simple and fast website designed for a small business with a clean layout and essential features.</p>
-      </div>
-      <div class="project-item" data-aos="fade-up" data-aos-delay="100">
-        <h3>How a Small Business Started Online with <span>Zero Maintenance Cost</span></h3>
-        <p>We created a website using free hosting solutions, helping the business go online without ongoing expenses.</p>
-      </div>
-      <div class="project-item" data-aos="fade-up" data-aos-delay="200">
-        <h3>From <span>Idea to Website:</span> A Complete Setup</h3>
-        <p>A complete process of turning a business idea into a fully functional website ready for customers.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- QUICK TIPS -->
-  <section class="tips">
-    <div class="section-header" data-aos="fade-up">
-      <span class="label">Pro Advice</span>
-      <h2>Quick Tips</h2>
-    </div>
-    <div class="tips-grid">
-      <div class="tip-item" data-aos="fade-up" data-aos-delay="0">
-        <span class="tip-dot"></span><span>Always keep your website simple and user-friendly</span>
-      </div>
-      <div class="tip-item" data-aos="fade-up" data-aos-delay="80">
-        <span class="tip-dot"></span><span>Use clear headings and easy navigation</span>
-      </div>
-      <div class="tip-item" data-aos="fade-up" data-aos-delay="160">
-        <span class="tip-dot"></span><span>Make sure your website is mobile-friendly</span>
-      </div>
-      <div class="tip-item" data-aos="fade-up" data-aos-delay="240">
-        <span class="tip-dot"></span><span>Keep your design clean and professional</span>
-      </div>
-      <div class="tip-item" data-aos="fade-up" data-aos-delay="320">
-        <span class="tip-dot"></span><span>Focus on fast loading speed</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- BUSINESS INSIGHTS -->
-  <section class="biz-insights">
-    <div class="section-header" data-aos="fade-up">
-      <span class="label">Knowledge Hub</span>
-      <h2>Business &amp; Website Insights</h2>
-    </div>
-    <div class="biz-list" data-aos="fade-up" data-aos-delay="100">
-      <div class="biz-item">
-        <div>
-          <h3>Why Every Business Needs a Website</h3>
-          <p>A website helps build trust, improve visibility, and attract more customers online.</p>
+        <!-- WhatsApp CTA below showcase -->
+        <div class="showcase-cta reveal">
+          <p>Ready to create a complete brand identity for your business?</p>
+          <a href="https://wa.me/917411984925?text=Hi%20NexaaWeb%2C%20I%20am%20interested%20in%20your%20Branding%20and%20Creative%20Design%20services.%20I%20would%20like%20to%20build%20a%20strong%20brand%20identity%20for%20my%20business.%20Could%20you%20please%20share%20the%20details%20and%20pricing%3F" class="btn-showcase-wa" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Start Branding on WhatsApp
+          </a>
         </div>
-        <span class="biz-arrow">→</span>
-      </div>
-      <div class="biz-item">
-        <div>
-          <h3>Best Website Solutions for Small Businesses</h3>
-          <p>Simple and effective website options for businesses starting their digital journey.</p>
-        </div>
-        <span class="biz-arrow">→</span>
-      </div>
-      <div class="biz-item">
-        <div>
-          <h3>How AI is Changing Modern Businesses</h3>
-          <p>AI tools and automation are helping businesses work smarter and grow faster.</p>
-        </div>
-        <span class="biz-arrow">→</span>
-      </div>
-      <div class="biz-item">
-        <div>
-          <h3>Choosing the Right Website for Your Business</h3>
-          <p>Understanding different types of websites and selecting the best one based on your needs.</p>
-        </div>
-        <span class="biz-arrow">→</span>
-      </div>
-    </div>
-  </section>
 
-  <!-- WHATSAPP CTA -->
-  <section class="whatsapp-cta" data-aos="fade-up">
-    <span class="label">Talk To Us Directly</span>
-    <h2>Have a Question? <span>Chat With Us</span></h2>
-    <p>Got a project in mind or just want to know more? Drop us a message on WhatsApp — we reply fast and love helping businesses grow online.</p>
-    <a href="https://wa.me/917411984925" target="_blank" rel="noopener" class="btn-whatsapp">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-      </svg>
-      Chat on WhatsApp
-    </a>
-  </section>
+      </div>
+    </section>
 
-  <!-- FINAL CTA -->
-  <section class="final-cta" data-aos="fade-up" data-aos-duration="700">
-    <h2>Ready to <span>Build</span> Your Website?</h2>
-    <p>Let's create a powerful and professional online presence for your business.</p>
-    <a href="/contact.html" class="btn-red">Start Your Project</a>
-  </section>
+    <!-- ══════════════════════════════
+         5. HOW WE WORK
+         FIX: data-n attribute added to all process-card divs
+    ══════════════════════════════ -->
+    <section class="br-process">
+      <div class="container">
+        <div class="section-top center reveal">
+          <span class="tag light">Our Process</span>
+          <h2 class="white">How We <span class="red">Work</span></h2>
+        </div>
+        <div class="process-grid">
+
+          <div class="process-card reveal" data-n="01">
+            <div class="p-num">01</div>
+            <h4>Understanding Your Brand</h4>
+            <p>We understand your business, audience, and design goals before starting.</p>
+          </div>
+
+          <div class="process-card reveal" style="transition-delay:.1s" data-n="02">
+            <div class="p-num">02</div>
+            <h4>Concept &amp; Design</h4>
+            <p>We create creative concepts that match your brand identity perfectly.</p>
+          </div>
+
+          <div class="process-card reveal" style="transition-delay:.2s" data-n="03">
+            <div class="p-num">03</div>
+            <h4>Refinement &amp; Feedback</h4>
+            <p>We improve designs based on your feedback for perfect results.</p>
+          </div>
+
+          <div class="process-card reveal" style="transition-delay:.3s" data-n="04">
+            <div class="p-num">04</div>
+            <h4>Final Delivery</h4>
+            <p>We deliver high-quality designs ready for real-world use.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         6. CTA
+    ══════════════════════════════ -->
+    <section class="br-cta">
+      <div class="container center reveal">
+        <span class="tag light">Let's Create</span>
+        <h2>Ready to Build <span class="red">Your Brand?</span></h2>
+        <p>Let's create a strong, professional, and memorable brand identity that makes your business stand out.</p>
+        <div class="cta-btns">
+          <a href="/contact.html" class="btn-cta">Start Your Project</a>
+          <a href="https://wa.me/917411984925?text=Hi%20NexaaWeb%2C%20I%20am%20interested%20in%20your%20Branding%20and%20Creative%20Design%20services.%20I%20would%20like%20to%20build%20a%20strong%20brand%20identity%20for%20my%20business.%20Could%20you%20please%20share%20the%20details%20and%20pricing%3F" class="btn-cta-wa" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Build Your Brand Identity
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <div id="footer-placeholder"></div>
 
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- ══════════════════════════════
+       POPUP
+  ══════════════════════════════ -->
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup-box" id="popupBox">
+      <button class="popup-close" id="popupClose">&#10005;</button>
+      <div class="popup-img-wrap"><img id="popupImg" src="" alt=""/></div>
+      <div class="popup-content">
+        <span class="popup-tag" id="popupTag"></span>
+        <h3 id="popupTitle"></h3>
+        <div class="popup-divider"></div>
+        <p id="popupText"></p>
+        <div class="popup-btns">
+          <a href="/contact.html" class="popup-btn">Start Your Project</a>
+          <a href="https://wa.me/917411984925?text=Hi%20NexaaWeb%2C%20I%20am%20interested%20in%20your%20Branding%20and%20Creative%20Design%20services.%20I%20would%20like%20to%20build%20a%20strong%20brand%20identity%20for%20my%20business.%20Could%20you%20please%20share%20the%20details%20and%20pricing%3F" class="popup-btn-wa" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="assets/js/script.js"></script>
   <script>
-    AOS.init({ once: true, duration: 700, easing: 'ease-out-quart' });
-
-    /* ── SEARCH + CATEGORY FILTER ── */
-    const searchInput    = document.getElementById('searchInput');
-    const searchBtn      = document.getElementById('searchBtn');
-    const articleList    = document.getElementById('articleList');
-    const noResults      = document.getElementById('noResults');
-    const noResultsQuery = document.getElementById('noResultsQuery');
-    const articles       = Array.from(articleList.querySelectorAll('.article-item'));
-    let activeCat = 'all';
-
-    function filterArticles() {
-      const query = searchInput.value.toLowerCase().trim();
-      let visible = 0;
-
-      articles.forEach(function(art) {
-        const title    = (art.getAttribute('data-title')    || '').toLowerCase();
-        const keywords = (art.getAttribute('data-keywords') || '').toLowerCase();
-        const category = art.getAttribute('data-category')  || '';
-        const catLabel = (art.querySelector('.article-cat')?.textContent || '').toLowerCase();
-        // also search inside paragraph body text
-        const bodyText = Array.from(art.querySelectorAll('p'))
-                              .map(function(p){ return p.textContent; })
-                              .join(' ').toLowerCase();
-
-        const matchSearch = query === '' ||
-          title.includes(query)    ||
-          keywords.includes(query) ||
-          catLabel.includes(query) ||
-          bodyText.includes(query);
-
-        const matchCat = activeCat === 'all' || category === activeCat;
-
-        if (matchSearch && matchCat) {
-          art.style.display = '';
-          visible++;
-        } else {
-          art.style.display = 'none';
+    /* ── Reveal on Scroll ── */
+    const revEls = document.querySelectorAll('.reveal');
+    const ro = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          ro.unobserve(e.target);
         }
       });
+    }, { threshold: 0.08 });
+    revEls.forEach(el => ro.observe(el));
 
-      if (visible === 0) {
-        noResultsQuery.textContent = searchInput.value.trim();
-        noResults.style.display = 'block';
-      } else {
-        noResults.style.display = 'none';
+    /* ── Popup Data ── */
+    const popupData = {
+      'logo': {
+        title: 'Logo Design', tag: 'Branding',
+        img: 'https://i.pinimg.com/1200x/b7/b3/27/b7b3274175bd59c691eb4de8d118d642.jpg',
+        text: `Your logo is the face of your brand — it is the first thing people see and the image they remember. At NexaaWeb, we design logos that are not just visually appealing but strategically crafted to represent your brand's values, personality, and vision.\n\nWe begin every logo project with a deep understanding of your business, target audience, and industry. We research your competitors and identify what makes your brand unique, then translate that into a visual identity that stands out.\n\nOur logo design process includes concept development, multiple design variations, color palette options, and typography selection. We provide revisions until the final logo is exactly what you envisioned. Every logo we create is delivered in multiple formats — including vector files — so it can be used across print, digital, and any other medium without quality loss.\n\nA great logo is timeless, versatile, and instantly recognizable. We make sure yours represents your brand with confidence and professionalism.`
+      },
+      'brand-identity': {
+        title: 'Brand Identity Design', tag: 'Branding',
+        img: 'https://i.pinimg.com/736x/20/fd/f2/20fdf294e2305e38cc14487485bb73e0.jpg',
+        text: `A brand identity is much more than a logo. It is the complete visual language that defines how your business looks and feels across every touchpoint — from your website and social media to your business cards and packaging.\n\nAt NexaaWeb, we create comprehensive brand identity systems that bring consistency, professionalism, and recognition to your business. Our brand identity packages include logo design, color palettes, typography selection, iconography, visual guidelines, and brand style guides.\n\nWe ensure that every element of your brand identity works together harmoniously to create a cohesive and memorable impression. Whether your brand is bold and energetic, elegant and refined, or friendly and approachable — we design an identity that truly reflects who you are.\n\nA strong brand identity builds trust, increases recognition, and makes your business look credible and established. We help you create a brand that people recognize, trust, and remember long after their first interaction with your business.`
+      },
+      'poster': {
+        title: 'Poster & Banner Design', tag: 'Design',
+        img: 'https://i.pinimg.com/736x/73/83/52/738352e90bd247e34a659d01f90f0921.jpg',
+        text: `Posters and banners are powerful marketing tools that capture attention and communicate your message instantly. At NexaaWeb, we design visually striking posters and banners that stop people in their tracks and drive them to take action.\n\nWhether you need promotional posters for an event, digital banners for online advertising, social media promotional graphics, or physical banners for trade shows and storefronts — we create designs that are bold, clear, and aligned with your brand identity.\n\nOur design process focuses on visual hierarchy, typography, color psychology, and composition to ensure your message is communicated effectively. We understand that a great poster or banner must work in seconds — capturing attention and delivering the key message almost immediately.\n\nWe deliver final files in print-ready formats for physical materials and optimized digital formats for online use. Every design is crafted with precision and creativity to help you make a powerful impact with your marketing campaigns.`
+      },
+      'social-media': {
+        title: 'Social Media Post Design', tag: 'Social Media',
+        img: 'https://i.pinimg.com/736x/25/95/5f/25955fa89ea725c69ece2eea2567f47f.jpg',
+        text: `In today's digital world, your social media presence is often the first point of contact between your business and potential customers. At NexaaWeb, we design professional and engaging social media posts that strengthen your online presence and help you connect with your audience.\n\nWe create custom social media designs for Instagram, Facebook, LinkedIn, Twitter, and other platforms. Our designs are tailored to each platform's specific dimensions and best practices while maintaining a consistent visual style that aligns with your brand identity.\n\nOur social media design services include promotional posts, product launches, announcements, educational content, quotes, stories, and more. We focus on creating designs that are visually attractive, easy to read, and optimized for engagement.\n\nConsistent and professional social media design builds brand authority and makes your business look credible and trustworthy online. We help you create a social media presence that attracts followers, generates engagement, and supports your overall marketing goals.`
+      },
+      'business-card': {
+        title: 'Business Card Design', tag: 'Print Design',
+        img: 'https://i.pinimg.com/736x/c8/b6/17/c8b617c08c31bed91d0bb0de12f86360.jpg',
+        text: `A business card is one of the most personal and powerful networking tools available. When you hand someone your business card, it represents your brand and leaves a lasting impression long after the meeting is over.\n\nAt NexaaWeb, we design professional business cards that reflect your brand identity and make you memorable. We focus on clean, elegant designs that communicate your key information clearly while standing out from generic, template-based cards.\n\nOur business card designs include both single-sided and double-sided options, with attention to typography, spacing, color, and overall visual balance. We incorporate your logo, contact details, social media handles, and any other relevant information in a way that looks professional and polished.\n\nWe deliver final files in print-ready formats with proper bleed and crop marks, ready to be sent directly to your preferred printing service. A well-designed business card is a small investment that creates a big impression.`
+      },
+      'brochure': {
+        title: 'Brochure & Flyer Design', tag: 'Print Design',
+        img: 'https://i.pinimg.com/736x/47/3f/a8/473fa850646410dd526c8e6063db3985.jpg',
+        text: `Brochures and flyers are essential marketing materials that allow you to present your business, products, and services in a detailed and visually compelling format. At NexaaWeb, we design brochures and flyers that inform, engage, and persuade your target audience.\n\nWe create bi-fold, tri-fold, and multi-page brochures that are perfect for product catalogs, service presentations, company overviews, and event promotions. Our flyer designs are bold and attention-grabbing, ideal for promotions, announcements, and local marketing campaigns.\n\nEvery design we create is structured with a clear information hierarchy that guides readers through the content naturally. We balance text and visuals effectively to create materials that are informative without being overwhelming.\n\nWe deliver print-ready files with all necessary specifications for professional printing. Whether you need 100 copies or 10,000, our designs are prepared to look sharp and professional in any print format.`
+      },
+      'company-profile': {
+        title: 'Company Profile Design', tag: 'Corporate',
+        img: 'https://i.pinimg.com/736x/5c/f2/7c/5cf27ceeb6701dda48a3703ddb991680.jpg',
+        text: `A company profile is one of the most important documents your business can have. It introduces your company to potential clients, partners, and investors — and it needs to make a powerful, professional impression.\n\nAt NexaaWeb, we design comprehensive company profiles that tell your brand story compellingly and present your business in the best possible light. Our company profiles include sections for your company overview, mission and vision, services, team, achievements, and contact information.\n\nWe use a premium layout with professional typography, high-quality imagery, and your brand colors to create a document that looks like it came from a large, established organization — regardless of your company's size.\n\nOur company profiles are delivered as both print-ready PDFs for physical distribution and optimized digital PDFs for email and online sharing. A professionally designed company profile builds instant credibility and helps you win new business with confidence.`
+      },
+      'resume': {
+        title: 'Resume / CV Design', tag: 'Career',
+        img: 'https://i.pinimg.com/1200x/ee/90/c9/ee90c9aaf686c5dc61c538bcd028916f.jpg',
+        text: `In a competitive job market, your resume needs to stand out from hundreds of other applicants. At NexaaWeb, we design modern, professional resumes and CVs that make a strong first impression and help you get noticed by employers.\n\nWe create custom resume designs that are clean, well-organized, and visually appealing while maintaining a professional tone appropriate for your industry. Whether you are applying for a creative role, a corporate position, or a technical job, we design a resume that fits the expectations of your target employers.\n\nOur resume designs prioritize readability and information hierarchy, ensuring that hiring managers can quickly find your most important qualifications. We incorporate your personal branding elements — including a professional photo if desired — to create a cohesive and memorable document.\n\nWe deliver your resume in both editable and PDF formats so you can make future updates easily. A professionally designed resume significantly increases your chances of getting interviews and advancing your career.`
+      },
+      'ppt': {
+        title: 'Professional PPT Design', tag: 'Presentation',
+        img: 'https://i.pinimg.com/736x/8b/1a/2b/8b1a2b26d64d16ca2c65f68c716bd29a.jpg',
+        text: `A great presentation can make the difference between winning a deal and losing it. At NexaaWeb, we design professional PowerPoint presentations that are visually impressive, clearly structured, and perfectly aligned with your brand identity.\n\nWe work with business presentations, investor pitch decks, sales presentations, training materials, and educational content. Each presentation is designed with a clear visual flow that guides your audience through the content logically and keeps them engaged from start to finish.\n\nOur presentation designs include custom slide layouts, consistent typography, professional charts and data visualizations, high-quality imagery, and smooth visual transitions. We ensure that each slide communicates one key idea clearly without overwhelming the audience with too much information.\n\nWe deliver presentations in editable PowerPoint format so you can update the content easily for future use. A professionally designed presentation enhances your credibility, reinforces your message, and helps you communicate with impact and confidence.`
+      },
+      'menu': {
+        title: 'Menu Card Design', tag: 'F&B Design',
+        img: 'https://i.pinimg.com/736x/3d/ed/34/3ded3445e7349bc27a0869f31c1e5b12.jpg',
+        text: `Your menu is one of the most important marketing tools in your restaurant, cafe, or food business. It is not just a list of items — it is a reflection of your brand, your quality, and the dining experience you offer.\n\nAt NexaaWeb, we design beautiful menu cards that are visually appetizing, easy to read, and perfectly aligned with your brand aesthetic. Whether you want a classic elegant menu, a modern minimalist design, or a vibrant and colorful style, we create menus that enhance your dining experience.\n\nWe organize your menu items in a logical, reader-friendly layout with clear sections, attractive typography, and strategic placement of high-margin items. We also ensure the design works well in print at various sizes — from table cards to full-page menus.\n\nWe deliver print-ready files that you can take directly to your printer. A well-designed menu not only looks professional but also influences customer ordering behavior, helping to increase your average transaction value.`
+      },
+      'nameplate': {
+        title: 'Name Plate Design', tag: 'Signage',
+        img: 'https://i.pinimg.com/736x/44/f0/51/44f051cbd27deb9beab348a43561f369.jpg',
+        text: `A professionally designed name plate is a subtle but powerful element of your office or business environment. It communicates professionalism, attention to detail, and brand consistency — creating the right impression for everyone who visits your space.\n\nAt NexaaWeb, we design elegant and professional name plates for offices, desks, doors, and corporate environments. Our designs balance functionality and aesthetics, ensuring your name plates are easy to read while reflecting your brand identity.\n\nWe create name plates in various styles — from classic and corporate to modern and minimalist — depending on your office environment and brand personality. We incorporate your logo, department names, employee titles, and any other relevant information in a clean and organized layout.\n\nWe deliver print-ready files in the exact dimensions required for your chosen material and manufacturing method. Well-designed name plates contribute to a professional, cohesive office environment that makes a positive impression on clients and visitors.`
       }
-    }
+    };
 
-    // Live search on every keystroke
-    searchInput.addEventListener('input', filterArticles);
+    /* ── Popup Logic ── */
+    const overlay  = document.getElementById('popupOverlay');
+    const closeBtn = document.getElementById('popupClose');
+    const popupBox = document.getElementById('popupBox');
 
-    // Enter key
-    searchInput.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter') filterArticles();
-    });
-
-    // Search icon click
-    searchBtn.addEventListener('click', filterArticles);
-
-    /* ── CATEGORY TABS ── */
-    document.querySelectorAll('#catList li').forEach(function(li) {
-      li.addEventListener('click', function() {
-        document.querySelectorAll('#catList li').forEach(function(i){ i.classList.remove('active'); });
-        li.classList.add('active');
-        activeCat = li.getAttribute('data-cat');
-        filterArticles();
+    document.querySelectorAll('.design-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const data = popupData[card.getAttribute('data-service')];
+        if (!data) return;
+        document.getElementById('popupImg').src           = data.img;
+        document.getElementById('popupTag').textContent   = data.tag;
+        document.getElementById('popupTitle').textContent = data.title;
+        document.getElementById('popupText').textContent  = data.text;
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        popupBox.scrollTop = 0;
       });
     });
+
+    function closePopup() {
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    closeBtn.addEventListener('click', closePopup);
+    overlay.addEventListener('click', e => { if (e.target === overlay) closePopup(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closePopup(); });
   </script>
 </body>
 </html>
